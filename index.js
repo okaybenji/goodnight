@@ -1,3 +1,5 @@
+const keys = {};
+
 const scenes = {
   menu: {
     preload() {
@@ -69,40 +71,60 @@ const scenes = {
 
       const plr = this.physics.add.sprite(196, 188, 'plr');
       game.plr = plr;
-      plr.setBounce(0.2); // our player will bounce from items
       this.physics.add.collider(collisionLayer, plr, () => {
         plr.jumping = false;
       });
 
-      this.input.keyboard.on('keydown', event => {
-        const keyMap = {
-          ArrowLeft: () => plr.body.velocity.x -= 20,
-          ArrowRight: () => plr.body.velocity.x += 20,
-          ArrowUp() {
-            if (plr.jumping) {
-              // return;
-            }
-            plr.jumping = true;
-            plr.body.velocity.y -= 20;
-          }
-        };
-
-        if (keyMap[event.key]) {
-          keyMap[event.key]();
-        }
-      });
+      this.keys = {
+        up: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP),
+        left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT),
+        right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT),
+      };
     },
     update() {
       const plr = game.plr;
 
+      if (this.keys.up.isDown) {
+        if (!plr.jumping) {
+          plr.jumping = true;
+          plr.body.velocity.y -= 60;
+        }
+      }
+
+      if (this.keys.left.isDown) {
+        plr.body.velocity.x -= 20;
+      }
+      if (this.keys.right.isDown) {
+        plr.body.velocity.x += 20;
+      }
+      const maxSpeed = 100;
+      if (Math.abs(plr.body.velocity.x) > maxSpeed) {
+        plr.body.velocity.x = Math.sign(plr.body.velocity.x) * maxSpeed;
+      }
+
       if (plr.body.y > 200) {
         plr.y = 200;
+        plr.body.velocity.y = 0;
       }
       if (plr.body.x > game.config.width) {
         plr.x = -8;
       }
       if (plr.body.x < -8) {
         plr.x = game.config.width;
+      }
+
+      // Friction.
+      // TODO: Can't check if plr.body.touching.down with tilemap?
+      if (plr.body.velocity.x > 0) {
+        plr.body.velocity.x -= 4;
+        if (plr.body.velocity.x < 0) {
+          plr.body.velocity.x = 0;
+        }
+      } else if (plr.body.velocity.x < 0) {
+        plr.body.velocity.x += 4;
+        if (plr.body.velocity.x > 0) {
+          plr.body.velocity.x = 0;
+        }
       }
     }
   },
