@@ -1,5 +1,87 @@
 const keys = {};
 
+const update = function() {
+  const plr = game.plr;
+
+  const maxJump = -200;
+  if (this.keys.up.isDown) {
+    if (!plr.jumping) {
+      plr.jumping = true;
+      plr.body.velocity.y += maxJump;
+    }
+  }
+  if (plr.body.velocity.y < maxJump) {
+    plr.body.velocity.y = maxJump;
+  }
+
+  if (this.keys.left.isDown) {
+    plr.body.velocity.x -= 20;
+  }
+  if (this.keys.right.isDown) {
+    plr.body.velocity.x += 20;
+  }
+  const maxSpeed = 100;
+  if (Math.abs(plr.body.velocity.x) > maxSpeed) {
+    plr.body.velocity.x = Math.sign(plr.body.velocity.x) * maxSpeed;
+  }
+
+  // World Wrap.
+  if (plr.body.x > game.config.width) {
+    plr.x = -8;
+  }
+  if (plr.body.x < -8) {
+    plr.x = game.config.width;
+  }
+  // Float.
+  if (plr.body.y > 200) {
+    plr.y = 200;
+    plr.body.velocity.y = 0;
+  }
+  // Next Level!
+  if (plr.body.y < 0) {
+    this.scene.start('level2');
+  }
+
+  // Friction.
+  // TODO: Can't check if plr.body.touching.down with tilemap?
+  if (plr.body.velocity.x > 0) {
+    plr.body.velocity.x -= 6;
+    if (plr.body.velocity.x < 0) {
+      plr.body.velocity.x = 0;
+    }
+  } else if (plr.body.velocity.x < 0) {
+    plr.body.velocity.x += 6;
+    if (plr.body.velocity.x > 0) {
+      plr.body.velocity.x = 0;
+    }
+  }
+};
+
+const randomizeStars = function() {
+  const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+  [...Array(24)]
+    .map(x => [randomIntBetween(0, game.config.width), randomIntBetween(0, game.config.height)])
+    .forEach(pos => {
+      this.add.sprite(pos[0], pos[1], 'star')
+        .anims.play('twinkle', true);
+    });
+};
+
+const setUpPlayer = function() {
+  const plr = this.physics.add.sprite(196, 188, 'plr');
+  game.plr = plr;
+  this.physics.add.collider(game.map.collisionLayer, plr, () => {
+    plr.jumping = false;
+  });
+
+  this.keys = {
+    up: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP),
+    left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT),
+    right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT),
+  };
+};
+
 const scenes = {
   menu: {
     preload() {
@@ -13,7 +95,8 @@ const scenes = {
       );
 
       // Scenes
-      this.scene.add('play', scenes.play);
+      this.scene.add('level1', scenes.level1);
+      this.scene.add('level2', scenes.level2);
     },
     create() {
       const gfx = () => {
@@ -38,7 +121,7 @@ const scenes = {
       const input = () => {
         // Press any key to start.
         this.input.keyboard.on('keydown', event => {
-          this.scene.start('play');
+          this.scene.start('level1');
         });
       };
 
@@ -46,90 +129,43 @@ const scenes = {
       input();
     },
   },
-  play: {
+  level1: {
     preload() {
-      this.load.tilemapTiledJSON('map', 'map/level1.json');
+      this.load.tilemapTiledJSON('level1', 'map/level1.json');
       this.load.spritesheet('monochrome-caves', 'img/monochrome-caves.png', {frameWidth: 8, frameHeight: 8});
     },
     create() {
-      const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
-      [...Array(24)]
-        .map(x => [randomIntBetween(0, game.config.width), randomIntBetween(0, game.config.height)])
-        .forEach(pos => {
-          this.add.sprite(pos[0], pos[1], 'star')
-            .anims.play('twinkle', true);
-        });
+      randomizeStars.call(this);
 
       // TODO: Animate water (swap lines) and bubbles (move up and disappear, then replace).
-      const map = this.make.tilemap({key: 'map'});
-      const tiles = map.addTilesetImage('monochrome-caves');
-      map.createStaticLayer('Decorate', tiles, 0, 0);
-      const collisionLayer = map.createDynamicLayer('Collide', tiles, 0, 0);
-      collisionLayer.setCollisionByExclusion([-1]);
+      game.map = this.make.tilemap({key: 'level1'});
+      game.map.tiles = game.map.addTilesetImage('monochrome-caves');
+      game.map.createStaticLayer('Decorate', game.map.tiles, 0, 0);
+      game.map.collisionLayer = game.map.createDynamicLayer('Collide', game.map.tiles, 0, 0);
+      game.map.collisionLayer.setCollisionByExclusion([-1]);
 
-      const plr = this.physics.add.sprite(196, 188, 'plr');
-      game.plr = plr;
-      this.physics.add.collider(collisionLayer, plr, () => {
-        plr.jumping = false;
-      });
-
-      this.keys = {
-        up: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP),
-        left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT),
-        right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT),
-      };
+      setUpPlayer.call(this);
     },
-    update() {
-      const plr = game.plr;
+    update,
+  },
+  level2: {
+    preload() {
+      this.load.tilemapTiledJSON('level2', 'map/level2.json');
+      this.load.spritesheet('monochrome-caves', 'img/monochrome-caves.png', {frameWidth: 8, frameHeight: 8});
+    },
+    create() {
+      randomizeStars.call(this);
 
-      const maxJump = -200;
-      if (this.keys.up.isDown) {
-        if (!plr.jumping) {
-          plr.jumping = true;
-          plr.body.velocity.y += maxJump;
-        }
-      }
-      if (plr.body.velocity.y < maxJump) {
-        plr.body.velocity.y = maxJump;
-      }
+      // TODO: Animate water (swap lines) and bubbles (move up and disappear, then replace).
+      game.map = this.make.tilemap({key: 'level2'});
+      game.map.tiles = game.map.addTilesetImage('monochrome-caves');
+      game.map.createStaticLayer('Decorate', game.map.tiles, 0, 0);
+      game.map.collisionLayer = game.map.createDynamicLayer('Collide', game.map.tiles, 0, 0);
+      game.map.collisionLayer.setCollisionByExclusion([-1]);
 
-      if (this.keys.left.isDown) {
-        plr.body.velocity.x -= 20;
-      }
-      if (this.keys.right.isDown) {
-        plr.body.velocity.x += 20;
-      }
-      const maxSpeed = 100;
-      if (Math.abs(plr.body.velocity.x) > maxSpeed) {
-        plr.body.velocity.x = Math.sign(plr.body.velocity.x) * maxSpeed;
-      }
-
-      if (plr.body.y > 200) {
-        plr.y = 200;
-        plr.body.velocity.y = 0;
-      }
-      if (plr.body.x > game.config.width) {
-        plr.x = -8;
-      }
-      if (plr.body.x < -8) {
-        plr.x = game.config.width;
-      }
-
-      // Friction.
-      // TODO: Can't check if plr.body.touching.down with tilemap?
-      if (plr.body.velocity.x > 0) {
-        plr.body.velocity.x -= 6;
-        if (plr.body.velocity.x < 0) {
-          plr.body.velocity.x = 0;
-        }
-      } else if (plr.body.velocity.x < 0) {
-        plr.body.velocity.x += 6;
-        if (plr.body.velocity.x > 0) {
-          plr.body.velocity.x = 0;
-        }
-      }
-    }
+      setUpPlayer.call(this);
+    },
+    update,
   },
 };
 
