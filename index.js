@@ -61,16 +61,17 @@ const scenes = {
 
       // TODO: Animate water (swap lines) and bubbles (move up and disappear, then replace).
       const map = this.make.tilemap({key: 'map'});
-      const groundTiles = map.addTilesetImage('monochrome-caves');
-      const groundLayer = map.createDynamicLayer('World', groundTiles, 0, 0);
-      // the player will collide with this layer
-      // groundLayer.setCollisionByExclusion([-1]);
+      const tiles = map.addTilesetImage('monochrome-caves');
+      map.createStaticLayer('Decorate', tiles, 0, 0);
+      map.createStaticLayer('Interact', tiles, 0, 0);
+      const collisionLayer = map.createDynamicLayer('Collide', tiles, 0, 0);
+      collisionLayer.setCollisionByExclusion([-1]);
 
       const player = this.physics.add.sprite(200, 188, 'plr');
       this.plr = player;
       player.setBounce(0.2); // our player will bounce from items
       player.setCollideWorldBounds(true);
-      this.physics.add.collider(groundLayer, player);
+      this.physics.add.collider(collisionLayer, player);
 
       this.input.keyboard.on('keydown', event => {
         const keyMap = {
@@ -91,7 +92,7 @@ const config = {
   type: Phaser.AUTO,
   width: 320,
   height: 240,
-  zoom: 2.5,
+  zoom: 2,
   pixelArt: true,
   physics: {
     default: 'arcade',
