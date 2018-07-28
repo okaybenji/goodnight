@@ -65,7 +65,6 @@ const scenes = {
       const map = this.make.tilemap({key: 'map'});
       const tiles = map.addTilesetImage('monochrome-caves');
       map.createStaticLayer('Decorate', tiles, 0, 0);
-      map.createStaticLayer('Interact', tiles, 0, 0);
       const collisionLayer = map.createDynamicLayer('Collide', tiles, 0, 0);
       collisionLayer.setCollisionByExclusion([-1]);
 
@@ -84,11 +83,15 @@ const scenes = {
     update() {
       const plr = game.plr;
 
+      const maxJump = -200;
       if (this.keys.up.isDown) {
         if (!plr.jumping) {
           plr.jumping = true;
-          plr.body.velocity.y -= 60;
+          plr.body.velocity.y += maxJump;
         }
+      }
+      if (plr.body.velocity.y < maxJump) {
+        plr.body.velocity.y = maxJump;
       }
 
       if (this.keys.left.isDown) {
@@ -116,12 +119,12 @@ const scenes = {
       // Friction.
       // TODO: Can't check if plr.body.touching.down with tilemap?
       if (plr.body.velocity.x > 0) {
-        plr.body.velocity.x -= 4;
+        plr.body.velocity.x -= 6;
         if (plr.body.velocity.x < 0) {
           plr.body.velocity.x = 0;
         }
       } else if (plr.body.velocity.x < 0) {
-        plr.body.velocity.x += 4;
+        plr.body.velocity.x += 6;
         if (plr.body.velocity.x > 0) {
           plr.body.velocity.x = 0;
         }
@@ -139,7 +142,7 @@ const config = {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 200 }
+      gravity: { y: 800 }
     }
   },
   scene: scenes.menu,
