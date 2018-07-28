@@ -82,6 +82,24 @@ const setUpPlayer = function() {
   };
 };
 
+const createLevel = function(levelName) {
+  randomizeStars.call(this);
+
+  // TODO: Animate water (swap lines) and bubbles (move up and disappear, then replace).
+  game.map = this.make.tilemap({key: levelName});
+  game.map.tiles = game.map.addTilesetImage('monochrome-caves');
+  game.map.createStaticLayer('Decorate', game.map.tiles, 0, 0);
+  game.map.collisionLayer = game.map.createDynamicLayer('Collide', game.map.tiles, 0, 0);
+  game.map.collisionLayer.setCollisionByExclusion([-1]);
+
+  setUpPlayer.call(this);
+};
+
+const preloadLevel = function(levelName) {
+  this.load.tilemapTiledJSON(levelName, `map/${levelName}.json`);
+  this.load.spritesheet('monochrome-caves', 'img/monochrome-caves.png', {frameWidth: 8, frameHeight: 8});
+};
+
 const scenes = {
   menu: {
     preload() {
@@ -131,39 +149,19 @@ const scenes = {
   },
   level1: {
     preload() {
-      this.load.tilemapTiledJSON('level1', 'map/level1.json');
-      this.load.spritesheet('monochrome-caves', 'img/monochrome-caves.png', {frameWidth: 8, frameHeight: 8});
+      preloadLevel.call(this, 'level1');
     },
     create() {
-      randomizeStars.call(this);
-
-      // TODO: Animate water (swap lines) and bubbles (move up and disappear, then replace).
-      game.map = this.make.tilemap({key: 'level1'});
-      game.map.tiles = game.map.addTilesetImage('monochrome-caves');
-      game.map.createStaticLayer('Decorate', game.map.tiles, 0, 0);
-      game.map.collisionLayer = game.map.createDynamicLayer('Collide', game.map.tiles, 0, 0);
-      game.map.collisionLayer.setCollisionByExclusion([-1]);
-
-      setUpPlayer.call(this);
+      createLevel.call(this, 'level1');
     },
     update,
   },
   level2: {
     preload() {
-      this.load.tilemapTiledJSON('level2', 'map/level2.json');
-      this.load.spritesheet('monochrome-caves', 'img/monochrome-caves.png', {frameWidth: 8, frameHeight: 8});
+      preloadLevel.call(this, 'level2');
     },
     create() {
-      randomizeStars.call(this);
-
-      // TODO: Animate water (swap lines) and bubbles (move up and disappear, then replace).
-      game.map = this.make.tilemap({key: 'level2'});
-      game.map.tiles = game.map.addTilesetImage('monochrome-caves');
-      game.map.createStaticLayer('Decorate', game.map.tiles, 0, 0);
-      game.map.collisionLayer = game.map.createDynamicLayer('Collide', game.map.tiles, 0, 0);
-      game.map.collisionLayer.setCollisionByExclusion([-1]);
-
-      setUpPlayer.call(this);
+      createLevel.call(this, 'level2');
     },
     update,
   },
