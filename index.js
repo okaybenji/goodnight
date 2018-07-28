@@ -3,6 +3,8 @@ const scenes = {
     preload() {
       // Art
       this.load.image('bg', 'img/menu.png');
+      this.load.image('plr', 'img/plr.png');
+      // TODO: Make stars of various sizes.
       this.load.spritesheet('star',
         'img/star.png',
         { frameWidth: 9, frameHeight: 9 }
@@ -43,19 +45,45 @@ const scenes = {
     },
   },
   play: {
+    preload() {
+      this.load.tilemapTiledJSON('map', 'map/level1.json');
+      this.load.spritesheet('monochrome-caves', 'img/monochrome-caves.png', {frameWidth: 8, frameHeight: 8});
+    },
     create() {
       const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-      [...Array(50)]
-        // TODO: How to retrieve the width and height of the game?
-        .map(x => [randomIntBetween(0, 320), randomIntBetween(0, 240)])
+      [...Array(24)]
+        .map(x => [randomIntBetween(0, game.config.width), randomIntBetween(0, game.config.height)])
         .forEach(pos => {
           this.add.sprite(pos[0], pos[1], 'star')
             .anims.play('twinkle', true);
         });
-    },
-    update() {
-    },
+
+      // TODO: Animate water (swap lines) and bubbles (move up and disappear, then replace).
+      const map = this.make.tilemap({key: 'map'});
+      const groundTiles = map.addTilesetImage('monochrome-caves');
+      const groundLayer = map.createDynamicLayer('World', groundTiles, 0, 0);
+      // the player will collide with this layer
+      // groundLayer.setCollisionByExclusion([-1]);
+
+      const player = this.physics.add.sprite(200, 188, 'plr');
+      this.plr = player;
+      player.setBounce(0.2); // our player will bounce from items
+      player.setCollideWorldBounds(true);
+      this.physics.add.collider(groundLayer, player);
+
+      this.input.keyboard.on('keydown', event => {
+        const keyMap = {
+          ArrowLeft: () => this.plr.body.setVelocityX(-20),
+          ArrowRight: () => this.plr.body.setVelocityX(20),
+          ArrowUp: () => this.plr.body.setVelocityY(-20),
+        };
+
+        if (keyMap[event.key]) {
+          keyMap[event.key]();
+        }
+      });
+    }
   },
 };
 
