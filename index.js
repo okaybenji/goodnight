@@ -1,4 +1,11 @@
 const keys = {};
+let level = 1;
+const levels = ['level1', 'level2'];
+
+const startNextLevel = function() {
+  this.scene.start(`level${level}`);
+  level++;
+};
 
 const update = function() {
   const plr = game.plr;
@@ -27,7 +34,7 @@ const update = function() {
 
   // World Wrap.
   if (plr.body.x > game.config.width) {
-    plr.x = -8;
+    plr.x = 0;
   }
   if (plr.body.x < -8) {
     plr.x = game.config.width;
@@ -39,11 +46,10 @@ const update = function() {
   }
   // Next Level!
   if (plr.body.y < 0) {
-    this.scene.start('level2');
+    startNextLevel.call(this);
   }
 
   // Friction.
-  // TODO: Can't check if plr.body.touching.down with tilemap?
   if (plr.body.velocity.x > 0) {
     plr.body.velocity.x -= 6;
     if (plr.body.velocity.x < 0) {
@@ -82,6 +88,11 @@ const setUpPlayer = function() {
   };
 };
 
+const preloadLevel = function(levelName) {
+  this.load.tilemapTiledJSON(levelName, `map/${levelName}.json`);
+  this.load.spritesheet('monochrome-caves', 'img/monochrome-caves.png', {frameWidth: 8, frameHeight: 8});
+};
+
 const createLevel = function(levelName) {
   randomizeStars.call(this);
 
@@ -93,11 +104,6 @@ const createLevel = function(levelName) {
   game.map.collisionLayer.setCollisionByExclusion([-1]);
 
   setUpPlayer.call(this);
-};
-
-const preloadLevel = function(levelName) {
-  this.load.tilemapTiledJSON(levelName, `map/${levelName}.json`);
-  this.load.spritesheet('monochrome-caves', 'img/monochrome-caves.png', {frameWidth: 8, frameHeight: 8});
 };
 
 const scenes = {
@@ -112,60 +118,49 @@ const scenes = {
         { frameWidth: 9, frameHeight: 9 }
       );
 
-      // Scenes
-      this.scene.add('level1', scenes.level1);
-      this.scene.add('level2', scenes.level2);
+      // Add levels as scenes.
+      levels.forEach(levelName => {
+        this.scene.add(levelName, scenes[levelName]);
+      });
     },
     create() {
-      const gfx = () => {
-        this.add.image(160, 120, 'bg');
+      // Set up graphics.
+      this.add.image(160, 120, 'bg');
 
-        this.anims.create({
-          key: 'twinkle',
-          frames: this.anims.generateFrameNumbers('star', { start: 0, end: 7 }),
-          frameRate: 10,
-          repeat: -1
-        });
+      this.anims.create({
+        key: 'twinkle',
+        frames: this.anims.generateFrameNumbers('star', { start: 0, end: 7 }),
+        frameRate: 10,
+        repeat: -1
+      });
 
-        const starPositions = [[45, 45], [48, 67], [40, 105], [135, 43], [115, 75],
-                               [128, 105], [136, 150], [135, 200], [300, 114]];
-        starPositions.forEach(pos => {
-          this.add.sprite(pos[0], pos[1], 'star')
-            .anims.play('twinkle', true);
-          // TODO: How to offset animation by random number of frames?
-        });
-      };
+      const starPositions = [[45, 45], [48, 67], [40, 105], [135, 43], [115, 75],
+                             [128, 105], [136, 150], [135, 200], [300, 114]];
+      starPositions.forEach(pos => {
+        this.add.sprite(pos[0], pos[1], 'star')
+          .anims.play('twinkle', true);
+        // TODO: How to offset animation by random number of frames?
+      });
 
-      const input = () => {
-        // Press any key to start.
-        this.input.keyboard.on('keydown', event => {
-          this.scene.start('level1');
-        });
-      };
-
-      gfx();
-      input();
+      // Press any key to start.
+      this.input.keyboard.on('keydown', event => {
+        startNextLevel.call(this);
+      });
     },
-  },
-  level1: {
-    preload() {
-      preloadLevel.call(this, 'level1');
-    },
-    create() {
-      createLevel.call(this, 'level1');
-    },
-    update,
-  },
-  level2: {
-    preload() {
-      preloadLevel.call(this, 'level2');
-    },
-    create() {
-      createLevel.call(this, 'level2');
-    },
-    update,
   },
 };
+
+levels.forEach(levelName => {
+  scenes[levelName] = {
+    preload() {
+      preloadLevel.call(this, levelName)
+    },
+    create() {
+      createLevel.call(this, levelName)
+    },
+    update
+  };
+});
 
 const config = {
   type: Phaser.AUTO,
