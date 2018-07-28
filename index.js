@@ -67,23 +67,43 @@ const scenes = {
       const collisionLayer = map.createDynamicLayer('Collide', tiles, 0, 0);
       collisionLayer.setCollisionByExclusion([-1]);
 
-      const player = this.physics.add.sprite(200, 188, 'plr');
-      this.plr = player;
-      player.setBounce(0.2); // our player will bounce from items
-      player.setCollideWorldBounds(true);
-      this.physics.add.collider(collisionLayer, player);
+      const plr = this.physics.add.sprite(196, 188, 'plr');
+      game.plr = plr;
+      plr.setBounce(0.2); // our player will bounce from items
+      this.physics.add.collider(collisionLayer, plr, () => {
+        plr.jumping = false;
+      });
 
       this.input.keyboard.on('keydown', event => {
         const keyMap = {
-          ArrowLeft: () => this.plr.body.setVelocityX(-20),
-          ArrowRight: () => this.plr.body.setVelocityX(20),
-          ArrowUp: () => this.plr.body.setVelocityY(-20),
+          ArrowLeft: () => plr.body.velocity.x -= 20,
+          ArrowRight: () => plr.body.velocity.x += 20,
+          ArrowUp() {
+            if (plr.jumping) {
+              // return;
+            }
+            plr.jumping = true;
+            plr.body.velocity.y -= 20;
+          }
         };
 
         if (keyMap[event.key]) {
           keyMap[event.key]();
         }
       });
+    },
+    update() {
+      const plr = game.plr;
+
+      if (plr.body.y > 200) {
+        plr.y = 200;
+      }
+      if (plr.body.x > game.config.width) {
+        plr.x = -8;
+      }
+      if (plr.body.x < -8) {
+        plr.x = game.config.width;
+      }
     }
   },
 };
