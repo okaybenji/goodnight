@@ -1,10 +1,8 @@
 const keys = {};
-let level = 1;
-const levels = ['level1', 'level2'];
+const levels = ['level1', 'todo'];
 
 const startNextLevel = function() {
-  this.scene.start(`level${level}`);
-  level++;
+  this.scene.start(levels.shift());
 };
 
 const update = function() {
