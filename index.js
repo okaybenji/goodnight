@@ -39,9 +39,10 @@ const update = function() {
   if (plr.body.x < -8) {
     plr.x = game.config.width;
   }
-  // Float.
-  if (plr.body.y > 200) {
-    plr.y = 200;
+  // Prevent playing plummeting into the abyss if slowly wrapping Y.
+  // TODO: Figure out a better way to do this.
+  if (plr.body.y > 198) {
+    plr.y = 198;
     plr.body.velocity.y = 0;
   }
   // Next Level!
@@ -74,6 +75,13 @@ const update = function() {
   } else {
     plr.body.allowGravity = true;
     plr.climbing = false;
+  }
+
+  // Float in water. Allow jumping out.
+  if (overTile && overTile.properties.water) {
+    plr.body.velocity.y = 0;
+    plr.y -= 3;
+    plr.jumping = false;
   }
 };
 
