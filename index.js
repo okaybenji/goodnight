@@ -61,6 +61,20 @@ const update = function() {
       plr.body.velocity.x = 0;
     }
   }
+
+  const overTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y);
+  if (overTile && overTile.properties.climbable) {
+    plr.body.allowGravity = false;
+    plr.jumping = false;
+    if (!plr.climbing) {
+      plr.climbing = true;
+      plr.body.velocity.x = 0;
+      plr.body.velocity.y = 0;
+    }
+  } else {
+    plr.body.allowGravity = true;
+    plr.climbing = false;
+  }
 };
 
 const randomizeStars = function() {
