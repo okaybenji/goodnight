@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="32" height="30" tilewidth="8" tileheight="8" infinite="0" nextobjectid="1">
  <tileset firstgid="1" name="monochrome-caves" tilewidth="8" tileheight="8" tilecount="64" columns="8">
-  <image source="../../Goodnight/goodnight/img/monochrome-caves.png" width="64" height="64"/>
+  <image source="../img/monochrome-caves.png" width="64" height="64"/>
   <tile id="0">
    <properties>
     <property name="climbable" type="bool" value="false"/>
