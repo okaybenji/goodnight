@@ -77,7 +77,7 @@ const randomizeStars = function() {
 const setUpPlayer = function() {
   const plr = this.physics.add.sprite(196, 188, 'plr');
   game.plr = plr;
-  this.physics.add.collider(game.map.collisionLayer, plr, () => {
+  this.physics.add.collider(game.map.worldLayer, plr, () => {
     plr.jumping = false;
   });
 
@@ -96,13 +96,11 @@ const preloadLevel = function(levelName) {
 const createLevel = function(levelName) {
   randomizeStars.call(this);
 
-  // TODO: Animate water (swap lines) and bubbles (move up and disappear, then replace).
   game.map = this.make.tilemap({key: levelName});
-  game.map.tiles = game.map.addTilesetImage('monochrome-caves');
-  game.map.createStaticLayer('Decorate', game.map.tiles, 0, 0);
-  game.map.collisionLayer = game.map.createDynamicLayer('Collide', game.map.tiles, 0, 0);
-  game.map.collisionLayer.setCollisionByExclusion([-1]);
-
+  game.map.tileset = game.map.addTilesetImage('monochrome-caves');
+  // TODO: Use dynamic layer and animation water surface and bubble tiles.
+  game.map.worldLayer = game.map.createStaticLayer('World', game.map.tileset, 0, 0);
+  game.map.worldLayer.setCollisionByProperty({collides: true});
   setUpPlayer.call(this);
 };
 
@@ -125,7 +123,7 @@ const scenes = {
     },
     create() {
       // Set up graphics.
-      this.add.image(160, 120, 'bg');
+      this.add.image(124, 120, 'bg');
 
       this.anims.create({
         key: 'twinkle',
@@ -134,8 +132,8 @@ const scenes = {
         repeat: -1
       });
 
-      const starPositions = [[45, 45], [48, 67], [40, 105], [135, 43], [115, 75],
-                             [128, 105], [136, 150], [135, 200], [300, 114]];
+      const starPositions = [[9, 45], [12, 67], [4, 105], [99, 43], [79, 75],
+                             [92, 105], [100, 150], [99, 200], [264, 114]];
       starPositions.forEach(pos => {
         this.add.sprite(pos[0], pos[1], 'star')
           .anims.play('twinkle', true);
@@ -164,7 +162,7 @@ levels.forEach(levelName => {
 
 const config = {
   type: Phaser.AUTO,
-  width: 320,
+  width: 256,
   height: 240,
   zoom: 2,
   pixelArt: true,
