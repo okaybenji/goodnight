@@ -160,10 +160,10 @@ const createLevel = function(levelName) {
 
   // TODO: Place znake and player spawn positions as objects in Tiled.
   setUpPlayer.call(this, 196, 188);
-  addZnake.call(this, 16, 96);
-  addZnake.call(this, 32, 144);
-  addZnake.call(this, 88, 144);
-  addZnake.call(this, 120, 144);
+  addZnake.call(this, 16, 128);
+  addZnake.call(this, 32, 192);
+  addZnake.call(this, 88, 160);
+  addZnake.call(this, 120, 188);
 };
 
 // Add a znake!
@@ -197,19 +197,21 @@ const addZnake = function(x, y) {
   this.physics.add.collider(game.map.worldLayer, znake, (znake, tile) => {
     const anim = znake.anims.currentAnim.key;
     // If the next tile the znake will encounter is not collidable, turn around.
-    const nextX = anim === 'left' ? tile.x - 1 : tile.x + 2;
+    let nextX;
+    if (anim === 'left') {
+      znake.x -= 0.1;
+      nextX = tile.x - 1;
+    } else if (anim === 'right') {
+      znake.x += 0.1;
+      nextX = tile.x + 2;
+    }
     const nextTile = tile.tilemapLayer.getTileAt(nextX, tile.y);
     if (!nextTile || !nextTile.properties.collides) {
-      if (anim === 'left') {
+      if (anim === 'left' && znake.x <= tile.getRight()) {
         znake.anims.play('turnRight');
       } else if (anim === 'right') {
         znake.anims.play('turnLeft');
       }
-    }
-    if (anim === 'left') {
-      znake.x -= 0.1;
-    } else if (anim === 'right') {
-      znake.x += 0.1;
     }
   });
   this.physics.add.collider(game.plr, znake, () => {
