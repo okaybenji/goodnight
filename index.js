@@ -83,14 +83,32 @@ const update = function() {
   }
 };
 
-const randomizeStars = function() {
+const addStar = function(delay) {
   const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+  const getRandomPosition = () => ({
+    x: randomIntBetween(0, game.config.width),
+    y: randomIntBetween(0, game.config.height)
+  });
 
-  [...Array(24)]
-    .map(x => [randomIntBetween(0, game.config.width), randomIntBetween(0, game.config.height)])
-    .forEach(pos => {
-      this.add.sprite(pos[0], pos[1], 'star')
-        .anims.play('twinkle', true);
+  const pos = getRandomPosition();
+  const star = this.add.sprite(pos.x, pos.y, 'star')
+
+  // Stagger star animations.
+  this.time.delayedCall(delay, () => {
+    star.anims.play('twinkle', true);
+  }, [], this);
+
+  star.on('animationrepeat', () => {
+    const newPos = getRandomPosition();
+    star.x = newPos.x;
+    star.y = newPos.y;
+  });
+};
+
+const randomizeStars = function() {
+  [...Array(4)]
+    .forEach((x, i) => {
+      addStar.call(this, i * 100);
     });
 };
 
