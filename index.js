@@ -158,12 +158,14 @@ const createLevel = function(levelName) {
   game.map.worldLayer = game.map.createDynamicLayer('World', game.map.tileset, 0, 0);
   game.map.worldLayer.setCollisionByProperty({collides: true});
 
-  // TODO: Place znake and player spawn positions as objects in Tiled.
-  setUpPlayer.call(this, 196, 188);
-  addZnake.call(this, 16, 128);
-  addZnake.call(this, 32, 192);
-  addZnake.call(this, 88, 160);
-  addZnake.call(this, 120, 188);
+  // Spawn player and enemies from positions placed in Tiled object layer.
+  const objectLayer = game.map.objects.find(objectLayer => objectLayer.name === 'Objects');
+  const spawnPoint = objectLayer.objects.find(obj => obj.type === 'player');
+  setUpPlayer.call(this, spawnPoint.x, spawnPoint.y);
+
+  const znakes = objectLayer.objects
+    .filter(obj => obj.type === 'znake')
+    .map(znake => addZnake.call(this, znake.x, znake.y));
 };
 
 // Add a znake!
