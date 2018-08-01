@@ -125,13 +125,29 @@ const createLevel = function(levelName) {
 
   // TODO: Place znake and player spawn positions as objects in Tiled.
   setUpPlayer.call(this, 196, 188);
+  addZnake.call(this, 16, 96);
+  addZnake.call(this, 32, 144);
   addZnake.call(this, 88, 144);
+  addZnake.call(this, 120, 144);
 };
 
 // Add a znake!
 const addZnake = function(x, y) {
   const znake = this.physics.add.sprite(x, y, 'znake')
     .anims.play('left', true);
+
+  znake.kill = () => {
+    znake.body.checkCollision.down = false;
+    this.tweens.add({
+        targets: znake,
+        rotation: Math.random() * Math.PI,
+        ease: 'Power1',
+        duration: 750,
+        onComplete() {
+          znake.destroy();
+        }
+    });
+  };
 
   znake.on('animationcomplete', () => {
     const anim = znake.anims.currentAnim.key;
@@ -161,7 +177,14 @@ const addZnake = function(x, y) {
       znake.x += 0.1;
     }
   });
-  this.physics.add.collider(game.plr, znake);
+  this.physics.add.collider(game.plr, znake, () => {
+    const plrJumpedOnZnake = game.plr.body.touching.down && znake.body.touching.up;
+    if (plrJumpedOnZnake) {
+      znake.kill();
+    } else {
+      console.log('it killed you');
+    }
+  });
 
   return znake;
 };
