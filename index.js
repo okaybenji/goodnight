@@ -1,11 +1,27 @@
 const keys = {};
 const levels = ['level1', 'todo'];
+const animateTileInterval = 500;
+let animateTileIndex = 0;
 
 const startNextLevel = function() {
   this.scene.start(levels.shift());
 };
 
 const update = function() {
+  if (this.time.now > this.lastTileSwap + animateTileInterval) {
+    if (animateTileIndex === 0) {
+      game.map.replaceByIndex(53, 59); // Bubbles.
+      game.map.replaceByIndex(45, 58); // Water surface.
+      animateTileIndex = 1;
+    } else {
+      animateTileIndex = 0;
+      game.map.replaceByIndex(59, 53);
+      game.map.replaceByIndex(58, 45);
+    }
+
+    this.lastTileSwap = this.time.now;
+  }
+
   const plr = game.plr;
 
   const maxJump = -200;
@@ -133,12 +149,13 @@ const preloadLevel = function(levelName) {
 };
 
 const createLevel = function(levelName) {
+  this.lastTileSwap = this.time.now;
+
   randomizeStars.call(this);
 
   game.map = this.make.tilemap({key: levelName});
   game.map.tileset = game.map.addTilesetImage('monochrome-caves');
-  // TODO: Use dynamic layer and animation water surface and bubble tiles.
-  game.map.worldLayer = game.map.createStaticLayer('World', game.map.tileset, 0, 0);
+  game.map.worldLayer = game.map.createDynamicLayer('World', game.map.tileset, 0, 0);
   game.map.worldLayer.setCollisionByProperty({collides: true});
 
   // TODO: Place znake and player spawn positions as objects in Tiled.
@@ -290,7 +307,6 @@ const scenes = {
       starPositions.forEach(pos => {
         this.add.sprite(pos[0], pos[1], 'star')
           .anims.play('twinkle', true);
-        // TODO: How to offset animation by random number of frames?
       });
 
       // Press any key to start.
