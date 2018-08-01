@@ -94,8 +94,9 @@ const randomizeStars = function() {
     });
 };
 
-const setUpPlayer = function() {
-  const plr = this.physics.add.sprite(196, 188, 'plr');
+// Add the player and set up controls.
+const setUpPlayer = function(x, y) {
+  const plr = this.physics.add.sprite(x, y, 'plr');
   game.plr = plr;
   this.physics.add.collider(game.map.worldLayer, plr, () => {
     plr.jumping = false;
@@ -121,11 +122,15 @@ const createLevel = function(levelName) {
   // TODO: Use dynamic layer and animation water surface and bubble tiles.
   game.map.worldLayer = game.map.createStaticLayer('World', game.map.tileset, 0, 0);
   game.map.worldLayer.setCollisionByProperty({collides: true});
-  setUpPlayer.call(this);
 
-  // Add a znake!
-  // TODO: Place znake positions as objects in Tiled.
-  const znake = this.physics.add.sprite(88, 144, 'znake')
+  // TODO: Place znake and player spawn positions as objects in Tiled.
+  setUpPlayer.call(this, 196, 188);
+  addZnake.call(this, 88, 144);
+};
+
+// Add a znake!
+const addZnake = function(x, y) {
+  const znake = this.physics.add.sprite(x, y, 'znake')
     .anims.play('left', true);
 
   znake.on('animationcomplete', () => {
@@ -157,6 +162,8 @@ const createLevel = function(levelName) {
     }
   });
   this.physics.add.collider(game.plr, znake);
+
+  return znake;
 };
 
 const scenes = {
