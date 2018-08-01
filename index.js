@@ -122,6 +122,41 @@ const createLevel = function(levelName) {
   game.map.worldLayer = game.map.createStaticLayer('World', game.map.tileset, 0, 0);
   game.map.worldLayer.setCollisionByProperty({collides: true});
   setUpPlayer.call(this);
+
+  // Add a znake!
+  // TODO: Place znake positions as objects in Tiled.
+  const znake = this.physics.add.sprite(88, 144, 'znake')
+    .anims.play('left', true);
+
+  znake.on('animationcomplete', () => {
+    const anim = znake.anims.currentAnim.key;
+    if (anim === 'turnLeft') {
+      znake.anims.play('left');
+    } else if (anim === 'turnRight') {
+      znake.anims.play('right');
+    }
+  }, this);
+
+  // Make znake patrol.
+  this.physics.add.collider(game.map.worldLayer, znake, (znake, tile) => {
+    const anim = znake.anims.currentAnim.key;
+    // If the next tile the znake will encounter is not collidable, turn around.
+    const nextX = anim === 'left' ? tile.x - 1 : tile.x + 2;
+    const nextTile = tile.tilemapLayer.getTileAt(nextX, tile.y);
+    if (!nextTile || !nextTile.properties.collides) {
+      if (anim === 'left') {
+        znake.anims.play('turnRight');
+      } else if (anim === 'right') {
+        znake.anims.play('turnLeft');
+      }
+    }
+    if (anim === 'left') {
+      znake.x -= 0.1;
+    } else if (anim === 'right') {
+      znake.x += 0.1;
+    }
+  });
+  this.physics.add.collider(game.plr, znake);
 };
 
 const scenes = {
@@ -134,6 +169,10 @@ const scenes = {
       this.load.spritesheet('star',
         'img/star.png',
         { frameWidth: 9, frameHeight: 9 }
+      );
+      this.load.spritesheet('znake',
+        'img/znake.gif',
+        { frameWidth: 20, frameHeight: 16 }
       );
 
       // Add levels as scenes.
@@ -150,6 +189,52 @@ const scenes = {
         frames: this.anims.generateFrameNumbers('star', { start: 0, end: 7 }),
         frameRate: 10,
         repeat: -1
+      });
+
+      this.anims.create({
+        key: 'left',
+        frames: [
+          { key: 'znake', frame: 4 },
+          { key: 'znake', frame: 5 },
+          { key: 'znake', frame: 6 },
+          { key: 'znake', frame: 5 },
+        ],
+        frameRate: 10,
+        repeat: -1
+      });
+
+      this.anims.create({
+        key: 'right',
+        frames: [
+          { key: 'znake', frame: 8 },
+          { key: 'znake', frame: 9 },
+          { key: 'znake', frame: 10 },
+          { key: 'znake', frame: 9 },
+        ],
+        frameRate: 10,
+        repeat: -1
+      });
+
+      this.anims.create({
+        key: 'turnRight',
+        frames: [
+          { key: 'znake', frame: 0 },
+          { key: 'znake', frame: 1 },
+          { key: 'znake', frame: 2 },
+          { key: 'znake', frame: 3 },
+        ],
+        frameRate: 10,
+      });
+
+      this.anims.create({
+        key: 'turnLeft',
+        frames: [
+          { key: 'znake', frame: 3 },
+          { key: 'znake', frame: 2 },
+          { key: 'znake', frame: 1 },
+          { key: 'znake', frame: 0 },
+        ],
+        frameRate: 10,
       });
 
       const starPositions = [[9, 45], [12, 67], [4, 105], [99, 43], [79, 75],
