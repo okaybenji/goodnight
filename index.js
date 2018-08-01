@@ -1,6 +1,7 @@
 const keys = {};
 const levels = ['level1', 'todo'];
 const animateTileInterval = 500;
+const idleAnimationInteral = 8000; // How long in MS to wait before playing an alternative idle animation.
 let animateTileIndex = 0;
 
 const startNextLevel = function() {
@@ -23,6 +24,17 @@ const update = function() {
   }
 
   const plr = game.plr;
+
+  // Play random alternative idle animation after some time passed w/o input.
+  if (this.time.now > this.lastPlayerInput + idleAnimationInteral) {
+    const anim = Math.random() > 0.5 ? 'idleAltA' : 'idleAltB';
+    plr.anims.play(anim);
+    this.lastPlayerInput = this.time.now; // Reset timer.
+  }
+
+  if (this.keys.up.isDown || this.keys.left.isDown || this.keys.right.isDown) {
+    this.lastPlayerInput = this.time.now;
+  }
 
   const maxJump = -200;
   if (this.keys.up.isDown) {
@@ -130,7 +142,8 @@ const randomizeStars = function() {
 
 // Add the player and set up controls.
 const setUpPlayer = function(x, y) {
-  const plr = this.physics.add.sprite(x, y, 'plr');
+  const plr = this.physics.add.sprite(x, y, 'plr')
+    .anims.play('idle', true);
   game.plr = plr;
   this.physics.add.collider(game.map.worldLayer, plr, () => {
     plr.jumping = false;
@@ -141,6 +154,13 @@ const setUpPlayer = function(x, y) {
     left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT),
     right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT),
   };
+
+  plr.on('animationcomplete', () => {
+    const anim = plr.anims.currentAnim.key;
+    if (anim === 'idleAltA' || anim === 'idleAltB') {
+      plr.anims.play('idle');
+    }
+  }, this);
 };
 
 const preloadLevel = function(levelName) {
@@ -150,6 +170,7 @@ const preloadLevel = function(levelName) {
 
 const createLevel = function(levelName) {
   this.lastTileSwap = this.time.now;
+  this.lastPlayerInput = this.time.now;
 
   randomizeStars.call(this);
 
@@ -233,12 +254,18 @@ const scenes = {
     preload() {
       // Art
       this.load.image('bg', 'img/menu.png');
-      this.load.image('plr', 'img/plr.png');
+
+      this.load.spritesheet('plr',
+        'img/dreamer.gif',
+        { frameWidth: 20, frameHeight: 24}
+      );
+
       // TODO: Make stars of various sizes.
       this.load.spritesheet('star',
         'img/star.png',
         { frameWidth: 9, frameHeight: 9 }
       );
+
       this.load.spritesheet('znake',
         'img/znake.gif',
         { frameWidth: 20, frameHeight: 16 }
@@ -252,6 +279,30 @@ const scenes = {
     create() {
       // Set up graphics.
       this.add.image(124, 120, 'bg');
+
+      this.anims.create({
+        key: 'idle',
+        frames: [
+          { key: 'plr', frame: 8},
+          { key: 'plr', frame: 8},
+          { key: 'plr', frame: 10},
+          { key: 'plr', frame: 8},
+        ],
+        frameRate: 8,
+        repeat: -1
+      });
+
+      this.anims.create({
+        key: 'idleAltA',
+        frames: this.anims.generateFrameNumbers('plr', { start: 16, end: 23 }),
+        frameRate: 8,
+      });
+
+      this.anims.create({
+        key: 'idleAltB',
+        frames: this.anims.generateFrameNumbers('plr', { start: 24, end: 31 }),
+        frameRate: 8,
+      });
 
       this.anims.create({
         key: 'twinkle',
