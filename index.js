@@ -47,12 +47,29 @@ const update = function() {
     plr.body.velocity.y = maxJump;
   }
 
-  if (this.keys.left.isDown) {
-    plr.body.velocity.x -= 20;
+  const anim = plr.anims.currentAnim.key;
+  const oneArrowKeyIsDownButNotBoth = (this.keys.left.isDown || this.keys.right.isDown)
+    && !(this.keys.left.isDown && this.keys.right.isDown);
+
+  if (oneArrowKeyIsDownButNotBoth) {
+    if (anim !== 'run') {
+      plr.anims.play('run');
+    }
+
+    if (this.keys.left.isDown) {
+      plr.flipX = false;
+      plr.body.velocity.x -= 20;
+    }
+    if (this.keys.right.isDown) {
+      plr.flipX = true;
+      plr.body.velocity.x += 20;
+    }
+  } else {
+    if (anim !== 'idle') {
+      plr.anims.play('idle');
+    }
   }
-  if (this.keys.right.isDown) {
-    plr.body.velocity.x += 20;
-  }
+
   const maxSpeed = 100;
   if (Math.abs(plr.body.velocity.x) > maxSpeed) {
     plr.body.velocity.x = Math.sign(plr.body.velocity.x) * maxSpeed;
@@ -302,6 +319,18 @@ const scenes = {
         key: 'idleAltB',
         frames: this.anims.generateFrameNumbers('plr', { start: 24, end: 31 }),
         frameRate: 8,
+      });
+
+      this.anims.create({
+        key: 'run',
+        frames: [
+          { key: 'plr', frame: 0},
+          { key: 'plr', frame: 1},
+          { key: 'plr', frame: 2},
+          { key: 'plr', frame: 1},
+        ],
+        frameRate: 10,
+        repeat: -1
       });
 
       this.anims.create({
