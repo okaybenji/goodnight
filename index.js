@@ -65,7 +65,7 @@ const update = function() {
       plr.body.velocity.x += 20;
     }
   } else {
-    if (anim !== 'idle' && !plr.jumping && !plr.hurt) {
+    if (anim !== 'idle' && anim !== 'idleAltA' && anim !== 'idleAltB' && !plr.jumping && !plr.hurt) {
       plr.anims.play('idle');
     }
   }
