@@ -52,7 +52,7 @@ const update = function() {
     && !(this.keys.left.isDown && this.keys.right.isDown);
 
   if (oneArrowKeyIsDownButNotBoth) {
-    if (anim !== 'run' && !plr.jumping) {
+    if (anim !== 'run' && !plr.jumping && !plr.hurt) {
       plr.anims.play('run');
     }
 
@@ -65,13 +65,22 @@ const update = function() {
       plr.body.velocity.x += 20;
     }
   } else {
-    if (anim !== 'idle' && !plr.jumping) {
+    if (anim !== 'idle' && !plr.jumping && !plr.hurt) {
       plr.anims.play('idle');
     }
   }
 
-  if (plr.jumping && anim !== 'jump') {
+  if (plr.jumping && anim !== 'jump' && !plr.hurt) {
     plr.anims.play('jump');
+  }
+
+  if (plr.hurt && anim !== 'hurt') {
+    plr.anims.play('hurt');
+    if (plr.hurt === 'left') {
+      plr.body.velocity.x = 100;
+    } else {
+      plr.body.velocity.x = -100;
+    }
   }
 
   const maxSpeed = 100;
@@ -181,6 +190,9 @@ const setUpPlayer = function(x, y) {
     if (anim === 'idleAltA' || anim === 'idleAltB') {
       plr.anims.play('idle');
     }
+    if (anim === 'hurt') {
+      plr.hurt = false;
+    }
   }, this);
 };
 
@@ -262,8 +274,12 @@ const addZnake = function(x, y) {
     const plrJumpedOnZnake = game.plr.body.touching.down && znake.body.touching.up;
     if (plrJumpedOnZnake) {
       znake.kill();
-    } else {
-      console.log('it killed you');
+    } else if (game.plr.anims.currentAnim.key !== 'hurt') {
+      if (game.plr.x > znake.x) {
+        game.plr.hurt = 'left';
+      } else {
+        game.plr.hurt = 'right';
+      }
     }
   });
 
@@ -342,6 +358,15 @@ const scenes = {
         frames: [
           { key: 'plr', frame: 33},
           { key: 'plr', frame: 32},
+        ],
+        frameRate: 10,
+      });
+
+      this.anims.create({
+        key: 'hurt',
+        frames: [
+          { key: 'plr', frame: 34},
+          { key: 'plr', frame: 36},
         ],
         frameRate: 10,
       });
