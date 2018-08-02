@@ -273,6 +273,7 @@ const addZnake = function(x, y) {
   this.physics.add.collider(game.plr, znake, () => {
     const plrJumpedOnZnake = game.plr.body.touching.down && znake.body.touching.up;
     if (plrJumpedOnZnake) {
+      game.plr.body.velocity.y -= 100;
       znake.kill();
     } else if (game.plr.anims.currentAnim.key !== 'hurt') {
       if (game.plr.x > znake.x) {
