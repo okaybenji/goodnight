@@ -92,7 +92,7 @@ const update = function() {
   if (plr.body.x > game.config.width) {
     plr.x = 0;
   }
-  if (plr.body.x < -8) {
+  if (plr.body.x < -16) {
     plr.x = game.config.width;
   }
   // Prevent playing plummeting into the abyss if slowly wrapping Y.
