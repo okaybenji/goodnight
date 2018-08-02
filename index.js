@@ -52,7 +52,7 @@ const update = function() {
     && !(this.keys.left.isDown && this.keys.right.isDown);
 
   if (oneArrowKeyIsDownButNotBoth) {
-    if (anim !== 'run') {
+    if (anim !== 'run' && !plr.jumping) {
       plr.anims.play('run');
     }
 
@@ -65,9 +65,13 @@ const update = function() {
       plr.body.velocity.x += 20;
     }
   } else {
-    if (anim !== 'idle') {
+    if (anim !== 'idle' && !plr.jumping) {
       plr.anims.play('idle');
     }
+  }
+
+  if (plr.jumping && anim !== 'jump') {
+    plr.anims.play('jump');
   }
 
   const maxSpeed = 100;
@@ -331,6 +335,15 @@ const scenes = {
         ],
         frameRate: 10,
         repeat: -1
+      });
+
+      this.anims.create({
+        key: 'jump',
+        frames: [
+          { key: 'plr', frame: 33},
+          { key: 'plr', frame: 32},
+        ],
+        frameRate: 10,
       });
 
       this.anims.create({
