@@ -375,6 +375,9 @@ const scenes = {
         { frameWidth: 20, frameHeight: 16 }
       );
 
+      // Add the opening animation as a scene.
+      this.scene.add('opening', scenes.opening);
+
       // Add levels as scenes.
       levels.forEach(levelName => {
         this.scene.add(levelName, scenes[levelName]);
@@ -584,11 +587,27 @@ const scenes = {
       });
 
       // Press any key to start.
-      this.input.keyboard.on('keydown', event => {
-        startNextLevel.call(this);
+      this.input.keyboard.on('keydown', () => {
+        this.scene.start('opening');
       });
     },
   },
+  opening: {
+    preload() {
+      this.load.image('frame', 'img/frame.png');
+      this.load.spritesheet('font', 'img/font.png', {frameWidth: 8, frameHeight: 8});
+    },
+    create() {
+      this.add.image(128, 96, 'frame');
+      this.add.sprite(128, 128, 'font');
+
+      // Press any key to start.
+      this.input.keyboard.on('keydown', () => {
+        console.log('starting scene');
+         startNextLevel.call(this);
+      });
+    }
+  }
 };
 
 levels.forEach(levelName => {
