@@ -180,6 +180,8 @@ const setUpPlayer = function(x, y) {
     plr.jumping = false;
   });
 
+  plr.body.setSize(12, 22, 2, 1);
+
   this.keys = {
     up: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP),
     left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT),
@@ -228,6 +230,7 @@ const addZnake = function(x, y) {
   const znake = this.physics.add.sprite(x, y, 'znake')
     .anims.play('left', true);
 
+  znake.body.setSize(14, 14, 1, 0.5);
   znake.kill = () => {
     znake.body.checkCollision.down = false;
     this.tweens.add({
