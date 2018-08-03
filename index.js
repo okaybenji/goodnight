@@ -175,6 +175,7 @@ const setUpPlayer = function(x, y) {
   const plr = this.physics.add.sprite(x, y, 'plr')
     .anims.play('idle', true);
   game.plr = plr;
+
   this.physics.add.collider(game.map.worldLayer, plr, () => {
     plr.jumping = false;
   });
@@ -291,7 +292,8 @@ const scenes = {
   menu: {
     preload() {
       // Art
-      this.load.image('bg', 'img/menu.png');
+      this.load.image('bg', 'img/title-bg.gif');
+      this.load.image('push-start', 'img/title-push-start.gif');
 
       this.load.spritesheet('plr',
         'img/dreamer.gif',
@@ -317,6 +319,18 @@ const scenes = {
     create() {
       // Set up graphics.
       this.add.image(124, 120, 'bg');
+      const startText = this.add.image(124, 204, 'push-start');
+
+      // Flash the menu text.
+      this.time.addEvent({ delay: 500, callback: function() {
+        startText.setTintFill(0x000000);
+      }, loop: true });
+
+      this.time.addEvent({ delay: 100, callback: function() {
+        this.time.addEvent({ delay: 500, callback: function() {
+          startText.clearTint();
+        }, loop: true });
+      }, callbackScope: this });
 
       this.anims.create({
         key: 'idle',
@@ -423,13 +437,6 @@ const scenes = {
           { key: 'znake', frame: 0 },
         ],
         frameRate: 10,
-      });
-
-      const starPositions = [[9, 45], [12, 67], [4, 105], [99, 43], [79, 75],
-                             [92, 105], [100, 150], [99, 200], [264, 114]];
-      starPositions.forEach(pos => {
-        this.add.sprite(pos[0], pos[1], 'star')
-          .anims.play('twinkle', true);
       });
 
       // Press any key to start.
