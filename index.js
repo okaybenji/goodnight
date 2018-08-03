@@ -232,6 +232,7 @@ const setUpPlayer = function(x, y) {
   }, loop: true });
 
   this.time.addEvent({ delay: 600, callback() {
+    plr.clearTint();
     flashTimer.remove();
   }});
 };
