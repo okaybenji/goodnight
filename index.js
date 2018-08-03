@@ -291,12 +291,34 @@ const addZnake = function(x, y) {
   return znake;
 };
 
+// Create eye w/ idle animations for the title screen.
+const addEye = function(x, y) {
+  const eye = this.add.sprite(x, y, 'eye');
+
+  this.time.addEvent({ delay: 8000, callback: () => {
+    eye.anims.play('lookRight');
+
+    this.time.addEvent({ delay: 1000, callback: () => {
+      eye.anims.play('lookLeft');
+    }});
+
+    this.time.addEvent({ delay: 4000, callback() {
+      eye.anims.play('blink');
+    }});
+  }, loop: true });
+};
+
 const scenes = {
   menu: {
     preload() {
       // Art
       this.load.image('bg', 'img/title-bg.gif');
       this.load.image('push-start', 'img/title-push-start.gif');
+
+      this.load.spritesheet('eye',
+        'img/title-eye-idle.gif',
+        { frameWidth: 13, frameHeight: 13 }
+     );
 
       this.load.spritesheet('plr',
         'img/dreamer.gif',
@@ -325,15 +347,50 @@ const scenes = {
       const startText = this.add.image(124, 204, 'push-start');
 
       // Flash the menu text.
-      this.time.addEvent({ delay: 500, callback: function() {
+      this.time.addEvent({ delay: 500, callback() {
         startText.setTintFill(0x000000);
       }, loop: true });
 
-      this.time.addEvent({ delay: 100, callback: function() {
-        this.time.addEvent({ delay: 500, callback: function() {
+      this.time.addEvent({ delay: 100, callback: () => {
+        this.time.addEvent({ delay: 500, callback() {
           startText.clearTint();
         }, loop: true });
-      }, callbackScope: this });
+      }});
+
+      this.anims.create({
+        key: 'lookRight',
+        frames: this.anims.generateFrameNumbers('eye', { start: 0, end: 3 }),
+        frameRate: 10,
+      });
+
+      this.anims.create({
+        key: 'lookLeft',
+        frames: [
+          { key: 'eye', frame: 3},
+          { key: 'eye', frame: 2},
+          { key: 'eye', frame: 1},
+          { key: 'eye', frame: 0},
+        ],
+        frameRate: 10,
+      });
+
+      this.anims.create({
+        key: 'blink',
+        frames: [
+          { key: 'eye', frame: 6},
+          { key: 'eye', frame: 7},
+          { key: 'eye', frame: 8},
+          { key: 'eye', frame: 9},
+          { key: 'eye', frame: 8},
+          { key: 'eye', frame: 7},
+          { key: 'eye', frame: 6},
+          { key: 'eye', frame: 0},
+        ],
+        frameRate: 10,
+      });
+
+      addEye.call(this, 63, 61);
+      addEye.call(this, 88, 61);
 
       this.anims.create({
         key: 'idle',
