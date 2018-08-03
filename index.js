@@ -29,6 +29,10 @@ const update = function() {
 
   const plr = game.plr;
 
+  if (plr.isDead) {
+    return;
+  }
+
   // Play random alternative idle animation after some time passed w/o input.
   if (this.time.now > this.lastPlayerInput + idleAnimationInteral) {
     const anim = Math.random() > 0.5 ? 'idleAltA' : 'idleAltB';
@@ -82,6 +86,7 @@ const update = function() {
   if (plr.hurt && anim !== 'hurt') {
     plr.anims.play('hurt');
     game.sfx.play('hurt');
+    plr.kill();
     if (plr.hurt === 'left') {
       plr.body.velocity.x = 100;
     } else {
@@ -204,6 +209,31 @@ const setUpPlayer = function(x, y) {
       plr.hurt = false;
     }
   }, this);
+
+  plr.kill = () => {
+    plr.isDead = true;
+    const scene = this.scene;
+    plr.body.checkCollision.down = false;
+    this.tweens.add({
+        targets: plr,
+        rotation: Math.random() * Math.PI,
+        ease: 'Power1',
+        duration: 750,
+        onComplete: function() {
+          scene.restart();
+        }
+    });
+    game.sfx.play('die');
+  };
+
+  // Make player flash a few times on scene start.
+  const flashTimer = this.time.addEvent({ delay: 100, callback() {
+    plr.isTinted ? plr.clearTint() : plr.setTintFill(0xFFFFFF);
+  }, loop: true });
+
+  this.time.addEvent({ delay: 600, callback() {
+    flashTimer.remove();
+  }});
 };
 
 const preloadLevel = function(levelName) {
