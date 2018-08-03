@@ -357,16 +357,16 @@ const scenes = {
        * This ensures the file system is only hit once per sound, as needed.
        * It will also prevent sounds from 'stacking' -- the same sound played repeatedly will interrupt itself each time.
        */
-      const sfx = function(audioCtx) {
+      const sfx = (audioCtx) => {
         const soundbank = {};
 
         return {
-          play: function(fileName) {
+          play(fileName) {
             if (soundbank[fileName]) {
               soundbank[fileName].play(soundbank[fileName].buffer);
             } else {
               soundbank[fileName] = new ChiptuneJsPlayer(new ChiptuneJsConfig(0, audioCtx));
-              soundbank[fileName].load('./sfx/' + fileName + '.xm', function(buffer) {
+              soundbank[fileName].load('./sfx/' + fileName + '.xm', (buffer) => {
                 soundbank[fileName].buffer = buffer;
                 soundbank[fileName].play(buffer);
               });
@@ -375,15 +375,15 @@ const scenes = {
         };
       };
 
-      const bgm = function(audioCtx) {
+      const bgm = (audioCtx) => {
         const player = new ChiptuneJsPlayer(new ChiptuneJsConfig(-1, audioCtx));
 
         return {
-          play: function(fileName) {
+          play(fileName) {
             if (fileName === 'None') {
               player.stop.call(player);
             } else {
-              player.load('./music/' + fileName + '.xm', function(buffer) {
+              player.load('./music/' + fileName + '.xm', (buffer) => {
                 player.play(buffer);
               });
             }
