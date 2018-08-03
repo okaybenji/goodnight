@@ -41,6 +41,7 @@ const update = function() {
     if (!plr.jumping) {
       plr.jumping = true;
       plr.body.velocity.y += maxJump;
+      game.sfx.play('jump');
     }
   }
   if (plr.body.velocity.y < maxJump) {
@@ -76,6 +77,7 @@ const update = function() {
 
   if (plr.hurt && anim !== 'hurt') {
     plr.anims.play('hurt');
+    game.sfx.play('hurt');
     if (plr.hurt === 'left') {
       plr.body.velocity.x = 100;
     } else {
@@ -103,6 +105,7 @@ const update = function() {
   }
   // Next Level!
   if (plr.body.y < 0) {
+    game.sfx.play('victory');
     startNextLevel.call(this);
   }
 
@@ -242,6 +245,7 @@ const addZnake = function(x, y) {
           znake.destroy();
         }
     });
+    game.sfx.play('bounce');
   };
 
   znake.on('animationcomplete', () => {
@@ -342,6 +346,34 @@ const scenes = {
       });
     },
     create() {
+      // Set up SFX.
+      /**
+       * Each time a unique sound filename is passed in, a new instance of chiptune.js will be created with that sound as a buffer.
+       * If the play method is called on sound file passed in previously, its respective instance will play the existing buffer.
+       * This ensures the file system is only hit once per sound, as needed.
+       * It will also prevent sounds from 'stacking' -- the same sound played repeatedly will interrupt itself each time.
+       */
+      const sfx = function(audioCtx) {
+        const soundbank = {};
+
+        return {
+          play: function(fileName) {
+            if (soundbank[fileName]) {
+              soundbank[fileName].play(soundbank[fileName].buffer);
+            } else {
+              soundbank[fileName] = new ChiptuneJsPlayer(new ChiptuneJsConfig(0, audioCtx));
+              soundbank[fileName].load('./sfx/' + fileName + '.xm', function(buffer) {
+                soundbank[fileName].buffer = buffer;
+                soundbank[fileName].play(buffer);
+              });
+            }
+          }
+        };
+      };
+
+      const audioCtx = new AudioContext();
+      game.sfx = sfx(audioCtx);
+
       // Set up graphics.
       this.add.image(124, 120, 'bg');
       const startText = this.add.image(124, 204, 'push-start');
