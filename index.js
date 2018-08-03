@@ -3,6 +3,7 @@ const levels = ['level1', 'todo'];
 const animateTileInterval = 500;
 const idleAnimationInteral = 8000; // How long in MS to wait before playing an alternative idle animation.
 let animateTileIndex = 0;
+let f;
 
 const startNextLevel = function() {
   const level = levels.shift();
@@ -595,16 +596,55 @@ const scenes = {
   opening: {
     preload() {
       this.load.image('frame', 'img/frame.png');
-      this.load.spritesheet('font', 'img/font.png', {frameWidth: 8, frameHeight: 8});
+      this.load.spritesheet('font', 'img/font.png', {frameWidth: 8, frameHeight: 7});
     },
     create() {
       this.add.image(128, 96, 'frame');
-      this.add.sprite(128, 128, 'font');
+
+      const setLetter = (sprite, letter) => {
+        const map = {
+          a: 10, b: 11, c: 12, d: 13, e: 14, f: 15, g: 16, h: 17,
+          i: 18, j: 19, k: 20, l: 21, m: 22, n: 23, o: 24, p: 25,
+          q: 26, r: 27, s: 28, t: 29, u: 30, v: 31, w: 32, x: 33,
+          y: 34, z: 35, '.': 36, '\'': 37, '!': 38, '-': 39, '“': 40, '”': 41,
+          ',': 42, ':': 43, '#': 44, ' ': 45, '•': 46, '?': 47
+        };
+
+        sprite.setFrame(map[letter]);
+      };
 
       // Press any key to start.
       this.input.keyboard.on('keydown', () => {
         console.log('starting scene');
          startNextLevel.call(this);
+      });
+
+      // Create the text.
+      const paragraphs = [
+        'a young dreamer chills on their sofa, awaiting the start of their favorite cartoon.'
+      ];
+
+      const lineLength = 24;
+      let col = 0;
+      let row = 0;
+      paragraphs.forEach(paragraph => {
+        paragraph.split(' ').forEach((word, i) => {
+          if (col + word.length > lineLength) {
+            row += 1;
+            col = 0;
+          }
+          word.split('').forEach((char, j) => {
+            const sprite = this.add.sprite(10 + col * 8, 10 + row * 8, 'font')
+            setLetter(sprite, char);
+            col++;
+
+            if (j + 1 === word.length) {
+              const sprite = this.add.sprite(10 + col * 8, 10 + row * 8, 'font')
+              setLetter(sprite, ' ');
+              col++;
+            }
+          });
+        });
       });
     }
   }
