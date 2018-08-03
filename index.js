@@ -5,7 +5,11 @@ const idleAnimationInteral = 8000; // How long in MS to wait before playing an a
 let animateTileIndex = 0;
 
 const startNextLevel = function() {
-  this.scene.start(levels.shift());
+  const level = levels.shift();
+  if (level === 'level1') {
+    game.music.play('forest');
+  }
+  this.scene.start(level);
 };
 
 const update = function() {
@@ -371,8 +375,25 @@ const scenes = {
         };
       };
 
+      const bgm = function(audioCtx) {
+        const player = new ChiptuneJsPlayer(new ChiptuneJsConfig(-1, audioCtx));
+
+        return {
+          play: function(fileName) {
+            if (fileName === 'None') {
+              player.stop.call(player);
+            } else {
+              player.load('./music/' + fileName + '.xm', function(buffer) {
+                player.play(buffer);
+              });
+            }
+          }
+        };
+      };
+
       const audioCtx = new AudioContext();
       game.sfx = sfx(audioCtx);
+      game.music = bgm(audioCtx);
 
       // Set up graphics.
       this.add.image(124, 120, 'bg');
