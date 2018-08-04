@@ -375,6 +375,9 @@ const scenes = {
         { frameWidth: 20, frameHeight: 16 }
       );
 
+      // Add the opening animation as a scene.
+      this.scene.add('opening', scenes.opening);
+
       // Add levels as scenes.
       levels.forEach(levelName => {
         this.scene.add(levelName, scenes[levelName]);
@@ -584,11 +587,120 @@ const scenes = {
       });
 
       // Press any key to start.
-      this.input.keyboard.on('keydown', event => {
-        startNextLevel.call(this);
+      this.input.keyboard.on('keydown', () => {
+        this.scene.start('opening');
       });
     },
   },
+  opening: {
+    preload() {
+      this.load.image('frame', 'img/frame.png');
+      this.load.spritesheet('font', 'img/font.png', {frameWidth: 8, frameHeight: 7});
+    },
+    create() {
+      this.add.image(128, 96, 'frame');
+
+      const intro = [
+        `a young dreamer chills on their sofa, awaiting the start of their favorite cartoon.`,
+        `every week the show's hero has a wonderful adventure in a strange new place,`,
+        `using her wits to overcome some impossible obstacle.`,
+        `but the time slot before is filled with stuffy old men saying things our dreamer can't understand,`,
+        `and soon they drift off into a strange world of their very own.`,
+        `“but i mustn't sleep” our dreamer realizes!$
+        “my very favorite tv show will be starting any minute now!”`,
+        `“i must escape this world somehow...$$$$$$
+        ...and soon!!”`,
+      ];
+      const text = []; // For  clearing text.
+      const timers = []; // For clearing text timers.
+
+      const setLetter = (sprite, letter) => {
+        const map = {
+          a: 10, b: 11, c: 12, d: 13, e: 14, f: 15, g: 16, h: 17,
+          i: 18, j: 19, k: 20, l: 21, m: 22, n: 23, o: 24, p: 25,
+          q: 26, r: 27, s: 28, t: 29, u: 30, v: 31, w: 32, x: 33,
+          y: 34, z: 35, '.': 36, '\'': 37, '!': 38, '-': 39, '“': 40, '”': 41,
+          ',': 42, ':': 43, '#': 44, ' ': 45, '•': 46, '?': 47
+        };
+
+        sprite.setFrame(map[letter] || 45);
+      };
+
+      const print = paragraph => {
+        // Clear prior text/timers.
+        text.forEach(sprite => {
+          sprite.destroy();
+        });
+        timers.forEach(timer => {
+          timer.remove();
+        });
+
+        const lineLength = 24;
+        const top = 168;
+        const left = 36;
+        const timeBetweenChars = 50;
+        let col = 0;
+        let row = 0;
+        let charCount = 0;
+
+        paragraph.split(' ').forEach((word, i) => {
+
+          word.split('').forEach((char, j) => {
+            charCount++;
+
+            const printChar = () => {
+              if (char === '\n') {
+                row++;
+                return;
+              }
+
+              // At start of each word, check if we should wrap.
+              if (j === 0 && col + word.length > lineLength) {
+                row += 1;
+                col = 0;
+              }
+
+              const sprite = this.add.sprite(left + col * 8, top + row * 8, 'font')
+              setLetter(sprite, char);
+              col++;
+              text.push(sprite)
+
+              if (j + 1 === word.length) {
+                const space = this.add.sprite(left + col * 8, top + row * 8, 'font')
+                setLetter(space, ' ');
+                col++;
+                text.push(space);
+              }
+            };
+
+            const timer = this.time.addEvent({
+              delay: timeBetweenChars * charCount,
+              callback: printChar
+            });
+
+            timers.push(timer);
+          });
+        });
+      };
+
+      const printLine = () => {
+        const paragraph = intro.shift();
+
+        if (paragraph) {
+          print(paragraph);
+        } else {
+          // Showed all the text, let's start the game!
+          startNextLevel.call(this);
+        }
+      };
+
+      // Press any key to start.
+      this.input.keyboard.on('keydown', printLine);
+
+      // Print first line.
+      printLine();
+    }
+  }
 };
 
 levels.forEach(levelName => {
