@@ -612,6 +612,7 @@ const scenes = {
         ...and soon!!”`,
       ];
       const text = []; // For  clearing text.
+      const timers = []; // For clearing text timers.
 
       const setLetter = (sprite, letter) => {
         const map = {
@@ -626,39 +627,58 @@ const scenes = {
       };
 
       const print = paragraph => {
-        // Clear prior text.
+        // Clear prior text/timers.
         text.forEach(sprite => {
           sprite.destroy();
+        });
+        timers.forEach(timer => {
+          timer.remove();
         });
 
         const lineLength = 24;
         const top = 168;
-        const left = 38;
+        const left = 36;
+        const timeBetweenChars = 50;
         let col = 0;
         let row = 0;
+        let charCount = 0;
 
         paragraph.split(' ').forEach((word, i) => {
-          if (col + word.length > lineLength) {
-            row += 1;
-            col = 0;
-          }
+
           word.split('').forEach((char, j) => {
-            if (char === '\n') {
-              row++;
-              return;
-            }
+            charCount++;
 
-            const sprite = this.add.sprite(left + col * 8, top + row * 8, 'font')
-            setLetter(sprite, char);
-            col++;
-            text.push(sprite)
+            const printChar = () => {
+              if (char === '\n') {
+                row++;
+                return;
+              }
 
-            if (j + 1 === word.length) {
-              const space = this.add.sprite(left + col * 8, top + row * 8, 'font')
-              setLetter(space, ' ');
+              // At start of each word, check if we should wrap.
+              if (j === 0 && col + word.length > lineLength) {
+                row += 1;
+                col = 0;
+              }
+
+              const sprite = this.add.sprite(left + col * 8, top + row * 8, 'font')
+              setLetter(sprite, char);
               col++;
-              text.push(space);
-            }
+              text.push(sprite)
+
+              if (j + 1 === word.length) {
+                const space = this.add.sprite(left + col * 8, top + row * 8, 'font')
+                setLetter(space, ' ');
+                col++;
+                text.push(space);
+              }
+            };
+
+            const timer = this.time.addEvent({
+              delay: timeBetweenChars * charCount,
+              callback: printChar
+            });
+
+            timers.push(timer);
           });
         });
       };
