@@ -670,6 +670,10 @@ const scenes = {
                 setLetter(space, ' ');
                 col++;
                 text.push(space);
+
+                if (i + 1 === paragraph.split(' ').length) {
+                  timers = [];
+                }
               }
             };
 
