@@ -430,19 +430,35 @@ const scenes = {
       game.music = bgm(audioCtx);
 
       // Set up graphics.
-      this.add.image(124, 120, 'bg');
-      const startText = this.add.image(124, 204, 'push-start');
+      const bg = this.add.image(124, 120, 'bg');
 
-      // Flash the menu text.
-      this.time.addEvent({ delay: 500, callback() {
-        startText.setTintFill(0x000000);
-      }, loop: true });
+      bg.alpha = 0;
 
-      this.time.addEvent({ delay: 100, callback: () => {
+      // Fade in the menu screen.
+      this.time.addEvent({delay: 500, callback() {
+        bg.alpha += 0.33;
+      }, repeat: 2});
+
+      this.time.addEvent({delay: 1500, callback: () => {
+        bg.alpha = 1;
+
+        const startText = this.add.image(124, 204, 'push-start');
+
+        // Flash the menu text.
         this.time.addEvent({ delay: 500, callback() {
-          startText.clearTint();
+          startText.setTintFill(0x000000);
         }, loop: true });
+
+        this.time.addEvent({ delay: 100, callback: () => {
+          this.time.addEvent({ delay: 500, callback() {
+            startText.clearTint();
+          }, loop: true });
+        }});
+
+        addEye.call(this, 63, 61);
+        addEye.call(this, 88, 61);
       }});
+
 
       this.anims.create({
         key: 'lookRight',
@@ -475,9 +491,6 @@ const scenes = {
         ],
         frameRate: 10,
       });
-
-      addEye.call(this, 63, 61);
-      addEye.call(this, 88, 61);
 
       this.anims.create({
         key: 'idle',
