@@ -1,8 +1,4 @@
-const keys = {};
 const levels = ['level1', 'todo'];
-const animateTileInterval = 500;
-const idleAnimationInteral = 8000; // How long in MS to wait before playing an alternative idle animation.
-let animateTileIndex = 0;
 
 const startNextLevel = function() {
   const level = levels.shift();
@@ -13,6 +9,10 @@ const startNextLevel = function() {
 };
 
 const update = function() {
+  const idleAnimationInteral = 8000; // How long in MS to wait before playing an alternative idle animation.
+  const animateTileInterval = 500;
+  let animateTileIndex = 0;
+
   if (this.time.now > this.lastTileSwap + animateTileInterval) {
     if (animateTileIndex === 0) {
       game.map.replaceByIndex(53, 59); // Bubbles.
@@ -263,7 +263,6 @@ const createLevel = function(levelName) {
     .map(znake => addZnake.call(this, znake.x, znake.y));
 };
 
-// Add a znake!
 const addZnake = function(x, y) {
   const znake = this.physics.add.sprite(x, y, 'znake')
     .anims.play('left', true);
@@ -328,23 +327,6 @@ const addZnake = function(x, y) {
   });
 
   return znake;
-};
-
-// Create eye w/ idle animations for the title screen.
-const addEye = function(x, y) {
-  const eye = this.add.sprite(x, y, 'eye');
-
-  this.time.addEvent({ delay: 8000, callback: () => {
-    eye.anims.play('lookRight');
-
-    this.time.addEvent({ delay: 1000, callback: () => {
-      eye.anims.play('lookLeft');
-    }});
-
-    this.time.addEvent({ delay: 4000, callback() {
-      eye.anims.play('blink');
-    }});
-  }, loop: true });
 };
 
 const scenes = {
@@ -455,10 +437,26 @@ const scenes = {
           }, loop: true });
         }});
 
+        // Create eye w/ idle animations.
+        const addEye = function(x, y) {
+          const eye = this.add.sprite(x, y, 'eye');
+
+          this.time.addEvent({ delay: 8000, callback: () => {
+            eye.anims.play('lookRight');
+
+            this.time.addEvent({ delay: 1000, callback: () => {
+              eye.anims.play('lookLeft');
+            }});
+
+            this.time.addEvent({ delay: 4000, callback() {
+              eye.anims.play('blink');
+            }});
+          }, loop: true });
+        };
+
         addEye.call(this, 63, 61);
         addEye.call(this, 88, 61);
       }});
-
 
       this.anims.create({
         key: 'lookRight',
