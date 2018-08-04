@@ -612,7 +612,7 @@ const scenes = {
         ...and soon!!”`,
       ];
       const text = []; // For  clearing text.
-      const timers = []; // For clearing text timers.
+      let timers = []; // For clearing or early invoking of text timers.
 
       const setLetter = (sprite, letter) => {
         const map = {
@@ -631,9 +631,10 @@ const scenes = {
         text.forEach(sprite => {
           sprite.destroy();
         });
-        timers.forEach(timer => {
+        timers.forEach((timer, i) => {
           timer.remove();
         });
+        timers = [];
 
         const lineLength = 24;
         const top = 168;
@@ -644,7 +645,6 @@ const scenes = {
         let charCount = 0;
 
         paragraph.split(' ').forEach((word, i) => {
-
           word.split('').forEach((char, j) => {
             charCount++;
 
@@ -683,7 +683,22 @@ const scenes = {
         });
       };
 
-      const printLine = () => {
+      const nextLine = () => {
+        // If the text is still animating in, just display it all immediately.
+        if (timers.length) {
+          timers.forEach(timer => {
+            if (timer.callback) {
+              timer.callback();
+            }
+
+            timer.remove();
+          });
+
+          timers = [];
+
+          return;
+        }
+
         const paragraph = intro.shift();
 
         if (paragraph) {
@@ -695,10 +710,10 @@ const scenes = {
       };
 
       // Press any key to start.
-      this.input.keyboard.on('keydown', printLine);
+      this.input.keyboard.on('keydown', nextLine);
 
       // Print first line.
-      printLine();
+      nextLine();
     }
   }
 };
