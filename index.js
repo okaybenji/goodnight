@@ -403,6 +403,9 @@ const scenes = {
                 player.play(buffer);
               });
             }
+          },
+          stop() {
+            player.stop.call(player);
           }
         };
       };
@@ -638,6 +641,8 @@ const scenes = {
       };
 
       const print = paragraph => {
+        game.music.play('text');
+
         // Clear prior text/timers.
         text.forEach(sprite => {
           sprite.destroy();
@@ -684,6 +689,7 @@ const scenes = {
 
                 if (i + 1 === paragraph.split(' ').length) {
                   timers = [];
+                  game.music.stop();
                 }
               }
             };
