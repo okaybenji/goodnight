@@ -3,7 +3,6 @@ const levels = ['level1', 'todo'];
 const animateTileInterval = 500;
 const idleAnimationInteral = 8000; // How long in MS to wait before playing an alternative idle animation.
 let animateTileIndex = 0;
-let f;
 
 const startNextLevel = function() {
   const level = levels.shift();
@@ -601,6 +600,19 @@ const scenes = {
     create() {
       this.add.image(128, 96, 'frame');
 
+      const intro = [
+        `a young dreamer chills on their sofa, awaiting the start of their favorite cartoon.`,
+        `every week the show's hero has a wonderful adventure in a strange new place,`,
+        `using her wits to overcome some impossible obstacle.`,
+        `but the time slot before is filled with stuffy old men saying things our dreamer can't understand,`,
+        `and soon they drift off into a strange world of their very own.`,
+        `“but i mustn't sleep” our dreamer realizes!$
+        “my very favorite tv show will be starting any minute now!”`,
+        `“i must escape this world somehow...$$$$$$
+        ...and soon!!”`,
+      ];
+      const text = []; // For  clearing text.
+
       const setLetter = (sprite, letter) => {
         const map = {
           a: 10, b: 11, c: 12, d: 13, e: 14, f: 15, g: 16, h: 17,
@@ -610,42 +622,63 @@ const scenes = {
           ',': 42, ':': 43, '#': 44, ' ': 45, '•': 46, '?': 47
         };
 
-        sprite.setFrame(map[letter]);
+        sprite.setFrame(map[letter] || 45);
       };
 
-      // Press any key to start.
-      this.input.keyboard.on('keydown', () => {
-        console.log('starting scene');
-         startNextLevel.call(this);
-      });
+      const print = paragraph => {
+        // Clear prior text.
+        text.forEach(sprite => {
+          sprite.destroy();
+        });
 
-      // Create the text.
-      const paragraphs = [
-        'a young dreamer chills on their sofa, awaiting the start of their favorite cartoon.'
-      ];
+        const lineLength = 24;
+        const top = 168;
+        const left = 38;
+        let col = 0;
+        let row = 0;
 
-      const lineLength = 24;
-      let col = 0;
-      let row = 0;
-      paragraphs.forEach(paragraph => {
         paragraph.split(' ').forEach((word, i) => {
           if (col + word.length > lineLength) {
             row += 1;
             col = 0;
           }
           word.split('').forEach((char, j) => {
-            const sprite = this.add.sprite(10 + col * 8, 10 + row * 8, 'font')
+            if (char === '\n') {
+              row++;
+              return;
+            }
+
+            const sprite = this.add.sprite(left + col * 8, top + row * 8, 'font')
             setLetter(sprite, char);
             col++;
+            text.push(sprite)
 
             if (j + 1 === word.length) {
-              const sprite = this.add.sprite(10 + col * 8, 10 + row * 8, 'font')
-              setLetter(sprite, ' ');
+              const space = this.add.sprite(left + col * 8, top + row * 8, 'font')
+              setLetter(space, ' ');
               col++;
+              text.push(space);
             }
           });
         });
-      });
+      };
+
+      const printLine = () => {
+        const paragraph = intro.shift();
+
+        if (paragraph) {
+          print(paragraph);
+        } else {
+          // Showed all the text, let's start the game!
+          startNextLevel.call(this);
+        }
+      };
+
+      // Press any key to start.
+      this.input.keyboard.on('keydown', printLine);
+
+      // Print first line.
+      printLine();
     }
   }
 };
