@@ -169,10 +169,10 @@ const startNextLevel = function() {
   this.scene.start(level);
 };
 
+let animateTileIndex = 0;
 const update = function() {
   const idleAnimationInteral = 8000; // How long in MS to wait before playing an alternative idle animation.
   const animateTileInterval = 500;
-  let animateTileIndex = 0;
 
   if (this.time.now > this.lastTileSwap + animateTileInterval) {
     if (animateTileIndex === 0) {
