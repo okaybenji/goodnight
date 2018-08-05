@@ -609,7 +609,7 @@ const scenes = {
   opening: {
     preload() {
       this.load.image('frame', 'img/frame.png');
-      this.load.spritesheet('font', 'img/font.png', {frameWidth: 8, frameHeight: 7});
+      this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
     },
     create() {
       this.add.image(128, 96, 'frame');
@@ -630,14 +630,14 @@ const scenes = {
 
       const setLetter = (sprite, letter) => {
         const map = {
-          a: 10, b: 11, c: 12, d: 13, e: 14, f: 15, g: 16, h: 17,
-          i: 18, j: 19, k: 20, l: 21, m: 22, n: 23, o: 24, p: 25,
-          q: 26, r: 27, s: 28, t: 29, u: 30, v: 31, w: 32, x: 33,
-          y: 34, z: 35, '.': 36, '\'': 37, '!': 38, '-': 39, '“': 40, '”': 41,
-          ',': 42, ':': 43, '#': 44, ' ': 45, '•': 46, '?': 47
+          ' ': 0, '!': 1, '“': 2, '”': 3, '\'': 7, ',': 12, '.': 14,
+          a: 33, b: 34, c: 35, d: 36, e: 37, f: 38, g: 39, h: 40,
+          i: 41, j: 42, k: 43, l: 44, m: 45, n: 46, o: 47, p: 48,
+          q: 49, r: 50, s: 51, t: 52, u: 53, v: 54, w: 55, x: 56,
+          y: 57, z: 58
         };
 
-        sprite.setFrame(map[letter] || 45);
+        sprite.setFrame(map[letter] || 0);
       };
 
       const print = paragraph => {
@@ -676,13 +676,13 @@ const scenes = {
                 col = 0;
               }
 
-              const sprite = this.add.sprite(left + col * 8, top + row * 8, 'font')
+              const sprite = this.add.sprite(left + col * 8, top + row * 8, 'typeface')
               setLetter(sprite, char);
               col++;
               text.push(sprite)
 
               if (j + 1 === word.length) {
-                const space = this.add.sprite(left + col * 8, top + row * 8, 'font')
+                const space = this.add.sprite(left + col * 8, top + row * 8, 'typeface')
                 setLetter(space, ' ');
                 col++;
                 text.push(space);
