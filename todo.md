@@ -6,5 +6,4 @@
 * Add end credits.
 
 # KNOWN BUGS
-* When forcing blank characters during text animation in intro, text SFX still plays.
 * Float animation is way too fast.

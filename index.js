@@ -620,9 +620,9 @@ const scenes = {
         `using her wits to overcome some impossible obstacle.`,
         `but the time slot before is filled with stuffy old men saying things our dreamer can't understand,`,
         `and soon they drift off into a strange world of their very own.`,
-        `“but i mustn't sleep” our dreamer realizes!$
+        `“but i mustn't sleep” our dreamer realizes!
         “my very favorite tv show will be starting any minute now!”`,
-        `“i must escape this world somehow...$$$$$$
+        `“i must escape this world somehow...
         ...and soon!!”`,
       ];
       const text = []; // For  clearing text.
@@ -666,7 +666,8 @@ const scenes = {
 
             const printChar = () => {
               if (char === '\n') {
-                row++;
+                col = 0;
+                row += 2;
                 return;
               }
 
