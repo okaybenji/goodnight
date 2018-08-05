@@ -1,30 +1,51 @@
 const levels = ['level1'];
 
-const intro = [
-  `a young dreamer chills on their sofa, awaiting the start of their favorite cartoon.`,
-  `every week the show's hero has a wonderful adventure in a strange new place,`,
-  `using her wits to overcome some impossible obstacle.`,
-  `but the time slot before is filled with stuffy old men saying things our dreamer can't understand,`,
-  `and soon they drift off into a strange world of their very own.`,
-  `“but i mustn't sleep” our dreamer realizes!
-  “my very favorite tv show will be starting any minute now!”`,
-  `“i must escape this world somehow...
-  ...and soon!!”`,
-];
+const setLetter = (sprite, letter) => {
+  const map = {
+    ' ': 0, '!': 1, '“': 2, '”': 3, '\'': 7, ',': 12, '.': 14,
+    a: 33, b: 34, c: 35, d: 36, e: 37, f: 38, g: 39, h: 40,
+    i: 41, j: 42, k: 43, l: 44, m: 45, n: 46, o: 47, p: 48,
+    q: 49, r: 50, s: 51, t: 52, u: 53, v: 54, w: 55, x: 56,
+    y: 57, z: 58
+  };
+
+  sprite.setFrame(map[letter] || 0);
+};
+
+const intro = {
+  paragraphs: [
+    `a young dreamer chills on their sofa, awaiting the start of their favorite cartoon.`,
+    `every week the show's hero has a wonderful adventure in a strange new place,`,
+    `using her wits to overcome some impossible obstacle.`,
+    `but the time slot before is filled with stuffy old men saying things our dreamer can't understand,`,
+    `and soon they drift off into a strange world of their very own.`,
+    `“but i mustn't sleep” our dreamer realizes!
+    “my very favorite tv show will be starting any minute now!”`,
+    `“i must escape this world somehow...
+    ...and soon!!”`,
+  ],
+  onComplete() {
+    startNextLevel.call(this);
+  }
+};
 
 // !--- SPOILER ALERT ---!
-const outro = [
-  `our dreamer drowsily opens their eyes and tries to focus on the television screen.`,
-  `the ending credits of the cartoon slowly come into focus.`,
-  `“i've missed it,” our dreamer sighs.
-    but they can't help showing a small smile.`,
-  `they had an adventure all their own, filled with wonder enough to match those they had merely watched on tv.`,
-  `anyhow, it's getting late now...
-  might as well go back to sleep.`,
-  `goodnight`,
-];
+const outro = {
+  paragraphs: [
+    `our dreamer drowsily opens their eyes and tries to focus on the television screen.`,
+    `the ending credits of the cartoon slowly come into focus.`,
+    `“i've missed it,” our dreamer sighs.
+      but they can't help showing a small smile.`,
+    `they had an adventure all their own, filled with wonder enough to match those they had merely watched on tv.`,
+    `anyhow, it's getting late now...
+    might as well go back to sleep.`
+  ],
+  onComplete() {
+    this.scene.start('end');
+  }
+};
 
-const cutsceneFactory = paragraphs => ({
+const cutsceneFactory = config => ({
   preload() {
     this.load.image('frame', 'img/frame.png');
     this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
@@ -34,18 +55,6 @@ const cutsceneFactory = paragraphs => ({
 
     const text = []; // For  clearing text.
     let timers = []; // For clearing or early invoking of text timers.
-
-    const setLetter = (sprite, letter) => {
-      const map = {
-        ' ': 0, '!': 1, '“': 2, '”': 3, '\'': 7, ',': 12, '.': 14,
-        a: 33, b: 34, c: 35, d: 36, e: 37, f: 38, g: 39, h: 40,
-        i: 41, j: 42, k: 43, l: 44, m: 45, n: 46, o: 47, p: 48,
-        q: 49, r: 50, s: 51, t: 52, u: 53, v: 54, w: 55, x: 56,
-        y: 57, z: 58
-      };
-
-      sprite.setFrame(map[letter] || 0);
-    };
 
     const print = paragraph => {
       game.music.play('text');
@@ -128,13 +137,13 @@ const cutsceneFactory = paragraphs => ({
         return;
       }
 
-      const paragraph = paragraphs.shift();
+      const paragraph = config.paragraphs.shift();
 
       if (paragraph) {
         print(paragraph);
       } else {
-        // Showed all the text, let's start the game!
-        startNextLevel.call(this);
+        // Showed all the text.
+        config.onComplete.call(this);
       }
     };
 
@@ -512,6 +521,7 @@ const scenes = {
       // Add the cutscenes as scenes..
       this.scene.add('intro', scenes.intro);
       this.scene.add('outro', scenes.outro);
+      this.scene.add('end', scenes.end);
 
       // Add levels as scenes.
       levels.forEach(levelName => {
@@ -760,7 +770,23 @@ const scenes = {
     },
   },
   intro: cutsceneFactory(intro),
-  outro: cutsceneFactory(outro)
+  outro: cutsceneFactory(outro),
+  end: {
+    preload() {
+      this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
+    },
+    create() {
+      randomizeStars.call(this);
+
+      const left = 94;
+      const top = 120;
+
+      'goodnight'.split('').forEach((char, i) => {
+        const sprite = this.add.sprite(left + i * 8, top, 'typeface')
+        setLetter(sprite, char);
+      });
+    }
+  }
 };
 
 levels.forEach(levelName => {
