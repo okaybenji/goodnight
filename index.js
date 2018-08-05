@@ -708,7 +708,7 @@ const scenes = {
         // If the text is still animating in, just display it all immediately.
         if (timers.length) {
           timers.forEach(timer => {
-            if (timer.callback) {
+            if (!timer.hasDispatched) {
               timer.callback();
             }
 
