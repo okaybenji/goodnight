@@ -1,7 +1,159 @@
-const levels = ['level1', 'todo'];
+const levels = ['level1'];
+
+const intro = [
+  `a young dreamer chills on their sofa, awaiting the start of their favorite cartoon.`,
+  `every week the show's hero has a wonderful adventure in a strange new place,`,
+  `using her wits to overcome some impossible obstacle.`,
+  `but the time slot before is filled with stuffy old men saying things our dreamer can't understand,`,
+  `and soon they drift off into a strange world of their very own.`,
+  `“but i mustn't sleep” our dreamer realizes!
+  “my very favorite tv show will be starting any minute now!”`,
+  `“i must escape this world somehow...
+  ...and soon!!”`,
+];
+
+// !--- SPOILER ALERT ---!
+const outro = [
+  `our dreamer drowsily opens their eyes and tries to focus on the television screen.`,
+  `the ending credits of the cartoon slowly come into focus.`,
+  `“i've missed it,” our dreamer sighs.
+    but they can't help showing a small smile.`,
+  `they had an adventure all their own, filled with wonder enough to match those they had merely watched on tv.`,
+  `anyhow, it's getting late now...
+  might as well go back to sleep.`,
+  `goodnight`,
+];
+
+const cutsceneFactory = paragraphs => ({
+  preload() {
+    this.load.image('frame', 'img/frame.png');
+    this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
+  },
+  create() {
+    this.add.image(128, 96, 'frame');
+
+    const text = []; // For  clearing text.
+    let timers = []; // For clearing or early invoking of text timers.
+
+    const setLetter = (sprite, letter) => {
+      const map = {
+        ' ': 0, '!': 1, '“': 2, '”': 3, '\'': 7, ',': 12, '.': 14,
+        a: 33, b: 34, c: 35, d: 36, e: 37, f: 38, g: 39, h: 40,
+        i: 41, j: 42, k: 43, l: 44, m: 45, n: 46, o: 47, p: 48,
+        q: 49, r: 50, s: 51, t: 52, u: 53, v: 54, w: 55, x: 56,
+        y: 57, z: 58
+      };
+
+      sprite.setFrame(map[letter] || 0);
+    };
+
+    const print = paragraph => {
+      game.music.play('text');
+
+      // Clear prior text/timers.
+      text.forEach(sprite => {
+        sprite.destroy();
+      });
+      timers.forEach((timer, i) => {
+        timer.remove();
+      });
+      timers = [];
+
+      const lineLength = 24;
+      const top = 168;
+      const left = 36;
+      const timeBetweenChars = 50;
+      let col = 0;
+      let row = 0;
+      let charCount = 0;
+
+      paragraph.split(' ').forEach((word, i) => {
+        word.split('').forEach((char, j) => {
+          charCount++;
+
+          const printChar = () => {
+            if (char === '\n') {
+              col = 0;
+              row += 2;
+              return;
+            }
+
+            // At start of each word, check if we should wrap.
+            if (j === 0 && col + word.length > lineLength) {
+              row += 1;
+              col = 0;
+            }
+
+            const sprite = this.add.sprite(left + col * 8, top + row * 8, 'typeface')
+            setLetter(sprite, char);
+            col++;
+            text.push(sprite)
+
+            if (j + 1 === word.length) {
+              const space = this.add.sprite(left + col * 8, top + row * 8, 'typeface')
+              setLetter(space, ' ');
+              col++;
+              text.push(space);
+
+              if (i + 1 === paragraph.split(' ').length) {
+                timers = [];
+                game.music.stop();
+              }
+            }
+          };
+
+          const timer = this.time.addEvent({
+            delay: timeBetweenChars * charCount,
+            callback: printChar
+          });
+
+          timers.push(timer);
+        });
+      });
+    };
+
+    const nextLine = () => {
+      // If the text is still animating in, just display it all immediately.
+      if (timers.length) {
+        timers.forEach(timer => {
+          if (!timer.hasDispatched) {
+            timer.callback();
+          }
+
+          timer.remove();
+        });
+
+        timers = [];
+
+        return;
+      }
+
+      const paragraph = paragraphs.shift();
+
+      if (paragraph) {
+        print(paragraph);
+      } else {
+        // Showed all the text, let's start the game!
+        startNextLevel.call(this);
+      }
+    };
+
+    // Press any key to start.
+    this.input.keyboard.on('keydown', nextLine);
+
+    // Print first line.
+    nextLine();
+  }
+});
 
 const startNextLevel = function() {
   const level = levels.shift();
+
+  if (!level) {
+    this.scene.start('outro');
+    return;
+  }
+
   if (level === 'level1') {
     game.music.play('forest');
   }
@@ -357,8 +509,9 @@ const scenes = {
         { frameWidth: 20, frameHeight: 16 }
       );
 
-      // Add the opening animation as a scene.
-      this.scene.add('opening', scenes.opening);
+      // Add the cutscenes as scenes..
+      this.scene.add('intro', scenes.intro);
+      this.scene.add('outro', scenes.outro);
 
       // Add levels as scenes.
       levels.forEach(levelName => {
@@ -602,142 +755,12 @@ const scenes = {
 
       // Press any key to start.
       this.input.keyboard.on('keydown', () => {
-        this.scene.start('opening');
+        this.scene.start('intro');
       });
     },
   },
-  opening: {
-    preload() {
-      this.load.image('frame', 'img/frame.png');
-      this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
-    },
-    create() {
-      this.add.image(128, 96, 'frame');
-
-      const intro = [
-        `a young dreamer chills on their sofa, awaiting the start of their favorite cartoon.`,
-        `every week the show's hero has a wonderful adventure in a strange new place,`,
-        `using her wits to overcome some impossible obstacle.`,
-        `but the time slot before is filled with stuffy old men saying things our dreamer can't understand,`,
-        `and soon they drift off into a strange world of their very own.`,
-        `“but i mustn't sleep” our dreamer realizes!
-        “my very favorite tv show will be starting any minute now!”`,
-        `“i must escape this world somehow...
-        ...and soon!!”`,
-      ];
-      const text = []; // For  clearing text.
-      let timers = []; // For clearing or early invoking of text timers.
-
-      const setLetter = (sprite, letter) => {
-        const map = {
-          ' ': 0, '!': 1, '“': 2, '”': 3, '\'': 7, ',': 12, '.': 14,
-          a: 33, b: 34, c: 35, d: 36, e: 37, f: 38, g: 39, h: 40,
-          i: 41, j: 42, k: 43, l: 44, m: 45, n: 46, o: 47, p: 48,
-          q: 49, r: 50, s: 51, t: 52, u: 53, v: 54, w: 55, x: 56,
-          y: 57, z: 58
-        };
-
-        sprite.setFrame(map[letter] || 0);
-      };
-
-      const print = paragraph => {
-        game.music.play('text');
-
-        // Clear prior text/timers.
-        text.forEach(sprite => {
-          sprite.destroy();
-        });
-        timers.forEach((timer, i) => {
-          timer.remove();
-        });
-        timers = [];
-
-        const lineLength = 24;
-        const top = 168;
-        const left = 36;
-        const timeBetweenChars = 50;
-        let col = 0;
-        let row = 0;
-        let charCount = 0;
-
-        paragraph.split(' ').forEach((word, i) => {
-          word.split('').forEach((char, j) => {
-            charCount++;
-
-            const printChar = () => {
-              if (char === '\n') {
-                col = 0;
-                row += 2;
-                return;
-              }
-
-              // At start of each word, check if we should wrap.
-              if (j === 0 && col + word.length > lineLength) {
-                row += 1;
-                col = 0;
-              }
-
-              const sprite = this.add.sprite(left + col * 8, top + row * 8, 'typeface')
-              setLetter(sprite, char);
-              col++;
-              text.push(sprite)
-
-              if (j + 1 === word.length) {
-                const space = this.add.sprite(left + col * 8, top + row * 8, 'typeface')
-                setLetter(space, ' ');
-                col++;
-                text.push(space);
-
-                if (i + 1 === paragraph.split(' ').length) {
-                  timers = [];
-                  game.music.stop();
-                }
-              }
-            };
-
-            const timer = this.time.addEvent({
-              delay: timeBetweenChars * charCount,
-              callback: printChar
-            });
-
-            timers.push(timer);
-          });
-        });
-      };
-
-      const nextLine = () => {
-        // If the text is still animating in, just display it all immediately.
-        if (timers.length) {
-          timers.forEach(timer => {
-            if (!timer.hasDispatched) {
-              timer.callback();
-            }
-
-            timer.remove();
-          });
-
-          timers = [];
-
-          return;
-        }
-
-        const paragraph = intro.shift();
-
-        if (paragraph) {
-          print(paragraph);
-        } else {
-          // Showed all the text, let's start the game!
-          startNextLevel.call(this);
-        }
-      };
-
-      // Press any key to start.
-      this.input.keyboard.on('keydown', nextLine);
-
-      // Print first line.
-      nextLine();
-    }
-  }
+  intro: cutsceneFactory(intro),
+  outro: cutsceneFactory(outro)
 };
 
 levels.forEach(levelName => {
