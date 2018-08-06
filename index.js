@@ -1,4 +1,4 @@
-const levels = ['level1'];
+const levels = ['level1', 'level2', 'level3'];
 
 const setLetter = (sprite, letter) => {
   const map = {
@@ -269,8 +269,8 @@ const update = function() {
   }
   // Prevent playing plummeting into the abyss if slowly wrapping Y.
   // TODO: Figure out a better way to do this.
-  if (plr.body.y > 198) {
-    plr.y = 198;
+  if (plr.body.y > 212) {
+    plr.y = 212;
     plr.body.velocity.y = 0;
   }
   // Next Level!
@@ -767,6 +767,9 @@ const scenes = {
       this.input.keyboard.on('keydown', () => {
         this.scene.start('intro');
       });
+
+      // TESTING: Skip to first level.
+      // startNextLevel.call(this);
     },
   },
   intro: cutsceneFactory(intro),

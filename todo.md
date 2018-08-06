@@ -4,6 +4,9 @@
 * Replace placeholder music & SFX.
 * Design all the levels!
 * Add end credits.
+* Add gamepad controls.
+* Create Electron app.
+* Improve the climbing/bounce animation.
 
 # KNOWN BUGS
 * Float animation is way too fast.
