@@ -272,6 +272,7 @@ const update = function() {
   // Next Level!
   if (plr.body.y < 0) {
     game.sfx.play('victory');
+    flowers += plr.flowers;
     startNextLevel.call(this);
   }
 
@@ -355,7 +356,7 @@ const setUpPlayer = function(x, y) {
       tileBehindPlayer.visible = false;
       tileBehindPlayer.properties.flower = false;
       game.sfx.play('bounce');
-      flowers++;
+      plr.flowers++;
     }
   });
 
@@ -392,6 +393,8 @@ const setUpPlayer = function(x, y) {
     });
     game.sfx.play('die');
   };
+
+  plr.flowers = 0;
 
   // Make player flash a few times on scene start.
   const flashTimer = this.time.addEvent({ delay: 100, callback() {
