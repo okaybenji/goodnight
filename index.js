@@ -1,4 +1,5 @@
 const levels = ['level1', 'level2', 'level3'];
+let flowers = 0; // Track how many flowers the player picks.
 
 const setLetter = (sprite, letter) => {
   const map = {
@@ -342,10 +343,20 @@ const randomizeStars = function() {
 const setUpPlayer = function(x, y) {
   const plr = this.physics.add.sprite(x, y, 'plr')
     .anims.play('idle', true);
+
   game.plr = plr;
 
-  this.physics.add.collider(game.map.worldLayer, plr, () => {
+  this.physics.add.collider(game.map.worldLayer, plr, (plr, tile) => {
     plr.jumping = false;
+
+    // Collect flowers.
+    const tileBehindPlayer = game.map.getTileAt(tile.x, tile.y - 1);
+    if (tileBehindPlayer && tileBehindPlayer.properties.flower) {
+      tileBehindPlayer.visible = false;
+      tileBehindPlayer.properties.flower = false;
+      game.sfx.play('bounce');
+      flowers++;
+    }
   });
 
   plr.body.setSize(12, 22, 2, 1);
@@ -505,7 +516,6 @@ const scenes = {
         { frameWidth: 20, frameHeight: 24}
       );
 
-      // TODO: Make stars of various sizes.
       this.load.spritesheet('star',
         'img/star.png',
         { frameWidth: 9, frameHeight: 9 }
