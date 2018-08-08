@@ -792,7 +792,7 @@ const scenes = {
     create() {
       randomizeStars.call(this);
 
-      const left = 94;
+      const left = 97;
       const top = 120;
 
       'goodnight'.split('').forEach((char, i) => {
