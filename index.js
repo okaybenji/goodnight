@@ -1,6 +1,19 @@
 const levels = ['level1', 'level2', 'level3'];
 let flowers = 0; // Track how many flowers the player picks.
 
+const throttle = (func, limit) => {
+  let inThrottle;
+  return function() {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+};
+
 const setLetter = (sprite, letter) => {
   const map = {
     ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, ',': 12, '.': 14, ':': 26,
@@ -206,16 +219,13 @@ const update = function() {
     this.lastPlayerInput = this.time.now;
   }
 
-  const maxJump = -200;
   if (this.keys.up.isDown) {
     if (!plr.jumping) {
-      plr.jumping = true;
-      plr.body.velocity.y += maxJump;
-      game.sfx.play('jump');
+      plr.jump();
     }
   }
-  if (plr.body.velocity.y < maxJump) {
-    plr.body.velocity.y = maxJump;
+  if (plr.body.velocity.y < plr.maxJump) {
+    plr.body.velocity.y = plr.maxJump;
   }
 
   const anim = plr.anims.currentAnim.key;
@@ -241,8 +251,17 @@ const update = function() {
     }
   }
 
-  if (plr.jumping && anim !== 'jump' && !plr.hurt) {
-    plr.anims.play('jump');
+  if (plr.jumping && !plr.hurt) {
+    // Play platform climb-jump animation if player is bounding off the side of a platform.
+    if (plr.body.blocked.left || plr.body.blocked.right) {
+      if (anim !== 'climbJump') {
+        plr.anims.play('climbJump');
+      }
+    } else {
+      if (anim !== 'jump') {
+        plr.anims.play('jump');
+      }
+    }
   }
 
   if (plr.hurt && anim !== 'hurt') {
@@ -393,6 +412,13 @@ const setUpPlayer = function(x, y) {
     });
     game.sfx.play('die');
   };
+
+  plr.maxJump = -200;
+  plr.jump = throttle(() => {
+    plr.jumping = true;
+    plr.body.velocity.y += plr.maxJump;
+    game.sfx.play('jump');
+  }, 30);
 
   plr.flowers = 0;
 
@@ -704,6 +730,15 @@ const scenes = {
       });
 
       this.anims.create({
+        key: 'climbJump',
+        frames: [
+          { key: 'plr', frame: 33},
+          { key: 'plr', frame: 34},
+        ],
+        frameRate: 20,
+      });
+
+       this.anims.create({
         key: 'jump',
         frames: [
           { key: 'plr', frame: 33},
