@@ -42,7 +42,7 @@ const outro = {
     might as well go back to sleep.`
   ],
   onComplete() {
-    this.scene.start('end');
+    this.scene.start('credits');
   }
 };
 
@@ -533,7 +533,6 @@ const scenes = {
       this.scene.add('intro', scenes.intro);
       this.scene.add('outro', scenes.outro);
       this.scene.add('credits', scenes.credits);
-      this.scene.add('end', scenes.end);
 
       // Add levels as scenes.
       levels.forEach(levelName => {
@@ -791,8 +790,10 @@ const scenes = {
       this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
     },
     create() {
+      randomizeStars.call(this);
+
       const top = 112;
-      const timeBetweenCredits = 8000;
+      const timeBetweenCredits = 6000;
       let sprites = []; // To clear credits.
 
       const credits = [
@@ -800,6 +801,7 @@ const scenes = {
         ['design, code, sound & story:', , 'benji kay', , '@okaybenji'],
         ['monochrome caves tileset:', , 'adam saltsman', , '@adamatomic'],
         ['inspired by the art', 'of sam boucher', , '@monsieureureka'],
+        [, 'goodnight']
       ];
 
       credits.forEach((credit, i) => {
@@ -810,34 +812,30 @@ const scenes = {
             sprites.forEach(sprite => sprite.destroy());
             sprites = [];
 
-            // Draw the new one.
+            // Fade in the new one.
             credit.forEach((line, row) => {
               const chars = line.split('');
               const left = (256 - ((chars.length - 1) * 8)) / 2; // Center text.
               chars.forEach((char, col) => {
                 const sprite = this.add.sprite(left + col * 8, top + row * 8, 'typeface');
+                sprite.alpha = 0;
                 sprites.push(sprite);
                 setLetter(sprite, char);
+
+                this.time.addEvent({delay: 250, callback() {
+                  sprite.alpha += 0.5;
+                }, repeat: 2});
+
+                if (i + 1 !== credits.length) {
+                  // Fade out.
+                  this.time.addEvent({delay: timeBetweenCredits - 250, callback() {
+                    sprite.alpha -= 0.5;
+                  }});
+                }
               });
             });
           }
         });
-      });
-    }
-  },
-  end: {
-    preload() {
-      this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
-    },
-    create() {
-      randomizeStars.call(this);
-
-      const left = 97;
-      const top = 120;
-
-      'goodnight'.split('').forEach((char, i) => {
-        const sprite = this.add.sprite(left + i * 8, top, 'typeface')
-        setLetter(sprite, char);
       });
     }
   }
