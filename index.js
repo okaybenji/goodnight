@@ -589,7 +589,7 @@ const scenes = {
       game.music = bgm(audioCtx);
 
       // Set up graphics.
-      const bg = this.add.image(124, 120, 'bg');
+      const bg = this.add.image(128, 120, 'bg');
 
       bg.alpha = 0;
 
@@ -601,7 +601,7 @@ const scenes = {
       this.time.addEvent({delay: 1500, callback: () => {
         bg.alpha = 1;
 
-        const startText = this.add.image(124, 204, 'push-start');
+        const startText = this.add.image(128, 204, 'push-start');
 
         // Flash the menu text.
         this.time.addEvent({ delay: 500, callback() {
@@ -631,8 +631,8 @@ const scenes = {
           }, loop: true });
         };
 
-        addEye.call(this, 63, 61);
-        addEye.call(this, 88, 61);
+        addEye.call(this, 67, 61);
+        addEye.call(this, 92, 61);
       }});
 
       this.anims.create({
@@ -780,7 +780,7 @@ const scenes = {
       });
 
       // TESTING: Skip to first level.
-       startNextLevel.call(this);
+      // startNextLevel.call(this);
     },
   },
   intro: cutsceneFactory(intro),
