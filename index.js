@@ -170,6 +170,10 @@ const cutsceneFactory = config => ({
 });
 
 const startNextLevel = function() {
+  this.scene.pause();
+
+  // TODO: Create second scene above this one and pan to it a la Mega Man 2.
+
   const level = levels.shift();
 
   if (!level) {
