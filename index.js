@@ -3,7 +3,7 @@ let flowers = 0; // Track how many flowers the player picks.
 
 const setLetter = (sprite, letter) => {
   const map = {
-    ' ': 0, '!': 1, '“': 2, '”': 3, '\'': 7, ',': 12, '.': 14,
+    ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, ',': 12, '.': 14, ':': 26,
     a: 33, b: 34, c: 35, d: 36, e: 37, f: 38, g: 39, h: 40,
     i: 41, j: 42, k: 43, l: 44, m: 45, n: 46, o: 47, p: 48,
     q: 49, r: 50, s: 51, t: 52, u: 53, v: 54, w: 55, x: 56,
@@ -532,6 +532,7 @@ const scenes = {
       // Add the cutscenes as scenes..
       this.scene.add('intro', scenes.intro);
       this.scene.add('outro', scenes.outro);
+      this.scene.add('credits', scenes.credits);
       this.scene.add('end', scenes.end);
 
       // Add levels as scenes.
@@ -785,6 +786,45 @@ const scenes = {
   },
   intro: cutsceneFactory(intro),
   outro: cutsceneFactory(outro),
+  credits: {
+    preload() {
+      this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
+    },
+    create() {
+      const top = 112;
+      const timeBetweenCredits = 8000;
+      let sprites = []; // To clear credits.
+
+      const credits = [
+        ['art & animation:', , 'adam bing', , '@exciteless'],
+        ['design, code, sound & story:', , 'benji kay', , '@okaybenji'],
+        ['monochrome caves tileset:', , 'adam saltsman', , '@adamatomic'],
+        ['inspired by the art', 'of sam boucher', , '@monsieureureka'],
+      ];
+
+      credits.forEach((credit, i) => {
+        const timer = this.time.addEvent({
+          delay: timeBetweenCredits * i,
+          callback: () => {
+            // Clear prior credit.
+            sprites.forEach(sprite => sprite.destroy());
+            sprites = [];
+
+            // Draw the new one.
+            credit.forEach((line, row) => {
+              const chars = line.split('');
+              const left = (256 - ((chars.length - 1) * 8)) / 2; // Center text.
+              chars.forEach((char, col) => {
+                const sprite = this.add.sprite(left + col * 8, top + row * 8, 'typeface');
+                sprites.push(sprite);
+                setLetter(sprite, char);
+              });
+            });
+          }
+        });
+      });
+    }
+  },
   end: {
     preload() {
       this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
