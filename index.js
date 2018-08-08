@@ -267,12 +267,7 @@ const update = function() {
   if (plr.body.x < -16) {
     plr.x = game.config.width;
   }
-  // Prevent playing plummeting into the abyss if slowly wrapping Y.
-  // TODO: Figure out a better way to do this.
-  if (plr.body.y > 212) {
-    plr.y = 212;
-    plr.body.velocity.y = 0;
-  }
+
   // Next Level!
   if (plr.body.y < 0) {
     game.sfx.play('victory');
@@ -411,7 +406,10 @@ const createLevel = function(levelName) {
 
   game.map = this.make.tilemap({key: levelName});
   game.map.tileset = game.map.addTilesetImage('monochrome-caves');
-  game.map.worldLayer = game.map.createDynamicLayer('World', game.map.tileset, 0, 0);
+
+  // On maps with water at the edges, there are 2 extra water tiles on each side to prevent player
+  // from falling out of the map on world wrap. Thus, here the map is offset by 2 tiles.
+  game.map.worldLayer = game.map.createDynamicLayer('World', game.map.tileset, -16, 0);
   game.map.worldLayer.setCollisionByProperty({collides: true});
 
   // Spawn player and enemies from positions placed in Tiled object layer.
@@ -769,7 +767,7 @@ const scenes = {
       });
 
       // TESTING: Skip to first level.
-      // startNextLevel.call(this);
+       startNextLevel.call(this);
     },
   },
   intro: cutsceneFactory(intro),
