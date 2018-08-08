@@ -401,15 +401,10 @@ const setUpPlayer = function(x, y) {
     plr.isDead = true;
     const scene = this.scene;
     plr.body.checkCollision.down = false;
-    this.tweens.add({
-        targets: plr,
-        rotation: Math.random() * Math.PI,
-        ease: 'Power1',
-        duration: 750,
-        onComplete: function() {
-          scene.restart();
-        }
-    });
+    this.time.addEvent({ delay: 750, callback() {
+      scene.restart();
+    }});
+    plr.rotation = Math.PI;
     game.sfx.play('die');
   };
 
@@ -469,15 +464,10 @@ const addZnake = function(x, y) {
   znake.body.setSize(14, 14, 1, 0.5);
   znake.kill = () => {
     znake.body.checkCollision.down = false;
-    this.tweens.add({
-        targets: znake,
-        rotation: Math.random() * Math.PI,
-        ease: 'Power1',
-        duration: 750,
-        onComplete() {
-          znake.destroy();
-        }
-    });
+    this.time.addEvent({ delay: 750, callback() {
+      znake.destroy();
+    }});
+    znake.rotation = Math.PI;
     game.sfx.play('bounce');
   };
 
