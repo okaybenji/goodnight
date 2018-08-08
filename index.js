@@ -62,10 +62,18 @@ const outro = {
 const cutsceneFactory = config => ({
   preload() {
     this.load.image('frame', 'img/frame.png');
+    this.load.image('frame-bg', 'img/frame-bg.png');
+    this.load.image('dreamer', 'img/cutscene-dreamer.gif');
+    this.load.image('sofa', 'img/cutscene-sofa.gif');
+    this.load.image('sofa-back', 'img/cutscene-sofa-back.gif');
+    this.load.image('tv', 'img/cutscene-tv.gif');
     this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
   },
   create() {
-    this.add.image(128, 96, 'frame');
+    this.add.image(128, 96, 'frame-bg');
+    this.add.image(152, 106, 'sofa');
+    this.add.image(156, 96, 'dreamer');
+    this.add.image(128, 120, 'frame');
 
     const text = []; // For  clearing text.
     let timers = []; // For clearing or early invoking of text timers.
