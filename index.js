@@ -57,6 +57,16 @@ const intro = {
         });
 
         this.anims.create({
+          key: 'half-blink',
+          frames: [
+            { key: 'eyes', frame: 4},
+            { key: 'eyes', frame: 5},
+            { key: 'eyes', frame: 4},
+          ],
+          frameRate: 5,
+        });
+
+        this.anims.create({
           key: 'slacken',
           frames: this.anims.generateFrameNumbers('mouth', { start: 0, end: 4 }),
           frameRate: 5,
@@ -248,11 +258,14 @@ const outro = {
         sprites.mouth.visible = true;
         sprites.dreamer.visible = true;
         sprites.sofa.visible = true;
+
+        sprites.eyes.anims.play('half-blink');
       },
       },
     {
       text: `they had an adventure all their own, filled with wonder enough to match those they had merely watched on tv.`,
       method(sprites) {
+        sprites.eyes.anims.play('half-blink');
         sprites.mouth.anims.play('smile');
       },
     },
