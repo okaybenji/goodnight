@@ -45,7 +45,14 @@ const intro = {
 
         this.anims.create({
           key: 'close',
-          frames: this.anims.generateFrameNumbers('eyes', { start: 4, end: 7 }),
+          frames: [
+            { key: 'eyes', frame: 4},
+            { key: 'eyes', frame: 5},
+            { key: 'eyes', frame: 4},
+            { key: 'eyes', frame: 5},
+            { key: 'eyes', frame: 6},
+            { key: 'eyes', frame: 7},
+          ],
           frameRate: 5,
         });
 
