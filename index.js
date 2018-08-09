@@ -32,6 +32,12 @@ const intro = {
       text: `a young dreamer chills on their sofa, awaiting the start of their favorite cartoon.`,
       method(sprites) {
         this.anims.create({
+          key: 'fade',
+          frames: this.anims.generateFrameNumbers('frame-bg', { start: 0, end: 4 }),
+          frameRate: 1,
+        });
+
+        this.anims.create({
           key: 'sparkle',
           frames: [
             { key: 'eyes', frame: 0},
@@ -150,6 +156,8 @@ const intro = {
       text: `“but i mustn't sleep” our dreamer realizes!
       “my very favorite tv show will be starting any minute now!”`,
       method(sprites) {
+        sprites.bg.anims.play('fade');
+
         // Set up parallax motion.
         sprites.sofa.target = 397;
         sprites.sofa.speed = 1;
@@ -275,6 +283,7 @@ const outro = {
       method(sprites) {
         sprites.eyes.anims.play('close');
         sprites.mouth.anims.play('slacken');
+        sprites.bg.anims.play('fade');
 
         // Set up parallax motion.
         sprites.sofa.target = 397;
@@ -296,19 +305,19 @@ const outro = {
 const cutsceneFactory = config => ({
   preload() {
     this.load.image('frame', 'img/frame.png');
-    this.load.image('frame-bg', 'img/frame-bg.png');
     this.load.image('dreamer', 'img/cutscene-dreamer.gif');
     this.load.image('sofa', 'img/cutscene-sofa.gif');
     this.load.image('sofa-back', 'img/cutscene-sofa-back.gif');
     this.load.image('tv', 'img/cutscene-tv.gif');
+    this.load.spritesheet('frame-bg', 'img/frame-bg.png', {frameWidth: 172, frameHeight: 82});
     this.load.spritesheet('eyes', 'img/cutscene-dreamer-eyes.gif', {frameWidth: 41, frameHeight: 21});
     this.load.spritesheet('mouth', 'img/cutscene-dreamer-mouth.gif', {frameWidth: 14, frameHeight: 14});
     this.load.spritesheet('tv-screen', 'img/cutscene-tv-screen.gif', {frameWidth: 51, frameHeight: 34});
     this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
   },
   create() {
-    this.add.image(128, 96, 'frame-bg');
     const sprites = {
+      bg: this.add.sprite(128, 96, 'frame-bg'),
       sofa: this.add.image(122, 106, 'sofa'),
       dreamer: this.add.image(106, 96, 'dreamer'),
       eyes: this.add.sprite(95, 96, 'eyes'),
