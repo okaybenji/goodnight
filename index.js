@@ -52,17 +52,20 @@ const intro = {
         this.anims.create({
           key: 'glaze',
           frames: [
+            { key: 'eyes', frame: 0},
+            { key: 'eyes', frame: 1},
             { key: 'eyes', frame: 2},
           ],
-          frameRate: 1,
+          frameRate: 10,
         });
 
         this.anims.create({
           key: 'normal',
           frames: [
+            { key: 'mouth', frame: 0},
             { key: 'mouth', frame: 1},
           ],
-          frameRate: 1,
+          frameRate: 2,
         });
 
         this.anims.create({
