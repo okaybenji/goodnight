@@ -167,6 +167,8 @@ const intro = {
         sprites.eyes.speed = 1.2;
         sprites.mouth.target = 343;
         sprites.mouth.speed = 1.2;
+        sprites.dream.target = 128;
+        sprites.dream.speed = 0.5;
       }
     },
     {
@@ -306,6 +308,7 @@ const cutsceneFactory = config => ({
   preload() {
     this.load.image('frame', 'img/frame.png');
     this.load.image('dreamer', 'img/cutscene-dreamer.gif');
+    this.load.image('dream', 'img/cutscene-dream.png');
     this.load.image('sofa', 'img/cutscene-sofa.gif');
     this.load.image('sofa-back', 'img/cutscene-sofa-back.gif');
     this.load.image('tv', 'img/cutscene-tv.gif');
@@ -325,6 +328,7 @@ const cutsceneFactory = config => ({
       tv: this.add.image(131, 96, 'tv'),
       tvScreen: this.add.sprite(124, 91, 'tv-screen'),
       sofaBack: this.add.image(32, 103, 'sofa-back'),
+      dream: this.add.image(-48, 96, 'dream'),
     };
     this.add.image(128, 120, 'frame');
 
