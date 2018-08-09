@@ -67,6 +67,16 @@ const intro = {
         sprites.tvScreen.visible = false;
 
         sprites.eyes.anims.play('sparkle');
+
+        // Set up parallax motion.
+        sprites.sofa.target = 147;
+        sprites.sofa.speed = 0.2;
+        sprites.dreamer.target = 156;
+        sprites.dreamer.speed = 0.4;
+        sprites.eyes.target = 145;
+        sprites.eyes.speed = 0.4;
+        sprites.mouth.target = 143;
+        sprites.mouth.speed = 0.4;
       }
     },
     {
@@ -82,6 +92,14 @@ const intro = {
         sprites.tvScreen.visible = true;
 
         sprites.tvScreen.anims.play('scan');
+
+        // Set up parallax motion.
+        sprites.sofaBack.target = 92;
+        sprites.sofaBack.speed = 0.4;
+        sprites.tv.target = 161;
+        sprites.tv.speed = 0.2;
+        sprites.tvScreen.target = 154;
+        sprites.tvScreen.speed = 0.2;
       }
     },
     {
@@ -234,15 +252,18 @@ const cutsceneFactory = config => ({
   create() {
     this.add.image(128, 96, 'frame-bg');
     const sprites = {
-      sofa: this.add.image(152, 106, 'sofa'),
-      dreamer: this.add.image(156, 96, 'dreamer'),
-      eyes: this.add.sprite(145, 96, 'eyes'),
-      mouth: this.add.sprite(143, 113, 'mouth'),
-      tv: this.add.image(156, 96, 'tv'),
-      tvScreen: this.add.sprite(149, 91, 'tv-screen'),
-      sofaBack: this.add.image(88, 103, 'sofa-back'),
+      sofa: this.add.image(122, 106, 'sofa'),
+      dreamer: this.add.image(106, 96, 'dreamer'),
+      eyes: this.add.sprite(95, 96, 'eyes'),
+      mouth: this.add.sprite(93, 113, 'mouth'),
+      tv: this.add.image(131, 96, 'tv'),
+      tvScreen: this.add.sprite(124, 91, 'tv-screen'),
+      sofaBack: this.add.image(32, 103, 'sofa-back'),
     };
     this.add.image(128, 120, 'frame');
+
+    // Configure sprites for parallax animations.
+    this.sprites = sprites;
 
     const text = []; // For  clearing text.
     let timers = []; // For clearing or early invoking of text timers.
@@ -344,6 +365,13 @@ const cutsceneFactory = config => ({
 
     // Print first line.
     nextLine();
+  },
+  update() {
+    Object.values(this.sprites).forEach(sprite => {
+      if (sprite.target && sprite.x < sprite.target) {
+        sprite.x += sprite.speed;
+      }
+    });
   }
 });
 
