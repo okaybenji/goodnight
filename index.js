@@ -28,16 +28,101 @@ const setLetter = (sprite, letter) => {
 
 const intro = {
   paragraphs: [
-    `a young dreamer chills on their sofa, awaiting the start of their favorite cartoon.`,
-    `every week the show's hero has a wonderful adventure in a strange new place,`,
-    `using her wits to overcome some impossible obstacle.`,
-    `but the time slot before is filled with stuffy old men saying things our dreamer can't understand,`,
-    `and soon they drift off into a strange world of their very own.`,
-    `“but i mustn't sleep” our dreamer realizes!
-    “my very favorite tv show will be starting any minute now!”`,
-    `“i must escape this world somehow...
-    ...and soon!!”`,
-  ],
+    {
+      text: `a young dreamer chills on their sofa, awaiting the start of their favorite cartoon.`,
+      method(sprites) {
+        this.anims.create({
+          key: 'sparkle',
+          frames: [
+            { key: 'eyes', frame: 0},
+            { key: 'eyes', frame: 1},
+            { key: 'eyes', frame: 2},
+            { key: 'eyes', frame: 1},
+          ],
+          frameRate: 10,
+          repeat: -1
+        });
+
+        this.anims.create({
+          key: 'close',
+          frames: this.anims.generateFrameNumbers('eyes', { start: 4, end: 7 }),
+          frameRate: 5,
+        });
+
+        this.anims.create({
+          key: 'slacken',
+          frames: this.anims.generateFrameNumbers('mouth', { start: 0, end: 4 }),
+          frameRate: 5,
+        });
+
+        this.anims.create({
+          key: 'scan',
+          frames: this.anims.generateFrameNumbers('tv-screen', { start: 0, end: 3 }),
+          frameRate: 10,
+          repeat: -1,
+        });
+
+        sprites.sofaBack.visible = false;
+        sprites.tv.visible = false;
+        sprites.tvScreen.visible = false;
+
+        sprites.eyes.anims.play('sparkle');
+      }
+    },
+    {
+      text: `every week the show's hero has a wonderful adventure in a strange new place,`,
+      method(sprites) {
+        sprites.eyes.visible = false;
+        sprites.mouth.visible = false;
+        sprites.dreamer.visible = false;
+        sprites.sofa.visible = false;
+
+        sprites.sofaBack.visible = true;
+        sprites.tv.visible = true;
+        sprites.tvScreen.visible = true;
+
+        sprites.tvScreen.anims.play('scan');
+      }
+    },
+    {
+      text: `using her wits to overcome some impossible obstacle.`,
+      method(sprites) {
+      }
+    },
+    {
+      text: `but the time slot before is filled with stuffy old men saying things our dreamer can't understand,`,
+      method(sprites) {
+        sprites.sofaBack.visible = false;
+        sprites.tv.visible = false;
+        sprites.tvScreen.visible = false;
+
+        sprites.eyes.visible = true;
+        sprites.mouth.visible = true;
+        sprites.dreamer.visible = true;
+        sprites.sofa.visible = true;
+
+        sprites.eyes.anims.play('sparkle');
+      }
+    },
+    {
+      text: `and soon they drift off into a strange world of their very own.`,
+      method(sprites) {
+        sprites.eyes.anims.play('close');
+        sprites.mouth.anims.play('slacken');
+      }
+    },
+    {
+      text: `“but i mustn't sleep” our dreamer realizes!
+      “my very favorite tv show will be starting any minute now!”`,
+      method(sprites) {
+      }
+    },
+    {
+      text: `“i must escape this world somehow...
+      ...and soon!!”`,
+      method(sprites) {
+      },
+  }],
   onComplete() {
     startNextLevel.call(this);
   }
@@ -46,13 +131,87 @@ const intro = {
 // !--- SPOILER ALERT ---!
 const outro = {
   paragraphs: [
-    `our dreamer drowsily opens their eyes and tries to focus on the television screen.`,
-    `the ending credits of the cartoon slowly come into focus.`,
-    `“i've missed it,” our dreamer sighs.
+    {
+      text: `our dreamer drowsily opens their eyes and tries to focus on the television screen.`,
+      method(sprites) {
+        this.anims.create({
+          key: 'open',
+          frames: [
+            { key: 'eyes', frame: 7},
+            { key: 'eyes', frame: 6},
+            { key: 'eyes', frame: 5},
+            { key: 'eyes', frame: 4},
+          ],
+          frameRate: 3,
+        });
+
+        this.anims.create({
+          key: 'tighten',
+          frames: [
+            { key: 'mouth', frame: 4},
+            { key: 'mouth', frame: 3},
+            { key: 'mouth', frame: 2},
+            { key: 'mouth', frame: 1},
+          ],
+          frameRate: 3,
+        });
+
+        this.anims.create({
+          key: 'smile',
+          frames: this.anims.generateFrameNumbers('mouth', { start: 0, end: 0 }),
+        });
+
+        sprites.sofaBack.visible = false;
+        sprites.tv.visible = false;
+        sprites.tvScreen.visible = false;
+
+        sprites.eyes.anims.play('open');
+        sprites.mouth.anims.play('tighten');
+      },
+    },
+    {
+      text: `the ending credits of the cartoon slowly come into focus.`,
+      method(sprites) {
+        sprites.eyes.visible = false;
+        sprites.mouth.visible = false;
+        sprites.dreamer.visible = false;
+        sprites.sofa.visible = false;
+
+        sprites.sofaBack.visible = true;
+        sprites.tv.visible = true;
+        sprites.tvScreen.visible = true;
+
+        sprites.tvScreen.anims.play('scan');
+      },
+    },
+    {
+      text: `“i've missed it,” our dreamer sighs.
       but they can't help showing a small smile.`,
-    `they had an adventure all their own, filled with wonder enough to match those they had merely watched on tv.`,
-    `anyhow, it's getting late now...
-    might as well go back to sleep.`
+      method(sprites) {
+        sprites.sofaBack.visible = false;
+        sprites.tv.visible = false;
+        sprites.tvScreen.visible = false;
+
+        sprites.eyes.visible = true;
+        sprites.mouth.visible = true;
+        sprites.dreamer.visible = true;
+        sprites.sofa.visible = true;
+      },
+      },
+    {
+      text: `they had an adventure all their own, filled with wonder enough to match those they had merely watched on tv.`,
+      method(sprites) {
+        sprites.mouth.anims.play('smile');
+      },
+    },
+    {
+      text: `anyhow, it's getting late now...
+      might as well go back to sleep.`,
+      method(sprites) {
+        sprites.eyes.anims.play('close');
+        sprites.mouth.anims.play('slacken');
+      },
+    }
   ],
   onComplete() {
     this.scene.start('credits');
@@ -67,12 +226,22 @@ const cutsceneFactory = config => ({
     this.load.image('sofa', 'img/cutscene-sofa.gif');
     this.load.image('sofa-back', 'img/cutscene-sofa-back.gif');
     this.load.image('tv', 'img/cutscene-tv.gif');
+    this.load.spritesheet('eyes', 'img/cutscene-dreamer-eyes.gif', {frameWidth: 41, frameHeight: 21});
+    this.load.spritesheet('mouth', 'img/cutscene-dreamer-mouth.gif', {frameWidth: 14, frameHeight: 14});
+    this.load.spritesheet('tv-screen', 'img/cutscene-tv-screen.gif', {frameWidth: 51, frameHeight: 34});
     this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
   },
   create() {
     this.add.image(128, 96, 'frame-bg');
-    this.add.image(152, 106, 'sofa');
-    this.add.image(156, 96, 'dreamer');
+    const sprites = {
+      sofa: this.add.image(152, 106, 'sofa'),
+      dreamer: this.add.image(156, 96, 'dreamer'),
+      eyes: this.add.sprite(145, 96, 'eyes'),
+      mouth: this.add.sprite(143, 113, 'mouth'),
+      tv: this.add.image(156, 96, 'tv'),
+      tvScreen: this.add.sprite(149, 91, 'tv-screen'),
+      sofaBack: this.add.image(88, 103, 'sofa-back'),
+    };
     this.add.image(128, 120, 'frame');
 
     const text = []; // For  clearing text.
@@ -162,7 +331,8 @@ const cutsceneFactory = config => ({
       const paragraph = config.paragraphs.shift();
 
       if (paragraph) {
-        print(paragraph);
+        print(paragraph.text);
+        paragraph.method.call(this, sprites);;
       } else {
         // Showed all the text.
         config.onComplete.call(this);
