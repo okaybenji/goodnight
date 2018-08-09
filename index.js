@@ -133,6 +133,15 @@ const intro = {
       text: `“but i mustn't sleep” our dreamer realizes!
       “my very favorite tv show will be starting any minute now!”`,
       method(sprites) {
+        // Set up parallax motion.
+        sprites.sofa.target = 397;
+        sprites.sofa.speed = 1;
+        sprites.dreamer.target = 356;
+        sprites.dreamer.speed = 1.2;
+        sprites.eyes.target = 345;
+        sprites.eyes.speed = 1.2;
+        sprites.mouth.target = 343;
+        sprites.mouth.speed = 1.2;
       }
     },
     {
@@ -185,6 +194,16 @@ const outro = {
 
         sprites.eyes.anims.play('open');
         sprites.mouth.anims.play('tighten');
+
+        // Set up parallax motion.
+        sprites.sofa.target = 147;
+        sprites.sofa.speed = 0.2;
+        sprites.dreamer.target = 156;
+        sprites.dreamer.speed = 0.4;
+        sprites.eyes.target = 145;
+        sprites.eyes.speed = 0.4;
+        sprites.mouth.target = 143;
+        sprites.mouth.speed = 0.4;
       },
     },
     {
@@ -200,6 +219,14 @@ const outro = {
         sprites.tvScreen.visible = true;
 
         sprites.tvScreen.anims.play('scan');
+
+        // Set up parallax motion.
+        sprites.sofaBack.target = 92;
+        sprites.sofaBack.speed = 0.4;
+        sprites.tv.target = 161;
+        sprites.tv.speed = 0.2;
+        sprites.tvScreen.target = 154;
+        sprites.tvScreen.speed = 0.2;
       },
     },
     {
@@ -228,6 +255,16 @@ const outro = {
       method(sprites) {
         sprites.eyes.anims.play('close');
         sprites.mouth.anims.play('slacken');
+
+        // Set up parallax motion.
+        sprites.sofa.target = 397;
+        sprites.sofa.speed = 0.5;
+        sprites.dreamer.target = 356;
+        sprites.dreamer.speed = 0.6;
+        sprites.eyes.target = 345;
+        sprites.eyes.speed = 0.6;
+        sprites.mouth.target = 343;
+        sprites.mouth.speed = 0.6;
       },
     }
   ],
