@@ -50,6 +50,22 @@ const intro = {
         });
 
         this.anims.create({
+          key: 'glaze',
+          frames: [
+            { key: 'eyes', frame: 2},
+          ],
+          frameRate: 1,
+        });
+
+        this.anims.create({
+          key: 'normal',
+          frames: [
+            { key: 'mouth', frame: 1},
+          ],
+          frameRate: 1,
+        });
+
+        this.anims.create({
           key: 'close',
           frames: [
             { key: 'eyes', frame: 4},
@@ -142,7 +158,8 @@ const intro = {
         sprites.dreamer.visible = true;
         sprites.sofa.visible = true;
 
-        sprites.eyes.anims.play('sparkle');
+        sprites.eyes.anims.play('glaze');
+        sprites.mouth.anims.play('normal');
       }
     },
     {
