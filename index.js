@@ -530,11 +530,12 @@ const update = function() {
     this.lastPlayerInput = this.time.now; // Reset timer.
   }
 
-  if (this.keys.up.isDown || this.keys.down.isDown || this.keys.left.isDown || this.keys.right.isDown) {
+  if (this.keys.up.isDown || this.keys.down.isDown || this.keys.left.isDown || this.keys.right.isDown || this.keys.space.isDown) {
     this.lastPlayerInput = this.time.now;
   }
 
-  if (Phaser.Input.Keyboard.JustDown(this.keys.up)) {
+  const justPressedJump = Phaser.Input.Keyboard.JustDown(this.keys.up) || Phaser.Input.Keyboard.JustDown(this.keys.space);
+  if (justPressedJump) {
     if (!plr.jumping) {
       plr.jump();
     }
@@ -542,7 +543,9 @@ const update = function() {
 
   // Allow playing to vault once after jumping by continuing to hold down the jump key.
   // (Each vault after that must be manual.)
-  if (this.keys.up.isDown && (plr.body.blocked.left || plr.body.blocked.right) && !plr.autoVaulting && !plr.jumping) {
+  const pressingJump = this.keys.up.isDown || this.keys.space.isDown;
+  const touchingSide = plr.body.blocked.left || plr.body.blocked.right;
+  if (pressingJump && touchingSide && !plr.autoVaulting && !plr.jumping) {
     plr.autoVaulting = true;
     plr.jump();
   }
@@ -728,6 +731,7 @@ const setUpPlayer = function(x, y) {
     down: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN),
     left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT),
     right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT),
+    space: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE),
   };
 
   plr.on('animationcomplete', () => {
