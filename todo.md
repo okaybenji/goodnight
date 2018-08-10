@@ -10,6 +10,7 @@
 * Show how many znakes player murdered at the end of the game.
 * Remove all the .DS_Store files from the repo.
 * Should we require player to be touching chain to go to next level?
+* Allow player to keep jumping while jump/up is held down if they are on a platform (plr.body.blocked.down).
 
 # KNOWN BUGS
 * Float animation is way too fast.
