@@ -534,7 +534,9 @@ const update = function() {
     this.lastPlayerInput = this.time.now;
   }
 
-  const justPressedJump = Phaser.Input.Keyboard.JustDown(this.keys.up) || Phaser.Input.Keyboard.JustDown(this.keys.space);
+  // If you wish to jump off a climbable object, you must specifically press the jump key.
+  // This is because the up key is used to climb upward.
+  const justPressedJump = (Phaser.Input.Keyboard.JustDown(this.keys.up) && !plr.climbing) || Phaser.Input.Keyboard.JustDown(this.keys.space);
   if (justPressedJump) {
     if (!plr.jumping) {
       plr.jump();
@@ -649,8 +651,7 @@ const update = function() {
     if (this.keys.down.isDown) {
       plr.y += 2;
     } else if (this.keys.up.isDown) {
-      // This isn't currently needed because you can jump up the chain.
-      // plr.y -= 3;
+      plr.y -= 3;
     }
   } else {
     // If player was climbing but now they aren't, don't let them jump in mid-air.
