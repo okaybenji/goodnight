@@ -695,7 +695,9 @@ const setUpPlayer = function(x, y) {
   game.plr = plr;
 
   this.physics.add.collider(game.map.worldLayer, plr, (plr, tile) => {
-    plr.jumping = false;
+    if (!plr.body.blocked.up) { // Prevent vaulting on bottoms of platforms.
+      plr.jumping = false;
+    }
 
     // Collect flowers.
     const tileBehindPlayer = game.map.getTileAt(tile.x, tile.y - 1);
