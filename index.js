@@ -60,10 +60,11 @@ const intro = {
         });
 
         this.anims.create({
-          key: 'normal',
+          key: 'bored',
           frames: [
             { key: 'mouth', frame: 0},
             { key: 'mouth', frame: 1},
+            { key: 'mouth', frame: 2},
           ],
           frameRate: 2,
         });
@@ -94,6 +95,12 @@ const intro = {
         this.anims.create({
           key: 'slacken',
           frames: this.anims.generateFrameNumbers('mouth', { start: 0, end: 4 }),
+          frameRate: 5,
+        });
+
+        this.anims.create({
+          key: 'slackenFromBored',
+          frames: this.anims.generateFrameNumbers('mouth', { start: 2, end: 4 }),
           frameRate: 5,
         });
 
@@ -163,14 +170,14 @@ const intro = {
         sprites.sofa.visible = true;
 
         sprites.eyes.anims.play('glaze');
-        sprites.mouth.anims.play('normal');
+        sprites.mouth.anims.play('bored');
       }
     },
     {
       text: `and soon they drift off into a strange world of their very own.`,
       method(sprites) {
         sprites.eyes.anims.play('close');
-        sprites.mouth.anims.play('slacken');
+        sprites.mouth.anims.play('slackenFromBored');
       }
     },
     {
