@@ -643,8 +643,12 @@ const update = function() {
       plr.body.velocity.y = 0;
     }
   } else {
-    plr.body.allowGravity = true;
+    // If player was climbing but now they aren't, don't let them jump in mid-air.
+    if (plr.climbing) {
+      plr.jumping = true;
+    }
     plr.climbing = false;
+    plr.body.allowGravity = true;
   }
 
   // Float in water. Allow jumping out.
