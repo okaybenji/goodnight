@@ -523,6 +523,16 @@ const update = function() {
     return;
   }
 
+  const overTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y);
+
+  // Float in water. Allow jumping out.
+  if (overTile && overTile.properties.water) {
+    plr.body.velocity.y = 0;
+    plr.y -= 3;
+    plr.jumping = false;
+    plr.autoVaulting = false;
+  }
+
   // Play random alternative idle animation after some time passed w/o input.
   if (this.time.now > this.lastPlayerInput + idleAnimationInteral) {
     const anim = Math.random() > 0.5 ? 'idleAltA' : 'idleAltB';
@@ -618,7 +628,6 @@ const update = function() {
   }
 
   // Next Level!
-  const overTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y);
   if (plr.body.y < 0 && overTile && overTile.properties.climbable) {
     game.sfx.play('victory');
     flowers += plr.flowers;
@@ -660,14 +669,6 @@ const update = function() {
     }
     plr.climbing = false;
     plr.body.allowGravity = true;
-  }
-
-  // Float in water. Allow jumping out.
-  if (overTile && overTile.properties.water) {
-    plr.body.velocity.y = 0;
-    plr.y -= 3;
-    plr.jumping = false;
-    plr.autoVaulting = false;
   }
 };
 

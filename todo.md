@@ -15,4 +15,3 @@
 * Float animation is way too fast.
 * Error occurs when trying to play the same sound twice: `openmpt: openmpt_module_read_float_stereo: ERROR: module * not valid`
 * It's possible to fall out of the game bounds when trying to get the flower in the pond.
-* Sometimes when the player is floating in water, the jump key doesn't seem to respond.
