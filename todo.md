@@ -11,6 +11,7 @@
 * Show how many seconds player chilled at the end of the game.
 * Show how many znakes player murdered at the end of the game.
 * Remove all the .DS_Store files from the repo.
+* Should we require player to be touching chain to go to next level?
 
 # KNOWN BUGS
 * Float animation is way too fast.

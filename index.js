@@ -541,10 +541,8 @@ const update = function() {
   }
 
   // Ensure upward movement (negative Y value) doesn't exceed maximum speed.
-  const isVaulting = plr.body.blocked.left || plr.body.blocked.right;
-  const maxYVelocity =  isVaulting ? plr.vaultSpeed : plr.jumpSpeed;
-  if (plr.body.velocity.y < maxYVelocity) {
-    plr.body.velocity.y = maxYVelocity;
+  if (plr.body.velocity.y < plr.jumpHeight) {
+    plr.body.velocity.y = plr.jumpHeight;
   }
 
   const anim = plr.anims.currentAnim.key;
@@ -729,13 +727,11 @@ const setUpPlayer = function(x, y) {
     game.sfx.play('die');
   };
 
-  plr.vaultSpeed = -225;
-  plr.jumpSpeed = -200;
+  plr.jumpHeight = -220;
   plr.jump = () => {
     plr.jumping = true;
 
-    const isVaulting = plr.body.blocked.left || plr.body.blocked.right;
-    plr.body.velocity.y = isVaulting ? plr.vaultSpeed : plr.jumpSpeed;
+    plr.body.velocity.y = plr.jumpHeight;
     game.sfx.play('jump');
   };
 
