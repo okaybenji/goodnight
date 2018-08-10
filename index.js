@@ -544,10 +544,12 @@ const update = function() {
     this.lastPlayerInput = this.time.now;
   }
 
+  // Allow player to jump if they just pressed jump, or if they're holding the jump key and touching down.
+  // (Prevents spam-vaulting.)
   // If you wish to jump off a climbable object, you must specifically press the jump key.
   // This is because the up key is used to climb upward.
   const justPressedJump = (Phaser.Input.Keyboard.JustDown(this.keys.up) && !plr.climbing) || Phaser.Input.Keyboard.JustDown(this.keys.space);
-  if (justPressedJump) {
+  if (justPressedJump || (this.keys.up.isDown && plr.body.blocked.down)) {
     if (!plr.jumping) {
       plr.jump();
     }
