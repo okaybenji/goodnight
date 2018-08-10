@@ -104,6 +104,7 @@ const intro = {
           repeat: -1,
         });
 
+        sprites.stars.visible = false;
         sprites.sofaBack.visible = false;
         sprites.tv.visible = false;
         sprites.tvScreen.visible = false;
@@ -176,6 +177,7 @@ const intro = {
       text: `“but i mustn't sleep” our dreamer realizes!
       “my very favorite tv show will be starting any minute now!”`,
       method(sprites) {
+        sprites.stars.visible = true;
         sprites.bg.anims.play('fade');
 
         // Set up parallax motion.
@@ -187,6 +189,8 @@ const intro = {
         sprites.eyes.speed = 1.2;
         sprites.mouth.target = 343;
         sprites.mouth.speed = 1.2;
+        sprites.stars.target = 128;
+        sprites.stars.speed = 0.04;
         sprites.platform.target = 60;
         sprites.platform.speed = 0.5;
         sprites.bwDreamer.target = 108;
@@ -341,6 +345,7 @@ const cutsceneFactory = config => ({
     this.load.image('sofa', 'img/cutscene-sofa.gif');
     this.load.image('sofa-back', 'img/cutscene-sofa-back.gif');
     this.load.image('tv', 'img/cutscene-tv.gif');
+    this.load.image('stars', 'img/cutscene-stars.png');
     this.load.spritesheet('frame-bg', 'img/frame-bg.png', {frameWidth: 172, frameHeight: 82});
     this.load.spritesheet('eyes', 'img/cutscene-dreamer-eyes.gif', {frameWidth: 41, frameHeight: 21});
     this.load.spritesheet('mouth', 'img/cutscene-dreamer-mouth.gif', {frameWidth: 14, frameHeight: 14});
@@ -350,6 +355,7 @@ const cutsceneFactory = config => ({
   create() {
     const sprites = {
       bg: this.add.sprite(128, 96, 'frame-bg'),
+      stars: this.add.sprite(116, 96, 'stars'),
       sofa: this.add.image(122, 106, 'sofa'),
       dreamer: this.add.image(106, 96, 'dreamer'),
       eyes: this.add.sprite(95, 96, 'eyes'),
