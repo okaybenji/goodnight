@@ -606,7 +606,8 @@ const update = function() {
   }
 
   // Next Level!
-  if (plr.body.y < 0) {
+  const overTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y);
+  if (plr.body.y < 0 && overTile && overTile.properties.climbable) {
     game.sfx.play('victory');
     flowers += plr.flowers;
     startNextLevel.call(this);
@@ -625,7 +626,6 @@ const update = function() {
     }
   }
 
-  const overTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y);
   if (overTile && overTile.properties.climbable) {
     plr.body.allowGravity = false;
     plr.jumping = false;
