@@ -1,7 +1,5 @@
 # TO-DO
 * Add freeze/pan transitions between screens a la Mega Man 2.
-* Add parallax to the cutscene dream (different rate for each of the 4 elements).
-* Add stars to the cutscene dream.
 * Replace placeholder music & SFX.
 * Design a lot more levels!
 * Add gamepad controls.
@@ -13,6 +11,7 @@
 * Add a seperate button for jump, let the player push up or the jump button to jump/vault.
 * Add 'chill' button which causes player to stop and smell the roses.
 * Show how many seconds player chilled at the end of the game.
+* Show how many znakes player murdered at the end of the game.
 * Remove all the .DS_Store files from the repo.
 
 # KNOWN BUGS
