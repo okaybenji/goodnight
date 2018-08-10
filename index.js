@@ -580,10 +580,10 @@ const update = function() {
   }
 
   if (plr.jumping && !plr.hurt) {
-    // Play platform climb-jump animation if player is bounding off the side of a platform.
+    // Play platform vault animation if player is bounding off the side of a platform.
     if (plr.body.blocked.left || plr.body.blocked.right) {
-      if (anim !== 'climbJump') {
-        plr.anims.play('climbJump');
+      if (anim !== 'vault') {
+        plr.anims.play('vault');
       }
     } else {
       if (anim !== 'jump') {
@@ -1048,7 +1048,7 @@ const scenes = {
       });
 
       this.anims.create({
-        key: 'climbJump',
+        key: 'vault',
         frames: [
           { key: 'plr', frame: 33},
           { key: 'plr', frame: 34},

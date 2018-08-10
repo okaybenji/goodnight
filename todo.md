@@ -7,7 +7,6 @@
 * Show how many flowers player collected at the end of the game.
 * Try making it so you have to press a button every time you want to vault instead of just holding down jump button.
 * Make the player hold up to climb up the chain, and let them hold down to climb down it.
-* Rename "jump-climb" to "vault" in the code.
 * Add a seperate button for jump, let the player push up or the jump button to jump/vault.
 * Add 'chill' button which causes player to stop and smell the roses.
 * Show how many seconds player chilled at the end of the game.
