@@ -530,7 +530,7 @@ const update = function() {
     this.lastPlayerInput = this.time.now; // Reset timer.
   }
 
-  if (this.keys.up.isDown || this.keys.left.isDown || this.keys.right.isDown) {
+  if (this.keys.up.isDown || this.keys.down.isDown || this.keys.left.isDown || this.keys.right.isDown) {
     this.lastPlayerInput = this.time.now;
   }
 
@@ -633,6 +633,7 @@ const update = function() {
     }
   }
 
+  // Handle climbing.
   if (overTile && overTile.properties.climbable) {
     plr.body.allowGravity = false;
     plr.jumping = false;
@@ -641,6 +642,12 @@ const update = function() {
       plr.climbing = true;
       plr.body.velocity.x = 0;
       plr.body.velocity.y = 0;
+    }
+    if (this.keys.down.isDown) {
+      plr.y += 2;
+    } else if (this.keys.up.isDown) {
+      // This isn't currently needed because you can jump up the chain.
+      // plr.y -= 3;
     }
   } else {
     // If player was climbing but now they aren't, don't let them jump in mid-air.
@@ -718,6 +725,7 @@ const setUpPlayer = function(x, y) {
 
   this.keys = {
     up: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP),
+    down: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN),
     left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT),
     right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT),
   };
