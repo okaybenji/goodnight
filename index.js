@@ -245,6 +245,7 @@ const outro = {
           frames: this.anims.generateFrameNumbers('mouth', { start: 0, end: 0 }),
         });
 
+        sprites.stars.visible = false;
         sprites.sofaBack.visible = false;
         sprites.tv.visible = false;
         sprites.tvScreen.visible = false;
@@ -313,6 +314,8 @@ const outro = {
       text: `anyhow, it's getting late now...
       might as well go back to sleep.`,
       method(sprites) {
+        sprites.stars.visible = true;
+
         sprites.eyes.anims.play('close');
         sprites.mouth.anims.play('slacken');
         sprites.bg.anims.play('fade');
