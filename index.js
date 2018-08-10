@@ -1,19 +1,6 @@
 const levels = ['level1', 'level2', 'level3'];
 let flowers = 0; // Track how many flowers the player picks.
 
-const throttle = (func, limit) => {
-  let inThrottle;
-  return function() {
-    const args = arguments;
-    const context = this;
-    if (!inThrottle) {
-      func.apply(context, args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
-    }
-  };
-};
-
 const setLetter = (sprite, letter) => {
   const map = {
     ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, ',': 12, '.': 14, ':': 26,
@@ -547,13 +534,17 @@ const update = function() {
     this.lastPlayerInput = this.time.now;
   }
 
-  if (this.keys.up.isDown) {
+  if (Phaser.Input.Keyboard.JustDown(this.keys.up)) {
     if (!plr.jumping) {
       plr.jump();
     }
   }
-  if (plr.body.velocity.y < plr.maxJump) {
-    plr.body.velocity.y = plr.maxJump;
+
+  // Ensure upward movement (negative Y value) doesn't exceed maximum speed.
+  const isVaulting = plr.body.blocked.left || plr.body.blocked.right;
+  const maxYVelocity =  isVaulting ? plr.vaultSpeed : plr.jumpSpeed;
+  if (plr.body.velocity.y < maxYVelocity) {
+    plr.body.velocity.y = maxYVelocity;
   }
 
   const anim = plr.anims.currentAnim.key;
@@ -738,12 +729,15 @@ const setUpPlayer = function(x, y) {
     game.sfx.play('die');
   };
 
-  plr.maxJump = -200;
-  plr.jump = throttle(() => {
+  plr.vaultSpeed = -225;
+  plr.jumpSpeed = -200;
+  plr.jump = () => {
     plr.jumping = true;
-    plr.body.velocity.y += plr.maxJump;
+
+    const isVaulting = plr.body.blocked.left || plr.body.blocked.right;
+    plr.body.velocity.y = isVaulting ? plr.vaultSpeed : plr.jumpSpeed;
     game.sfx.play('jump');
-  }, 30);
+  };
 
   plr.flowers = 0;
 
