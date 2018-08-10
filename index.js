@@ -187,8 +187,14 @@ const intro = {
         sprites.eyes.speed = 1.2;
         sprites.mouth.target = 343;
         sprites.mouth.speed = 1.2;
-        sprites.dream.target = 128;
-        sprites.dream.speed = 0.5;
+        sprites.platform.target = 208;
+        sprites.platform.speed = 0.33;
+        sprites.chain.target = 128;
+        sprites.chain.speed = 0.5;
+        sprites.bwDreamer.target = 156;
+        sprites.bwDreamer.speed = 0.75;
+        sprites.cutZnake.target = 72;
+        sprites.cutZnake.speed = 1;
       }
     },
     {
@@ -328,7 +334,10 @@ const cutsceneFactory = config => ({
   preload() {
     this.load.image('frame', 'img/frame.png');
     this.load.image('dreamer', 'img/cutscene-dreamer.gif');
-    this.load.image('dream', 'img/cutscene-dream.png');
+    this.load.image('cut-znake', 'img/cutscene-bw-znake.gif');
+    this.load.image('platform', 'img/cutscene-bw-platform.gif');
+    this.load.image('bw-dreamer', 'img/cutscene-bw-dreamer.gif');
+    this.load.image('chain', 'img/cutscene-bw-chain.gif');
     this.load.image('sofa', 'img/cutscene-sofa.gif');
     this.load.image('sofa-back', 'img/cutscene-sofa-back.gif');
     this.load.image('tv', 'img/cutscene-tv.gif');
@@ -348,7 +357,10 @@ const cutsceneFactory = config => ({
       tv: this.add.image(131, 96, 'tv'),
       tvScreen: this.add.sprite(124, 91, 'tv-screen'),
       sofaBack: this.add.image(32, 103, 'sofa-back'),
-      dream: this.add.image(-48, 96, 'dream'),
+      cutZnake: this.add.image(-244, 84, 'cut-znake'),
+      platform: this.add.image(104, 84, 'platform'),
+      chain: this.add.image(-30, 68, 'chain'),
+      bwDreamer: this.add.image(-80, 108, 'bw-dreamer'),
     };
     this.add.image(128, 120, 'frame');
 
