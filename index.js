@@ -540,6 +540,13 @@ const update = function() {
     }
   }
 
+  // Allow playing to vault once after jumping by continuing to hold down the jump key.
+  // (Each vault after that must be manual.)
+  if (this.keys.up.isDown && (plr.body.blocked.left || plr.body.blocked.right) && !plr.autoVaulting && !plr.jumping) {
+    plr.autoVaulting = true;
+    plr.jump();
+  }
+
   // Ensure upward movement (negative Y value) doesn't exceed maximum speed.
   if (plr.body.velocity.y < plr.jumpHeight) {
     plr.body.velocity.y = plr.jumpHeight;
@@ -629,6 +636,7 @@ const update = function() {
   if (overTile && overTile.properties.climbable) {
     plr.body.allowGravity = false;
     plr.jumping = false;
+    plr.autoVaulting = false;
     if (!plr.climbing) {
       plr.climbing = true;
       plr.body.velocity.x = 0;
@@ -644,6 +652,7 @@ const update = function() {
     plr.body.velocity.y = 0;
     plr.y -= 3;
     plr.jumping = false;
+    plr.autoVaulting = false;
   }
 };
 
@@ -686,6 +695,9 @@ const setUpPlayer = function(x, y) {
   this.physics.add.collider(game.map.worldLayer, plr, (plr, tile) => {
     if (!plr.body.blocked.up) { // Prevent vaulting on bottoms of platforms.
       plr.jumping = false;
+    }
+    if (plr.body.blocked.down) {
+      plr.autoVaulting = false;
     }
 
     // Collect flowers.

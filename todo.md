@@ -12,10 +12,10 @@
 * Show how many znakes player murdered at the end of the game.
 * Remove all the .DS_Store files from the repo.
 * Should we require player to be touching chain to go to next level?
-* Auto-vault once if player is still holding jump key when they first come in contact with a platform on their left/right side.
 
 # KNOWN BUGS
 * Float animation is way too fast.
 * Error occurs when trying to play the same sound twice: `openmpt: openmpt_module_read_float_stereo: ERROR: module * not valid`
 * It's possible to fall out of the game bounds when trying to get the flower in the pond.
 * Sometimes when the player is floating in water, the jump key doesn't seem to respond.
+* If player moves sideways off the chain, they can jump once in mid-air. (Maybe keep jumping true while on chain?)
