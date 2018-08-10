@@ -357,10 +357,10 @@ const cutsceneFactory = config => ({
       tv: this.add.image(131, 96, 'tv'),
       tvScreen: this.add.sprite(124, 91, 'tv-screen'),
       sofaBack: this.add.image(32, 103, 'sofa-back'),
-      platform: this.add.image(-48, 84, 'platform'),
-      bwDreamer: this.add.image(-37, 108, 'bw-dreamer'),
-      chain: this.add.image(-20, 68, 'chain'),
-      cutZnake: this.add.image(-28, 84, 'cut-znake'),
+      platform: this.add.image(-98, 84, 'platform'),
+      bwDreamer: this.add.image(-104, 108, 'bw-dreamer'),
+      chain: this.add.image(-95, 68, 'chain'),
+      cutZnake: this.add.image(-128, 84, 'cut-znake'),
     };
     this.add.image(128, 120, 'frame');
 
