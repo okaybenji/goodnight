@@ -187,13 +187,13 @@ const intro = {
         sprites.eyes.speed = 1.2;
         sprites.mouth.target = 343;
         sprites.mouth.speed = 1.2;
-        sprites.platform.target = 208;
-        sprites.platform.speed = 0.33;
-        sprites.chain.target = 128;
-        sprites.chain.speed = 0.5;
-        sprites.bwDreamer.target = 156;
-        sprites.bwDreamer.speed = 0.75;
-        sprites.cutZnake.target = 72;
+        sprites.platform.target = 60;
+        sprites.platform.speed = 0.5;
+        sprites.bwDreamer.target = 108;
+        sprites.bwDreamer.speed = 0.67;
+        sprites.chain.target = 142;
+        sprites.chain.speed = 0.75;
+        sprites.cutZnake.target = 188;
         sprites.cutZnake.speed = 1;
       }
     },
@@ -357,10 +357,10 @@ const cutsceneFactory = config => ({
       tv: this.add.image(131, 96, 'tv'),
       tvScreen: this.add.sprite(124, 91, 'tv-screen'),
       sofaBack: this.add.image(32, 103, 'sofa-back'),
-      cutZnake: this.add.image(-244, 84, 'cut-znake'),
-      platform: this.add.image(104, 84, 'platform'),
-      chain: this.add.image(-30, 68, 'chain'),
-      bwDreamer: this.add.image(-80, 108, 'bw-dreamer'),
+      platform: this.add.image(-48, 84, 'platform'),
+      bwDreamer: this.add.image(-37, 108, 'bw-dreamer'),
+      chain: this.add.image(-20, 68, 'chain'),
+      cutZnake: this.add.image(-28, 84, 'cut-znake'),
     };
     this.add.image(128, 120, 'frame');
 
