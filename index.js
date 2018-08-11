@@ -374,8 +374,6 @@ const cutsceneFactory = config => ({
     let timers = []; // For clearing or early invoking of text timers.
 
     const print = paragraph => {
-      game.music.play('text');
-
       // Clear prior text/timers.
       text.forEach(sprite => {
         sprite.destroy();
@@ -397,11 +395,15 @@ const cutsceneFactory = config => ({
         word.split('').forEach((char, j) => {
           charCount++;
 
-          const printChar = () => {
+          const printChar = (muteSound) => {
             if (char === '\n') {
               col = 0;
               row += 2;
               return;
+            }
+
+            if (char !== ' ' && !muteSound) {
+              game.sfx.play('text');
             }
 
             // At start of each word, check if we should wrap.
@@ -423,7 +425,6 @@ const cutsceneFactory = config => ({
 
               if (i + 1 === paragraph.split(' ').length) {
                 timers = [];
-                game.music.stop();
               }
             }
           };
@@ -441,9 +442,10 @@ const cutsceneFactory = config => ({
     const nextLine = () => {
       // If the text is still animating in, just display it all immediately.
       if (timers.length) {
+        const muteSound = true;
         timers.forEach(timer => {
           if (!timer.hasDispatched) {
-            timer.callback();
+            timer.callback(muteSound);
           }
 
           timer.remove();
@@ -493,7 +495,7 @@ const startNextLevel = function() {
   }
 
   if (level === 'level1') {
-    game.music.play('forest');
+    // game.music.play('gameplay');
   }
   this.scene.start(level);
 };
@@ -908,53 +910,51 @@ const scenes = {
       });
     },
     create() {
-      // Set up SFX.
-      /**
-       * Each time a unique sound filename is passed in, a new instance of chiptune.js will be created with that sound as a buffer.
-       * If the play method is called on sound file passed in previously, its respective instance will play the existing buffer.
-       * This ensures the file system is only hit once per sound, as needed.
-       * It will also prevent sounds from 'stacking' -- the same sound played repeatedly will interrupt itself each time.
-       */
-      const sfx = (audioCtx) => {
+      // Set up SFX. Don't allow sounds to stack.
+      const sfx = () => {
+        const howl = new Howl({
+          src: ['./sfx/text.wav'],
+          sprite: {
+            text: [0, 50],
+          },
+        });
+
         const soundbank = {};
 
         return {
-          play(fileName) {
-            if (soundbank[fileName]) {
-              soundbank[fileName].play(soundbank[fileName].buffer);
+          play(spriteName) {
+            const id = soundbank[spriteName];
+
+            if (id) {
+              if (howl.playing(id)) {
+                howl.stop(id);
+              }
+              howl.play(id);
             } else {
-              soundbank[fileName] = new ChiptuneJsPlayer(new ChiptuneJsConfig(0, audioCtx));
-              soundbank[fileName].load('./sfx/' + fileName + '.xm', (buffer) => {
-                soundbank[fileName].buffer = buffer;
-                soundbank[fileName].play(buffer);
-              });
+              soundbank[spriteName] = howl.play(spriteName);
             }
+          },
+          stop(spriteName) {
+            howl.stop(spriteName);
           }
         };
       };
 
       const bgm = (audioCtx) => {
-        const player = new ChiptuneJsPlayer(new ChiptuneJsConfig(-1, audioCtx));
+        const player = createNsfPlayer(audioCtx);
 
         return {
           play(fileName) {
-            if (fileName === 'None') {
-              player.stop.call(player);
-            } else {
-              player.load('./music/' + fileName + '.xm', (buffer) => {
-                player.play(buffer);
-              });
-            }
+            player.play(`./music/${fileName}.nsf`);
           },
           stop() {
-            player.stop.call(player);
+            player.stop();
           }
         };
       };
 
-      const audioCtx = new AudioContext();
-      game.sfx = sfx(audioCtx);
-      game.music = bgm(audioCtx);
+      game.sfx = sfx();
+      game.music = bgm(Howler.ctx);
 
       // Set up graphics.
       const bg = this.add.image(128, 120, 'bg');
@@ -1167,6 +1167,7 @@ const scenes = {
       this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
     },
     create() {
+      game.music.play('credits');
       randomizeStars.call(this);
 
       const top = 112;
