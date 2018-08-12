@@ -609,7 +609,7 @@ const update = function() {
 
   if (plr.hurt && anim !== 'hurt') {
     plr.anims.play('hurt');
-    game.sfx.play('hurt');
+    //game.sfx.play('hurt');
     plr.kill();
     if (plr.hurt === 'left') {
       plr.body.velocity.x = 100;
@@ -633,7 +633,7 @@ const update = function() {
 
   // Next Level!
   if (plr.body.y < 0 && overTile && overTile.properties.climbable) {
-    game.sfx.play('victory');
+    //game.sfx.play('victory');
     flowers += plr.flowers;
     startNextLevel.call(this);
   }
@@ -725,7 +725,7 @@ const setUpPlayer = function(x, y) {
     if (tileBehindPlayer && tileBehindPlayer.properties.flower) {
       tileBehindPlayer.visible = false;
       tileBehindPlayer.properties.flower = false;
-      game.sfx.play('bounce');
+      //game.sfx.play('bounce');
       plr.flowers++;
     }
   });
@@ -758,7 +758,7 @@ const setUpPlayer = function(x, y) {
       scene.restart();
     }});
     plr.rotation = Math.PI;
-    game.sfx.play('die');
+    //game.sfx.play('die');
   };
 
   plr.jumpHeight = -220;
@@ -822,7 +822,7 @@ const addZnake = function(x, y) {
       znake.destroy();
     }});
     znake.rotation = Math.PI;
-    game.sfx.play('bounce');
+    game.sfx.play('stomp');
   };
 
   znake.on('animationcomplete', () => {
@@ -912,33 +912,29 @@ const scenes = {
     create() {
       // Set up SFX. Don't allow sounds to stack.
       const sfx = () => {
-        const howl = new Howl({
-          src: ['./sfx/text.wav'],
-          sprite: {
-            text: [0, 50],
-          },
-        });
+        const sounds = ['text', 'jump', 'stomp'];
+        const soundbank = sounds.reduce((bank, name) => {
+          bank[name] = new Howl({
+            src: [`./sfx/${name}.wav`],
+            volume: 0.5,
+          });
 
-        const soundbank = {};
+          return bank;
+        }, {});
 
         return {
-          play(spriteName) {
-            const id = soundbank[spriteName];
-
-            if (id) {
-              if (howl.playing(id)) {
-                howl.stop(id);
-              }
-              howl.play(id);
-            } else {
-              soundbank[spriteName] = howl.play(spriteName);
+          play(name) {
+            if (soundbank[name].playing()) {
+              soundbank[name].stop();
             }
+            soundbank[name].play();
           },
-          stop(spriteName) {
-            howl.stop(spriteName);
+          stop(name) {
+            soundbank[name].stop();
           }
         };
       };
+
 
       const bgm = (audioCtx) => {
         const player = createNsfPlayer(audioCtx);
