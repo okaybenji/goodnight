@@ -968,6 +968,8 @@ const scenes = {
       game.sfx = sfx();
       game.music = bgm(Howler.ctx);
 
+      game.music.play('title');
+
       // Set up graphics.
       const bg = this.add.image(128, 120, 'bg');
 
