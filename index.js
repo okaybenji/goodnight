@@ -201,7 +201,9 @@ const intro = {
       method(sprites) {
       },
   }],
+  music: 'intro',
   onComplete() {
+    game.music.stop();
     startNextLevel.call(this);
   }
 };
@@ -350,6 +352,10 @@ const cutsceneFactory = config => ({
     this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
   },
   create() {
+    if (config.music) {
+      game.music.play(config.music);
+    }
+
     const sprites = {
       bg: this.add.sprite(128, 96, 'frame-bg'),
       stars: this.add.sprite(116, 96, 'stars'),
