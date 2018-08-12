@@ -1,6 +1,6 @@
 const createNsfPlayer = (audioContext) => {
   // Messages are disabled. Feel free to handle them however you like.
-  const message = (msg) => console.log(msg);
+  const message = (msg) => undefined;
 
   const play = (fileName, trackNo) => {
     if(node){
