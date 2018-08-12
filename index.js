@@ -352,6 +352,7 @@ const cutsceneFactory = config => ({
     this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
   },
   create() {
+    game.music.stop();
     if (config.music) {
       game.music.play(config.music);
     }
@@ -499,14 +500,19 @@ const startNextLevel = function() {
 
   const level = levels.shift();
 
+  const isFirstLevel = level === 'level1';
+  const isLastLevel = !levels.length;
+  if (isFirstLevel) {
+    // game.music.play('gameplay');
+  } else if (isLastLevel) {
+    game.music.play('climax');
+  }
+
   if (!level) {
     this.scene.start('outro');
     return;
   }
 
-  if (level === 'level1') {
-    // game.music.play('gameplay');
-  }
   this.scene.start(level);
 };
 
