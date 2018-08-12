@@ -764,7 +764,7 @@ const setUpPlayer = function(x, y) {
       scene.restart();
     }});
     plr.rotation = Math.PI;
-    //game.sfx.play('die');
+    game.sfx.play('die');
   };
 
   plr.jumpHeight = -220;
@@ -918,7 +918,7 @@ const scenes = {
     create() {
       // Set up SFX. Don't allow sounds to stack.
       const sfx = () => {
-        const sounds = ['text', 'jump', 'stomp', 'pick'];
+        const sounds = ['text', 'jump', 'stomp', 'pick', 'die'];
         const soundbank = sounds.reduce((bank, name) => {
           bank[name] = new Howl({
             src: [`./sfx/${name}.wav`],
