@@ -16,3 +16,4 @@
 * Float animation is way too fast.
 * Error occurs when trying to play the same sound twice: `openmpt: openmpt_module_read_float_stereo: ERROR: module * not valid`
 * It's possible to fall out of the game bounds, for example when trying to get the flower in the pond, or falling leftward off the chain in the level 3.
+* For some reason, the music just stops playing part-way through the 2nd loop during the credits.
