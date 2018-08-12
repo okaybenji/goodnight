@@ -445,7 +445,11 @@ const cutsceneFactory = config => ({
       });
     };
 
-    const nextLine = () => {
+    const nextLine = (event) => {
+      if (event.code !== 'Enter' && event.code !== 'Space') {
+        return;
+      }
+
       // If the text is still animating in, just display it all immediately.
       if (timers.length) {
         const muteSound = true;
@@ -477,7 +481,7 @@ const cutsceneFactory = config => ({
     this.input.keyboard.on('keydown', nextLine);
 
     // Print first line.
-    nextLine();
+    nextLine({code: 'Enter'});
   },
   update() {
     Object.values(this.sprites).forEach(sprite => {
@@ -1154,7 +1158,7 @@ const scenes = {
       });
 
       // Press any key to start.
-      this.input.keyboard.on('keydown', () => {
+      this.input.keyboard.on('keydown', (event) => {
         this.scene.start('intro');
       });
 
