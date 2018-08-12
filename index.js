@@ -147,6 +147,8 @@ const intro = {
     {
       text: `but the time slot before is filled with stuffy old men saying things our dreamer can't understand,`,
       method(sprites) {
+        game.music.play('talking');
+
         sprites.sofaBack.visible = false;
         sprites.tv.visible = false;
         sprites.tvScreen.visible = false;
@@ -171,6 +173,8 @@ const intro = {
       text: `“but i mustn't sleep” our dreamer realizes!
       “my very favorite tv show will be starting any minute now!”`,
       method(sprites) {
+        game.music.stop();
+
         sprites.stars.visible = true;
         sprites.bg.anims.play('fade');
 
@@ -203,7 +207,6 @@ const intro = {
   }],
   music: 'intro',
   onComplete() {
-    game.music.stop();
     startNextLevel.call(this);
   }
 };
