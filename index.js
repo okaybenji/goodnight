@@ -731,7 +731,7 @@ const setUpPlayer = function(x, y) {
     if (tileBehindPlayer && tileBehindPlayer.properties.flower) {
       tileBehindPlayer.visible = false;
       tileBehindPlayer.properties.flower = false;
-      //game.sfx.play('bounce');
+      game.sfx.play('pick');
       plr.flowers++;
     }
   });
@@ -918,7 +918,7 @@ const scenes = {
     create() {
       // Set up SFX. Don't allow sounds to stack.
       const sfx = () => {
-        const sounds = ['text', 'jump', 'stomp'];
+        const sounds = ['text', 'jump', 'stomp', 'pick'];
         const soundbank = sounds.reduce((bank, name) => {
           bank[name] = new Howl({
             src: [`./sfx/${name}.wav`],
