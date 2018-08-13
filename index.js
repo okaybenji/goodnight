@@ -595,8 +595,10 @@ const update = function() {
     && !(this.keys.left.isDown && this.keys.right.isDown);
 
   if (oneArrowKeyIsDownButNotBoth) {
-    if (anim !== 'run' && !plr.jumping && !plr.hurt) {
+    if (anim !== 'run' && !plr.jumping && !plr.hurt && !plr.climbing) {
       plr.anims.play('run');
+    } else if (anim !== 'climb' && plr.climbing && !plr.hurt) {
+      plr.anims.play('climb');
     }
 
     if (this.keys.left.isDown) {
@@ -608,8 +610,10 @@ const update = function() {
       plr.body.velocity.x += 20;
     }
   } else {
-    if (anim !== 'idle' && anim !== 'idleAltA' && anim !== 'idleAltB' && !plr.jumping && !plr.hurt) {
+    if (anim !== 'idle' && anim !== 'idleAltA' && anim !== 'idleAltB' && !plr.jumping && !plr.hurt && !plr.climbing) {
       plr.anims.play('idle');
+    } else if (plr.climbing) {
+      plr.anims.play('climbIdle');
     }
   }
 
@@ -682,8 +686,14 @@ const update = function() {
     }
     if (this.keys.down.isDown) {
       plr.y += 2;
+      if (anim !== 'climb') {
+        plr.anims.play('climb');
+      }
     } else if (this.keys.up.isDown) {
       plr.y -= 3;
+      if (anim !== 'climb') {
+        plr.anims.play('climb');
+      }
     }
   } else {
     // If player was climbing but now they aren't, don't let them jump in mid-air.
@@ -1104,6 +1114,32 @@ const scenes = {
           { key: 'plr', frame: 32},
         ],
         frameRate: 10,
+      });
+
+      this.anims.create({
+        key: 'chill',
+        frames: this.anims.generateFrameNumbers('plr', { start: 40, end: 45 }),
+        frameRate: 8
+      });
+
+      this.anims.create({
+        key: 'climb',
+        frames: [
+          { key: 'plr', frame: 48},
+          { key: 'plr', frame: 49},
+          { key: 'plr', frame: 50},
+          { key: 'plr', frame: 49},
+        ],
+        frameRate: 10,
+        repeat: -1
+      });
+
+      this.anims.create({
+        key: 'climbIdle',
+        frames: [
+          { key: 'plr', frame: 49},
+        ],
+        frameRate: 1
       });
 
       this.anims.create({
