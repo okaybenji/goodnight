@@ -450,7 +450,7 @@ const cutsceneFactory = config => ({
     };
 
     const nextLine = (event) => {
-      if (event.code !== 'Enter' && event.code !== 'Space') {
+      if (event.key !== 'Enter' && event.key !== 'x') {
         return;
       }
 
@@ -485,7 +485,7 @@ const cutsceneFactory = config => ({
     this.input.keyboard.on('keydown', nextLine);
 
     // Print first line.
-    nextLine({code: 'Enter'});
+    nextLine({key: 'Enter'});
   },
   update() {
     Object.values(this.sprites).forEach(sprite => {
@@ -562,14 +562,12 @@ const update = function() {
     this.lastPlayerInput = this.time.now; // Reset timer.
   }
 
-  if (this.keys.up.isDown || this.keys.down.isDown || this.keys.left.isDown || this.keys.right.isDown || this.keys.space.isDown) {
+  if (this.keys.up.isDown || this.keys.down.isDown || this.keys.left.isDown || this.keys.right.isDown || this.keys.jump.isDown) {
     this.lastPlayerInput = this.time.now;
     if (plr.chilling) {
       plr.chilling = false;
     }
-  }
-
-  if (Phaser.Input.Keyboard.JustDown(this.keys.z) && !plr.chilling && plr.body.blocked.down) {
+  } else if (Phaser.Input.Keyboard.JustDown(this.keys.chill) && !plr.chilling && plr.body.blocked.down) {
     plr.chilling = true;
     plr.anims.play('chill');
     return;
@@ -579,10 +577,8 @@ const update = function() {
 
   // Allow player to jump if they just pressed jump, or if they're holding the jump key and touching down.
   // (Prevents spam-vaulting.)
-  // If you wish to jump off a climbable object, you must specifically press the jump key.
-  // This is because the up key is used to climb upward.
-  const justPressedJump = (Phaser.Input.Keyboard.JustDown(this.keys.up) && !plr.climbing) || Phaser.Input.Keyboard.JustDown(this.keys.space);
-  if (justPressedJump || (this.keys.up.isDown && plr.body.blocked.down)) {
+  const justPressedJump = Phaser.Input.Keyboard.JustDown(this.keys.jump);
+  if (justPressedJump || (this.keys.jump.isDown && plr.body.blocked.down)) {
     if (!plr.jumping) {
       plr.jump();
     }
@@ -590,7 +586,7 @@ const update = function() {
 
   // Allow playing to vault once after jumping by continuing to hold down the jump key.
   // (Each vault after that must be manual.)
-  const pressingJump = this.keys.up.isDown || this.keys.space.isDown;
+  const pressingJump = this.keys.jump.isDown;
   const touchingSide = plr.body.blocked.left || plr.body.blocked.right;
   if (pressingJump && touchingSide && !plr.autoVaulting && !plr.jumping) {
     plr.autoVaulting = true;
@@ -769,8 +765,8 @@ const setUpPlayer = function(x, y) {
     down: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN),
     left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT),
     right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT),
-    space: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE),
-    z: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.Z),
+    jump: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.X),
+    chill: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.Z),
   };
 
   plr.on('animationcomplete', () => {
