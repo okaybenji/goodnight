@@ -6,8 +6,7 @@
 * Create Electron app.
 * Show how many flowers player collected at the end of the game.
 * Add 'chill' button which causes player to stop and smell the roses.
-* Show how many seconds player chilled at the end of the game.
-* Show how many znakes player murdered at the end of the game.
+* Add a pause screen. Show seconds chilled, znakes murdered, times killed, and flowers collected. Also show at end of game.
 * Remove all the .DS_Store files from the repo.
 * Should we require player to be touching chain to go to next level?
 

@@ -556,7 +556,7 @@ const update = function() {
   }
 
   // Play random alternative idle animation after some time passed w/o input.
-  if (this.time.now > this.lastPlayerInput + idleAnimationInteral) {
+  if (this.time.now > this.lastPlayerInput + idleAnimationInteral && !plr.chilling) {
     const anim = Math.random() > 0.5 ? 'idleAltA' : 'idleAltB';
     plr.anims.play(anim);
     this.lastPlayerInput = this.time.now; // Reset timer.
@@ -564,6 +564,17 @@ const update = function() {
 
   if (this.keys.up.isDown || this.keys.down.isDown || this.keys.left.isDown || this.keys.right.isDown || this.keys.space.isDown) {
     this.lastPlayerInput = this.time.now;
+    if (plr.chilling) {
+      plr.chilling = false;
+    }
+  }
+
+  if (Phaser.Input.Keyboard.JustDown(this.keys.z) && !plr.chilling && plr.body.blocked.down) {
+    plr.chilling = true;
+    plr.anims.play('chill');
+    return;
+  } else if (plr.chilling) {
+    return;
   }
 
   // Allow player to jump if they just pressed jump, or if they're holding the jump key and touching down.
@@ -759,6 +770,7 @@ const setUpPlayer = function(x, y) {
     left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT),
     right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT),
     space: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE),
+    z: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.Z),
   };
 
   plr.on('animationcomplete', () => {
