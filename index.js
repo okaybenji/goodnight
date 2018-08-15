@@ -591,10 +591,12 @@ const update = function() {
   }
 
   const anim = plr.anims.currentAnim.key;
-  const oneArrowKeyIsDownButNotBoth = (this.keys.left.isDown || this.keys.right.isDown)
+  const oneHorizontalKeyIsDownButNotBoth = (this.keys.left.isDown || this.keys.right.isDown)
     && !(this.keys.left.isDown && this.keys.right.isDown);
+  const oneVerticalKeyIsDownButNotBoth = (this.keys.up.isDown || this.keys.down.isDown)
+    && !(this.keys.up.isDown && this.keys.down.isDown);
 
-  if (oneArrowKeyIsDownButNotBoth) {
+  if (oneHorizontalKeyIsDownButNotBoth) {
     if (anim !== 'run' && !plr.jumping && !plr.hurt && !plr.climbing) {
       plr.anims.play('run');
     } else if (anim !== 'climb' && plr.climbing && !plr.hurt) {
@@ -612,7 +614,7 @@ const update = function() {
   } else {
     if (anim !== 'idle' && anim !== 'idleAltA' && anim !== 'idleAltB' && !plr.jumping && !plr.hurt && !plr.climbing) {
       plr.anims.play('idle');
-    } else if (plr.climbing) {
+    } else if (plr.climbing && !oneVerticalKeyIsDownButNotBoth && anim !== 'climbIdle') {
       plr.anims.play('climbIdle');
     }
   }
@@ -684,16 +686,11 @@ const update = function() {
       plr.body.velocity.x = 0;
       plr.body.velocity.y = 0;
     }
-    if (this.keys.down.isDown) {
-      plr.y += 2;
+    if (oneVerticalKeyIsDownButNotBoth) {
       if (anim !== 'climb') {
         plr.anims.play('climb');
       }
-    } else if (this.keys.up.isDown) {
-      plr.y -= 3;
-      if (anim !== 'climb') {
-        plr.anims.play('climb');
-      }
+      plr.y += this.keys.up.isDown ? -3 : 2;
     }
   } else {
     // If player was climbing but now they aren't, don't let them jump in mid-air.
