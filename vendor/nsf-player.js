@@ -32,8 +32,8 @@ const createNsfPlayer = (audioContext) => {
     }
 
     node.disconnect();
-    if (Module.ccall('gme_delete', 'number', ['number'], [emu]) != 0) {
-      console.error('Failed to stop track.');
+    if (Module.ccall('gme_delete', 'number', ['number'], [emu]) !== 0) {
+      // console.error('Failed to stop track.');
     }
   };
 
