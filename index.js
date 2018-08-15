@@ -552,6 +552,7 @@ const update = function() {
     plr.y -= 3;
     plr.jumping = false;
     plr.autoVaulting = false;
+    plr.floating = true;
   }
 
   // Play random alternative idle animation after some time passed w/o input.
@@ -739,7 +740,7 @@ const setUpPlayer = function(x, y) {
   game.plr = plr;
 
   this.physics.add.collider(game.map.worldLayer, plr, (plr, tile) => {
-    if (!plr.body.blocked.up) { // Prevent vaulting on bottoms of platforms.
+    if (!plr.body.blocked.up /*&& !plr.autoVaulting*/) { // Prevent vaulting on bottoms of platforms.
       plr.jumping = false;
     }
     if (plr.body.blocked.down) {
@@ -789,7 +790,17 @@ const setUpPlayer = function(x, y) {
 
   plr.jumpHeight = -220;
   plr.jump = () => {
+    // Player can jump off the ground,
+    // or vault off the sides of platforms,
+    // or jump off chains,
+    // or jump out of water.
+    // ...and that's it!
+    if (!plr.body.blocked.down && !plr.body.blocked.left && !plr.body.blocked.right && !plr.climbing && !plr.floating) {
+      return;
+    }
+
     plr.jumping = true;
+    plr.floating = false;
 
     plr.body.velocity.y = plr.jumpHeight;
     game.sfx.play('jump');
