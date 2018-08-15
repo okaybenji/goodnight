@@ -4,13 +4,9 @@
 * Design a lot more levels!
 * Add gamepad controls.
 * Create Electron app.
-* Show how many flowers player collected at the end of the game.
-* Add 'chill' button which causes player to stop and smell the roses.
 * Add a pause screen. Show seconds chilled, znakes murdered, times killed, and flowers collected. Also show at end of game.
 * Remove all the .DS_Store files from the repo.
-* Should we require player to be touching chain to go to next level?
 
 # KNOWN BUGS
 * Float animation is way too fast.
-* Error occurs when trying to play the same sound twice: `openmpt: openmpt_module_read_float_stereo: ERROR: module * not valid`
 * It's possible to fall out of the game bounds, for example when trying to get the flower in the pond, or falling leftward off the chain in the level 3.
