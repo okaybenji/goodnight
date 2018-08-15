@@ -562,7 +562,7 @@ const update = function() {
     this.lastPlayerInput = this.time.now; // Reset timer.
   }
 
-  if (this.keys.up.isDown || this.keys.down.isDown || this.keys.left.isDown || this.keys.right.isDown || this.keys.jump.isDown) {
+  if (this.keys.up.isDown || this.keys.down.isDown || this.keys.left.isDown || this.keys.right.isDown || this.keys.jump.isDown || this.gamepad.up || this.gamepad.down || this.gamepad.left || this.gamepad.right) {
     this.lastPlayerInput = this.time.now;
     if (plr.chilling) {
       plr.chilling = false;
@@ -599,10 +599,12 @@ const update = function() {
   }
 
   const anim = plr.anims.currentAnim.key;
-  const oneHorizontalKeyIsDownButNotBoth = (this.keys.left.isDown || this.keys.right.isDown)
-    && !(this.keys.left.isDown && this.keys.right.isDown);
-  const oneVerticalKeyIsDownButNotBoth = (this.keys.up.isDown || this.keys.down.isDown)
-    && !(this.keys.up.isDown && this.keys.down.isDown);
+  const oneHorizontalKeyIsDownButNotBoth = this.gamepad.left || this.gamepad.right
+    || ((this.keys.left.isDown || this.keys.right.isDown)
+    && !(this.keys.left.isDown && this.keys.right.isDown));
+  const oneVerticalKeyIsDownButNotBoth = this.gamepad.up || this.gamepad.down
+    || ((this.keys.up.isDown || this.keys.down.isDown)
+    && !(this.keys.up.isDown && this.keys.down.isDown));
 
   if (oneHorizontalKeyIsDownButNotBoth) {
     if (anim !== 'run' && !plr.jumping && !plr.hurt && !plr.climbing) {
@@ -698,7 +700,7 @@ const update = function() {
       if (anim !== 'climb') {
         plr.anims.play('climb');
       }
-      plr.y += this.keys.up.isDown ? -3 : 2;
+      plr.y += (this.gamepad.up || this.keys.up.isDown) ? -3 : 2;
     }
   } else {
     plr.climbing = false;
@@ -737,6 +739,13 @@ const randomizeStars = function() {
 
 // Add the player and set up controls.
 const setUpPlayer = function(x, y) {
+  this.gamepad = this.gamepad || {};
+  // Set up gamepad.
+  this.input.gamepad.once('down', pad => {
+    console.log('down!!!');
+    this.gamepad = pad;
+  }, this);
+
   const plr = this.physics.add.sprite(x, y, 'plr')
     .anims.play('idle', true);
 
@@ -998,6 +1007,12 @@ const scenes = {
       }, 30000);
 
       game.music.play('title');
+
+      // Set up gamepad.
+      this.input.gamepad.once('down', pad => {
+        console.log('down!!!');
+        this.gamepad = pad;
+      }, this);
 
       // Set up graphics.
       const bg = this.add.image(128, 120, 'bg');
@@ -1311,6 +1326,9 @@ const config = {
     arcade: {
       gravity: { y: 800 }
     }
+  },
+  input: {
+    gamepad: true,
   },
   scene: scenes.menu,
 };
