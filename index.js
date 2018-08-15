@@ -938,7 +938,7 @@ const scenes = {
     create() {
       // Set up SFX. Don't allow sounds to stack.
       const sfx = () => {
-        const sounds = ['text', 'jump', 'stomp', 'pick', 'die'];
+        const sounds = ['text', 'jump', 'stomp', 'pick', 'die', 'silence'];
         const soundbank = sounds.reduce((bank, name) => {
           bank[name] = new Howl({
             src: [`./sfx/${name}.wav`],
@@ -977,6 +977,12 @@ const scenes = {
 
       game.sfx = sfx();
       game.music = bgm(Howler.ctx);
+
+      // Play a silent "sound" every 30 secs.
+      // This prevents AudioContext from pausing itself.
+      setInterval(() => {
+        game.sfx.play('silence');
+      }, 30000);
 
       game.music.play('title');
 
