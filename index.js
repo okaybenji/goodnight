@@ -694,10 +694,6 @@ const update = function() {
       plr.y += this.keys.up.isDown ? -3 : 2;
     }
   } else {
-    // If player was climbing but now they aren't, don't let them jump in mid-air.
-    if (plr.climbing) {
-      plr.jumping = true;
-    }
     plr.climbing = false;
     plr.body.allowGravity = true;
   }
@@ -740,9 +736,7 @@ const setUpPlayer = function(x, y) {
   game.plr = plr;
 
   this.physics.add.collider(game.map.worldLayer, plr, (plr, tile) => {
-    if (!plr.body.blocked.up /*&& !plr.autoVaulting*/) { // Prevent vaulting on bottoms of platforms.
-      plr.jumping = false;
-    }
+    plr.jumping = false;
     if (plr.body.blocked.down) {
       plr.autoVaulting = false;
     }
