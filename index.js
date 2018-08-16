@@ -573,6 +573,7 @@ const update = function() {
     }
   } else if (Phaser.Input.Keyboard.JustDown(this.keys.chill) && !plr.chilling && plr.body.blocked.down) {
     plr.chilling = true;
+    plr.body.velocity.x = 0; // Stop slide in case player was moving.
     const roll = Math.random();
     const anim =
       roll > 0.5 ? 'chill'
