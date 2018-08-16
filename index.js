@@ -556,7 +556,7 @@ const update = function() {
     plr.y -= 3;
     plr.jumping = false;
     plr.autoVaulting = false;
-    plr.floating = true;
+    plr.swimming = true;
   }
 
   // Play random alternative idle animation after some time passed w/o input.
@@ -618,7 +618,7 @@ const update = function() {
     && !(this.keys.up.isDown && this.keys.down.isDown);
 
   if (oneHorizontalKeyIsDownButNotBoth) {
-    if (anim !== 'run' && !plr.jumping && !plr.hurt && !plr.climbing) {
+    if (anim !== 'run' && !plr.jumping && !plr.hurt && !plr.climbing && !plr.swimming) {
       plr.anims.play('run');
     } else if (anim !== 'climb' && plr.climbing && !plr.hurt) {
       plr.anims.play('climb');
@@ -633,7 +633,7 @@ const update = function() {
       plr.body.velocity.x += 20;
     }
   } else {
-    if (anim !== 'idle' && anim !== 'idleAltA' && anim !== 'idleAltB' && !plr.jumping && !plr.hurt && !plr.climbing) {
+    if (anim !== 'idle' && anim !== 'idleAltA' && anim !== 'idleAltB' && !plr.jumping && !plr.hurt && !plr.climbing && !plr.swimming) {
       plr.anims.play('idle');
     } else if (plr.climbing && !oneVerticalKeyIsDownButNotBoth && anim !== 'climbIdle') {
       plr.anims.play('climbIdle');
@@ -651,6 +651,10 @@ const update = function() {
         plr.anims.play('jump');
       }
     }
+  }
+
+  if (plr.swimming && anim !== 'swim' && !plr.hurt) {
+    plr.anims.play('swim');
   }
 
   if (plr.hurt && anim !== 'hurt') {
@@ -809,12 +813,12 @@ const setUpPlayer = function(x, y) {
     // or jump off chains,
     // or jump out of water.
     // ...and that's it!
-    if (!plr.body.blocked.down && !plr.body.blocked.left && !plr.body.blocked.right && !plr.climbing && !plr.floating) {
+    if (!plr.body.blocked.down && !plr.body.blocked.left && !plr.body.blocked.right && !plr.climbing && !plr.swimming) {
       return;
     }
 
     plr.jumping = true;
-    plr.floating = false;
+    plr.swimming = false;
 
     plr.body.velocity.y = plr.jumpHeight;
     game.sfx.play('jump');
@@ -1147,6 +1151,18 @@ const scenes = {
           { key: 'plr', frame: 32},
         ],
         frameRate: 10,
+      });
+
+      this.anims.create({
+        key: 'swim',
+        frames: [
+          { key: 'plr', frame: 40},
+          { key: 'plr', frame: 41},
+          { key: 'plr', frame: 42},
+          { key: 'plr', frame: 41},
+        ],
+        frameRate: 8,
+        repeat: -1,
       });
 
       this.anims.create({
