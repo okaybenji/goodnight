@@ -907,6 +907,11 @@ const addZnake = function(x, y) {
     }
   });
   this.physics.add.collider(game.plr, znake, () => {
+    // Znakes don't mess with chill ppl.
+    if (game.plr.chilling) {
+      return;
+    }
+
     const plrJumpedOnZnake = game.plr.body.touching.down && znake.body.touching.up;
     if (plrJumpedOnZnake) {
       game.plr.body.velocity.y -= 100;
