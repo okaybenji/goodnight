@@ -1,6 +1,9 @@
 const levels = ['level1', 'level2', 'level3'];
 let flowers = 0; // Track how many flowers the player picks.
 
+const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const randomArrayElement = arr => arr[Math.floor(Math.random() * arr.length)];
+
 const setLetter = (sprite, letter) => {
   const map = {
     ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, ',': 12, '.': 14, ':': 26,
@@ -544,6 +547,7 @@ const update = function() {
     return;
   }
 
+  const anim = plr.anims.currentAnim.key;
   const overTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y);
 
   // Float in water. Allow jumping out.
@@ -569,9 +573,18 @@ const update = function() {
     }
   } else if (Phaser.Input.Keyboard.JustDown(this.keys.chill) && !plr.chilling && plr.body.blocked.down) {
     plr.chilling = true;
-    plr.anims.play('chill');
+    const roll = Math.random();
+    const anim =
+      roll > 0.5 ? 'chill'
+      : roll > 0.25 ? 'sleep'
+      : 'gameboy';
+
+    plr.anims.play(anim);
     return;
   } else if (plr.chilling) {
+    if (anim === 'gameboy' && !plr.anims.isPlaying) {
+      plr.anims.play('gameboy2');
+    }
     return;
   }
 
@@ -598,7 +611,6 @@ const update = function() {
     plr.body.velocity.y = plr.jumpHeight;
   }
 
-  const anim = plr.anims.currentAnim.key;
   const oneHorizontalKeyIsDownButNotBoth = (this.keys.left.isDown || this.keys.right.isDown)
     && !(this.keys.left.isDown && this.keys.right.isDown);
   const oneVerticalKeyIsDownButNotBoth = (this.keys.up.isDown || this.keys.down.isDown)
@@ -707,7 +719,6 @@ const update = function() {
 };
 
 const addStar = function(delay) {
-  const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
   const getRandomPosition = () => ({
     x: randomIntBetween(0, game.config.width),
     y: randomIntBetween(0, game.config.height)
@@ -1134,8 +1145,46 @@ const scenes = {
 
       this.anims.create({
         key: 'chill',
-        frames: this.anims.generateFrameNumbers('plr', { start: 40, end: 45 }),
+        frames: this.anims.generateFrameNumbers('plr', { start: 56, end: 62 }),
         frameRate: 8
+      });
+
+      this.anims.create({
+        key: 'sleep',
+        frames: this.anims.generateFrameNumbers('plr', { start: 64, end: 70 }),
+        frameRate: 8
+      });
+
+      this.anims.create({
+        key: 'gameboy',
+        frames: this.anims.generateFrameNumbers('plr', { start: 72, end: 78 }),
+        frameRate: 8
+      });
+
+      // Generate a bunch of frames that look like playing gameboy.
+      const playFrames = [74, 75];
+      const frames = [...Array(64)]
+        .map((f, i, arr) => ({key: 'plr', frame: randomArrayElement(playFrames)}))
+        .map((f, i, arr) => {
+          const last = arr[i - 1];
+          if (last) {
+            f.frame =
+              // 76 is the start of the blink animation, so if that comes up, finish it.
+              last.frame === 76 ? 77
+              : last.frame === 77 ? 78
+              // If we're repeating frames, play a different one, and maybe blink.
+              : last.frame === f.frame ? randomArrayElement([74, 75, 76].splice([74, 75, 76].indexOf(f.frame)))
+              : f.frame;
+          }
+
+          return f;
+        });
+
+      this.anims.create({
+        key: 'gameboy2',
+        frames,
+        frameRate: 8,
+        repeat: -1,
       });
 
       this.anims.create({
