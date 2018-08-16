@@ -843,6 +843,7 @@ const preloadLevel = function(levelName) {
 };
 
 const createLevel = function(levelName) {
+  const xOffset = -24; // To account for extra level width.
   this.lastTileSwap = this.time.now;
   this.lastPlayerInput = this.time.now;
 
@@ -851,19 +852,19 @@ const createLevel = function(levelName) {
   game.map = this.make.tilemap({key: levelName});
   game.map.tileset = game.map.addTilesetImage('monochrome-caves');
 
-  // On maps with water at the edges, there are 2 extra water tiles on each side to prevent player
-  // from falling out of the map on world wrap. Thus, here the map is offset by 2 tiles.
-  game.map.worldLayer = game.map.createDynamicLayer('World', game.map.tileset, -16, 0);
+  // There are 2 extra tiles on the left and right for screen wrapping.
+  // There is also a 1-tile collidable border to prevent players falling outside the screen.
+  game.map.worldLayer = game.map.createDynamicLayer('World', game.map.tileset, xOffset, 0);
   game.map.worldLayer.setCollisionByProperty({collides: true});
 
   // Spawn player and enemies from positions placed in Tiled object layer.
   const objectLayer = game.map.objects.find(objectLayer => objectLayer.name === 'Objects');
   const spawnPoint = objectLayer.objects.find(obj => obj.type === 'player');
-  setUpPlayer.call(this, spawnPoint.x, spawnPoint.y);
+  setUpPlayer.call(this, spawnPoint.x + xOffset, spawnPoint.y);
 
   const znakes = objectLayer.objects
     .filter(obj => obj.type === 'znake')
-    .map(znake => addZnake.call(this, znake.x, znake.y));
+    .map(znake => addZnake.call(this, znake.x + xOffset, znake.y));
 };
 
 const addZnake = function(x, y) {

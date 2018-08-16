@@ -9,4 +9,3 @@
 
 # KNOWN BUGS
 * Float animation is way too fast.
-* It's possible to fall out of the game bounds, for example when trying to get the flower in the pond, or falling leftward off the chain in the level 3.
