@@ -675,10 +675,10 @@ const update = function() {
 
   // World Wrap.
   if (plr.body.x > game.config.width) {
-    plr.x = 0;
+    plr.x = -4;
   }
-  if (plr.body.x < -16) {
-    plr.x = game.config.width;
+  if (plr.body.x < -12) {
+    plr.x = game.config.width + 4;
   }
 
   // Next Level!
