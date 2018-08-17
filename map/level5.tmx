@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="32" height="30" tilewidth="8" tileheight="8" infinite="0" nextobjectid="9">
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="38" height="31" tilewidth="8" tileheight="8" infinite="0" nextobjectid="21">
  <tileset firstgid="1" name="monochrome-caves" tilewidth="8" tileheight="8" tilecount="64" columns="8">
   <image source="../img/monochrome-caves.png" width="64" height="64"/>
   <tile id="0">
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="true"/>
    </properties>
   </tile>
@@ -13,6 +14,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -20,6 +22,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -27,6 +30,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -34,6 +38,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -41,6 +46,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -48,6 +54,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -55,6 +62,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -62,6 +70,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -69,6 +78,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -76,6 +86,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -83,6 +94,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -90,6 +102,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -97,6 +110,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -104,6 +118,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -111,6 +126,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -118,6 +134,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -125,6 +142,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -132,6 +150,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -139,6 +158,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -146,6 +166,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -153,6 +174,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -160,6 +182,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -167,6 +190,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -174,6 +198,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -181,6 +206,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -188,6 +214,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -195,6 +222,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -202,6 +230,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -209,6 +238,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -216,6 +246,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -223,6 +254,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -230,6 +262,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -237,6 +270,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -244,6 +278,7 @@
    <properties>
     <property name="climbable" type="bool" value="true"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -251,6 +286,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -258,6 +294,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -265,6 +302,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -272,6 +310,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -279,6 +318,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -286,6 +326,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -293,6 +334,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -300,6 +342,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -307,6 +350,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -314,6 +358,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="true"/>
    </properties>
   </tile>
@@ -321,6 +366,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="true"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -328,6 +374,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="true"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -335,6 +382,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="true"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -342,6 +390,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="true"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -349,6 +398,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -356,6 +406,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -363,6 +414,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="true"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -370,6 +422,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="true"/>
    </properties>
   </tile>
@@ -377,6 +430,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -384,6 +438,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -391,6 +446,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -398,6 +454,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="true"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -405,6 +462,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -412,13 +470,15 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
   <tile id="59">
    <properties>
     <property name="climbable" type="bool" value="false"/>
-    <property name="collides" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -426,6 +486,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -433,6 +494,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -440,6 +502,7 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
@@ -447,58 +510,51 @@
    <properties>
     <property name="climbable" type="bool" value="false"/>
     <property name="collides" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
     <property name="water" type="bool" value="false"/>
    </properties>
   </tile>
  </tileset>
- <layer name="World" width="32" height="30">
+ <layer name="World" width="38" height="31">
   <data encoding="csv">
-0,0,0,0,0,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,35,0,0,0,0,0,0,49,49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,35,0,0,0,0,0,0,0,0,0,49,49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,49,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,45,45,45,45,45,45,45,45,45,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,1,1,1,1,1,1,1,53,1,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,53,1,1,1,1,1,1,1,1,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,1,1,1,1,1,1,1,1,1,
-0,0,0,0,0,57,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,1,1,1,53,1,1,1,1,1,
-0,0,0,0,47,46,46,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,55,55,55,55,55,55,1,1,1,
-0,0,0,0,47,47,47,47,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,1,1,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,55,55,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,31,30,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,48,46,46,46,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,47,48,48,48,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,0,0,0,0,37,0,0,0,0,0,
-45,48,48,48,47,45,45,45,45,45,45,45,45,45,48,47,47,47,47,47,45,45,45,45,45,47,47,47,47,45,45,45,
-1,47,55,55,48,1,1,1,53,1,1,1,1,1,47,55,55,55,55,47,1,1,1,1,1,47,55,55,47,1,53,1,
-1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-53,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,53,1,1,1,1,1,1,1,1,53,1,1,1
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,45,45,45,45,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,53,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,45,45,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,38,0,0,49,
+49,0,0,0,0,0,0,0,0,53,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,60,46,46,46,46,46,46,46,46,46,46,46,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,45,45,0,0,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,49,
+49,45,45,45,45,0,0,0,0,0,0,0,0,0,0,0,53,1,1,0,0,0,0,0,0,0,57,0,0,0,0,0,0,0,0,0,0,49,
+49,53,53,1,59,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,48,48,48,48,48,48,48,48,48,48,48,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,45,45,45,45,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,53,1,1,1,53,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,45,45,45,45,45,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,1,53,1,1,1,53,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,32,0,0,38,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,38,0,38,0,0,30,31,0,0,0,0,49,
+49,46,46,46,46,46,46,46,46,46,46,46,46,46,52,45,45,45,45,45,45,45,60,46,46,46,46,46,46,46,46,46,46,46,46,46,46,49,
+49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,1,1,1,1,1,1,1,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49
 </data>
  </layer>
  <objectgroup name="Objects">
-  <object id="4" type="znake" x="40" y="128">
+  <object id="8" type="player" x="72" y="232">
    <point/>
   </object>
-  <object id="5" type="znake" x="32" y="208">
-   <point/>
-  </object>
-  <object id="6" type="znake" x="80" y="168">
-   <point/>
-  </object>
-  <object id="7" type="znake" x="208" y="208">
-   <point/>
-  </object>
-  <object id="8" type="player" x="120" y="208">
+  <object id="14" type="znake" x="240" y="128">
    <point/>
   </object>
  </objectgroup>

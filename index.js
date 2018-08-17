@@ -1,5 +1,8 @@
-const levels = ['level1', 'level2', 'level3'];
+const levels = ['level1', 'level2', 'level3', 'level4', 'level5'];
 let flowers = 0; // Track how many flowers the player picks.
+
+const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const randomArrayElement = arr => arr[Math.floor(Math.random() * arr.length)];
 
 const setLetter = (sprite, letter) => {
   const map = {
@@ -506,9 +509,9 @@ const startNextLevel = function() {
   const isFirstLevel = level === 'level1';
   const isLastLevel = !levels.length;
   if (isFirstLevel) {
-    // game.music.play('gameplay');
+    game.music.play('title');
   } else if (isLastLevel) {
-    game.music.play('climax');
+    // game.music.play('climax');
   }
 
   if (!level) {
@@ -544,6 +547,7 @@ const update = function() {
     return;
   }
 
+  const anim = plr.anims.currentAnim.key;
   const overTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y);
 
   // Float in water. Allow jumping out.
@@ -552,7 +556,7 @@ const update = function() {
     plr.y -= 3;
     plr.jumping = false;
     plr.autoVaulting = false;
-    plr.floating = true;
+    plr.swimming = true;
   }
 
   // Play random alternative idle animation after some time passed w/o input.
@@ -569,9 +573,19 @@ const update = function() {
     }
   } else if (Phaser.Input.Keyboard.JustDown(this.keys.chill) && !plr.chilling && plr.body.blocked.down) {
     plr.chilling = true;
-    plr.anims.play('chill');
+    plr.body.velocity.x = 0; // Stop slide in case player was moving.
+    const roll = Math.random();
+    const anim =
+      roll > 0.5 ? 'chill'
+      : roll > 0.25 ? 'sleep'
+      : 'gameboy';
+
+    plr.anims.play(anim);
     return;
   } else if (plr.chilling) {
+    if (anim === 'gameboy' && !plr.anims.isPlaying) {
+      plr.anims.play('gameboy2');
+    }
     return;
   }
 
@@ -598,7 +612,6 @@ const update = function() {
     plr.body.velocity.y = plr.jumpHeight;
   }
 
-  const anim = plr.anims.currentAnim.key;
   const oneHorizontalKeyIsDownButNotBoth = this.gamepad.left || this.gamepad.right
     || ((this.keys.left.isDown || this.keys.right.isDown)
     && !(this.keys.left.isDown && this.keys.right.isDown));
@@ -607,7 +620,7 @@ const update = function() {
     && !(this.keys.up.isDown && this.keys.down.isDown));
 
   if (oneHorizontalKeyIsDownButNotBoth) {
-    if (anim !== 'run' && !plr.jumping && !plr.hurt && !plr.climbing) {
+    if (anim !== 'run' && !plr.jumping && !plr.hurt && !plr.climbing && !plr.swimming) {
       plr.anims.play('run');
     } else if (anim !== 'climb' && plr.climbing && !plr.hurt) {
       plr.anims.play('climb');
@@ -622,7 +635,7 @@ const update = function() {
       plr.body.velocity.x += 20;
     }
   } else {
-    if (anim !== 'idle' && anim !== 'idleAltA' && anim !== 'idleAltB' && !plr.jumping && !plr.hurt && !plr.climbing) {
+    if (anim !== 'idle' && anim !== 'idleAltA' && anim !== 'idleAltB' && !plr.jumping && !plr.hurt && !plr.climbing && !plr.swimming) {
       plr.anims.play('idle');
     } else if (plr.climbing && !oneVerticalKeyIsDownButNotBoth && anim !== 'climbIdle') {
       plr.anims.play('climbIdle');
@@ -642,9 +655,12 @@ const update = function() {
     }
   }
 
+  if (plr.swimming && anim !== 'swim' && !plr.hurt) {
+    plr.anims.play('swim');
+  }
+
   if (plr.hurt && anim !== 'hurt') {
     plr.anims.play('hurt');
-    //game.sfx.play('hurt');
     plr.kill();
     if (plr.hurt === 'left') {
       plr.body.velocity.x = 100;
@@ -660,10 +676,10 @@ const update = function() {
 
   // World Wrap.
   if (plr.body.x > game.config.width) {
-    plr.x = 0;
+    plr.x = -4;
   }
-  if (plr.body.x < -16) {
-    plr.x = game.config.width;
+  if (plr.body.x < -12) {
+    plr.x = game.config.width + 4;
   }
 
   // Next Level!
@@ -709,7 +725,6 @@ const update = function() {
 };
 
 const addStar = function(delay) {
-  const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
   const getRandomPosition = () => ({
     x: randomIntBetween(0, game.config.width),
     y: randomIntBetween(0, game.config.height)
@@ -755,6 +770,7 @@ const setUpPlayer = function(x, y) {
     plr.jumping = false;
     if (plr.body.blocked.down) {
       plr.autoVaulting = false;
+      plr.swimming = false;
     }
 
     // Collect flowers.
@@ -806,12 +822,12 @@ const setUpPlayer = function(x, y) {
     // or jump off chains,
     // or jump out of water.
     // ...and that's it!
-    if (!plr.body.blocked.down && !plr.body.blocked.left && !plr.body.blocked.right && !plr.climbing && !plr.floating) {
+    if (!plr.body.blocked.down && !plr.body.blocked.left && !plr.body.blocked.right && !plr.climbing && !plr.swimming) {
       return;
     }
 
     plr.jumping = true;
-    plr.floating = false;
+    plr.swimming = false;
 
     plr.body.velocity.y = plr.jumpHeight;
     game.sfx.play('jump');
@@ -836,6 +852,7 @@ const preloadLevel = function(levelName) {
 };
 
 const createLevel = function(levelName) {
+  const xOffset = -24; // To account for extra level width.
   this.lastTileSwap = this.time.now;
   this.lastPlayerInput = this.time.now;
 
@@ -844,19 +861,19 @@ const createLevel = function(levelName) {
   game.map = this.make.tilemap({key: levelName});
   game.map.tileset = game.map.addTilesetImage('monochrome-caves');
 
-  // On maps with water at the edges, there are 2 extra water tiles on each side to prevent player
-  // from falling out of the map on world wrap. Thus, here the map is offset by 2 tiles.
-  game.map.worldLayer = game.map.createDynamicLayer('World', game.map.tileset, -16, 0);
+  // There are 2 extra tiles on the left and right for screen wrapping.
+  // There is also a 1-tile collidable border to prevent players falling outside the screen.
+  game.map.worldLayer = game.map.createDynamicLayer('World', game.map.tileset, xOffset, 0);
   game.map.worldLayer.setCollisionByProperty({collides: true});
 
   // Spawn player and enemies from positions placed in Tiled object layer.
   const objectLayer = game.map.objects.find(objectLayer => objectLayer.name === 'Objects');
   const spawnPoint = objectLayer.objects.find(obj => obj.type === 'player');
-  setUpPlayer.call(this, spawnPoint.x, spawnPoint.y);
+  setUpPlayer.call(this, spawnPoint.x + xOffset, spawnPoint.y);
 
   const znakes = objectLayer.objects
     .filter(obj => obj.type === 'znake')
-    .map(znake => addZnake.call(this, znake.x, znake.y));
+    .map(znake => addZnake.call(this, znake.x + xOffset, znake.y));
 };
 
 const addZnake = function(x, y) {
@@ -904,6 +921,11 @@ const addZnake = function(x, y) {
     }
   });
   this.physics.add.collider(game.plr, znake, () => {
+    // Znakes don't mess with chill ppl.
+    if (game.plr.chilling) {
+      return;
+    }
+
     const plrJumpedOnZnake = game.plr.body.touching.down && znake.body.touching.up;
     if (plrJumpedOnZnake) {
       game.plr.body.velocity.y -= 100;
@@ -1148,9 +1170,59 @@ const scenes = {
       });
 
       this.anims.create({
+        key: 'swim',
+        frames: [
+          { key: 'plr', frame: 40},
+          { key: 'plr', frame: 41},
+          { key: 'plr', frame: 42},
+          { key: 'plr', frame: 41},
+        ],
+        frameRate: 8,
+        repeat: -1,
+      });
+
+      this.anims.create({
         key: 'chill',
-        frames: this.anims.generateFrameNumbers('plr', { start: 40, end: 45 }),
+        frames: this.anims.generateFrameNumbers('plr', { start: 56, end: 62 }),
         frameRate: 8
+      });
+
+      this.anims.create({
+        key: 'sleep',
+        frames: this.anims.generateFrameNumbers('plr', { start: 64, end: 70 }),
+        frameRate: 8
+      });
+
+      this.anims.create({
+        key: 'gameboy',
+        frames: this.anims.generateFrameNumbers('plr', { start: 72, end: 78 }),
+        frameRate: 8
+      });
+
+      // Generate a bunch of frames that look like playing gameboy.
+      const playFrames = [74, 75];
+      const frames = [...Array(64)]
+        .map((f, i, arr) => ({key: 'plr', frame: randomArrayElement(playFrames)}))
+        .map((f, i, arr) => {
+          const last = arr[i - 1];
+          if (last) {
+            f.frame =
+              // 76 is the start of the blink animation, so if that comes up, finish it.
+              last.frame === 76 ? 77
+              : last.frame === 77 ? 78
+              // If we're repeating frames, play a different one, and maybe blink.
+              : last.frame === f.frame ? randomArrayElement([74, 75, 76].splice([74, 75, 76].indexOf(f.frame)))
+              : f.frame;
+          }
+
+          return f;
+        });
+
+      this.anims.create({
+        key: 'gameboy2',
+        frames,
+        frameRate: 8,
+        repeat: -1,
       });
 
       this.anims.create({
