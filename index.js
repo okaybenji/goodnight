@@ -659,7 +659,6 @@ const update = function() {
 
   if (plr.hurt && anim !== 'hurt') {
     plr.anims.play('hurt');
-    //game.sfx.play('hurt');
     plr.kill();
     if (plr.hurt === 'left') {
       plr.body.velocity.x = 100;
@@ -762,6 +761,7 @@ const setUpPlayer = function(x, y) {
     plr.jumping = false;
     if (plr.body.blocked.down) {
       plr.autoVaulting = false;
+      plr.swimming = false;
     }
 
     // Collect flowers.
