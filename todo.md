@@ -6,6 +6,7 @@
 * Create Electron app.
 * Remove all the .DS_Store files from the repo.
 * Add a pause screen with stats. Also show at end of game.
+* Set up the couch mechanic for the last level.
 
 ### Pause screen stats:
 * Current level number
