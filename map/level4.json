@@ -1,8 +1,7 @@
 { "height":31,
- "infinite":false,
  "layers":[
         {
-         "data":[49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 46, 46, 46, 46, 46, 46, 46, 46, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 47, 48, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 57, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 60, 46, 52, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 48, 0, 0, 0, 47, 48, 48, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 46, 52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 47, 48, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 47, 48, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 48, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 48, 0, 38, 57, 0, 0, 0, 0, 0, 49, 49, 1, 1, 1, 1, 59, 1, 1, 1, 1, 1, 1, 59, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 53, 1, 48, 48, 48, 48, 48, 48, 48, 48, 48, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49],
+         "data":[49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 181, 182, 183, 184, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 177, 180, 193, 191, 191, 194, 180, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 185, 186, 174, 187, 186, 187, 188, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 0, 0, 32, 38, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 46, 46, 46, 46, 46, 46, 46, 46, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 55, 48, 55, 48, 47, 55, 55, 55, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 181, 182, 48, 49, 56, 0, 0, 56, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 177, 191, 191, 49, 49, 49, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 185, 186, 187, 186, 49, 49, 0, 0, 0, 57, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 49, 61, 0, 0, 60, 46, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 47, 49, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 46, 52, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 49, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 181, 182, 47, 55, 48, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 49, 0, 0, 0, 0, 49, 0, 0, 49, 49, 0, 0, 0, 0, 0, 177, 180, 193, 191, 191, 49, 49, 180, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 61, 0, 0, 0, 0, 56, 0, 0, 49, 49, 0, 0, 0, 0, 0, 185, 186, 187, 188, 185, 186, 187, 188, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 49, 38, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 49, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 49, 49, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 49, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 48, 56, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 49, 0, 0, 0, 0, 0, 0, 0, 49, 49, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 48, 49, 38, 57, 0, 0, 0, 0, 0, 49, 49, 1, 1, 1, 1, 59, 1, 1, 1, 1, 1, 1, 59, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 53, 1, 47, 48, 48, 48, 48, 48, 48, 48, 48, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49],
          "height":31,
          "name":"World",
          "opacity":1,
@@ -14,13 +13,13 @@
         }, 
         {
          "draworder":"topdown",
+         "height":0,
          "name":"Objects",
          "objects":[
                 {
                  "height":0,
                  "id":8,
                  "name":"",
-                 "point":true,
                  "rotation":0,
                  "type":"player",
                  "visible":true,
@@ -32,7 +31,6 @@
                  "height":0,
                  "id":14,
                  "name":"",
-                 "point":true,
                  "rotation":0,
                  "type":"znake",
                  "visible":true,
@@ -44,7 +42,6 @@
                  "height":0,
                  "id":20,
                  "name":"",
-                 "point":true,
                  "rotation":0,
                  "type":"znake",
                  "visible":true,
@@ -55,31 +52,32 @@
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
+         "width":0,
          "x":0,
          "y":0
         }],
  "nextobjectid":21,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.1.6",
  "tileheight":8,
  "tilesets":[
         {
          "columns":8,
          "firstgid":1,
-         "image":"..\/img\/monochrome-caves.png",
-         "imageheight":64,
+         "image":"..\/img\/tileset.gif",
+         "imageheight":200,
          "imagewidth":64,
          "margin":0,
-         "name":"monochrome-caves",
+         "name":"tileset",
          "spacing":0,
-         "tilecount":64,
+         "tilecount":200,
          "tileheight":8,
          "tileproperties":
             {
              "0":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":true
@@ -87,6 +85,7 @@
              "1":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -94,6 +93,87 @@
              "10":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "100":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "101":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "102":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "103":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "104":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "105":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "106":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "107":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "108":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "109":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -101,6 +181,87 @@
              "11":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "110":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "111":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "112":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "113":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "114":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "115":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "116":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "117":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "118":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "119":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -108,6 +269,87 @@
              "12":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "120":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "121":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "122":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "123":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "124":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "125":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "126":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "127":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "128":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "129":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -115,6 +357,87 @@
              "13":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "130":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "131":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "132":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "133":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "134":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "135":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "136":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "137":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "138":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "139":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -122,6 +445,87 @@
              "14":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "140":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "141":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "142":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "143":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "144":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "145":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "146":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "147":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "148":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "149":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -129,6 +533,87 @@
              "15":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "150":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "151":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "152":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "153":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "154":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "155":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "156":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "157":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "158":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "159":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -136,6 +621,87 @@
              "16":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "160":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "161":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "162":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "163":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "164":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "165":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "166":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "167":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "168":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "169":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -143,6 +709,87 @@
              "17":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "170":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "171":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "172":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "173":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "174":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "175":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "176":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "177":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "178":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "179":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -150,6 +797,87 @@
              "18":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "180":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "181":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "182":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "183":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "184":
+                {
+                 "climbable":false,
+                 "cloud":true,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "185":
+                {
+                 "climbable":false,
+                 "cloud":true,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "186":
+                {
+                 "climbable":false,
+                 "cloud":true,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "187":
+                {
+                 "climbable":false,
+                 "cloud":true,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "188":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "189":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -157,6 +885,23 @@
              "19":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "190":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "191":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -164,6 +909,7 @@
              "2":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -171,6 +917,7 @@
              "20":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -178,6 +925,7 @@
              "21":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -185,6 +933,7 @@
              "22":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -192,6 +941,7 @@
              "23":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -199,6 +949,7 @@
              "24":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -206,6 +957,7 @@
              "25":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -213,6 +965,7 @@
              "26":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -220,6 +973,7 @@
              "27":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -227,6 +981,7 @@
              "28":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -234,6 +989,7 @@
              "29":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -241,6 +997,7 @@
              "3":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -248,6 +1005,7 @@
              "30":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -255,6 +1013,7 @@
              "31":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -262,6 +1021,7 @@
              "32":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -269,6 +1029,7 @@
              "33":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -276,6 +1037,7 @@
              "34":
                 {
                  "climbable":true,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -283,6 +1045,7 @@
              "35":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -290,6 +1053,7 @@
              "36":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -297,6 +1061,7 @@
              "37":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -304,6 +1069,7 @@
              "38":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -311,6 +1077,7 @@
              "39":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -318,6 +1085,7 @@
              "4":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -325,6 +1093,7 @@
              "40":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -332,6 +1101,7 @@
              "41":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -339,6 +1109,7 @@
              "42":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -346,6 +1117,7 @@
              "43":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -353,6 +1125,7 @@
              "44":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":true
@@ -360,6 +1133,7 @@
              "45":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":true,
                  "flower":false,
                  "water":false
@@ -367,6 +1141,7 @@
              "46":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":true,
                  "flower":false,
                  "water":false
@@ -374,6 +1149,7 @@
              "47":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":true,
                  "flower":false,
                  "water":false
@@ -381,6 +1157,7 @@
              "48":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":true,
                  "flower":false,
                  "water":false
@@ -388,6 +1165,7 @@
              "49":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -395,6 +1173,7 @@
              "5":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -402,6 +1181,7 @@
              "50":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -409,6 +1189,7 @@
              "51":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":true,
                  "flower":false,
                  "water":false
@@ -416,6 +1197,7 @@
              "52":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":true
@@ -423,6 +1205,7 @@
              "53":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -430,6 +1213,7 @@
              "54":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -437,6 +1221,7 @@
              "55":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -444,6 +1229,7 @@
              "56":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":true,
                  "water":false
@@ -451,6 +1237,7 @@
              "57":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -458,6 +1245,7 @@
              "58":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -465,6 +1253,7 @@
              "59":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":true,
                  "flower":false,
                  "water":false
@@ -472,6 +1261,7 @@
              "6":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -479,13 +1269,15 @@
              "60":
                 {
                  "climbable":false,
-                 "collides":false,
+                 "cloud":false,
+                 "collides":true,
                  "flower":false,
                  "water":false
                 },
              "61":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -493,6 +1285,7 @@
              "62":
                 {
                  "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -500,6 +1293,55 @@
              "63":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "64":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "65":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "66":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "67":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "68":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "69":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -507,6 +1349,87 @@
              "7":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "70":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "71":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "72":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "73":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "74":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "75":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "76":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "77":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "78":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "79":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -514,6 +1437,87 @@
              "8":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "80":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "81":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "82":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "83":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "84":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "85":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "86":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "87":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "88":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "89":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -521,6 +1525,87 @@
              "9":
                 {
                  "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "90":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "91":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "92":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "93":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "94":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "95":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "96":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "97":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "98":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "flower":false,
+                 "water":false
+                },
+             "99":
+                {
+                 "climbable":false,
+                 "cloud":false,
                  "collides":false,
                  "flower":false,
                  "water":false
@@ -531,6 +1616,7 @@
              "0":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -538,6 +1624,7 @@
              "1":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -545,6 +1632,87 @@
              "10":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "100":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "101":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "102":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "103":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "104":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "105":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "106":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "107":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "108":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "109":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -552,6 +1720,87 @@
              "11":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "110":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "111":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "112":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "113":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "114":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "115":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "116":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "117":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "118":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "119":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -559,6 +1808,87 @@
              "12":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "120":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "121":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "122":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "123":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "124":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "125":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "126":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "127":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "128":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "129":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -566,6 +1896,87 @@
              "13":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "130":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "131":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "132":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "133":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "134":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "135":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "136":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "137":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "138":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "139":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -573,6 +1984,87 @@
              "14":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "140":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "141":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "142":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "143":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "144":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "145":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "146":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "147":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "148":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "149":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -580,6 +2072,87 @@
              "15":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "150":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "151":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "152":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "153":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "154":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "155":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "156":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "157":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "158":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "159":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -587,6 +2160,87 @@
              "16":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "160":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "161":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "162":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "163":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "164":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "165":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "166":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "167":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "168":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "169":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -594,6 +2248,87 @@
              "17":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "170":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "171":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "172":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "173":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "174":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "175":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "176":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "177":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "178":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "179":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -601,6 +2336,87 @@
              "18":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "180":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "181":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "182":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "183":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "184":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "185":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "186":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "187":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "188":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "189":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -608,6 +2424,23 @@
              "19":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "190":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "191":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -615,6 +2448,7 @@
              "2":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -622,6 +2456,7 @@
              "20":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -629,6 +2464,7 @@
              "21":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -636,6 +2472,7 @@
              "22":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -643,6 +2480,7 @@
              "23":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -650,6 +2488,7 @@
              "24":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -657,6 +2496,7 @@
              "25":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -664,6 +2504,7 @@
              "26":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -671,6 +2512,7 @@
              "27":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -678,6 +2520,7 @@
              "28":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -685,6 +2528,7 @@
              "29":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -692,6 +2536,7 @@
              "3":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -699,6 +2544,7 @@
              "30":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -706,6 +2552,7 @@
              "31":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -713,6 +2560,7 @@
              "32":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -720,6 +2568,7 @@
              "33":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -727,6 +2576,7 @@
              "34":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -734,6 +2584,7 @@
              "35":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -741,6 +2592,7 @@
              "36":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -748,6 +2600,7 @@
              "37":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -755,6 +2608,7 @@
              "38":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -762,6 +2616,7 @@
              "39":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -769,6 +2624,7 @@
              "4":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -776,6 +2632,7 @@
              "40":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -783,6 +2640,7 @@
              "41":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -790,6 +2648,7 @@
              "42":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -797,6 +2656,7 @@
              "43":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -804,6 +2664,7 @@
              "44":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -811,6 +2672,7 @@
              "45":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -818,6 +2680,7 @@
              "46":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -825,6 +2688,7 @@
              "47":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -832,6 +2696,7 @@
              "48":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -839,6 +2704,7 @@
              "49":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -846,6 +2712,7 @@
              "5":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -853,6 +2720,7 @@
              "50":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -860,6 +2728,7 @@
              "51":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -867,6 +2736,7 @@
              "52":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -874,6 +2744,7 @@
              "53":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -881,6 +2752,7 @@
              "54":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -888,6 +2760,7 @@
              "55":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -895,6 +2768,7 @@
              "56":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -902,6 +2776,7 @@
              "57":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -909,6 +2784,7 @@
              "58":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -916,6 +2792,7 @@
              "59":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -923,6 +2800,7 @@
              "6":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -930,6 +2808,7 @@
              "60":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -937,6 +2816,7 @@
              "61":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -944,6 +2824,7 @@
              "62":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -951,6 +2832,55 @@
              "63":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "64":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "65":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "66":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "67":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "68":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "69":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -958,6 +2888,87 @@
              "7":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "70":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "71":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "72":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "73":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "74":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "75":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "76":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "77":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "78":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "79":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -965,6 +2976,87 @@
              "8":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "80":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "81":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "82":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "83":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "84":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "85":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "86":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "87":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "88":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "89":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -972,6 +3064,87 @@
              "9":
                 {
                  "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "90":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "91":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "92":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "93":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "94":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "95":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "96":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "97":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "98":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "99":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
                  "collides":"bool",
                  "flower":"bool",
                  "water":"bool"
@@ -980,7 +3153,6 @@
          "tilewidth":8
         }],
  "tilewidth":8,
- "type":"map",
  "version":1,
  "width":38
 }

@@ -685,6 +685,9 @@ const update = function() {
     //game.sfx.play('victory');
     flowers += plr.flowers;
     startNextLevel.call(this);
+  } else if (plr.body.y > game.config.height) {
+    // Sweet Death!
+    plr.kill();
   }
 
   // Friction.
@@ -839,7 +842,7 @@ const setUpPlayer = function(x, y) {
 
 const preloadLevel = function(levelName) {
   this.load.tilemapTiledJSON(levelName, `map/${levelName}.json`);
-  this.load.spritesheet('monochrome-caves', 'img/monochrome-caves.png', {frameWidth: 8, frameHeight: 8});
+  this.load.spritesheet('tileset', 'img/tileset.gif', {frameWidth: 8, frameHeight: 8});
 };
 
 const createLevel = function(levelName) {
@@ -850,7 +853,7 @@ const createLevel = function(levelName) {
   randomizeStars.call(this);
 
   game.map = this.make.tilemap({key: levelName});
-  game.map.tileset = game.map.addTilesetImage('monochrome-caves');
+  game.map.tileset = game.map.addTilesetImage('tileset');
 
   // There are 2 extra tiles on the left and right for screen wrapping.
   // There is also a 1-tile collidable border to prevent players falling outside the screen.
