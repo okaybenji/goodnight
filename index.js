@@ -1,4 +1,4 @@
-const levels = ['level1', 'level2', 'level3'];
+const levels = ['level1', 'level2', 'level3', 'level4'];
 let flowers = 0; // Track how many flowers the player picks.
 
 const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
