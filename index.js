@@ -511,7 +511,7 @@ const startNextLevel = function() {
   if (isFirstLevel) {
     // game.music.play('gameplay');
   } else if (isLastLevel) {
-    game.music.play('climax');
+    // game.music.play('climax');
   }
 
   if (!level) {
