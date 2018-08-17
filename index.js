@@ -509,7 +509,7 @@ const startNextLevel = function() {
   const isFirstLevel = level === 'level1';
   const isLastLevel = !levels.length;
   if (isFirstLevel) {
-    // game.music.play('gameplay');
+    game.music.play('title');
   } else if (isLastLevel) {
     // game.music.play('climax');
   }
