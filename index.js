@@ -1,5 +1,6 @@
 const levels = ['level1', 'level2', 'level3', 'level4', 'level5', 'final'];
 let flowers = 0; // Track how many flowers the player picks.
+let gamepad = {};
 
 const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 const randomArrayElement = arr => arr[Math.floor(Math.random() * arr.length)];
@@ -561,7 +562,17 @@ const update = function() {
     this.lastPlayerInput = this.time.now; // Reset timer.
   }
 
-  if (this.keys.up.isDown || this.keys.down.isDown || this.keys.left.isDown || this.keys.right.isDown || this.keys.jump.isDown || this.gamepad.up || this.gamepad.down || this.gamepad.left || this.gamepad.right) {
+  const pressing = {
+    up: this.keys.up.isDown || gamepad.up || (gamepad.leftStick && gamepad.leftStick.y < 0),
+    down: this.keys.up.isDown || gamepad.up || (gamepad.leftStick && gamepad.leftStick.y > 0),
+    left: this.keys.left.isDown || gamepad.left || (gamepad.leftStick && gamepad.leftStick.x < 0),
+    right: this.keys.right.isDown || gamepad.right || (gamepad.leftStick && gamepad.leftStick.x > 0),
+    jump: gamepad.A,
+    chill: gamepad.B,
+  };
+
+
+  if (pressing.left || pressing.right || pressing.up || pressing.down || pressing.jump) {
     this.lastPlayerInput = this.time.now;
     if (plr.chilling) {
       plr.chilling = false;
@@ -611,9 +622,8 @@ const update = function() {
 
   // Allow playing to vault once after jumping by continuing to hold down the jump key.
   // (Each vault after that must be manual.)
-  const pressingJump = this.keys.jump.isDown;
   const touchingSide = plr.body.blocked.left || plr.body.blocked.right;
-  if (pressingJump && touchingSide && !plr.autoVaulting && !plr.jumping) {
+  if (pressing.jump && touchingSide && !plr.autoVaulting && !plr.jumping) {
     plr.autoVaulting = true;
     plr.jump();
   }
@@ -623,12 +633,8 @@ const update = function() {
     plr.body.velocity.y = plr.jumpHeight;
   }
 
-  const oneHorizontalKeyIsDownButNotBoth = this.gamepad.left || this.gamepad.right
-    || ((this.keys.left.isDown || this.keys.right.isDown)
-    && !(this.keys.left.isDown && this.keys.right.isDown));
-  const oneVerticalKeyIsDownButNotBoth = this.gamepad.up || this.gamepad.down
-    || ((this.keys.up.isDown || this.keys.down.isDown)
-    && !(this.keys.up.isDown && this.keys.down.isDown));
+  const oneHorizontalKeyIsDownButNotBoth = (pressing.left && !pressing.right) || (pressing.right && !pressing.left);
+  const oneVerticalKeyIsDownButNotBoth = (pressing.up && !pressing.down) || (pressing.down && !pressing.up)
 
   if (oneHorizontalKeyIsDownButNotBoth) {
     if (anim !== 'run' && !plr.jumping && !plr.hurt && !plr.climbing && !plr.swimming) {
@@ -637,11 +643,11 @@ const update = function() {
       plr.anims.play('climb');
     }
 
-    if (this.keys.left.isDown) {
+    if (pressing.left) {
       plr.flipX = false;
       plr.body.velocity.x -= 20;
     }
-    if (this.keys.right.isDown) {
+    if (pressing.right) {
       plr.flipX = true;
       plr.body.velocity.x += 20;
     }
@@ -730,7 +736,7 @@ const update = function() {
       if (anim !== 'climb') {
         plr.anims.play('climb');
       }
-      plr.y += (this.gamepad.up || this.keys.up.isDown) ? -3 : 2;
+      plr.y += pressing.up ? -3 : 2;
     }
   } else {
     plr.climbing = false;
@@ -768,11 +774,9 @@ const randomizeStars = function() {
 
 // Add the player and set up controls.
 const setUpPlayer = function(x, y) {
-  this.gamepad = this.gamepad || {};
   // Set up gamepad.
-  this.input.gamepad.once('down', pad => {
-    console.log('down!!!');
-    this.gamepad = pad;
+  this.input.gamepad.on('down', pad => {
+    gamepad = pad;
   }, this);
 
   const plr = this.physics.add.sprite(x, y, 'plr')
@@ -861,6 +865,8 @@ const setUpPlayer = function(x, y) {
 };
 
 const preloadLevel = function(levelName) {
+  game.activeScene = this;
+
   this.load.tilemapTiledJSON(levelName, `map/${levelName}.json`);
   this.load.spritesheet('tileset', 'img/tileset.gif', {frameWidth: 8, frameHeight: 8});
 };
@@ -1043,12 +1049,6 @@ const scenes = {
       }, 30000);
 
       game.music.play('title');
-
-      // Set up gamepad.
-      this.input.gamepad.once('down', pad => {
-        console.log('down!!!');
-        this.gamepad = pad;
-      }, this);
 
       // Set up graphics.
       const bg = this.add.image(128, 120, 'bg');
@@ -1335,10 +1335,21 @@ const scenes = {
         frameRate: 10,
       });
 
-      // Press any key to start.
-      this.input.keyboard.on('keydown', (event) => {
-        this.scene.start('intro');
+      // Press ENTER key or START/OPTIONS button to start.
+      this.input.keyboard.once('keydown', (event) => {
+        if (event.key === 'Enter') {
+          this.scene.start('intro');
+        }
       });
+
+      // Set up gamepad.
+      this.input.gamepad.on('down', pad => {
+        const startButton = pad.buttons[9];
+
+        if (startButton.pressed) {
+          this.scene.start('intro');
+        }
+      }, this);
 
       // TESTING: Skip to first level.
       // startNextLevel.call(this);
