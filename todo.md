@@ -2,10 +2,10 @@
 * Add freeze/pan transitions between screens a la Mega Man 2.
 * Replace placeholder music & SFX.
 * Design a lot more levels!
-* Add gamepad controls.
 * Create Electron app.
 * Remove all the .DS_Store files from the repo.
 * Add a pause screen with stats. Also show at end of game.
+* Need to ensure gamepad users know there is a chill button. Maybe show controls somewhere in-game.
 
 ### Pause screen stats:
 * Current level number
