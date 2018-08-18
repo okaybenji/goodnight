@@ -12,7 +12,7 @@
 * Seconds chilled
 * Znakes murdered
 * Times killed
-* Pond-jumping record (max consecutive times jumped level 5 pond without falling in)
+* Gorge-jumping record (max consecutive times jumped level 5 gorge without falling in)
 * Flowers collected
 
 # KNOWN BUGS
