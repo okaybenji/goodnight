@@ -1,4 +1,4 @@
-const levels = ['level1', 'level2', 'level3', 'level4', 'level5', 'final'];
+const levels = ['level1', 'level2', 'level3', 'level4', 'level5', 'level6', 'final'];
 let flowers = 0; // Track how many flowers the player picks.
 
 const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -101,6 +101,12 @@ const intro = {
           repeat: -1,
         });
 
+        this.anims.create({
+          key: 'lookUp',
+          frames: this.anims.generateFrameNumbers('bw-dreamer-eyes', { start: 0, end: 3 }),
+          frameRate: 4,
+        });
+
         sprites.stars.visible = false;
         sprites.sofaBack.visible = false;
         sprites.tv.visible = false;
@@ -196,6 +202,8 @@ const intro = {
         sprites.platform.speed = 0.5;
         sprites.bwDreamer.target = 108;
         sprites.bwDreamer.speed = 0.67;
+        sprites.bwDreamerEyes.target = 123;
+        sprites.bwDreamerEyes.speed = 0.67;
         sprites.chain.target = 142;
         sprites.chain.speed = 0.75;
         sprites.cutZnake.target = 188;
@@ -206,6 +214,7 @@ const intro = {
       text: `“i must escape this world somehow...
       ...and soon!!”`,
       method(sprites) {
+        sprites.bwDreamerEyes.anims.play('lookUp');
       },
   }],
   music: 'intro',
@@ -341,11 +350,14 @@ const outro = {
 
 const cutsceneFactory = config => ({
   preload() {
+    game.activeScene = this;
+
     this.load.image('frame', 'img/frame.png');
     this.load.image('dreamer', 'img/cutscene-dreamer.gif');
     this.load.image('cut-znake', 'img/cutscene-bw-znake.gif');
     this.load.image('platform', 'img/cutscene-bw-platform.gif');
     this.load.image('bw-dreamer', 'img/cutscene-bw-dreamer.gif');
+    this.load.spritesheet('bw-dreamer-eyes', 'img/cutscene-bw-dreamer-eyes.gif', {frameWidth: 10, frameHeight: 16});
     this.load.image('chain', 'img/cutscene-bw-chain.gif');
     this.load.image('sofa', 'img/cutscene-sofa.gif');
     this.load.image('sofa-back', 'img/cutscene-sofa-back.gif');
@@ -374,6 +386,7 @@ const cutsceneFactory = config => ({
       sofaBack: this.add.image(32, 103, 'sofa-back'),
       platform: this.add.image(-98, 84, 'platform'),
       bwDreamer: this.add.image(-104, 108, 'bw-dreamer'),
+      bwDreamerEyes: this.add.sprite(-88, 93, 'bw-dreamer-eyes'),
       chain: this.add.image(-95, 68, 'chain'),
       cutZnake: this.add.image(-128, 84, 'cut-znake'),
     };
