@@ -452,7 +452,7 @@ const cutsceneFactory = config => ({
       });
     };
 
-    const nextLine = (event) => {
+    const nextLine = (event = {key: 'Enter'}) => {
       if (event.key !== 'Enter' && event.key !== 'x') {
         return;
       }
@@ -484,11 +484,19 @@ const cutsceneFactory = config => ({
       }
     };
 
-    // Press any key to start.
+    // Press START or JUMP to progress.
     this.input.keyboard.on('keydown', nextLine);
 
+    this.input.gamepad.on('down', pad => {
+      const startButton = pad.buttons[9];
+
+      if (pad.A || startButton.pressed) {
+        nextLine();
+      }
+    }, this);
+
     // Print first line.
-    nextLine({key: 'Enter'});
+    nextLine();
   },
   update() {
     Object.values(this.sprites).forEach(sprite => {
