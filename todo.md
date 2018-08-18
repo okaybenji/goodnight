@@ -6,6 +6,7 @@
 * Remove all the .DS_Store files from the repo.
 * Add a pause screen with stats. Also show at end of game.
 * Need to ensure gamepad users know there is a chill button. Maybe show controls somewhere in-game.
+* The chain climbable area needs to be bigger or go down further? A player was clearly touching it but it was not grabbing on the player didn't know what to do.
 
 ### Pause screen stats:
 * Current level number
