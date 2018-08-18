@@ -528,6 +528,7 @@ const startNextLevel = function() {
 let animateTileIndex = 0;
 const update = function() {
   gamepad = this.input.gamepad.pad1;
+  gamepad.setAxisThreshold(0.5);
 
   const idleAnimationInteral = 8000; // How long in MS to wait before playing an alternative idle animation.
   const animateTileInterval = 500;
@@ -556,12 +557,12 @@ const update = function() {
   const overTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y);
   const onTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y + 8);
 
-  // Float in water. Allow jumping out.
+  // Float in water.
   if (overTile && overTile.properties.water) {
     plr.body.velocity.y = 0;
     plr.y -= 3;
     plr.jumping = false;
-    plr.autoVaulting = false;
+    plr.canAutovault = true;
     plr.swimming = true;
   }
 
@@ -574,13 +575,12 @@ const update = function() {
 
   const pressing = {
     up: this.keys.up.isDown || gamepad.up || (gamepad.leftStick && gamepad.leftStick.y < 0),
-    down: this.keys.up.isDown || gamepad.down || (gamepad.leftStick && gamepad.leftStick.y > 0),
+    down: this.keys.down.isDown || gamepad.down || (gamepad.leftStick && gamepad.leftStick.y > 0),
     left: this.keys.left.isDown || gamepad.left || (gamepad.leftStick && gamepad.leftStick.x < 0),
     right: this.keys.right.isDown || gamepad.right || (gamepad.leftStick && gamepad.leftStick.x > 0),
     jump: this.keys.jump.isDown || gamepad.A,
     chill: this.keys.chill.isDown || gamepad.B,
   };
-
 
   if (pressing.left || pressing.right || pressing.up || pressing.down || pressing.jump) {
     this.lastPlayerInput = this.time.now;
@@ -621,21 +621,21 @@ const update = function() {
     return;
   }
 
-  // Allow player to jump if they just pressed jump, or if they're holding the jump key and touching down.
+  // Allow player to jump once if they just pressed jump, or if they're holding the jump key and touching down.
   // (Prevents spam-vaulting.)
-  // TODO: Get rid of pressing.jump and replace with gamepad equivalent of JustDown.
-  const justPressedJump = Phaser.Input.Keyboard.JustDown(this.keys.jump) || pressing.jump;
-  if (justPressedJump || (this.keys.jump.isDown && plr.body.blocked.down)) {
+  // There's also a gamepad listener for this in set up player.
+  const justPressedJump = Phaser.Input.Keyboard.JustDown(this.keys.jump);
+  if (justPressedJump || (pressing.jump && plr.body.blocked.down)) {
     if (!plr.jumping) {
       plr.jump();
     }
   }
 
-  // Allow playing to vault once after jumping by continuing to hold down the jump key.
+  // Allow player to vault once after jumping by continuing to hold down the jump key.
   // (Each vault after that must be manual.)
   const touchingSide = plr.body.blocked.left || plr.body.blocked.right;
-  if (pressing.jump && touchingSide && !plr.autoVaulting && !plr.jumping) {
-    plr.autoVaulting = true;
+  if (pressing.jump && touchingSide && plr.canAutovault && !plr.jumping) {
+    plr.canAutovault = false;
     plr.jump();
   }
 
@@ -737,7 +737,7 @@ const update = function() {
   if (overTile && overTile.properties.climbable) {
     plr.body.allowGravity = false;
     plr.jumping = false;
-    plr.autoVaulting = false;
+    plr.canAutovault = true;
     if (!plr.climbing) {
       plr.climbing = true;
       plr.body.velocity.x = 0;
@@ -793,7 +793,7 @@ const setUpPlayer = function(x, y) {
   this.physics.add.collider(game.map.worldLayer, plr, (plr, tile) => {
     plr.jumping = false;
     if (plr.body.blocked.down) {
-      plr.autoVaulting = false;
+      plr.canAutovault = true;
       plr.swimming = false;
     }
 
@@ -843,10 +843,8 @@ const setUpPlayer = function(x, y) {
   plr.jump = () => {
     // Player can jump off the ground,
     // or vault off the sides of platforms,
-    // or jump off chains,
-    // or jump out of water.
-    // ...and that's it!
-    if (!plr.body.blocked.down && !plr.body.blocked.left && !plr.body.blocked.right && !plr.climbing && !plr.swimming) {
+    // or jump off chains.
+    if (!plr.body.blocked.down && !plr.body.blocked.left && !plr.body.blocked.right && !plr.climbing) {
       return;
     }
 
@@ -855,7 +853,20 @@ const setUpPlayer = function(x, y) {
 
     plr.body.velocity.y = plr.jumpHeight;
     game.sfx.play('jump');
+
+    // We are vaulting.
+    if (!plr.body.blocked.down) {
+      plr.canAutovault = false;
+    }
   };
+
+  // Let player jump once per button press.
+  this.input.gamepad.on('down', pad => {
+    const pressedJump = pad.A;
+    if (pressedJump && !plr.jumping) {
+      plr.jump();
+    }
+  }, this);
 
   plr.flowers = 0;
 
