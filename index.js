@@ -528,8 +528,13 @@ const startNextLevel = function() {
 let animateTileIndex = 0;
 const update = function() {
   // In case player switches to another gamepad. Default to pad1.
-  gamepad = gamepad.connected ? gamepad : this.input.gamepad.pad1;
-  gamepad.setAxisThreshold(0.5);
+  gamepad = gamepad.connected
+    ? gamepad
+    : this.input.gamepad.pad1 || gamepad;
+
+  if (gamepad.setAxisThreshold) {
+    gamepad.setAxisThreshold(0.5);
+  }
 
   const idleAnimationInteral = 8000; // How long in MS to wait before playing an alternative idle animation.
   const animateTileInterval = 500;
