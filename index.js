@@ -527,6 +527,8 @@ const startNextLevel = function() {
 
 let animateTileIndex = 0;
 const update = function() {
+  gamepad = this.input.gamepad.pad1;
+
   const idleAnimationInteral = 8000; // How long in MS to wait before playing an alternative idle animation.
   const animateTileInterval = 500;
 
@@ -572,11 +574,11 @@ const update = function() {
 
   const pressing = {
     up: this.keys.up.isDown || gamepad.up || (gamepad.leftStick && gamepad.leftStick.y < 0),
-    down: this.keys.up.isDown || gamepad.up || (gamepad.leftStick && gamepad.leftStick.y > 0),
+    down: this.keys.up.isDown || gamepad.down || (gamepad.leftStick && gamepad.leftStick.y > 0),
     left: this.keys.left.isDown || gamepad.left || (gamepad.leftStick && gamepad.leftStick.x < 0),
     right: this.keys.right.isDown || gamepad.right || (gamepad.leftStick && gamepad.leftStick.x > 0),
-    jump: gamepad.A,
-    chill: gamepad.B,
+    jump: this.keys.jump.isDown || gamepad.A,
+    chill: this.keys.chill.isDown || gamepad.B,
   };
 
 
@@ -585,7 +587,7 @@ const update = function() {
     if (plr.chilling) {
       plr.chilling = false;
     }
-  } else if (Phaser.Input.Keyboard.JustDown(this.keys.chill) && !plr.chilling && plr.body.blocked.down) {
+  } else if (pressing.chill && !plr.chilling && plr.body.blocked.down) {
     if (onTile && onTile.properties.couch) {
       // End the game!!
       plr.endingGame = true;
@@ -621,7 +623,8 @@ const update = function() {
 
   // Allow player to jump if they just pressed jump, or if they're holding the jump key and touching down.
   // (Prevents spam-vaulting.)
-  const justPressedJump = Phaser.Input.Keyboard.JustDown(this.keys.jump);
+  // TODO: Get rid of pressing.jump and replace with gamepad equivalent of JustDown.
+  const justPressedJump = Phaser.Input.Keyboard.JustDown(this.keys.jump) || pressing.jump;
   if (justPressedJump || (this.keys.jump.isDown && plr.body.blocked.down)) {
     if (!plr.jumping) {
       plr.jump();
@@ -782,11 +785,6 @@ const randomizeStars = function() {
 
 // Add the player and set up controls.
 const setUpPlayer = function(x, y) {
-  // Set up gamepad.
-  this.input.gamepad.on('down', pad => {
-    gamepad = pad;
-  }, this);
-
   const plr = this.physics.add.sprite(x, y, 'plr')
     .anims.play('idle', true);
 
