@@ -20,7 +20,7 @@ const setLetter = (sprite, letter) => {
 const intro = {
   paragraphs: [
     {
-      text: `a young dreamer chills on their sofa, awaiting the start of their favorite cartoon.`,
+      text: `a young dreamer chills on a sofa, awaiting the start of their favorite cartoon.`,
       method(sprites) {
         this.anims.create({
           key: 'fade',
@@ -121,7 +121,7 @@ const intro = {
       }
     },
     {
-      text: `every week the show's hero has a wonderful adventure in a strange new place,`,
+      text: `each episode is a tale of wonder & adventure in a strange new place,`,
       method(sprites) {
         sprites.eyes.visible = false;
         sprites.mouth.visible = false;
@@ -144,12 +144,12 @@ const intro = {
       }
     },
     {
-      text: `using her wits to overcome some impossible obstacle.`,
+      text: `a hero using her wits to overcome some impossible obstacle.`,
       method(sprites) {
       }
     },
     {
-      text: `but the time slot before is filled with stuffy old men saying things our dreamer can't understand,`,
+      text: `but the time slot before is filled with stuffy old men saying things our dreamer doesn't understand,`,
       method(sprites) {
         game.music.play('talking');
 
@@ -167,7 +167,7 @@ const intro = {
       }
     },
     {
-      text: `and soon they drift off into a strange world of their very own.`,
+      text: `and soon our young dreamer drifts off into a strange world of their very own.`,
       method(sprites) {
         sprites.eyes.anims.play('close');
         sprites.mouth.anims.play('slackenFromBored');
@@ -307,7 +307,7 @@ const outro = {
       },
       },
     {
-      text: `they had an adventure all their own, filled with wonder enough to match those they had merely watched on tv.`,
+      text: `this time, the adventure was their own, and every bit as wondrous as any on tv.`,
       method(sprites) {
         sprites.eyes.anims.play('half-blink');
         sprites.mouth.anims.play('smile');
