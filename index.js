@@ -527,7 +527,8 @@ const startNextLevel = function() {
 
 let animateTileIndex = 0;
 const update = function() {
-  gamepad = this.input.gamepad.pad1;
+  // In case player switches to another gamepad. Default to pad1.
+  gamepad = gamepad.connected ? gamepad : this.input.gamepad.pad1;
   gamepad.setAxisThreshold(0.5);
 
   const idleAnimationInteral = 8000; // How long in MS to wait before playing an alternative idle animation.
@@ -862,6 +863,8 @@ const setUpPlayer = function(x, y) {
 
   // Let player jump once per button press.
   this.input.gamepad.on('down', pad => {
+    gamepad = pad; // In case player switches to another gamepad.
+
     const pressedJump = pad.A;
     if (pressedJump && !plr.jumping) {
       plr.jump();
