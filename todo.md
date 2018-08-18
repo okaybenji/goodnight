@@ -18,3 +18,4 @@
 # KNOWN BUGS
 * Float animation is way too fast.
 * Znakes will walk through walls.
+* There is some weirdness with gamepad support. Sometimes keyboard keys or gamepad buttons/sticks stop working.

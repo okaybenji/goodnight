@@ -716,12 +716,7 @@ const update = function() {
     plr.x = game.config.width + 4;
   }
 
-  // Next Level!
-  if (plr.body.y < 0 && overTile && overTile.properties.climbable) {
-    //game.sfx.play('victory');
-    flowers += plr.flowers;
-    startNextLevel.call(this);
-  } else if (plr.body.y > game.config.height) {
+  if (plr.body.y > game.config.height) {
     // Sweet Death!
     plr.kill();
   }
@@ -744,11 +739,18 @@ const update = function() {
     plr.body.allowGravity = false;
     plr.jumping = false;
     plr.canAutovault = true;
+
     if (!plr.climbing) {
       plr.climbing = true;
       plr.body.velocity.x = 0;
       plr.body.velocity.y = 0;
+    } else if (plr.body.y < 0) {
+      // Next Level!
+      //game.sfx.play('victory');
+      flowers += plr.flowers;
+      startNextLevel.call(this);
     }
+
     if (oneVerticalKeyIsDownButNotBoth) {
       if (anim !== 'climb') {
         plr.anims.play('climb');
