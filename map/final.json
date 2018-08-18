@@ -1,7 +1,7 @@
 { "height":31,
  "layers":[
         {
-         "data":[49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 181, 182, 183, 184, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 177, 180, 193, 191, 191, 194, 180, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 185, 186, 174, 187, 186, 187, 188, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 0, 0, 32, 38, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 46, 46, 46, 46, 46, 46, 46, 46, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 55, 48, 55, 48, 47, 55, 55, 55, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 181, 182, 48, 49, 56, 0, 0, 56, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 177, 191, 191, 49, 49, 49, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 185, 186, 187, 186, 49, 49, 0, 0, 0, 57, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 49, 61, 0, 0, 60, 46, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 47, 49, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 46, 52, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 49, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 181, 182, 47, 55, 48, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 49, 0, 0, 0, 0, 49, 0, 0, 49, 49, 0, 0, 0, 0, 0, 177, 180, 193, 191, 191, 49, 49, 180, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 61, 0, 0, 0, 0, 56, 0, 0, 49, 49, 0, 0, 0, 0, 0, 185, 186, 187, 188, 185, 186, 187, 188, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 49, 38, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 49, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 49, 49, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 49, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 48, 56, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 49, 0, 0, 0, 0, 0, 0, 0, 49, 49, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 48, 49, 38, 57, 0, 0, 0, 0, 0, 49, 49, 1, 1, 1, 1, 59, 1, 1, 1, 1, 1, 1, 59, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 53, 1, 47, 48, 48, 48, 48, 48, 48, 48, 48, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49],
+         "data":[49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 95, 96, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 68, 69, 70, 71, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 72, 80, 76, 77, 78, 79, 0, 0, 0, 0, 0, 0, 0, 0, 177, 191, 180, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 88, 84, 85, 85, 87, 0, 0, 0, 0, 0, 0, 0, 0, 185, 186, 188, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 181, 182, 183, 184, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 177, 193, 191, 191, 194, 180, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 185, 185, 174, 187, 187, 188, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 65, 66, 86, 86, 67, 75, 0, 0, 0, 0, 0, 0, 0, 121, 122, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 73, 74, 74, 74, 74, 73, 0, 0, 0, 0, 165, 166, 126, 129, 130, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 81, 82, 82, 82, 82, 83, 0, 0, 0, 0, 0, 123, 124, 127, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 131, 132, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 136, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 144, 0, 0, 0, 153, 154, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 155, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 167, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 181, 182, 183, 184, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 177, 180, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 177, 180, 193, 191, 191, 194, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 185, 188, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 177, 191, 191, 191, 191, 191, 191, 191, 180, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 185, 186, 178, 179, 187, 186, 174, 187, 188, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 152, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 101, 101, 102, 0, 0, 0, 0, 0, 0, 160, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 109, 109, 191, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 150, 151, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 110, 117, 117, 118, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 159, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 177, 180, 0, 0, 0, 0, 0, 0, 0, 0, 137, 138, 0, 153, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 177, 191, 191, 180, 0, 0, 0, 0, 0, 0, 0, 145, 146, 140, 154, 0, 0, 0, 0, 0, 0, 0, 0, 191, 97, 98, 98, 99, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 185, 186, 188, 188, 0, 0, 0, 0, 0, 0, 0, 0, 147, 148, 0, 0, 0, 0, 0, 0, 0, 0, 0, 191, 105, 106, 106, 107, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 113, 113, 0, 114, 114, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49],
          "height":31,
          "name":"World",
          "opacity":1,
@@ -24,30 +24,8 @@
                  "type":"player",
                  "visible":true,
                  "width":0,
-                 "x":72,
-                 "y":224
-                }, 
-                {
-                 "height":0,
-                 "id":14,
-                 "name":"",
-                 "rotation":0,
-                 "type":"znake",
-                 "visible":true,
-                 "width":0,
-                 "x":240,
-                 "y":72
-                }, 
-                {
-                 "height":0,
-                 "id":20,
-                 "name":"",
-                 "rotation":0,
-                 "type":"znake",
-                 "visible":true,
-                 "width":0,
-                 "x":192,
-                 "y":240
+                 "x":248,
+                 "y":208
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -79,6 +57,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":true
                 },
@@ -87,6 +66,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -95,6 +75,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -102,7 +83,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -110,7 +92,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -118,7 +101,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -126,7 +110,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -134,7 +119,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -142,7 +128,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -150,7 +137,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -159,6 +147,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -166,7 +155,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -175,6 +165,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -183,6 +174,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -191,6 +183,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -198,7 +191,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -207,6 +201,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -215,6 +210,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -223,6 +219,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -231,6 +228,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -238,7 +236,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -246,7 +245,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -254,7 +254,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -262,7 +263,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -271,6 +273,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -279,6 +282,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -286,7 +290,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -294,7 +299,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -303,6 +309,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -311,6 +318,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -319,6 +327,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -327,6 +336,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -335,6 +345,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -343,6 +354,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -351,6 +363,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -359,6 +372,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -367,6 +381,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -375,6 +390,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -383,6 +399,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -391,6 +408,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -399,6 +417,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -406,7 +425,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -414,7 +434,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -422,7 +443,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -431,6 +453,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -438,7 +461,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -447,6 +471,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -455,6 +480,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -463,6 +489,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -471,6 +498,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -478,7 +506,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -486,7 +515,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -495,6 +525,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -503,6 +534,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -511,6 +543,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -519,6 +552,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -526,7 +560,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -535,6 +570,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -542,7 +578,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -550,7 +587,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -559,6 +597,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -567,6 +606,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -575,6 +615,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -583,6 +624,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -591,6 +633,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -599,6 +642,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -607,6 +651,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -614,7 +659,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -623,6 +669,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -631,6 +678,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -639,6 +687,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -647,6 +696,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -655,6 +705,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -662,7 +713,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -670,7 +722,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -678,7 +731,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -686,7 +740,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -695,6 +750,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -703,6 +759,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -711,6 +768,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -719,6 +777,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -727,6 +786,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -735,6 +795,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -743,6 +804,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -751,6 +813,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -759,6 +822,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -767,22 +831,25 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
              "177":
                 {
                  "climbable":false,
-                 "cloud":false,
+                 "cloud":true,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
              "178":
                 {
                  "climbable":false,
-                 "cloud":false,
+                 "cloud":true,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -791,6 +858,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -799,6 +867,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -807,6 +876,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -815,6 +885,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -823,6 +894,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -831,6 +903,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -839,6 +912,7 @@
                  "climbable":false,
                  "cloud":true,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -847,6 +921,7 @@
                  "climbable":false,
                  "cloud":true,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -855,6 +930,7 @@
                  "climbable":false,
                  "cloud":true,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -863,6 +939,7 @@
                  "climbable":false,
                  "cloud":true,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -871,6 +948,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -879,6 +957,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -887,6 +966,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -895,6 +975,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -903,6 +984,79 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
+                 "flower":false,
+                 "water":false
+                },
+             "192":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "couch":false,
+                 "flower":false,
+                 "water":false
+                },
+             "193":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "couch":false,
+                 "flower":false,
+                 "water":false
+                },
+             "194":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "couch":false,
+                 "flower":false,
+                 "water":false
+                },
+             "195":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "couch":false,
+                 "flower":false,
+                 "water":false
+                },
+             "196":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "couch":false,
+                 "flower":false,
+                 "water":false
+                },
+             "197":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "couch":false,
+                 "flower":false,
+                 "water":false
+                },
+             "198":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "couch":false,
+                 "flower":false,
+                 "water":false
+                },
+             "199":
+                {
+                 "climbable":false,
+                 "cloud":false,
+                 "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -911,6 +1065,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -919,6 +1074,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -927,6 +1083,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -935,6 +1092,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -943,6 +1101,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -951,6 +1110,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -959,6 +1119,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -967,6 +1128,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -975,6 +1137,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -983,6 +1146,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -991,6 +1155,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -999,6 +1164,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1007,6 +1173,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1015,6 +1182,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1023,6 +1191,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1031,6 +1200,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1039,6 +1209,7 @@
                  "climbable":true,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1047,6 +1218,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1055,6 +1227,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1063,6 +1236,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1071,6 +1245,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1079,6 +1254,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1087,6 +1263,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1095,6 +1272,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1103,6 +1281,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1111,6 +1290,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1119,6 +1299,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1127,6 +1308,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":true
                 },
@@ -1135,6 +1317,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1143,6 +1326,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1151,6 +1335,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1159,6 +1344,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1167,6 +1353,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1175,6 +1362,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1183,6 +1371,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1191,6 +1380,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1199,6 +1389,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":true
                 },
@@ -1207,6 +1398,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1215,6 +1407,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1223,6 +1416,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1231,6 +1425,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":true,
                  "water":false
                 },
@@ -1239,6 +1434,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1247,6 +1443,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1255,6 +1452,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1263,6 +1461,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1271,6 +1470,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1279,6 +1479,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1287,6 +1488,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1295,6 +1497,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1302,7 +1505,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1311,6 +1515,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":true,
                  "flower":false,
                  "water":false
                 },
@@ -1319,6 +1524,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":true,
                  "flower":false,
                  "water":false
                 },
@@ -1326,7 +1532,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1334,7 +1541,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1342,7 +1550,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1351,6 +1560,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1358,7 +1568,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1367,6 +1578,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1374,7 +1586,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1382,7 +1595,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":true,
                  "flower":false,
                  "water":false
                 },
@@ -1390,7 +1604,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1398,7 +1613,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1406,7 +1622,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1414,7 +1631,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1422,7 +1640,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1431,6 +1650,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1439,6 +1659,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1447,6 +1668,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1455,6 +1677,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1463,6 +1686,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1470,7 +1694,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1478,7 +1703,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1487,6 +1713,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":true,
                  "flower":false,
                  "water":false
                 },
@@ -1494,7 +1721,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1503,6 +1731,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1510,7 +1739,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1519,6 +1749,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1527,6 +1758,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1535,6 +1767,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1543,6 +1776,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1551,6 +1785,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1559,6 +1794,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1567,6 +1803,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1575,6 +1812,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1582,7 +1820,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1590,7 +1829,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1598,7 +1838,8 @@
                 {
                  "climbable":false,
                  "cloud":false,
-                 "collides":false,
+                 "collides":true,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 },
@@ -1607,6 +1848,7 @@
                  "climbable":false,
                  "cloud":false,
                  "collides":false,
+                 "couch":false,
                  "flower":false,
                  "water":false
                 }
@@ -1618,6 +1860,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1626,6 +1869,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1634,6 +1878,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1642,6 +1887,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1650,6 +1896,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1658,6 +1905,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1666,6 +1914,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1674,6 +1923,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1682,6 +1932,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1690,6 +1941,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1698,6 +1950,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1706,6 +1959,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1714,6 +1968,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1722,6 +1977,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1730,6 +1986,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1738,6 +1995,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1746,6 +2004,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1754,6 +2013,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1762,6 +2022,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1770,6 +2031,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1778,6 +2040,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1786,6 +2049,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1794,6 +2058,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1802,6 +2067,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1810,6 +2076,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1818,6 +2085,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1826,6 +2094,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1834,6 +2103,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1842,6 +2112,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1850,6 +2121,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1858,6 +2130,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1866,6 +2139,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1874,6 +2148,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1882,6 +2157,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1890,6 +2166,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1898,6 +2175,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1906,6 +2184,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1914,6 +2193,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1922,6 +2202,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1930,6 +2211,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1938,6 +2220,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1946,6 +2229,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1954,6 +2238,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1962,6 +2247,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1970,6 +2256,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1978,6 +2265,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1986,6 +2274,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -1994,6 +2283,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2002,6 +2292,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2010,6 +2301,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2018,6 +2310,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2026,6 +2319,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2034,6 +2328,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2042,6 +2337,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2050,6 +2346,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2058,6 +2355,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2066,6 +2364,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2074,6 +2373,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2082,6 +2382,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2090,6 +2391,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2098,6 +2400,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2106,6 +2409,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2114,6 +2418,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2122,6 +2427,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2130,6 +2436,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2138,6 +2445,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2146,6 +2454,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2154,6 +2463,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2162,6 +2472,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2170,6 +2481,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2178,6 +2490,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2186,6 +2499,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2194,6 +2508,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2202,6 +2517,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2210,6 +2526,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2218,6 +2535,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2226,6 +2544,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2234,6 +2553,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2242,6 +2562,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2250,6 +2571,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2258,6 +2580,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2266,6 +2589,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2274,6 +2598,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2282,6 +2607,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2290,6 +2616,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2298,6 +2625,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2306,6 +2634,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2314,6 +2643,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2322,6 +2652,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2330,6 +2661,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2338,6 +2670,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2346,6 +2679,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2354,6 +2688,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2362,6 +2697,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2370,6 +2706,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2378,6 +2715,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2386,6 +2724,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2394,6 +2733,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2402,6 +2742,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2410,6 +2751,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2418,6 +2760,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2426,6 +2769,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2434,6 +2778,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2442,6 +2787,79 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "192":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "couch":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "193":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "couch":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "194":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "couch":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "195":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "couch":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "196":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "couch":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "197":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "couch":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "198":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "couch":"bool",
+                 "flower":"bool",
+                 "water":"bool"
+                },
+             "199":
+                {
+                 "climbable":"bool",
+                 "cloud":"bool",
+                 "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2450,6 +2868,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2458,6 +2877,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2466,6 +2886,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2474,6 +2895,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2482,6 +2904,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2490,6 +2913,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2498,6 +2922,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2506,6 +2931,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2514,6 +2940,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2522,6 +2949,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2530,6 +2958,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2538,6 +2967,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2546,6 +2976,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2554,6 +2985,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2562,6 +2994,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2570,6 +3003,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2578,6 +3012,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2586,6 +3021,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2594,6 +3030,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2602,6 +3039,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2610,6 +3048,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2618,6 +3057,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2626,6 +3066,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2634,6 +3075,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2642,6 +3084,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2650,6 +3093,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2658,6 +3102,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2666,6 +3111,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2674,6 +3120,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2682,6 +3129,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2690,6 +3138,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2698,6 +3147,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2706,6 +3156,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2714,6 +3165,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2722,6 +3174,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2730,6 +3183,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2738,6 +3192,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2746,6 +3201,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2754,6 +3210,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2762,6 +3219,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2770,6 +3228,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2778,6 +3237,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2786,6 +3246,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2794,6 +3255,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2802,6 +3264,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2810,6 +3273,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2818,6 +3282,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2826,6 +3291,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2834,6 +3300,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2842,6 +3309,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2850,6 +3318,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2858,6 +3327,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2866,6 +3336,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2874,6 +3345,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2882,6 +3354,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2890,6 +3363,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2898,6 +3372,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2906,6 +3381,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2914,6 +3390,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2922,6 +3399,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2930,6 +3408,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2938,6 +3417,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2946,6 +3426,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2954,6 +3435,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2962,6 +3444,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2970,6 +3453,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2978,6 +3462,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2986,6 +3471,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -2994,6 +3480,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3002,6 +3489,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3010,6 +3498,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3018,6 +3507,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3026,6 +3516,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3034,6 +3525,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3042,6 +3534,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3050,6 +3543,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3058,6 +3552,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3066,6 +3561,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3074,6 +3570,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3082,6 +3579,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3090,6 +3588,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3098,6 +3597,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3106,6 +3606,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3114,6 +3615,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3122,6 +3624,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3130,6 +3633,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3138,6 +3642,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 },
@@ -3146,6 +3651,7 @@
                  "climbable":"bool",
                  "cloud":"bool",
                  "collides":"bool",
+                 "couch":"bool",
                  "flower":"bool",
                  "water":"bool"
                 }

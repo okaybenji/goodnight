@@ -1,4 +1,4 @@
-const levels = ['level1', 'level2', 'level3', 'level4', 'level5'];
+const levels = ['level1', 'level2', 'level3', 'level4', 'level5', 'final'];
 let flowers = 0; // Track how many flowers the player picks.
 
 const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -358,7 +358,6 @@ const cutsceneFactory = config => ({
     this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
   },
   create() {
-    game.music.stop();
     if (config.music) {
       game.music.play(config.music);
     }
@@ -511,12 +510,7 @@ const startNextLevel = function() {
   if (isFirstLevel) {
     game.music.play('title');
   } else if (isLastLevel) {
-    // game.music.play('climax');
-  }
-
-  if (!level) {
-    this.scene.start('outro');
-    return;
+    game.music.play('climax');
   }
 
   this.scene.start(level);
@@ -543,12 +537,13 @@ const update = function() {
 
   const plr = game.plr;
 
-  if (plr.isDead) {
+  if (plr.isDead || plr.endingGame) {
     return;
   }
 
   const anim = plr.anims.currentAnim.key;
   const overTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y);
+  const onTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y + 8);
 
   // Float in water. Allow jumping out.
   if (overTile && overTile.properties.water) {
@@ -572,6 +567,22 @@ const update = function() {
       plr.chilling = false;
     }
   } else if (Phaser.Input.Keyboard.JustDown(this.keys.chill) && !plr.chilling && plr.body.blocked.down) {
+    if (onTile && onTile.properties.couch) {
+      // End the game!!
+      plr.endingGame = true;
+      plr.anims.play('chill');
+      game.music.stop();
+
+      this.time.delayedCall(6000, () => {
+        plr.anims.play('sleepFromChill');
+      }, [], this);
+
+      this.time.delayedCall(10000, () => {
+        this.scene.start('outro');
+      }, [], this);
+
+      return;
+    }
     plr.chilling = true;
     plr.body.velocity.x = 0; // Stop slide in case player was moving.
     const roll = Math.random();
@@ -687,6 +698,9 @@ const update = function() {
     //game.sfx.play('victory');
     flowers += plr.flowers;
     startNextLevel.call(this);
+  } else if (plr.body.y > game.config.height) {
+    // Sweet Death!
+    plr.kill();
   }
 
   // Friction.
@@ -848,7 +862,7 @@ const setUpPlayer = function(x, y) {
 
 const preloadLevel = function(levelName) {
   this.load.tilemapTiledJSON(levelName, `map/${levelName}.json`);
-  this.load.spritesheet('monochrome-caves', 'img/monochrome-caves.png', {frameWidth: 8, frameHeight: 8});
+  this.load.spritesheet('tileset', 'img/tileset.gif', {frameWidth: 8, frameHeight: 8});
 };
 
 const createLevel = function(levelName) {
@@ -859,7 +873,7 @@ const createLevel = function(levelName) {
   randomizeStars.call(this);
 
   game.map = this.make.tilemap({key: levelName});
-  game.map.tileset = game.map.addTilesetImage('monochrome-caves');
+  game.map.tileset = game.map.addTilesetImage('tileset');
 
   // There are 2 extra tiles on the left and right for screen wrapping.
   // There is also a 1-tile collidable border to prevent players falling outside the screen.
@@ -1197,6 +1211,20 @@ const scenes = {
         key: 'gameboy',
         frames: this.anims.generateFrameNumbers('plr', { start: 72, end: 78 }),
         frameRate: 8
+      });
+
+      this.anims.create({
+        key: 'sleepFromChill',
+        frames: [
+          { key: 'plr', frame: 61},
+          { key: 'plr', frame: 60},
+          { key: 'plr', frame: 59},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 68},
+          { key: 'plr', frame: 69},
+          { key: 'plr', frame: 70},
+        ],
+        frameRate: 4
       });
 
       // Generate a bunch of frames that look like playing gameboy.
