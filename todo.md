@@ -1,6 +1,7 @@
 # TO-DO
 * Block input while player is blinking at start of level and also during scene transition (at least block pause because it will break).
 * Reset inputs to false on pause (otherwise they can get stuck).
+* Pausing the game causes joystick not to work upon unpausing until you press a button.
 * Replace placeholder music & SFX.
 * Design a lot more levels!
 * Create Electron app.

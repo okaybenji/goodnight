@@ -25,6 +25,12 @@ const pause = () => {
   game.activeScene.keys.right.isDown = false;
   game.activeScene.keys.jump.isDown = false;
   game.activeScene.keys.chill.isDown = false;
+  gamepad.up = false;
+  gamepad.down = false;
+  gamepad.left = false;
+  gamepad.right = false;
+  gamepad.A = false;
+  gamepad.B = false;
 };
 
 const unpause = () => {
@@ -1094,7 +1100,7 @@ const scenes = {
           }
       });
 
-      this.input.gamepad.on('down', pad => {
+      this.input.gamepad.once('down', pad => {
         gamepad = pad; // In case player switches to another gamepad.
 
         // Let player toggle pause.
