@@ -508,21 +508,35 @@ const cutsceneFactory = config => ({
 });
 
 const startNextLevel = function() {
-  this.scene.pause();
-
-  // TODO: Create second scene above this one and pan to it a la Mega Man 2.
-
   const level = levels.shift();
 
   const isFirstLevel = level === 'level1';
   const isLastLevel = !levels.length;
   if (isFirstLevel) {
     game.music.play('title');
-  } else if (isLastLevel) {
+    this.scene.start(level);
+  } else {
+    const lastScene = this;
+    lastScene.tweens.add({
+      targets: lastScene.cameras.main,
+      y: 240,
+      duration: 1000,
+    });
+
+    this.scene.transition({ target: level, duration: 1000 });
+
+    game.activeScene.cameras.main.y = -240;
+    game.activeScene.tweens.add({
+      targets: game.activeScene.cameras.main,
+      y: 0,
+      duration: 1000,
+    });
+  }
+
+  if (isLastLevel) {
     game.music.play('climax');
   }
 
-  this.scene.start(level);
 };
 
 let animateTileIndex = 0;
