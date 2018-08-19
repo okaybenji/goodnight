@@ -1,7 +1,14 @@
 const levels = ['level1', 'level2', 'level3', 'level4', 'level5', 'final'];
 let level;
-let flowers = 0; // Track how many flowers the player picks.
 let gamepad = {};
+
+// Global tracking of player stats.
+let levelNum = 0;
+let secondsChilled = 0; // TODO
+let flowersPicked = 0;
+let znakesKilled = 0; // TODO
+let deathCount = 0;
+let gorgeStreak = 0; // TODO
 
 const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 const randomArrayElement = arr => arr[Math.floor(Math.random() * arr.length)];
@@ -21,6 +28,7 @@ const unpause = () => {
 const setLetter = (sprite, letter) => {
   const map = {
     ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, ',': 12, '.': 14, ':': 26,
+    '0': 16, '1': 17, '2': 18, '3': 19, '4': 20, '5': 21, '6': 22, '7': 23, '8': 24, '9': 25,
     a: 33, b: 34, c: 35, d: 36, e: 37, f: 38, g: 39, h: 40,
     i: 41, j: 42, k: 43, l: 44, m: 45, n: 46, o: 47, p: 48,
     q: 49, r: 50, s: 51, t: 52, u: 53, v: 54, w: 55, x: 56,
@@ -522,6 +530,7 @@ const cutsceneFactory = config => ({
 
 const startNextLevel = function() {
   level = levels.shift();
+  levelNum++;
 
   const isFirstLevel = level === 'level1';
   const isLastLevel = !levels.length;
@@ -774,7 +783,7 @@ const update = function() {
     } else if (plr.body.y < 0) {
       // Next Level!
       //game.sfx.play('victory');
-      flowers += plr.flowers;
+      flowersPicked += plr.flowers;
       startNextLevel.call(this);
     }
 
@@ -864,6 +873,7 @@ const setUpPlayer = function(x, y) {
   }, this);
 
   plr.kill = () => {
+    deathCount++;
     plr.isDead = true;
     const scene = this.scene;
     plr.body.checkCollision.down = false;
@@ -1050,9 +1060,35 @@ const scenes = {
 
       const chars = 'paused'.split('');
       chars.forEach((char, col) => {
-        const top = 116;
+        const top = 56;
         const left = (256 - ((chars.length - 1) * 8)) / 2; // Center text.
         setLetter(this.add.sprite(left + col * 8, top, 'typeface'), char);
+      });
+
+      const stats = [
+        {text: 'level', icon: 'chain', value: levelNum},
+        {text: 'seconds chilled', icon: 'clock', value: secondsChilled},
+        {text: 'flowers picked', icon: 'flower', value: flowersPicked + game.plr.flowers},
+        {text: 'znakes killed', icon: 'z', value: znakesKilled},
+        {text: 'deaths', icon: 'heart', value: deathCount},
+        {text: 'gorge streak', icon: 'rock', value: gorgeStreak},
+      ];
+
+      stats.forEach((stat, i) => {
+        const top = 88;
+        const left = 64;
+        const right = 64;
+
+        // Display stat description.
+        stat.text.split('').forEach((char, col) => {
+          setLetter(this.add.sprite(left + col * 8, top + i * 16, 'typeface'), char);
+        });
+
+        // Display stat.
+        (stat.value + '').split('').forEach((char, col) => {
+          console.log(char);
+          setLetter(this.add.sprite((256 - right) + col * 8, top + i * 16, 'typeface'), char);
+        });
       });
     }
   },
