@@ -17,6 +17,14 @@ const pause = () => {
   game.scene.pause(level);
   game.scene.keys[level].cameras.main.visible = false;
   game.scene.start('pause');
+
+  // Reset controls so they do not get stuck.
+  game.activeScene.keys.up.isDown = false;
+  game.activeScene.keys.down.isDown = false;
+  game.activeScene.keys.left.isDown = false;
+  game.activeScene.keys.right.isDown = false;
+  game.activeScene.keys.jump.isDown = false;
+  game.activeScene.keys.chill.isDown = false;
 };
 
 const unpause = () => {
