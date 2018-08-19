@@ -4,9 +4,9 @@ let gamepad = {};
 
 // Global tracking of player stats.
 let levelNum = 0;
-let secondsChilled = 0; // TODO
+let secondsChilled = 0;
 let flowersPicked = 0;
-let znakesKilled = 0; // TODO
+let znakesKilled = 0;
 let deathCount = 0;
 let gorgeStreak = 0; // TODO
 
@@ -798,6 +798,7 @@ const update = function() {
       // Next Level!
       //game.sfx.play('victory');
       flowersPicked += plr.flowers;
+      znakesKilled += plr.znakes;
       startNextLevel.call(this);
     }
 
@@ -941,7 +942,9 @@ const setUpPlayer = function(x, y) {
     }
   });
 
+  // Track stats per level, reset on death.
   plr.flowers = 0;
+  plr.znakes = 0;
 
   // Make player flash a few times on scene start.
   const flashTimer = this.time.addEvent({ delay: 100, callback() {
@@ -992,6 +995,7 @@ const addZnake = function(x, y) {
 
   znake.body.setSize(14, 14, 1, 0.5);
   znake.kill = () => {
+    game.plr.znakes++;
     znake.body.checkCollision.down = false;
     this.time.addEvent({ delay: 750, callback() {
       znake.destroy();
@@ -1082,8 +1086,9 @@ const scenes = {
       const stats = [
         {text: 'level', icon: 'chain', value: levelNum},
         {text: 'seconds chilled', icon: 'clock', value: secondsChilled},
+        // Flower and znake counts for each level reset if player dies.
         {text: 'flowers picked', icon: 'flower', value: flowersPicked + game.plr.flowers},
-        {text: 'znakes killed', icon: 'z', value: znakesKilled},
+        {text: 'znakes killed', icon: 'z', value: znakesKilled + game.plr.znakes},
         {text: 'deaths', icon: 'heart', value: deathCount},
         {text: 'gorge streak', icon: 'rock', value: gorgeStreak},
       ];
