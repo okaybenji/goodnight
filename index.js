@@ -529,6 +529,11 @@ const cutsceneFactory = config => ({
 });
 
 const startNextLevel = function() {
+  // Update stats.
+  if (game.plr && game.plr.gorges > gorgeStreak) {
+    gorgeStreak = game.plr.gorges;
+  }
+
   level = levels.shift();
   levelNum++;
 
@@ -612,6 +617,10 @@ const update = function() {
   const anim = plr.anims.currentAnim.key;
   const overTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y);
   const onTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y + 8);
+
+  if (overTile && overTile.properties.gorge) {
+    plr.jumpingGorge = true;
+  }
 
   // Float in water.
   if (overTile && overTile.properties.water) {
@@ -854,6 +863,10 @@ const setUpPlayer = function(x, y) {
     if (plr.body.blocked.down) {
       plr.canAutovault = true;
       plr.swimming = false;
+      if (plr.jumpingGorge) {
+        plr.jumpingGorge = false;
+        plr.gorges++;
+      }
     }
 
     // Collect flowers.
@@ -888,7 +901,13 @@ const setUpPlayer = function(x, y) {
   }, this);
 
   plr.kill = () => {
+    // Update stats.
     deathCount++;
+
+    if (plr.gorges > gorgeStreak) {
+      gorgeStreak = plr.gorges;
+    }
+
     plr.isDead = true;
     const scene = this.scene;
     plr.body.checkCollision.down = false;
@@ -945,6 +964,7 @@ const setUpPlayer = function(x, y) {
   // Track stats per level, reset on death.
   plr.flowers = 0;
   plr.znakes = 0;
+  plr.gorges = 0;
 
   // Make player flash a few times on scene start.
   const flashTimer = this.time.addEvent({ delay: 100, callback() {
@@ -1090,7 +1110,7 @@ const scenes = {
         {text: 'flowers picked', icon: 'flower', value: flowersPicked + game.plr.flowers},
         {text: 'znakes killed', icon: 'z', value: znakesKilled + game.plr.znakes},
         {text: 'deaths', icon: 'heart', value: deathCount},
-        {text: 'gorge streak', icon: 'rock', value: gorgeStreak},
+        {text: 'gorge streak', icon: 'rock', value: Math.max(game.plr.gorges, gorgeStreak)},
       ];
 
       stats.forEach((stat, i) => {
