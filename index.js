@@ -536,10 +536,6 @@ const update = function() {
     gamepad.setAxisThreshold(0.5);
   }
 
-  if (game.paused) {
-    return;
-  }
-
   const idleAnimationInteral = 8000; // How long in MS to wait before playing an alternative idle animation.
   const animateTileInterval = 500;
 
@@ -872,6 +868,15 @@ const setUpPlayer = function(x, y) {
     }
   };
 
+  const togglePause = () => {
+    const sceneName = game.activeScene.scene.key;
+    if (game.scene.isActive(sceneName)) {
+      game.scene.pause(sceneName);
+    } else {
+      game.scene.resume(sceneName);
+    }
+  };
+
   this.input.gamepad.on('down', pad => {
     gamepad = pad; // In case player switches to another gamepad.
 
@@ -884,14 +889,14 @@ const setUpPlayer = function(x, y) {
     // Let player toggle pause.
     const pressedStart = pad.buttons[9].pressed;
     if (pressedStart) {
-      game.paused = !game.paused;
+      togglePause();
     }
   }, this);
 
   this.input.keyboard.on('keydown', (event) => {
     console.log('event.key:', event.key);
     if (event.key === 'Enter') {
-      game.paused = !game.paused;
+      togglePause();
     }
   });
 
@@ -965,10 +970,6 @@ const addZnake = function(x, y) {
 
   // Make znake patrol.
   this.physics.add.collider(game.map.worldLayer, znake, (znake, tile) => {
-    if (game.paused) {
-      return;
-    }
-
     const anim = znake.anims.currentAnim.key;
     // If the next tile the znake will encounter is not collidable, turn around.
     let nextX;
