@@ -33,6 +33,10 @@ const resetControls = () => {
 };
 
 const pause = () => {
+  if (!game.scene.keys[level]) {
+    return;
+  }
+
   game.scene.pause(level);
   game.scene.keys[level].cameras.main.visible = false;
   game.scene.start('pause');
@@ -41,7 +45,11 @@ const pause = () => {
 };
 
 const unpause = () => {
-  game.scene.stop('pause');
+  if (!this.scene.transition) {
+    return;
+  }
+
+  this.scene.transition({ target: level, duration: 0, allowInput: false });
   game.scene.keys[level].cameras.main.visible = true;
 
   // Give player time to prepare.
@@ -962,27 +970,29 @@ const setUpPlayer = function(x, y) {
     }
   };
 
-  this.input.gamepad.on('down', pad => {
-    gamepad = pad; // In case player switches to another gamepad.
+  this.time.delayedCall(1001, () => {
+    this.input.gamepad.on('down', pad => {
+      gamepad = pad; // In case player switches to another gamepad.
 
-    // Let player jump once per button press.
-    const pressedJump = pad.A;
-    if (pressedJump && !plr.jumping) {
-      plr.jump();
-    }
+      // Let player jump once per button press.
+      const pressedJump = pad.A;
+      if (pressedJump && !plr.jumping) {
+        plr.jump();
+      }
 
-    // Let player toggle pause.
-    const pressedStart = pad.buttons[9].pressed;
-    if (pressedStart) {
-      pause();
-    }
-  }, this);
+      // Let player toggle pause.
+      const pressedStart = pad.buttons[9].pressed;
+      if (pressedStart) {
+        pause();
+      }
+    }, this);
 
-  this.input.keyboard.on('keydown', (event) => {
-    if (event.key === 'Enter') {
-      pause();
-    }
-  });
+    this.input.keyboard.on('keydown', (event) => {
+      if (event.key === 'Enter') {
+        pause();
+      }
+    });
+  }, [], this);
 
   // Track stats per level, reset on death.
   plr.flowers = 0;
@@ -1022,7 +1032,7 @@ const createLevel = function(levelName) {
   game.map.worldLayer = game.map.createDynamicLayer('World', game.map.tileset, xOffset, 0);
   game.map.worldLayer.setCollisionByProperty({collides: true});
 
-  // Spawn player and enemies from positions placed in Tiled object layer.
+  // Spawn enemies from positions placed in Tiled object layer.
   const objectLayer = game.map.objects.find(objectLayer => objectLayer.name === 'Objects');
   const spawnPoint = objectLayer.objects.find(obj => obj.type === 'player');
   setUpPlayer.call(this, spawnPoint.x + xOffset, spawnPoint.y);
