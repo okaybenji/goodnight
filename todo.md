@@ -1,12 +1,9 @@
 # TO-DO
-* Block input while player is blinking at start of level and also during scene transition (at least block pause because it will break).
-* Reset inputs to false on pause (otherwise they can get stuck).
-* Pausing the game causes joystick not to work upon unpausing until you press a button.
 * Replace placeholder music & SFX.
 * Design a lot more levels!
 * Create Electron app.
 * Remove all the .DS_Store files from the repo.
-* Add a pause screen with stats. Also show at end of game.
+* Show stats screen at the end of the game.
 * Need to ensure gamepad users know there is a chill button. Maybe show controls somewhere in-game. (Or have subconscious talk about it.)
 * Release on Steam.
 * Port to Switch.
@@ -18,6 +15,7 @@
 * Deathproof: Never die. "If you die in your dreams, do you die in real life? You'll never know."
 * Knievel: Jump the gorge 20 times without dying.
 * Greatnight: Qualify for all other achievements in a single run.
+* Avoid all the flowers. (Would mean tweaking wording on Greatnight.)
 
 # KNOWN BUGS
 * Float animation is way too fast.

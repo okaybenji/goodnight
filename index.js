@@ -13,18 +13,17 @@ let gorgeStreak = 0; // TODO
 const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 const randomArrayElement = arr => arr[Math.floor(Math.random() * arr.length)];
 
-const pause = () => {
-  game.scene.pause(level);
-  game.scene.keys[level].cameras.main.visible = false;
-  game.scene.start('pause');
+// Reset controls so they do not get stuck.
+const resetControls = () => {
+  if (game.activeScene && game.activeScene.keys) {
+    game.activeScene.keys.up.isDown = false;
+    game.activeScene.keys.down.isDown = false;
+    game.activeScene.keys.left.isDown = false;
+    game.activeScene.keys.right.isDown = false;
+    game.activeScene.keys.jump.isDown = false;
+    game.activeScene.keys.chill.isDown = false;
+  };
 
-  // Reset controls so they do not get stuck.
-  game.activeScene.keys.up.isDown = false;
-  game.activeScene.keys.down.isDown = false;
-  game.activeScene.keys.left.isDown = false;
-  game.activeScene.keys.right.isDown = false;
-  game.activeScene.keys.jump.isDown = false;
-  game.activeScene.keys.chill.isDown = false;
   gamepad.up = false;
   gamepad.down = false;
   gamepad.left = false;
@@ -33,10 +32,22 @@ const pause = () => {
   gamepad.B = false;
 };
 
+const pause = () => {
+  game.scene.pause(level);
+  game.scene.keys[level].cameras.main.visible = false;
+  game.scene.start('pause');
+
+  resetControls();
+};
+
 const unpause = () => {
   game.scene.stop('pause');
-  game.scene.resume(level);
   game.scene.keys[level].cameras.main.visible = true;
+
+  // Give player time to prepare.
+  setTimeout(() => {
+    game.scene.resume(level);
+  }, 250);
 };
 
 const setLetter = (sprite, letter) => {
@@ -555,29 +566,27 @@ const startNextLevel = function() {
   const isLastLevel = !levels.length;
   if (isFirstLevel) {
     game.music.play('title');
-    this.scene.start(level);
-  } else {
-    const lastScene = this;
-    lastScene.tweens.add({
-      targets: lastScene.cameras.main,
-      y: 240,
-      duration: 1000,
-    });
-
-    this.scene.transition({ target: level, duration: 1000 });
-
-    game.activeScene.cameras.main.y = -240;
-    game.activeScene.tweens.add({
-      targets: game.activeScene.cameras.main,
-      y: 0,
-      duration: 1000,
-    });
-  }
-
-  if (isLastLevel) {
+  } else if (isLastLevel) {
     game.music.play('climax');
   }
 
+  const lastScene = this;
+  lastScene.tweens.add({
+    targets: lastScene.cameras.main,
+    y: 240,
+    duration: 1000,
+  });
+
+  this.scene.transition({ target: level, duration: 1000, allowInput: false });
+
+  game.activeScene.cameras.main.y = -240;
+  game.activeScene.tweens.add({
+    targets: game.activeScene.cameras.main,
+    y: 0,
+    duration: 1000,
+  });
+
+  resetControls();
 };
 
 let animateTileIndex = 0;
@@ -1095,14 +1104,12 @@ const scenes = {
     create() {
       // Set up controls to unpause.
       this.input.keyboard.on('keydown', (event) => {
-          if (event.key === 'Enter') {
-            unpause();
-          }
+        if (event.key === 'Enter') {
+          unpause();
+        }
       });
 
       this.input.gamepad.once('down', pad => {
-        gamepad = pad; // In case player switches to another gamepad.
-
         // Let player toggle pause.
         const pressedStart = pad.buttons[9].pressed;
         if (pressedStart) {
