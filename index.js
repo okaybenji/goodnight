@@ -1,9 +1,22 @@
 const levels = ['level1', 'level2', 'level3', 'level4', 'level5', 'final'];
+let level;
 let flowers = 0; // Track how many flowers the player picks.
 let gamepad = {};
 
 const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 const randomArrayElement = arr => arr[Math.floor(Math.random() * arr.length)];
+
+const pause = () => {
+  game.scene.pause(level);
+  game.scene.keys[level].cameras.main.visible = false;
+  game.scene.start('pause');
+};
+
+const unpause = () => {
+  game.scene.stop('pause');
+  game.scene.resume(level);
+  game.scene.keys[level].cameras.main.visible = true;
+};
 
 const setLetter = (sprite, letter) => {
   const map = {
@@ -508,7 +521,7 @@ const cutsceneFactory = config => ({
 });
 
 const startNextLevel = function() {
-  const level = levels.shift();
+  level = levels.shift();
 
   const isFirstLevel = level === 'level1';
   const isLastLevel = !levels.length;
@@ -882,15 +895,6 @@ const setUpPlayer = function(x, y) {
     }
   };
 
-  const togglePause = () => {
-    const sceneName = game.activeScene.scene.key;
-    if (game.scene.isActive(sceneName)) {
-      game.scene.pause(sceneName);
-    } else {
-      game.scene.resume(sceneName);
-    }
-  };
-
   this.input.gamepad.on('down', pad => {
     gamepad = pad; // In case player switches to another gamepad.
 
@@ -903,14 +907,13 @@ const setUpPlayer = function(x, y) {
     // Let player toggle pause.
     const pressedStart = pad.buttons[9].pressed;
     if (pressedStart) {
-      togglePause();
+      pause();
     }
   }, this);
 
   this.input.keyboard.on('keydown', (event) => {
-    console.log('event.key:', event.key);
     if (event.key === 'Enter') {
-      togglePause();
+      pause();
     }
   });
 
@@ -1026,6 +1029,33 @@ const addZnake = function(x, y) {
 };
 
 const scenes = {
+  pause: {
+    create() {
+      // Set up controls to unpause.
+      this.input.keyboard.on('keydown', (event) => {
+          if (event.key === 'Enter') {
+            unpause();
+          }
+      });
+
+      this.input.gamepad.on('down', pad => {
+        gamepad = pad; // In case player switches to another gamepad.
+
+        // Let player toggle pause.
+        const pressedStart = pad.buttons[9].pressed;
+        if (pressedStart) {
+          unpause();
+        }
+      }, this);
+
+      const chars = 'paused'.split('');
+      chars.forEach((char, col) => {
+        const top = 116;
+        const left = (256 - ((chars.length - 1) * 8)) / 2; // Center text.
+        setLetter(this.add.sprite(left + col * 8, top, 'typeface'), char);
+      });
+    }
+  },
   menu: {
     preload() {
       // Art
@@ -1053,6 +1083,7 @@ const scenes = {
       );
 
       // Add the cutscenes as scenes..
+      this.scene.add('pause', scenes.pause);
       this.scene.add('intro', scenes.intro);
       this.scene.add('outro', scenes.outro);
       this.scene.add('credits', scenes.credits);
@@ -1400,7 +1431,6 @@ const scenes = {
 
       // Press ENTER key or START/OPTIONS button to start.
       this.input.keyboard.once('keydown', (event) => {
-        console.log(event);
         if (event.key === 'Enter') {
           this.scene.start('intro');
         }
