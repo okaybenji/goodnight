@@ -595,6 +595,20 @@ const update = function() {
     return;
   }
 
+  // Track time chilled.
+  if (plr.chilling) {
+    if (this.lastUpdatedChillTime) {
+      if (this.time.now > this.lastUpdatedChillTime + 1000) {
+        secondsChilled++;
+        this.lastUpdatedChillTime = this.time.now;
+      }
+    } else {
+      this.lastUpdatedChillTime = this.time.now;
+    }
+  } else {
+    this.lastUpdatedChillTime = undefined;
+  }
+
   const anim = plr.anims.currentAnim.key;
   const overTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y);
   const onTile = game.map.worldLayer.tilemap.getTileAtWorldXY(plr.x, plr.y + 8);
@@ -1086,7 +1100,6 @@ const scenes = {
 
         // Display stat.
         (stat.value + '').split('').forEach((char, col) => {
-          console.log(char);
           setLetter(this.add.sprite((256 - right) + col * 8, top + i * 16, 'typeface'), char);
         });
       });

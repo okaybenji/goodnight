@@ -1,5 +1,5 @@
 # TO-DO
-* Block input while player is blinking at start of level.
+* Block input while player is blinking at start of level and also during scene transition (at least block pause because it will break).
 * Replace placeholder music & SFX.
 * Design a lot more levels!
 * Create Electron app.
