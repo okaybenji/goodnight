@@ -11,7 +11,7 @@
 ## ACHIEVEMENTS
 * Zero chill: Finish the game with a 0-second chill record.
 * Stop & Smell: Pick every flower in the game.
-* Exterminator: Kill every znake in the game. (Except the impossible ones.)
+* Exterminator/Ruthlezz/Cold-Blooded: Kill every znake in the game. (Except the impossible ones.)
 * Deathproof: Never die. "If you die in your dreams, do you die in real life? You'll never know."
 * Knievel: Jump the gorge 20 times without dying.
 * Greatnight: Qualify for all other achievements in a single run.
