@@ -1,5 +1,5 @@
 # TO-DO
-* Replace placeholder music & SFX.
+* Replace placeholder music & SFX. Add pause/unpause SFX.
 * Design more levels!
 * Create Electron app.
 * Remove all the .DS_Store files from the repo.
