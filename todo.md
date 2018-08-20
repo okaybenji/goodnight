@@ -1,6 +1,6 @@
 # TO-DO
 * Replace placeholder music & SFX.
-* Design a lot more levels!
+* Design more levels!
 * Create Electron app.
 * Remove all the .DS_Store files from the repo.
 * Show stats screen at the end of the game.
@@ -21,3 +21,4 @@
 * Float animation is way too fast.
 * Znakes will walk through walls.
 * There is some weirdness with gamepad support. Sometimes keyboard keys or gamepad buttons/sticks stop working.
+* Sometimes pausing the game fails to hide the level scene. Sometimes scene change calls (startNextLevel or pause) are spammed.
