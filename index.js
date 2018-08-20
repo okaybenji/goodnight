@@ -1101,6 +1101,14 @@ const addZnake = function(x, y) {
 
 const scenes = {
   pause: {
+    preload() {
+      this.load.image('icon-chain', 'img/icon-chain.gif');
+      this.load.image('icon-snowflake', 'img/icon-snowflake.gif');
+      this.load.image('icon-flower', 'img/icon-flower.gif');
+      this.load.image('icon-z', 'img/icon-z.gif');
+      this.load.image('icon-heart', 'img/icon-heart.gif');
+      this.load.image('icon-rock', 'img/icon-rock.gif');
+    },
     create() {
       // Set up controls to unpause.
       this.input.keyboard.on('keydown', (event) => {
@@ -1126,7 +1134,7 @@ const scenes = {
 
       const stats = [
         {text: 'level', icon: 'chain', value: levelNum},
-        {text: 'seconds chilled', icon: 'clock', value: secondsChilled},
+        {text: 'seconds chilled', icon: 'snowflake', value: secondsChilled},
         // Flower and znake counts for each level reset if player dies.
         {text: 'flowers picked', icon: 'flower', value: flowersPicked + game.plr.flowers},
         {text: 'znakes killed', icon: 'z', value: znakesKilled + game.plr.znakes},
@@ -1145,9 +1153,13 @@ const scenes = {
         });
 
         // Display stat.
-        (stat.value + '').split('').forEach((char, col) => {
+        const statStr = (stat.value + '');
+        statStr.split('').forEach((char, col) => {
           setLetter(this.add.sprite((256 - right) + col * 8, top + i * 16, 'typeface'), char);
         });
+
+        // Display stat icon.
+        this.add.image((256 - right) + statStr.length * 8, top + i * 16, `icon-${stat.icon}`);
       });
     }
   },
