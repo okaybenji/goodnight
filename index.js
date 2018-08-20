@@ -1,4 +1,4 @@
-const levels = ['level1', 'level2', 'level3', 'level4', 'level5', 'final'];
+const levels = ['level1', 'level2', 'level3', 'level4', 'level5', 'level6', 'final'];
 let level;
 let gamepad = {};
 
