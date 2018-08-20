@@ -8,7 +8,7 @@ let secondsChilled = 0;
 let flowersPicked = 0;
 let znakesKilled = 0;
 let deathCount = 0;
-let gorgeStreak = 0; // TODO
+let gorgeStreak = 0;
 
 const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 const randomArrayElement = arr => arr[Math.floor(Math.random() * arr.length)];
