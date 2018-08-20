@@ -33,6 +33,11 @@ const resetControls = () => {
 };
 
 const pause = () => {
+  if (game.paused) {
+    return;
+  }
+
+  game.paused = true;
   game.scene.pause(level);
   game.scene.keys[level].cameras.main.visible = false;
   game.scene.start('pause');
@@ -41,12 +46,17 @@ const pause = () => {
 };
 
 const unpause = () => {
+  if (!game.paused) {
+    return;
+  }
+
   game.scene.stop('pause');
   game.scene.keys[level].cameras.main.visible = true;
 
   // Give player time to prepare.
   setTimeout(() => {
     game.scene.resume(level);
+    game.paused = false;
   }, 250);
 };
 
@@ -554,6 +564,13 @@ const cutsceneFactory = config => ({
 });
 
 const startNextLevel = function() {
+  if (game.transitioning) {
+    return;
+  }
+
+  game.transitioning = true;
+  const duration = 1000;
+
   // Update stats.
   if (game.plr && game.plr.gorges > gorgeStreak) {
     gorgeStreak = game.plr.gorges;
@@ -574,16 +591,19 @@ const startNextLevel = function() {
   lastScene.tweens.add({
     targets: lastScene.cameras.main,
     y: 240,
-    duration: 1000,
+    duration,
   });
 
-  this.scene.transition({ target: level, duration: 1000, allowInput: false });
+  this.scene.transition({ target: level, duration, allowInput: false });
 
   game.activeScene.cameras.main.y = -240;
   game.activeScene.tweens.add({
     targets: game.activeScene.cameras.main,
     y: 0,
-    duration: 1000,
+    duration,
+    onComplete() {
+      game.transitioning = false;
+    },
   });
 
   resetControls();
