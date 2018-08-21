@@ -686,6 +686,7 @@ const update = function() {
       plr.endingGame = true;
       plr.anims.play('chill');
       game.music.stop();
+      this.scene.stop('pause');
 
       this.time.delayedCall(6000, () => {
         plr.anims.play('sleepFromChill');
