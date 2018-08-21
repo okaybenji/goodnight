@@ -576,6 +576,7 @@ const startNextLevel = function() {
       setTimeout(() => {
         // Then start the next level and hide the transition screen.
         game.transitionScene.cameras.main.visible = false;
+        game.starsScene.cameras.main.visible = true;
         this.scene.launch(level);
         game.transitioning = false;
       }, 750);
@@ -592,6 +593,7 @@ const startNextLevel = function() {
 
   game.transitionScene.setLevel(levelNum);
   game.transitionScene.cameras.main.visible = true;
+  game.starsScene.cameras.main.visible = false;
 };
 
 let animateTileIndex = 0;
@@ -693,6 +695,7 @@ const update = function() {
       }, [], this);
 
       this.time.delayedCall(10000, () => {
+        game.starsScene.cameras.main.visible = false;
         this.scene.start('outro');
       }, [], this);
 
@@ -850,34 +853,6 @@ const update = function() {
   }
 };
 
-const addStar = function(delay) {
-  const getRandomPosition = () => ({
-    x: randomIntBetween(0, game.config.width),
-    y: randomIntBetween(0, game.config.height)
-  });
-
-  const pos = getRandomPosition();
-  const star = this.add.sprite(pos.x, pos.y, 'star')
-
-  // Stagger star animations.
-  this.time.delayedCall(delay, () => {
-    star.anims.play('twinkle', true);
-  }, [], this);
-
-  star.on('animationrepeat', () => {
-    const newPos = getRandomPosition();
-    star.x = newPos.x;
-    star.y = newPos.y;
-  });
-};
-
-const randomizeStars = function() {
-  [...Array(4)]
-    .forEach((x, i) => {
-      addStar.call(this, i * 100);
-    });
-};
-
 // Add the player and set up controls.
 const setUpPlayer = function(x, y) {
   const plr = this.physics.add.sprite(x, y, 'plr')
@@ -1005,8 +980,6 @@ const createLevel = function(levelName) {
   this.lastTileSwap = this.time.now;
   this.lastPlayerInput = this.time.now;
 
-  randomizeStars.call(this);
-
   game.map = this.make.tilemap({key: levelName});
   game.map.tileset = game.map.addTilesetImage('tileset');
 
@@ -1093,6 +1066,34 @@ const addZnake = function(x, y) {
 };
 
 const scenes = {
+  stars: {
+    create() {
+      game.starsScene = this;
+
+      [...Array(4)]
+        .forEach((x, i) => {
+          const getRandomPosition = () => ({
+            x: randomIntBetween(0, game.config.width),
+            y: randomIntBetween(0, game.config.height)
+          });
+
+          const pos = getRandomPosition();
+          const star = this.add.sprite(pos.x, pos.y, 'star')
+
+          // Stagger star animations.
+          const delay = 100;
+          this.time.delayedCall(delay * i, () => {
+            star.anims.play('twinkle', true);
+          }, [], this);
+
+          star.on('animationrepeat', () => {
+            const newPos = getRandomPosition();
+            star.x = newPos.x;
+            star.y = newPos.y;
+          });
+        });
+    },
+  },
   pause: {
     preload() {
       this.load.image('icon-chain', 'img/icon-chain.gif');
@@ -1221,6 +1222,7 @@ const scenes = {
       );
 
       // Add the cutscenes as scenes..
+      this.scene.add('stars', scenes.stars);
       this.scene.add('pause', scenes.pause);
       this.scene.add('transition', scenes.transition);
       this.scene.add('intro', scenes.intro);
@@ -1592,14 +1594,18 @@ const scenes = {
 
       // TESTING: Skip to first level.
       // startNextLevel.call(this);
+
+      // Prepare stars scene.
+      this.scene.launch('stars');
+      game.scene.keys.stars.cameras.main.visible = false;
     },
   },
   intro: cutsceneFactory(intro),
   outro: cutsceneFactory(outro),
   credits: {
     create() {
+      game.starsScene.cameras.main.visible = true;
       game.music.play('credits');
-      randomizeStars.call(this);
 
       const top = 112;
       const timeBetweenCredits = 6000;
