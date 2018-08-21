@@ -9,13 +9,14 @@
 * Port to Switch.
 
 ## ACHIEVEMENTS
-* Zero chill: Finish the game with a 0-second chill record.
+* Zero Chill: Finish the game with a 0-second chill record.
 * Stop & Smell: Pick every flower in the game.
 * Exterminator/Ruthlezz/Cold-Blooded: Kill every znake in the game. (Except the impossible ones.)
 * Deathproof: Never die. "If you die in your dreams, do you die in real life? You'll never know."
 * Knievel: Jump the gorge 20 times without dying.
-* Greatnight: Qualify for all other achievements in a single run.
-* Avoid all the flowers. (Would mean tweaking wording on Greatnight.)
+* Greatnight: Qualify for Zero Chill, Stop & Smell, Cold-Blooded, Deathproof, and Knievel achievements in a single run.
+* Allergic: Avoid all the flowers.
+* Pazifizt: Don't kill any snakes.
 
 # KNOWN BUGS
 * Float animation is way too fast.
