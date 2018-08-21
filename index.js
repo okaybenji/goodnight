@@ -1127,7 +1127,7 @@ const scenes = {
         }
       });
 
-      this.input.gamepad.once('down', pad => {
+      this.input.gamepad.on('down', pad => {
         // Let player toggle pause.
         const pressedStart = pad.buttons[9].pressed;
         if (pressedStart) {

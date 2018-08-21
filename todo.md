@@ -22,3 +22,4 @@
 * Znakes will walk through walls.
 * There is some weirdness with gamepad support. Sometimes keyboard keys or gamepad buttons/sticks stop working.
 * Sometimes pausing the game fails to hide the level scene. Sometimes scene change calls (startNextLevel or pause) are spammed.
+* Weirdly, using the joystick on Xbone controller on level 5 to get to the water pool to transition to znake lair works, but using the D-pad doesn't seem to give you enough gas to get over there.
