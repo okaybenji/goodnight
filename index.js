@@ -572,8 +572,13 @@ const startNextLevel = function() {
   const duration = 1000;
 
   // Update stats.
-  if (game.plr && game.plr.gorges > gorgeStreak) {
-    gorgeStreak = game.plr.gorges;
+  if (game.plr) {
+    flowersPicked += game.plr.flowers;
+    znakesKilled += game.plr.znakes;
+
+    if (game.plr.gorges > gorgeStreak) {
+      gorgeStreak = game.plr.gorges;
+    }
   }
 
   level = levels.shift();
@@ -849,8 +854,6 @@ const update = function() {
     } else if (plr.body.y < 0) {
       // Next Level!
       //game.sfx.play('victory');
-      flowersPicked += plr.flowers;
-      znakesKilled += plr.znakes;
       startNextLevel.call(this);
     }
 
