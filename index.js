@@ -577,6 +577,7 @@ const startNextLevel = function() {
         // Then start the next level and hide the transition screen.
         game.transitionScene.cameras.main.visible = false;
         this.scene.launch(level);
+        game.transitioning = false;
       }, 750);
     }
   });
@@ -999,17 +1000,6 @@ const preloadLevel = function(levelName) {
 };
 
 const createLevel = function(levelName) {
-  // Transition the level into view.
-  this.cameras.main.y = -240;
-  this.tweens.add({
-    targets: this.cameras.main,
-    y: 0,
-    duration: 1000,
-    onComplete() {
-      game.transitioning = false;
-    },
-  });
-
   const xOffset = -24; // To account for extra level width.
   this.lastTileSwap = this.time.now;
   this.lastPlayerInput = this.time.now;
