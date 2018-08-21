@@ -1,5 +1,5 @@
 const levels = ['level1', 'level2', 'level3', 'level4', 'level5', 'level6', 'final'];
-let level;
+let level = 'intro'; // Trick to transition from opening cutscene to first level.
 let gamepad = {};
 
 // Global tracking of player stats.
@@ -15,13 +15,13 @@ const randomArrayElement = arr => arr[Math.floor(Math.random() * arr.length)];
 
 // Reset controls so they do not get stuck.
 const resetControls = () => {
-  if (game.activeScene && game.activeScene.keys) {
-    game.activeScene.keys.up.isDown = false;
-    game.activeScene.keys.down.isDown = false;
-    game.activeScene.keys.left.isDown = false;
-    game.activeScene.keys.right.isDown = false;
-    game.activeScene.keys.jump.isDown = false;
-    game.activeScene.keys.chill.isDown = false;
+  if (game.levelScene && game.levelScene.keys) {
+    game.levelScene.keys.up.isDown = false;
+    game.levelScene.keys.down.isDown = false;
+    game.levelScene.keys.left.isDown = false;
+    game.levelScene.keys.right.isDown = false;
+    game.levelScene.keys.jump.isDown = false;
+    game.levelScene.keys.chill.isDown = false;
   };
 
   gamepad.up = false;
@@ -30,34 +30,6 @@ const resetControls = () => {
   gamepad.right = false;
   gamepad.A = false;
   gamepad.B = false;
-};
-
-const pause = () => {
-  if (game.paused) {
-    return;
-  }
-
-  game.paused = true;
-  game.scene.pause(level);
-  game.scene.keys[level].cameras.main.visible = false;
-  game.scene.start('pause');
-
-  resetControls();
-};
-
-const unpause = () => {
-  if (!game.paused) {
-    return;
-  }
-
-  game.scene.stop('pause');
-  game.scene.keys[level].cameras.main.visible = true;
-
-  // Give player time to prepare.
-  setTimeout(() => {
-    game.scene.resume(level);
-    game.paused = false;
-  }, 250);
 };
 
 const setLetter = (sprite, letter) => {
@@ -267,7 +239,10 @@ const intro = {
   }],
   music: 'intro',
   onComplete() {
+    game.music.play('title');
     startNextLevel.call(this);
+    this.scene.launch('pause');
+    game.scene.keys.pause.cameras.main.visible = false;
   }
 };
 
@@ -398,6 +373,8 @@ const outro = {
 
 const cutsceneFactory = config => ({
   preload() {
+    game.activeScene = this;
+
     this.load.image('frame', 'img/frame.png');
     this.load.image('dreamer', 'img/cutscene-dreamer.gif');
     this.load.image('cut-znake', 'img/cutscene-bw-znake.gif');
@@ -412,7 +389,6 @@ const cutsceneFactory = config => ({
     this.load.spritesheet('eyes', 'img/cutscene-dreamer-eyes.gif', {frameWidth: 41, frameHeight: 21});
     this.load.spritesheet('mouth', 'img/cutscene-dreamer-mouth.gif', {frameWidth: 14, frameHeight: 14});
     this.load.spritesheet('tv-screen', 'img/cutscene-tv-screen.gif', {frameWidth: 51, frameHeight: 34});
-    this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
   },
   create() {
     if (config.music) {
@@ -565,11 +541,12 @@ const cutsceneFactory = config => ({
 
 const startNextLevel = function() {
   if (game.transitioning) {
+    console.warn('startNextLevel called while transition already occuring');
     return;
   }
 
   game.transitioning = true;
-  const duration = 1000;
+  const duration = 2000;
 
   // Update stats.
   if (game.plr) {
@@ -581,37 +558,39 @@ const startNextLevel = function() {
     }
   }
 
-  level = levels.shift();
-  levelNum++;
-
-  const isFirstLevel = level === 'level1';
-  const isLastLevel = !levels.length;
-  if (isFirstLevel) {
-    game.music.play('title');
-  } else if (isLastLevel) {
-    game.music.play('climax');
+  // First transition from previous level to transition scene.
+  const lastLevel = level;
+  if (lastLevel) {
+    this.scene.pause(lastLevel);
   }
-
-  const lastScene = this;
-  lastScene.tweens.add({
+  const lastScene = game.activeScene;
+  game.transitionScene.tweens.add({
     targets: lastScene.cameras.main,
     y: 240,
     duration,
+    onComplete: () => {
+      if (lastLevel) {
+        this.scene.stop(lastLevel);
+      }
+
+      setTimeout(() => {
+        // Then start the next level and hide the transition screen.
+        game.transitionScene.cameras.main.visible = false;
+        this.scene.launch(level);
+      }, 750);
+    }
   });
 
-  this.scene.transition({ target: level, duration, allowInput: false });
+  level = levels.shift();
+  levelNum++;
 
-  game.activeScene.cameras.main.y = -240;
-  game.activeScene.tweens.add({
-    targets: game.activeScene.cameras.main,
-    y: 0,
-    duration,
-    onComplete() {
-      game.transitioning = false;
-    },
-  });
+  const isLastLevel = !levels.length;
+  if (isLastLevel) {
+    game.music.play('climax');
+  }
 
-  resetControls();
+  game.transitionScene.setLevel(levelNum);
+  game.transitionScene.cameras.main.visible = true;
 };
 
 let animateTileIndex = 0;
@@ -993,19 +972,7 @@ const setUpPlayer = function(x, y) {
     if (pressedJump && !plr.jumping) {
       plr.jump();
     }
-
-    // Let player toggle pause.
-    const pressedStart = pad.buttons[9].pressed;
-    if (pressedStart) {
-      pause();
-    }
   }, this);
-
-  this.input.keyboard.on('keydown', (event) => {
-    if (event.key === 'Enter') {
-      pause();
-    }
-  });
 
   // Track stats per level, reset on death.
   plr.flowers = 0;
@@ -1024,6 +991,7 @@ const setUpPlayer = function(x, y) {
 };
 
 const preloadLevel = function(levelName) {
+  game.levelScene = this;
   game.activeScene = this;
 
   this.load.tilemapTiledJSON(levelName, `map/${levelName}.json`);
@@ -1031,6 +999,17 @@ const preloadLevel = function(levelName) {
 };
 
 const createLevel = function(levelName) {
+  // Transition the level into view.
+  this.cameras.main.y = -240;
+  this.tweens.add({
+    targets: this.cameras.main,
+    y: 0,
+    duration: 1000,
+    onComplete() {
+      game.transitioning = false;
+    },
+  });
+
   const xOffset = -24; // To account for extra level width.
   this.lastTileSwap = this.time.now;
   this.lastPlayerInput = this.time.now;
@@ -1133,10 +1112,26 @@ const scenes = {
       this.load.image('icon-rock', 'img/icon-rock.gif');
     },
     create() {
+      game.pauseScene = this;
+
+      const togglePause = () => {
+        if (game.scene.isActive(level) && !game.transitioning) {
+          this.scene.restart('pause'); // Re-render stats.
+          game.scene.pause(level);
+          game.scene.keys[level].cameras.main.visible = false;
+          resetControls();
+          this.cameras.main.visible = true;
+        } else {
+          game.scene.resume(level);
+          game.scene.keys[level].cameras.main.visible = true;
+          this.cameras.main.visible = false;
+        }
+      };
+
       // Set up controls to unpause.
       this.input.keyboard.on('keydown', (event) => {
         if (event.key === 'Enter') {
-          unpause();
+          togglePause();
         }
       });
 
@@ -1144,7 +1139,7 @@ const scenes = {
         // Let player toggle pause.
         const pressedStart = pad.buttons[9].pressed;
         if (pressedStart) {
-          unpause();
+          togglePause();
         }
       }, this);
 
@@ -1155,7 +1150,7 @@ const scenes = {
         setLetter(this.add.sprite(left + col * 8, top, 'typeface'), char);
       });
 
-      const stats = [
+      const stats = game.plr ? [
         {text: 'level', icon: 'chain', value: levelNum},
         {text: 'seconds chilled', icon: 'snowflake', value: secondsChilled},
         // Flower and znake counts for each level reset if player dies.
@@ -1163,7 +1158,7 @@ const scenes = {
         {text: 'znakes killed', icon: 'z', value: znakesKilled + game.plr.znakes},
         {text: 'deaths', icon: 'heart', value: deathCount},
         {text: 'gorge streak', icon: 'rock', value: Math.max(game.plr.gorges, gorgeStreak)},
-      ];
+      ] : [];
 
       stats.forEach((stat, i) => {
         const top = 88;
@@ -1184,7 +1179,29 @@ const scenes = {
         // Display stat icon.
         this.add.image((256 - right) + statStr.length * 8, top + i * 16, `icon-${stat.icon}`);
       });
-    }
+    },
+  },
+  transition: {
+    preload() {
+      this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
+    },
+    create() {
+      game.transitionScene = this;
+
+      const top = 112;
+
+      const chars = 'level  '.split('');
+      chars.forEach((char, col) => {
+        const left = (256 - ((chars.length - 1) * 8)) / 2; // Center text.
+        setLetter(this.add.sprite(left + col * 8, top, 'typeface'), char);
+      });
+
+      const level = this.add.sprite(148, top, 'typeface');
+
+      this.setLevel = (levelNum) => {
+        setLetter(level, `${levelNum}`);
+      };
+    },
   },
   menu: {
     preload() {
@@ -1214,6 +1231,7 @@ const scenes = {
 
       // Add the cutscenes as scenes..
       this.scene.add('pause', scenes.pause);
+      this.scene.add('transition', scenes.transition);
       this.scene.add('intro', scenes.intro);
       this.scene.add('outro', scenes.outro);
       this.scene.add('credits', scenes.credits);
@@ -1224,6 +1242,8 @@ const scenes = {
       });
     },
     create() {
+      this.scene.stop('menu');
+
       // Set up SFX. Don't allow sounds to stack.
       const sfx = () => {
         const sounds = ['text', 'jump', 'stomp', 'pick', 'die', 'silence'];
@@ -1575,6 +1595,10 @@ const scenes = {
         }
       }, this);
 
+      // Prepare transition screen.
+      this.scene.launch('transition');
+      game.scene.keys.transition.cameras.main.visible = false;
+
       // TESTING: Skip to first level.
       // startNextLevel.call(this);
     },
@@ -1582,9 +1606,6 @@ const scenes = {
   intro: cutsceneFactory(intro),
   outro: cutsceneFactory(outro),
   credits: {
-    preload() {
-      this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
-    },
     create() {
       game.music.play('credits');
       randomizeStars.call(this);
