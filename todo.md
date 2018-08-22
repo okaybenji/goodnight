@@ -1,6 +1,8 @@
 # TO-DO
 * Replace placeholder music & SFX. Add pause/unpause SFX.
 * Design more levels!
+* Get the player to go up the chain all the way off the screen before the transition starts (or during the transition).
+* Try setting up Mario-style swimming physics instead of the buoyancy that's there now.
 * Create Electron app.
 * Remove all the .DS_Store files from the repo.
 * Show stats screen at the end of the game.
