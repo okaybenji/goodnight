@@ -853,6 +853,19 @@ const update = function() {
   }
 };
 
+const addNpc = function(npc) {
+  this.add.sprite(npc.x, npc.y - 12, 'npc')
+    .anims.play('npc-idle', true);
+
+  const dialog = npc.properties.dialog;
+  const chars = dialog.split('');
+  chars.forEach((char, col) => {
+    const top = npc.y - 24;
+    const left = npc.x - ((chars.length - 1) * 8 / 2); // Center text.
+    setLetter(this.add.sprite(left + col * 8, top, 'typeface'), char);
+  });
+};
+
 // Add the player and set up controls.
 const setUpPlayer = function(x, y) {
   const plr = this.physics.add.sprite(x, y, 'plr')
@@ -992,6 +1005,11 @@ const createLevel = function(levelName) {
   const objectLayer = game.map.objects.find(objectLayer => objectLayer.name === 'Objects');
   const spawnPoint = objectLayer.objects.find(obj => obj.type === 'player');
   setUpPlayer.call(this, spawnPoint.x + xOffset, spawnPoint.y);
+
+  const npc = objectLayer.objects.find(obj => obj.type === 'npc');
+  if (npc) {
+    addNpc.call(this, npc);
+  }
 
   const znakes = objectLayer.objects
     .filter(obj => obj.type === 'znake')
@@ -1211,6 +1229,11 @@ const scenes = {
         { frameWidth: 20, frameHeight: 24}
       );
 
+      this.load.spritesheet('npc',
+        'img/subconscious.gif',
+        { frameWidth: 20, frameHeight: 24}
+      );
+
       this.load.spritesheet('star',
         'img/star.png',
         { frameWidth: 9, frameHeight: 9 }
@@ -1364,6 +1387,18 @@ const scenes = {
           { key: 'eye', frame: 0},
         ],
         frameRate: 10,
+      });
+
+      this.anims.create({
+        key: 'npc-idle',
+        frames: [
+          { key: 'npc', frame: 6},
+          { key: 'npc', frame: 6},
+          { key: 'npc', frame: 8},
+          { key: 'npc', frame: 6},
+        ],
+        frameRate: 8,
+        repeat: -1
       });
 
       this.anims.create({

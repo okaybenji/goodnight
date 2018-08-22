@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="31" tilewidth="8" tileheight="8" nextobjectid="9">
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="38" height="31" tilewidth="8" tileheight="8" infinite="0" nextobjectid="12">
  <tileset firstgid="1" name="tileset" tilewidth="8" tileheight="8" tilecount="200" columns="8">
   <image source="../img/tileset.gif" width="64" height="200"/>
   <tile id="0">
@@ -552,5 +552,10 @@
  </layer>
  <objectgroup name="Objects">
   <object id="8" type="player" x="172" y="216"/>
+  <object id="9" type="npc" x="212" y="216">
+   <properties>
+    <property name="dialog" value="hey, you!"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
