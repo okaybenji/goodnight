@@ -36,10 +36,14 @@ const setLetter = (sprite, letter) => {
   const map = {
     ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, ',': 12, '.': 14, ':': 26,
     '0': 16, '1': 17, '2': 18, '3': 19, '4': 20, '5': 21, '6': 22, '7': 23, '8': 24, '9': 25,
-    a: 33, b: 34, c: 35, d: 36, e: 37, f: 38, g: 39, h: 40,
-    i: 41, j: 42, k: 43, l: 44, m: 45, n: 46, o: 47, p: 48,
-    q: 49, r: 50, s: 51, t: 52, u: 53, v: 54, w: 55, x: 56,
-    y: 57, z: 58
+    A: 33, B: 34, C: 35, D: 36, E: 37, F: 38, G: 39, H: 40,
+    I: 41, J: 42, K: 43, L: 44, M: 45, N: 46, O: 47, P: 48,
+    Q: 49, R: 50, S: 51, T: 52, U: 53, V: 54, W: 55, X: 56,
+    Y: 57, Z: 58,
+    a: 65, b: 66, c: 67, d: 68, e: 69, f: 70, g: 71, h: 72,
+    i: 73, j: 74, k: 75, l: 76, m: 77, n: 78, o: 79, p: 80,
+    q: 81, r: 82, s: 83, t: 84, u: 85, v: 86, w: 87, x: 88,
+    y: 89, z: 90
   };
 
   sprite.setFrame(map[letter] || 0);
@@ -458,7 +462,7 @@ const cutsceneFactory = config => ({
             }
 
             const sprite = this.add.sprite(left + col * 8, top + row * 8, 'typeface')
-            setLetter(sprite, char);
+            setLetter(sprite, char.toUpperCase());
             col++;
             text.push(sprite)
 
@@ -1191,13 +1195,13 @@ const scenes = {
       });
 
       const stats = game.plr ? [
-        {text: 'level', icon: 'chain', value: levelNum},
-        {text: 'seconds chilled', icon: 'snowflake', value: secondsChilled},
+        {text: 'LEVEL', icon: 'chain', value: levelNum},
+        {text: 'SECONDS CHILLED', icon: 'snowflake', value: secondsChilled},
         // Flower and znake counts for each level reset if player dies.
-        {text: 'flowers picked', icon: 'flower', value: flowersPicked + game.plr.flowers},
-        {text: 'znakes killed', icon: 'z', value: znakesKilled + game.plr.znakes},
-        {text: 'deaths', icon: 'heart', value: deathCount},
-        {text: 'gorge streak', icon: 'rock', value: Math.max(game.plr.gorges, gorgeStreak)},
+        {text: 'FLOWERS PICKED', icon: 'flower', value: flowersPicked + game.plr.flowers},
+        {text: 'ZNAKES KILLED', icon: 'z', value: znakesKilled + game.plr.znakes},
+        {text: 'DEATHS', icon: 'heart', value: deathCount},
+        {text: 'GORGE STREAK', icon: 'rock', value: Math.max(game.plr.gorges, gorgeStreak)},
       ] : [];
 
       stats.forEach((stat, i) => {
@@ -1231,7 +1235,7 @@ const scenes = {
 
       const top = 112;
 
-      const chars = 'level  '.split('');
+      const chars = 'LEVEL  '.split('');
       chars.forEach((char, col) => {
         const left = (256 - ((chars.length - 1) * 8)) / 2; // Center text.
         setLetter(this.add.sprite(left + col * 8, top, 'typeface'), char);
