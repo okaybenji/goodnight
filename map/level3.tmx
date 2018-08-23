@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="31" tilewidth="8" tileheight="8" nextobjectid="20">
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="38" height="31" tilewidth="8" tileheight="8" infinite="0" nextobjectid="21">
  <tileset firstgid="1" name="tileset" tilewidth="8" tileheight="8" tilecount="200" columns="8">
   <image source="../img/tileset.gif" width="64" height="200"/>
   <tile id="0">
@@ -556,5 +556,13 @@
   <object id="12" type="znake" x="152" y="168"/>
   <object id="13" type="znake" x="144" y="96"/>
   <object id="14" type="znake" x="256" y="64"/>
+  <object id="20" type="npc" x="200" y="128">
+   <properties>
+    <property name="dialog">don't let znakes touch you!
+unless... maybe uh...
+jump on their heads?</property>
+    <property name="faceRight" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

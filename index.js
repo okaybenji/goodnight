@@ -34,7 +34,7 @@ const resetControls = () => {
 
 const setLetter = (sprite, letter) => {
   const map = {
-    ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, ',': 12, '.': 14, ':': 26, '?': 31,
+    ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, '(': 8, ')': 9, ',': 12, '.': 14, ':': 26, '?': 31,
     '0': 16, '1': 17, '2': 18, '3': 19, '4': 20, '5': 21, '6': 22, '7': 23, '8': 24, '9': 25,
     A: 33, B: 34, C: 35, D: 36, E: 37, F: 38, G: 39, H: 40,
     I: 41, J: 42, K: 43, L: 44, M: 45, N: 46, O: 47, P: 48,
@@ -859,7 +859,7 @@ const update = function() {
 
 const addNpc = function({x, y, properties}) {
   const sprite = this.add.sprite(x, y - 12, 'npc')
-    .anims.play('npc-idle', true);
+    .anims.play(properties.anim ? properties.anim : 'npc-idle', true);
 
   if (properties.faceRight) {
     sprite.flipX = true;
@@ -1439,6 +1439,18 @@ const scenes = {
           { key: 'npc', frame: 6},
           { key: 'npc', frame: 8},
           { key: 'npc', frame: 6},
+        ],
+        frameRate: 8,
+        repeat: -1
+      });
+
+      this.anims.create({
+        key: 'npc-swim',
+        frames: [
+          { key: 'npc', frame: 18},
+          { key: 'npc', frame: 19},
+          { key: 'npc', frame: 20},
+          { key: 'npc', frame: 19},
         ],
         frameRate: 8,
         repeat: -1

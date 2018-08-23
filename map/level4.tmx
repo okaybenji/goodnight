@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="31" tilewidth="8" tileheight="8" nextobjectid="21">
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="38" height="31" tilewidth="8" tileheight="8" infinite="0" nextobjectid="23">
  <tileset firstgid="1" name="tileset" tilewidth="8" tileheight="8" tilecount="200" columns="8">
   <image source="../img/tileset.gif" width="64" height="200"/>
   <tile id="0">
@@ -1770,5 +1770,20 @@
   <object id="8" type="player" x="72" y="224"/>
   <object id="14" type="znake" x="240" y="72"/>
   <object id="20" type="znake" x="128" y="240"/>
+  <object id="21" type="npc" x="144" y="232">
+   <properties>
+    <property name="anim" value="npc-swim"/>
+    <property name="dialog">it's coming right for you!!
+
+
+
+
+
+nice job!
+i wanna help you escape
+so we can watch tv :)</property>
+    <property name="faceRight" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
