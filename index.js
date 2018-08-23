@@ -34,7 +34,7 @@ const resetControls = () => {
 
 const setLetter = (sprite, letter) => {
   const map = {
-    ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, '(': 8, ')': 9, ',': 12, '.': 14, ':': 26, '?': 31,
+    ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, '’': 7, '(': 8, ')': 9, ',': 12, '.': 14, ':': 26, '?': 31,
     '0': 16, '1': 17, '2': 18, '3': 19, '4': 20, '5': 21, '6': 22, '7': 23, '8': 24, '9': 25,
     A: 33, B: 34, C: 35, D: 36, E: 37, F: 38, G: 39, H: 40,
     I: 41, J: 42, K: 43, L: 44, M: 45, N: 46, O: 47, P: 48,
@@ -691,6 +691,7 @@ const update = function() {
       // End the game!!
       plr.endingGame = true;
       plr.anims.play('chill');
+      game.npc.anims.play('npc-chill');
       game.music.stop();
       this.scene.stop('pause');
 
@@ -865,6 +866,8 @@ const addNpc = function({x, y, properties}) {
     sprite.flipX = true;
   }
 
+  game.npc = sprite;
+
   const timeBetweenLines = 2500;
   const timeBetweenChars = 50;
   const dialog = properties.dialog;
@@ -877,6 +880,11 @@ const addNpc = function({x, y, properties}) {
       delay: timeBetweenLines * i,
       callback: () => {
         letters.forEach(l => l.destroy());
+
+        if (game.plr.endingGame) {
+          return;
+        }
+
         chars.forEach((char, col) => {
           this.time.addEvent({
             delay: timeBetweenChars * col,
@@ -1045,13 +1053,14 @@ const createLevel = function(levelName) {
 
   // Spawn player and enemies from positions placed in Tiled object layer.
   const objectLayer = game.map.objects.find(objectLayer => objectLayer.name === 'Objects');
-  const player = objectLayer.objects.find(obj => obj.type === 'player');
-  setUpPlayer.call(this, player);
 
   const npc = objectLayer.objects.find(obj => obj.type === 'npc');
   if (npc) {
     addNpc.call(this, npc);
   }
+
+  const player = objectLayer.objects.find(obj => obj.type === 'player');
+  setUpPlayer.call(this, player);
 
   const znakes = objectLayer.objects
     .filter(obj => obj.type === 'znake')
@@ -1457,6 +1466,12 @@ const scenes = {
       });
 
       this.anims.create({
+        key: 'npc-chill',
+        frames: this.anims.generateFrameNumbers('npc', { start: 24, end: 29 }),
+        frameRate: 8,
+      });
+
+      this.anims.create({
         key: 'idle',
         frames: [
           { key: 'plr', frame: 8},
@@ -1725,7 +1740,7 @@ const scenes = {
                 const sprite = this.add.sprite(left + col * 8, top + row * 8, 'typeface');
                 sprite.alpha = 0;
                 sprites.push(sprite);
-                setLetter(sprite, char);
+                setLetter(sprite, char.toUpperCase());
 
                 this.time.addEvent({delay: 250, callback() {
                   sprite.alpha += 0.5;

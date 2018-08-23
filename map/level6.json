@@ -31,11 +31,19 @@
                  "height":0,
                  "id":8,
                  "name":"",
+                 "properties":
+                    {
+                     "faceRight":true
+                    },
+                 "propertytypes":
+                    {
+                     "faceRight":"bool"
+                    },
                  "rotation":0,
                  "type":"player",
                  "visible":true,
                  "width":0,
-                 "x":48,
+                 "x":24,
                  "y":80
                 }, 
                 {
@@ -92,6 +100,27 @@
                  "width":0,
                  "x":88,
                  "y":80
+                }, 
+                {
+                 "height":0,
+                 "id":26,
+                 "name":"",
+                 "properties":
+                    {
+                     "dialog":"if you ever need a break,\njust press B to chill out\n(you have to be on a platform)",
+                     "faceRight":false
+                    },
+                 "propertytypes":
+                    {
+                     "dialog":"string",
+                     "faceRight":"bool"
+                    },
+                 "rotation":0,
+                 "type":"npc",
+                 "visible":true,
+                 "width":0,
+                 "x":112,
+                 "y":224
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -99,7 +128,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":25,
+ "nextobjectid":27,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
