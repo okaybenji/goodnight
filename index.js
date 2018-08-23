@@ -1261,7 +1261,7 @@ const scenes = {
         }
       }, this);
 
-      const chars = 'paused'.split('');
+      const chars = 'PAUSED'.split('');
       chars.forEach((char, col) => {
         const top = 56;
         const left = (256 - ((chars.length - 1) * 8)) / 2; // Center text.
