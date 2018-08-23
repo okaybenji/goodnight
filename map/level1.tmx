@@ -551,11 +551,19 @@
 </data>
  </layer>
  <objectgroup name="Objects">
-  <object id="8" type="player" x="172" y="216"/>
-  <object id="9" type="npc" x="212" y="216">
+  <object id="8" type="player" x="152" y="216">
+   <properties>
+    <property name="faceRight" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="9" type="npc" x="208" y="216">
    <properties>
     <property name="dialog">hey, you!
-climb that chain!</property>
+climb that chain!
+
+
+press A to jump
+press it again to vault</property>
    </properties>
   </object>
  </objectgroup>

@@ -34,7 +34,7 @@ const resetControls = () => {
 
 const setLetter = (sprite, letter) => {
   const map = {
-    ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, ',': 12, '.': 14, ':': 26,
+    ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, ',': 12, '.': 14, ':': 26, '?': 31,
     '0': 16, '1': 17, '2': 18, '3': 19, '4': 20, '5': 21, '6': 22, '7': 23, '8': 24, '9': 25,
     A: 33, B: 34, C: 35, D: 36, E: 37, F: 38, G: 39, H: 40,
     I: 41, J: 42, K: 43, L: 44, M: 45, N: 46, O: 47, P: 48,
@@ -857,13 +857,17 @@ const update = function() {
   }
 };
 
-const addNpc = function(npc) {
-  this.add.sprite(npc.x, npc.y - 12, 'npc')
+const addNpc = function({x, y, properties}) {
+  const sprite = this.add.sprite(x, y - 12, 'npc')
     .anims.play('npc-idle', true);
+
+  if (properties.faceRight) {
+    sprite.flipX = true;
+  }
 
   const timeBetweenLines = 2500;
   const timeBetweenChars = 50;
-  const dialog = npc.properties.dialog;
+  const dialog = properties.dialog;
   const lines = dialog.split('\n');
   let letters = [];
 
@@ -880,8 +884,8 @@ const addNpc = function(npc) {
               if (char !== ' ') {
                 game.sfx.play('text');
               }
-              const top = npc.y - 28;
-              const left = npc.x - ((chars.length - 1) * 4 / 2); // Center text.
+              const top = y - 28;
+              const left = x - ((chars.length - 1) * 4 / 2); // Center text.
               const letter = this.add.sprite(left + col * 4, top, 'typeface-sm');
               letters.push(letter);
               setLetter(letter, char);
@@ -901,9 +905,13 @@ const addNpc = function(npc) {
 };
 
 // Add the player and set up controls.
-const setUpPlayer = function(x, y) {
+const setUpPlayer = function({x, y, properties}) {
   const plr = this.physics.add.sprite(x, y, 'plr')
     .anims.play('idle', true);
+
+  if (properties && properties.faceRight) {
+    plr.flipX = true;
+  }
 
   game.plr = plr;
 
@@ -1037,8 +1045,8 @@ const createLevel = function(levelName) {
 
   // Spawn player and enemies from positions placed in Tiled object layer.
   const objectLayer = game.map.objects.find(objectLayer => objectLayer.name === 'Objects');
-  const spawnPoint = objectLayer.objects.find(obj => obj.type === 'player');
-  setUpPlayer.call(this, spawnPoint.x + xOffset, spawnPoint.y);
+  const player = objectLayer.objects.find(obj => obj.type === 'player');
+  setUpPlayer.call(this, player);
 
   const npc = objectLayer.objects.find(obj => obj.type === 'npc');
   if (npc) {

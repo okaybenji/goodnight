@@ -20,11 +20,19 @@
                  "height":0,
                  "id":8,
                  "name":"",
+                 "properties":
+                    {
+                     "faceRight":true
+                    },
+                 "propertytypes":
+                    {
+                     "faceRight":"bool"
+                    },
                  "rotation":0,
                  "type":"player",
                  "visible":true,
                  "width":0,
-                 "x":172,
+                 "x":152,
                  "y":216
                 }, 
                 {
@@ -33,7 +41,7 @@
                  "name":"",
                  "properties":
                     {
-                     "dialog":"hey, you!\nclimb that chain!"
+                     "dialog":"hey, you!\nclimb that chain!\n\n\npress A to jump\npress it again to vault"
                     },
                  "propertytypes":
                     {
@@ -43,7 +51,7 @@
                  "type":"npc",
                  "visible":true,
                  "width":0,
-                 "x":212,
+                 "x":208,
                  "y":216
                 }],
          "opacity":1,
