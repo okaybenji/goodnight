@@ -239,7 +239,7 @@ const intro = {
   }],
   music: 'intro',
   onComplete() {
-    game.music.play('title');
+    game.music.play('waltz');
     startNextLevel.call(this);
     this.scene.launch('pause');
     game.scene.keys.pause.cameras.main.visible = false;
@@ -857,12 +857,35 @@ const addNpc = function(npc) {
   this.add.sprite(npc.x, npc.y - 12, 'npc')
     .anims.play('npc-idle', true);
 
+  const timeBetweenLines = 2500;
+  const timeBetweenChars = 50;
   const dialog = npc.properties.dialog;
-  const chars = dialog.split('');
-  chars.forEach((char, col) => {
-    const top = npc.y - 24;
-    const left = npc.x - ((chars.length - 1) * 8 / 2); // Center text.
-    setLetter(this.add.sprite(left + col * 8, top, 'typeface'), char);
+  const lines = dialog.split('\n');
+  let letters = [];
+
+  lines.forEach((line, i) => {
+    const chars = line.split('');
+    this.time.addEvent({
+      delay: timeBetweenLines * i,
+      callback: () => {
+        letters.forEach(l => l.destroy());
+        chars.forEach((char, col) => {
+          this.time.addEvent({
+            delay: timeBetweenChars * col,
+            callback: () => {
+              if (char !== ' ') {
+                game.sfx.play('text');
+              }
+              const top = npc.y - 24;
+              const left = npc.x - ((chars.length - 1) * 8 / 2); // Center text.
+              const letter = this.add.sprite(left + col * 8, top, 'typeface');
+              letters.push(letter);
+              setLetter(letter, char);
+            }
+          });
+        });
+      }
+    });
   });
 };
 
