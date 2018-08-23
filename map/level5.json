@@ -37,6 +37,27 @@
                  "width":0,
                  "x":240,
                  "y":120
+                }, 
+                {
+                 "height":0,
+                 "id":21,
+                 "name":"",
+                 "properties":
+                    {
+                     "dialog":"I wanna help you escape\nso we can watch TV :)\n\nthose pools just float in the air\n\nOH! also,\nit's fun to jump over this gorge",
+                     "faceRight":false
+                    },
+                 "propertytypes":
+                    {
+                     "dialog":"string",
+                     "faceRight":"bool"
+                    },
+                 "rotation":0,
+                 "type":"npc",
+                 "visible":true,
+                 "width":0,
+                 "x":184,
+                 "y":224
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -44,7 +65,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":21,
+ "nextobjectid":22,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",

@@ -34,12 +34,16 @@ const resetControls = () => {
 
 const setLetter = (sprite, letter) => {
   const map = {
-    ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, ',': 12, '.': 14, ':': 26,
+    ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, '’': 7, '(': 8, ')': 9, ',': 12, '.': 14, ':': 26, '?': 31,
     '0': 16, '1': 17, '2': 18, '3': 19, '4': 20, '5': 21, '6': 22, '7': 23, '8': 24, '9': 25,
-    a: 33, b: 34, c: 35, d: 36, e: 37, f: 38, g: 39, h: 40,
-    i: 41, j: 42, k: 43, l: 44, m: 45, n: 46, o: 47, p: 48,
-    q: 49, r: 50, s: 51, t: 52, u: 53, v: 54, w: 55, x: 56,
-    y: 57, z: 58
+    A: 33, B: 34, C: 35, D: 36, E: 37, F: 38, G: 39, H: 40,
+    I: 41, J: 42, K: 43, L: 44, M: 45, N: 46, O: 47, P: 48,
+    Q: 49, R: 50, S: 51, T: 52, U: 53, V: 54, W: 55, X: 56,
+    Y: 57, Z: 58,
+    a: 65, b: 66, c: 67, d: 68, e: 69, f: 70, g: 71, h: 72,
+    i: 73, j: 74, k: 75, l: 76, m: 77, n: 78, o: 79, p: 80,
+    q: 81, r: 82, s: 83, t: 84, u: 85, v: 86, w: 87, x: 88,
+    y: 89, z: 90
   };
 
   sprite.setFrame(map[letter] || 0);
@@ -239,7 +243,7 @@ const intro = {
   }],
   music: 'intro',
   onComplete() {
-    game.music.play('title');
+    game.music.play('waltz');
     startNextLevel.call(this);
     this.scene.launch('pause');
     game.scene.keys.pause.cameras.main.visible = false;
@@ -458,7 +462,7 @@ const cutsceneFactory = config => ({
             }
 
             const sprite = this.add.sprite(left + col * 8, top + row * 8, 'typeface')
-            setLetter(sprite, char);
+            setLetter(sprite, char.toUpperCase());
             col++;
             text.push(sprite)
 
@@ -687,6 +691,7 @@ const update = function() {
       // End the game!!
       plr.endingGame = true;
       plr.anims.play('chill');
+      game.npc.anims.play('npc-chill');
       game.music.stop();
       this.scene.stop('pause');
 
@@ -853,10 +858,68 @@ const update = function() {
   }
 };
 
+const addNpc = function({x, y, properties}) {
+  const sprite = this.add.sprite(x, y - 12, 'npc')
+    .anims.play(properties.anim ? properties.anim : 'npc-idle', true);
+
+  if (properties.faceRight) {
+    sprite.flipX = true;
+  }
+
+  game.npc = sprite;
+
+  const timeBetweenLines = 2500;
+  const timeBetweenChars = 50;
+  const dialog = properties.dialog;
+  const lines = dialog.split('\n');
+  let letters = [];
+
+  lines.forEach((line, i) => {
+    const chars = line.split('');
+    this.time.addEvent({
+      delay: timeBetweenLines * i,
+      callback: () => {
+        letters.forEach(l => l.destroy());
+
+        if (game.plr.endingGame) {
+          return;
+        }
+
+        chars.forEach((char, col) => {
+          this.time.addEvent({
+            delay: timeBetweenChars * col,
+            callback: () => {
+              if (char !== ' ') {
+                game.sfx.play('text');
+              }
+              const top = y - 28;
+              const left = x - ((chars.length - 1) * 4 / 2); // Center text.
+              const letter = this.add.sprite(left + col * 4, top, 'typeface-sm');
+              letters.push(letter);
+              setLetter(letter, char);
+            },
+          });
+        });
+      },
+    });
+  });
+
+  this.time.addEvent({
+    delay: timeBetweenLines * lines.length,
+    callback: () => {
+      letters.forEach(l => l.destroy());
+    },
+  });
+};
+
 // Add the player and set up controls.
-const setUpPlayer = function(x, y) {
+const setUpPlayer = function({x, y, properties}) {
   const plr = this.physics.add.sprite(x, y, 'plr')
     .anims.play('idle', true);
+
+  if (properties && properties.faceRight) {
+    plr.flipX = true;
+  }
 
   game.plr = plr;
 
@@ -990,8 +1053,14 @@ const createLevel = function(levelName) {
 
   // Spawn player and enemies from positions placed in Tiled object layer.
   const objectLayer = game.map.objects.find(objectLayer => objectLayer.name === 'Objects');
-  const spawnPoint = objectLayer.objects.find(obj => obj.type === 'player');
-  setUpPlayer.call(this, spawnPoint.x + xOffset, spawnPoint.y);
+
+  const npc = objectLayer.objects.find(obj => obj.type === 'npc');
+  if (npc) {
+    addNpc.call(this, npc);
+  }
+
+  const player = objectLayer.objects.find(obj => obj.type === 'player');
+  setUpPlayer.call(this, player);
 
   const znakes = objectLayer.objects
     .filter(obj => obj.type === 'znake')
@@ -1143,13 +1212,13 @@ const scenes = {
       });
 
       const stats = game.plr ? [
-        {text: 'level', icon: 'chain', value: levelNum},
-        {text: 'seconds chilled', icon: 'snowflake', value: secondsChilled},
+        {text: 'LEVEL', icon: 'chain', value: levelNum},
+        {text: 'SECONDS CHILLED', icon: 'snowflake', value: secondsChilled},
         // Flower and znake counts for each level reset if player dies.
-        {text: 'flowers picked', icon: 'flower', value: flowersPicked + game.plr.flowers},
-        {text: 'znakes killed', icon: 'z', value: znakesKilled + game.plr.znakes},
-        {text: 'deaths', icon: 'heart', value: deathCount},
-        {text: 'gorge streak', icon: 'rock', value: Math.max(game.plr.gorges, gorgeStreak)},
+        {text: 'FLOWERS PICKED', icon: 'flower', value: flowersPicked + game.plr.flowers},
+        {text: 'ZNAKES KILLED', icon: 'z', value: znakesKilled + game.plr.znakes},
+        {text: 'DEATHS', icon: 'heart', value: deathCount},
+        {text: 'GORGE STREAK', icon: 'rock', value: Math.max(game.plr.gorges, gorgeStreak)},
       ] : [];
 
       stats.forEach((stat, i) => {
@@ -1176,13 +1245,14 @@ const scenes = {
   transition: {
     preload() {
       this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
+      this.load.spritesheet('typeface-sm', 'img/typeface-hw.gif', {frameWidth: 4, frameHeight: 8});
     },
     create() {
       game.transitionScene = this;
 
       const top = 112;
 
-      const chars = 'level  '.split('');
+      const chars = 'LEVEL  '.split('');
       chars.forEach((char, col) => {
         const left = (256 - ((chars.length - 1) * 8)) / 2; // Center text.
         setLetter(this.add.sprite(left + col * 8, top, 'typeface'), char);
@@ -1208,6 +1278,11 @@ const scenes = {
 
       this.load.spritesheet('plr',
         'img/dreamer.gif',
+        { frameWidth: 20, frameHeight: 24}
+      );
+
+      this.load.spritesheet('npc',
+        'img/subconscious.gif',
         { frameWidth: 20, frameHeight: 24}
       );
 
@@ -1364,6 +1439,36 @@ const scenes = {
           { key: 'eye', frame: 0},
         ],
         frameRate: 10,
+      });
+
+      this.anims.create({
+        key: 'npc-idle',
+        frames: [
+          { key: 'npc', frame: 6},
+          { key: 'npc', frame: 6},
+          { key: 'npc', frame: 8},
+          { key: 'npc', frame: 6},
+        ],
+        frameRate: 8,
+        repeat: -1
+      });
+
+      this.anims.create({
+        key: 'npc-swim',
+        frames: [
+          { key: 'npc', frame: 18},
+          { key: 'npc', frame: 19},
+          { key: 'npc', frame: 20},
+          { key: 'npc', frame: 19},
+        ],
+        frameRate: 8,
+        repeat: -1
+      });
+
+      this.anims.create({
+        key: 'npc-chill',
+        frames: this.anims.generateFrameNumbers('npc', { start: 24, end: 29 }),
+        frameRate: 8,
       });
 
       this.anims.create({
@@ -1635,7 +1740,7 @@ const scenes = {
                 const sprite = this.add.sprite(left + col * 8, top + row * 8, 'typeface');
                 sprite.alpha = 0;
                 sprites.push(sprite);
-                setLetter(sprite, char);
+                setLetter(sprite, char.toUpperCase());
 
                 this.time.addEvent({delay: 250, callback() {
                   sprite.alpha += 0.5;

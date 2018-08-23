@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="31" tilewidth="8" tileheight="8" nextobjectid="21">
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="38" height="31" tilewidth="8" tileheight="8" infinite="0" nextobjectid="22">
  <tileset firstgid="1" name="tileset" tilewidth="8" tileheight="8" tilecount="200" columns="8">
   <image source="../img/tileset.gif" width="64" height="200"/>
   <tile id="0">
@@ -2039,6 +2039,23 @@
 </data>
  </layer>
  <objectgroup name="Objects">
-  <object id="8" type="player" x="248" y="208"/>
+  <object id="8" type="player" x="232" y="208"/>
+  <object id="21" type="npc" x="128" y="144">
+   <properties>
+    <property name="dialog">OK, I have a confession to make
+
+I haven’t been helping you escape
+
+I placed these obstacles for you
+
+I only get to play when you’re asleep
+
+I’m sorry
+I know you love that cartoon
+
+I won’t get in your way anymore</property>
+    <property name="faceRight" type="bool" value="true"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
