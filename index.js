@@ -1135,6 +1135,63 @@ const addZnake = function(x, y) {
 };
 
 const scenes = {
+  logo: {
+    preload() {
+      this.load.image('logo', 'img/logo.gif');
+    },
+    create() {
+      // Set up SFX. Don't allow sounds to stack.
+      const sfx = () => {
+        const sounds = ['text', 'jump', 'stomp', 'pick', 'die', 'silence'];
+        const soundbank = sounds.reduce((bank, name) => {
+          bank[name] = new Howl({
+            src: [`./sfx/${name}.wav`],
+            volume: 0.5,
+          });
+
+          return bank;
+        }, {});
+
+        return {
+          play(name) {
+            if (soundbank[name].playing()) {
+              soundbank[name].stop();
+            }
+            soundbank[name].play();
+          },
+          stop(name) {
+            soundbank[name].stop();
+          }
+        };
+      };
+
+      const bgm = (audioCtx) => {
+        const player = createNsfPlayer(audioCtx);
+
+        return {
+          play(fileName) {
+            player.play(`./music/${fileName}.nsf`);
+          },
+          stop() {
+            player.stop();
+          }
+        };
+      };
+
+      game.sfx = sfx();
+      game.music = bgm(Howler.ctx);
+
+      this.add.image(128, 120, 'logo');
+      game.music.play('logo');
+
+      // Prepare the menu.
+      this.scene.add('menu', scenes.menu);
+
+      this.time.delayedCall(3000, () => {
+        this.scene.start('menu');
+      });
+    },
+  },
   stars: {
     create() {
       game.starsScene = this;
@@ -1296,7 +1353,7 @@ const scenes = {
         { frameWidth: 20, frameHeight: 16 }
       );
 
-      // Add the cutscenes as scenes..
+      // Add the various scenes.
       this.scene.add('stars', scenes.stars);
       this.scene.add('pause', scenes.pause);
       this.scene.add('transition', scenes.transition);
@@ -1310,50 +1367,6 @@ const scenes = {
       });
     },
     create() {
-      this.scene.stop('menu');
-
-      // Set up SFX. Don't allow sounds to stack.
-      const sfx = () => {
-        const sounds = ['text', 'jump', 'stomp', 'pick', 'die', 'silence'];
-        const soundbank = sounds.reduce((bank, name) => {
-          bank[name] = new Howl({
-            src: [`./sfx/${name}.wav`],
-            volume: 0.5,
-          });
-
-          return bank;
-        }, {});
-
-        return {
-          play(name) {
-            if (soundbank[name].playing()) {
-              soundbank[name].stop();
-            }
-            soundbank[name].play();
-          },
-          stop(name) {
-            soundbank[name].stop();
-          }
-        };
-      };
-
-
-      const bgm = (audioCtx) => {
-        const player = createNsfPlayer(audioCtx);
-
-        return {
-          play(fileName) {
-            player.play(`./music/${fileName}.nsf`);
-          },
-          stop() {
-            player.stop();
-          }
-        };
-      };
-
-      game.sfx = sfx();
-      game.music = bgm(Howler.ctx);
-
       // Play a silent "sound" every 30 secs.
       // This prevents AudioContext from pausing itself.
       setInterval(() => {
@@ -1788,7 +1801,7 @@ const config = {
   input: {
     gamepad: true,
   },
-  scene: scenes.menu,
+  scene: scenes.logo,
 };
 
 const game = new Phaser.Game(config);
