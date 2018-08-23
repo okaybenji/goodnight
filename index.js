@@ -876,16 +876,23 @@ const addNpc = function(npc) {
               if (char !== ' ') {
                 game.sfx.play('text');
               }
-              const top = npc.y - 24;
-              const left = npc.x - ((chars.length - 1) * 8 / 2); // Center text.
-              const letter = this.add.sprite(left + col * 8, top, 'typeface');
+              const top = npc.y - 28;
+              const left = npc.x - ((chars.length - 1) * 4 / 2); // Center text.
+              const letter = this.add.sprite(left + col * 4, top, 'typeface-sm');
               letters.push(letter);
               setLetter(letter, char);
-            }
+            },
           });
         });
-      }
+      },
     });
+  });
+
+  this.time.addEvent({
+    delay: timeBetweenLines * lines.length,
+    callback: () => {
+      letters.forEach(l => l.destroy());
+    },
   });
 };
 
@@ -1217,6 +1224,7 @@ const scenes = {
   transition: {
     preload() {
       this.load.spritesheet('typeface', 'img/typeface.gif', {frameWidth: 8, frameHeight: 8});
+      this.load.spritesheet('typeface-sm', 'img/typeface-hw.gif', {frameWidth: 4, frameHeight: 8});
     },
     create() {
       game.transitionScene = this;
