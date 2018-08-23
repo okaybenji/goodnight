@@ -554,7 +554,7 @@
   <object id="8" type="player" x="144" y="208"/>
   <object id="9" type="npc" x="48" y="128">
    <properties>
-    <property name="dialog">who am i?
+    <property name="dialog">who am I?
 your subconscious!
 
 try to get to that pool</property>

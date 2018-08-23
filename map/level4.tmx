@@ -1767,10 +1767,14 @@
 </data>
  </layer>
  <objectgroup name="Objects">
-  <object id="8" type="player" x="72" y="224"/>
+  <object id="8" type="player" x="72" y="224">
+   <properties>
+    <property name="faceRight" type="bool" value="true"/>
+   </properties>
+  </object>
   <object id="14" type="znake" x="240" y="72"/>
   <object id="20" type="znake" x="128" y="240"/>
-  <object id="21" type="npc" x="144" y="232">
+  <object id="21" type="npc" x="136" y="232">
    <properties>
     <property name="anim" value="npc-swim"/>
     <property name="dialog">it's coming right for you!!
@@ -1778,10 +1782,11 @@
 
 
 
-
 nice job!
-i wanna help you escape
-so we can watch tv :)</property>
+you can vault multiple times
+even from up there,
+it's a long jump to the chain
+but I know you can make it</property>
     <property name="faceRight" type="bool" value="false"/>
    </properties>
   </object>

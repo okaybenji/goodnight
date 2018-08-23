@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="38" height="31" tilewidth="8" tileheight="8" infinite="0" nextobjectid="21">
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="38" height="31" tilewidth="8" tileheight="8" infinite="0" nextobjectid="22">
  <tileset firstgid="1" name="tileset" tilewidth="8" tileheight="8" tilecount="200" columns="8">
   <image source="../img/tileset.gif" width="64" height="200"/>
   <tile id="0">
@@ -1841,5 +1841,17 @@
  <objectgroup name="Objects">
   <object id="8" type="player" x="56" y="224"/>
   <object id="14" type="znake" x="240" y="120"/>
+  <object id="21" type="npc" x="184" y="224">
+   <properties>
+    <property name="dialog">I wanna help you escape
+so we can watch TV :)
+
+those pools just float in the air
+
+OH! also,
+it's fun to jump over this gorge</property>
+    <property name="faceRight" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
