@@ -59,28 +59,6 @@
                 }, 
                 {
                  "height":0,
-                 "id":21,
-                 "name":"",
-                 "rotation":0,
-                 "type":"znake",
-                 "visible":true,
-                 "width":0,
-                 "x":112,
-                 "y":80
-                }, 
-                {
-                 "height":0,
-                 "id":22,
-                 "name":"",
-                 "rotation":0,
-                 "type":"znake",
-                 "visible":true,
-                 "width":0,
-                 "x":136,
-                 "y":80
-                }, 
-                {
-                 "height":0,
                  "id":23,
                  "name":"",
                  "rotation":0,

@@ -2080,8 +2080,6 @@
    </properties>
   </object>
   <object id="14" type="znake" x="160" y="112"/>
-  <object id="21" type="znake" x="112" y="80"/>
-  <object id="22" type="znake" x="136" y="80"/>
   <object id="23" type="znake" x="280" y="168"/>
   <object id="24" type="znake" x="88" y="80"/>
   <object id="26" type="npc" x="112" y="224">
