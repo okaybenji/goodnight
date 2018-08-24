@@ -1,7 +1,7 @@
 { "height":31,
  "layers":[
         {
-         "data":[49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 62, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 62, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 62, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 181, 182, 183, 184, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 193, 191, 191, 194, 177, 180, 0, 0, 0, 0, 90, 45, 47, 48, 61, 45, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 177, 191, 191, 191, 191, 191, 191, 180, 0, 0, 0, 90, 1, 1, 1, 1, 53, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 185, 186, 174, 187, 186, 174, 187, 188, 0, 0, 0, 0, 91, 91, 91, 91, 91, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 90, 45, 45, 45, 45, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 0, 38, 0, 0, 38, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 90, 53, 1, 1, 1, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 49, 49, 0, 0, 0, 0, 0, 0, 0, 91, 91, 91, 91, 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 48, 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90, 45, 48, 45, 92, 0, 0, 0, 0, 0, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 58, 45, 45, 45, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90, 53, 1, 1, 92, 0, 0, 0, 0, 0, 54, 57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 53, 53, 1, 59, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 91, 91, 91, 0, 0, 0, 0, 0, 0, 48, 48, 47, 48, 47, 48, 48, 48, 47, 48, 61, 48, 49, 49, 91, 91, 91, 91, 0, 0, 0, 0, 0, 0, 0, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 47, 55, 55, 55, 55, 56, 56, 0, 56, 0, 56, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 37, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 54, 0, 0, 47, 55, 55, 55, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90, 45, 45, 47, 48, 45, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 54, 0, 0, 47, 55, 55, 55, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90, 53, 1, 1, 1, 53, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 54, 47, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 91, 91, 91, 91, 91, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 90, 45, 45, 45, 47, 48, 45, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 90, 1, 53, 1, 1, 1, 53, 92, 0, 0, 0, 0, 0, 196, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 91, 91, 91, 91, 91, 91, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 32, 0, 0, 38, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 37, 0, 38, 38, 0, 38, 0, 0, 30, 31, 0, 0, 0, 0, 49, 49, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 52, 0, 0, 0, 0, 0, 0, 0, 60, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 56, 47, 173, 0, 0, 0, 0, 0, 40, 48, 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 0, 0, 0, 0, 0, 0, 0, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49],
+         "data":[49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 62, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 62, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 62, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 181, 182, 183, 184, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 193, 191, 191, 194, 177, 180, 0, 0, 0, 0, 90, 45, 47, 48, 61, 45, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 177, 191, 191, 191, 191, 191, 191, 180, 0, 0, 0, 90, 1, 1, 1, 1, 53, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 185, 186, 174, 187, 186, 174, 187, 188, 0, 0, 0, 0, 91, 91, 91, 91, 91, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 90, 45, 45, 45, 45, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 0, 38, 0, 0, 38, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 90, 53, 1, 1, 1, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 49, 49, 0, 0, 0, 0, 0, 0, 0, 91, 91, 91, 91, 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 48, 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90, 45, 48, 45, 92, 0, 0, 0, 0, 0, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 58, 45, 45, 45, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90, 53, 1, 1, 92, 0, 0, 0, 0, 0, 54, 57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 53, 53, 1, 59, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 91, 91, 91, 0, 0, 0, 0, 0, 0, 48, 48, 47, 48, 47, 48, 48, 48, 47, 48, 61, 48, 49, 49, 91, 91, 91, 91, 0, 0, 0, 0, 0, 0, 0, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 47, 55, 55, 55, 55, 56, 56, 0, 56, 0, 56, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 37, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 54, 0, 0, 47, 55, 55, 55, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90, 45, 45, 47, 48, 45, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 54, 0, 0, 47, 55, 55, 55, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90, 53, 1, 1, 1, 53, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 54, 47, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 91, 91, 91, 91, 91, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 90, 45, 45, 45, 47, 48, 45, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 90, 1, 53, 1, 1, 1, 53, 92, 0, 0, 0, 0, 0, 196, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 91, 91, 91, 91, 91, 91, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 0, 0, 0, 0, 32, 0, 0, 38, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 37, 0, 38, 38, 0, 38, 0, 0, 30, 31, 0, 0, 0, 0, 49, 49, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 52, 63, 63, 63, 63, 63, 63, 63, 60, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 56, 47, 173, 0, 0, 0, 0, 0, 40, 48, 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 0, 0, 0, 0, 0, 0, 0, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49],
          "height":31,
          "name":"World",
          "opacity":1,
@@ -88,6 +88,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":true
@@ -96,6 +97,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -104,6 +106,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -112,6 +115,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -120,6 +124,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -128,6 +133,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -136,6 +142,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -144,6 +151,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -152,6 +160,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -160,6 +169,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -168,6 +178,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -176,6 +187,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -184,6 +196,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -192,6 +205,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -200,6 +214,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -208,6 +223,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -216,6 +232,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -224,6 +241,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -232,6 +250,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -240,6 +259,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -248,6 +268,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -256,6 +277,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -264,6 +286,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -272,6 +295,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -280,6 +304,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -288,6 +313,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -296,6 +322,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -304,6 +331,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -312,6 +340,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -320,6 +349,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -328,6 +358,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -336,6 +367,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -344,6 +376,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -352,6 +385,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -360,6 +394,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -368,6 +403,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -376,6 +412,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -384,6 +421,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -392,6 +430,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -400,6 +439,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -408,6 +448,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -416,6 +457,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -424,6 +466,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -432,6 +475,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -440,6 +484,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -448,6 +493,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -456,6 +502,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -464,6 +511,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -472,6 +520,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -480,6 +529,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -488,6 +538,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -496,6 +547,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -504,6 +556,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -512,6 +565,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -520,6 +574,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -528,6 +583,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -536,6 +592,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -544,6 +601,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -552,6 +610,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -560,6 +619,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -568,6 +628,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -576,6 +637,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -584,6 +646,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -592,6 +655,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -600,6 +664,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -608,6 +673,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -616,6 +682,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -624,6 +691,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -632,6 +700,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -640,6 +709,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -648,6 +718,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -656,6 +727,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -664,6 +736,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -672,6 +745,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -680,6 +754,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -688,6 +763,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -696,6 +772,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -704,6 +781,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -712,6 +790,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -720,6 +799,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -728,6 +808,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -736,6 +817,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -744,6 +826,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -752,6 +835,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -760,6 +844,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -768,6 +853,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -776,6 +862,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -784,6 +871,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -792,6 +880,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -800,6 +889,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -808,6 +898,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -816,6 +907,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -824,6 +916,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -832,6 +925,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -840,6 +934,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -848,6 +943,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -856,6 +952,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -864,6 +961,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -872,6 +970,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -880,6 +979,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -888,6 +988,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -896,6 +997,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -904,6 +1006,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -912,6 +1015,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -920,6 +1024,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -928,6 +1033,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -936,6 +1042,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -944,6 +1051,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":true,
                  "water":false
@@ -952,6 +1060,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -960,6 +1069,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -968,6 +1078,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -976,6 +1087,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -984,6 +1096,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -992,6 +1105,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1000,6 +1114,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1008,6 +1123,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1016,6 +1132,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1024,6 +1141,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1032,6 +1150,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1040,6 +1159,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1048,6 +1168,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1056,6 +1177,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1064,6 +1186,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1072,6 +1195,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1080,6 +1204,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1088,6 +1213,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1096,6 +1222,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1104,6 +1231,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1112,6 +1240,7 @@
                 {
                  "climbable":true,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1120,6 +1249,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1128,6 +1258,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1136,6 +1267,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1144,6 +1276,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1152,6 +1285,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1160,6 +1294,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1168,6 +1303,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1176,6 +1312,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1184,6 +1321,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1192,6 +1330,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1200,6 +1339,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":true
@@ -1208,6 +1348,7 @@
                 {
                  "climbable":false,
                  "collides":true,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1216,6 +1357,7 @@
                 {
                  "climbable":false,
                  "collides":true,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1224,6 +1366,7 @@
                 {
                  "climbable":false,
                  "collides":true,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1232,6 +1375,7 @@
                 {
                  "climbable":false,
                  "collides":true,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1240,6 +1384,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1248,6 +1393,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1256,6 +1402,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1264,6 +1411,7 @@
                 {
                  "climbable":false,
                  "collides":true,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1272,6 +1420,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":true
@@ -1280,6 +1429,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1288,6 +1438,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1296,6 +1447,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1304,6 +1456,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":true,
                  "gorge":false,
                  "water":false
@@ -1312,6 +1465,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1320,6 +1474,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1328,6 +1483,7 @@
                 {
                  "climbable":false,
                  "collides":true,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1336,6 +1492,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1344,6 +1501,7 @@
                 {
                  "climbable":false,
                  "collides":true,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1352,6 +1510,7 @@
                 {
                  "climbable":true,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1360,6 +1519,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":true,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1368,6 +1528,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1376,6 +1537,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1384,6 +1546,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1392,6 +1555,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1400,6 +1564,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1408,6 +1573,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1416,6 +1582,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1424,6 +1591,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1432,6 +1600,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1440,6 +1609,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1448,6 +1618,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1456,6 +1627,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1464,6 +1636,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1472,6 +1645,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1480,6 +1654,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1488,6 +1663,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1496,6 +1672,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1504,6 +1681,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1512,6 +1690,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1520,6 +1699,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1528,6 +1708,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1536,6 +1717,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1544,6 +1726,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1552,6 +1735,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1560,6 +1744,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1568,6 +1753,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1576,6 +1762,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1584,6 +1771,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1592,6 +1780,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1600,6 +1789,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1608,6 +1798,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1616,6 +1807,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1624,6 +1816,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1632,6 +1825,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1640,6 +1834,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1648,6 +1843,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1656,6 +1852,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1664,6 +1861,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1672,6 +1870,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1680,6 +1879,7 @@
                 {
                  "climbable":false,
                  "collides":false,
+                 "death":false,
                  "flower":false,
                  "gorge":false,
                  "water":false
@@ -1691,6 +1891,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1699,6 +1900,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1707,6 +1909,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1715,6 +1918,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1723,6 +1927,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1731,6 +1936,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1739,6 +1945,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1747,6 +1954,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1755,6 +1963,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1763,6 +1972,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1771,6 +1981,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1779,6 +1990,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1787,6 +1999,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1795,6 +2008,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1803,6 +2017,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1811,6 +2026,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1819,6 +2035,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1827,6 +2044,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1835,6 +2053,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1843,6 +2062,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1851,6 +2071,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1859,6 +2080,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1867,6 +2089,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1875,6 +2098,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1883,6 +2107,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1891,6 +2116,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1899,6 +2125,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1907,6 +2134,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1915,6 +2143,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1923,6 +2152,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1931,6 +2161,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1939,6 +2170,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1947,6 +2179,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1955,6 +2188,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1963,6 +2197,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1971,6 +2206,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1979,6 +2215,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1987,6 +2224,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -1995,6 +2233,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2003,6 +2242,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2011,6 +2251,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2019,6 +2260,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2027,6 +2269,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2035,6 +2278,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2043,6 +2287,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2051,6 +2296,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2059,6 +2305,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2067,6 +2314,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2075,6 +2323,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2083,6 +2332,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2091,6 +2341,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2099,6 +2350,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2107,6 +2359,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2115,6 +2368,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2123,6 +2377,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2131,6 +2386,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2139,6 +2395,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2147,6 +2404,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2155,6 +2413,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2163,6 +2422,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2171,6 +2431,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2179,6 +2440,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2187,6 +2449,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2195,6 +2458,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2203,6 +2467,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2211,6 +2476,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2219,6 +2485,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2227,6 +2494,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2235,6 +2503,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2243,6 +2512,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2251,6 +2521,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2259,6 +2530,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2267,6 +2539,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2275,6 +2548,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2283,6 +2557,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2291,6 +2566,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2299,6 +2575,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2307,6 +2584,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2315,6 +2593,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2323,6 +2602,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2331,6 +2611,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2339,6 +2620,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2347,6 +2629,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2355,6 +2638,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2363,6 +2647,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2371,6 +2656,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2379,6 +2665,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2387,6 +2674,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2395,6 +2683,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2403,6 +2692,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2411,6 +2701,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2419,6 +2710,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2427,6 +2719,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2435,6 +2728,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2443,6 +2737,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2451,6 +2746,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2459,6 +2755,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2467,6 +2764,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2475,6 +2773,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2483,6 +2782,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2491,6 +2791,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2499,6 +2800,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2507,6 +2809,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2515,6 +2818,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2523,6 +2827,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2531,6 +2836,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2539,6 +2845,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2547,6 +2854,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2555,6 +2863,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2563,6 +2872,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2571,6 +2881,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2579,6 +2890,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2587,6 +2899,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2595,6 +2908,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2603,6 +2917,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2611,6 +2926,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2619,6 +2935,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2627,6 +2944,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2635,6 +2953,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2643,6 +2962,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2651,6 +2971,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2659,6 +2980,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2667,6 +2989,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2675,6 +2998,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2683,6 +3007,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2691,6 +3016,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2699,6 +3025,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2707,6 +3034,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2715,6 +3043,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2723,6 +3052,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2731,6 +3061,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2739,6 +3070,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2747,6 +3079,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2755,6 +3088,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2763,6 +3097,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2771,6 +3106,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2779,6 +3115,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2787,6 +3124,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2795,6 +3133,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2803,6 +3142,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2811,6 +3151,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2819,6 +3160,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2827,6 +3169,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2835,6 +3178,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2843,6 +3187,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2851,6 +3196,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2859,6 +3205,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2867,6 +3214,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2875,6 +3223,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2883,6 +3232,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2891,6 +3241,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2899,6 +3250,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2907,6 +3259,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2915,6 +3268,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2923,6 +3277,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2931,6 +3286,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2939,6 +3295,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2947,6 +3304,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2955,6 +3313,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2963,6 +3322,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2971,6 +3331,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2979,6 +3340,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2987,6 +3349,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -2995,6 +3358,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3003,6 +3367,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3011,6 +3376,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3019,6 +3385,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3027,6 +3394,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3035,6 +3403,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3043,6 +3412,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3051,6 +3421,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3059,6 +3430,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3067,6 +3439,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3075,6 +3448,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3083,6 +3457,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3091,6 +3466,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3099,6 +3475,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3107,6 +3484,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3115,6 +3493,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3123,6 +3502,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3131,6 +3511,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3139,6 +3520,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3147,6 +3529,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3155,6 +3538,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3163,6 +3547,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3171,6 +3556,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3179,6 +3565,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3187,6 +3574,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3195,6 +3583,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3203,6 +3592,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3211,6 +3601,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3219,6 +3610,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3227,6 +3619,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3235,6 +3628,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3243,6 +3637,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3251,6 +3646,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3259,6 +3655,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3267,6 +3664,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3275,6 +3673,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"
@@ -3283,6 +3682,7 @@
                 {
                  "climbable":"bool",
                  "collides":"bool",
+                 "death":"bool",
                  "flower":"bool",
                  "gorge":"bool",
                  "water":"bool"

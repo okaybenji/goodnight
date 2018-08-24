@@ -656,6 +656,11 @@ const update = function() {
     plr.jumpingGorge = true;
   }
 
+  // Player fell in the gorge.
+  if (onTile && onTile.properties.death) {
+    plr.kill();
+  }
+
   // Float in water.
   if (overTile && overTile.properties.water) {
     plr.body.velocity.y = 0;

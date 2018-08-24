@@ -24,7 +24,6 @@
 # KNOWN BUGS
 * Title screen music goes silent for a bit after it has looped a couple of times.
 * After adding transitions, player doesn't have to come back to pick up the first flower in level 2.
-* Player can survive jumping the gorge by vaulting back out of it.
 * Float animation is way too fast.
 * Znakes will walk through walls.
 * There is some weirdness with gamepad support. Sometimes keyboard keys or gamepad buttons/sticks stop working. (This may be fixed. Keep an eye out.)
