@@ -880,38 +880,65 @@ const addNpc = function({x, y, properties}) {
   game.npc = sprite;
 
   const timeBetweenLines = 2500;
-  const timeBetweenChars = 50;
   const dialog = properties.dialog;
   const lines = dialog.split('\n');
   let letters = [];
 
+  const lineLength = 16;
+  const top = 168;
+  const left = 36;
+  const timeBetweenChars = 50;
+  let col = 0;
+  let row = 0;
+  let charCount = 0;
+
   lines.forEach((line, i) => {
-    const chars = line.split('');
     this.time.addEvent({
       delay: timeBetweenLines * i,
       callback: () => {
+        console.log('line:', line);
         letters.forEach(l => l.destroy());
+        row = 0;
 
-        if (game.plr.endingGame) {
-          return;
-        }
+        line.split(' ').forEach((word, i) => {
+          console.log('word:', word);
+          const chars = word.split('');
+          chars.forEach((char, j) => {
+            charCount++;
 
-        chars.forEach((char, col) => {
-          this.time.addEvent({
-            delay: timeBetweenChars * col,
-            callback: () => {
+            const printChar = (muteSound) => {
               if (char !== ' ') {
                 game.sfx.play('text');
               }
-              const top = y - 28;
-              const left = x - ((chars.length - 1) * 4 / 2); // Center text.
-              const letter = this.add.sprite(left + col * 4, top, 'typeface-sm');
+
+              // At start of each word, check if we should wrap.
+              if (j === 0 && col + word.length > lineLength) {
+                console.log('this word needs to wrap to the next line');
+                row += 1;
+                col = 0;
+              }
+
+              const top = y - 28 + row * 8;
+              const left = x - ((chars.length - 1) * 8 / 2); // Center text.
+              const letter = this.add.sprite(left + col * 8, top, 'typeface');
               letters.push(letter);
-              setLetter(letter, char);
-            },
+              setLetter(letter, char.toUpperCase());
+              col++;
+
+              if (j + 1 === word.length) {
+                const space = this.add.sprite(left + col * 8, top + row * 8, 'typeface')
+                setLetter(space, ' ');
+                col++;
+              }
+            };
+
+            this.time.addEvent({
+              delay: timeBetweenChars * charCount,
+              callback: printChar
+            });
           });
         });
-      },
+      }
     });
   });
 

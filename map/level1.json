@@ -41,7 +41,7 @@
                  "name":"",
                  "properties":
                     {
-                     "dialog":"hey, you!\nclimb that chain!\n\n\npress A to jump\n\nto vault, press \u25c0 + A\non the side of a platform"
+                     "dialog":"hey, you!\nclimb that chain!\n\n\npress A to jump\n\nto vault, press < + A\non the side of a platform"
                     },
                  "propertytypes":
                     {
