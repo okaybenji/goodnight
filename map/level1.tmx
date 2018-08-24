@@ -556,14 +556,16 @@
     <property name="faceRight" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="9" type="npc" x="208" y="216">
+  <object id="9" type="npc" x="200" y="216">
    <properties>
     <property name="dialog">hey, you!
 climb that chain!
 
 
 press A to jump
-press it again to vault</property>
+
+to vault, press ◀ + A
+on the side of a platform</property>
    </properties>
   </object>
  </objectgroup>

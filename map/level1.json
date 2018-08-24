@@ -41,7 +41,7 @@
                  "name":"",
                  "properties":
                     {
-                     "dialog":"hey, you!\nclimb that chain!\n\n\npress A to jump\npress it again to vault"
+                     "dialog":"hey, you!\nclimb that chain!\n\n\npress A to jump\n\nto vault, press \u25c0 + A\non the side of a platform"
                     },
                  "propertytypes":
                     {
@@ -51,7 +51,7 @@
                  "type":"npc",
                  "visible":true,
                  "width":0,
-                 "x":208,
+                 "x":200,
                  "y":216
                 }],
          "opacity":1,
