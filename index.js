@@ -663,11 +663,12 @@ const update = function() {
 
   // Float in water.
   if (overTile && overTile.properties.water) {
-    plr.body.velocity.y = 0;
-    plr.y -= 3;
     plr.jumping = false;
     plr.canAutovault = true;
     plr.swimming = true;
+  } else {
+    plr.swimming = false;
+    plr.setGravityY(800);
   }
 
   // Play random alternative idle animation after some time passed w/o input.
@@ -733,7 +734,9 @@ const update = function() {
   // There's also a gamepad listener for this in set up player.
   const justPressedJump = Phaser.Input.Keyboard.JustDown(this.keys.jump);
   if (justPressedJump || (pressing.jump && plr.body.blocked.down)) {
-    if (!plr.jumping) {
+    if (plr.swimming) {
+      plr.swim();
+    } else if (!plr.jumping) {
       plr.jump();
     }
   }
@@ -792,6 +795,8 @@ const update = function() {
 
   if (plr.swimming && anim !== 'swim' && !plr.hurt) {
     plr.anims.play('swim');
+    plr.body.velocity.y = 0;
+    plr.setGravityY(75);
   }
 
   if (plr.hurt && anim !== 'hurt') {
@@ -1008,14 +1013,24 @@ const setUpPlayer = function({x, y, properties}) {
       plr.canAutovault = false;
     }
   };
+  plr.swim = () => {
+    const swimHeight = -125;
+    plr.setGravityY(800); // Make height change quickly but prevent player going up too high.
+    plr.body.velocity.y = swimHeight;
+    game.sfx.play('swim');
+  };
 
   this.input.gamepad.on('down', pad => {
     gamepad = pad; // In case player switches to another gamepad.
 
     // Let player jump once per button press.
     const pressedJump = pad.A;
-    if (pressedJump && !plr.jumping) {
-      plr.jump();
+    if (pressedJump) {
+      if (plr.swimming) {
+        plr.swim();
+      } else if (!plr.jumping) {
+        plr.jump();
+      }
     }
   }, this);
 
@@ -1075,6 +1090,8 @@ const createLevel = function(levelName) {
 const addZnake = function(x, y) {
   const znake = this.physics.add.sprite(x, y, 'znake')
     .anims.play('left', true);
+
+  znake.setGravityY(800);
 
   znake.body.setSize(14, 14, 1, 0.5);
   znake.kill = () => {
@@ -1147,7 +1164,7 @@ const scenes = {
     create() {
       // Set up SFX. Don't allow sounds to stack.
       const sfx = () => {
-        const sounds = ['text', 'jump', 'stomp', 'pick', 'die', 'silence'];
+        const sounds = ['text', 'jump', 'swim', 'stomp', 'pick', 'die', 'silence'];
         const soundbank = sounds.reduce((bank, name) => {
           bank[name] = new Howl({
             src: [`./sfx/${name}.wav`],
@@ -1807,9 +1824,6 @@ const config = {
   pixelArt: true,
   physics: {
     default: 'arcade',
-    arcade: {
-      gravity: { y: 800 }
-    }
   },
   input: {
     gamepad: true,
