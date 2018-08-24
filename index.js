@@ -1059,6 +1059,10 @@ const preloadLevel = function(levelName) {
 };
 
 const createLevel = function(levelName) {
+  if (level === 'level4') {
+    game.music.play('level4');
+  }
+
   const xOffset = -24; // To account for extra level width.
   this.lastTileSwap = this.time.now;
   this.lastPlayerInput = this.time.now;
@@ -1084,11 +1088,12 @@ const createLevel = function(levelName) {
 
   const znakes = objectLayer.objects
     .filter(obj => obj.type === 'znake')
-    .map(znake => addZnake.call(this, znake.x + xOffset, znake.y));
+    .map(znake => addZnake.call(this, znake));
 };
 
-const addZnake = function(x, y) {
-  const znake = this.physics.add.sprite(x, y, 'znake')
+const addZnake = function({x, y, properties}) {
+  const xOffset = -24; // To account for extra level width.
+  const znake = this.physics.add.sprite(x + xOffset, y, 'znake')
     .anims.play('left', true);
 
   znake.setGravityY(800);
@@ -1102,7 +1107,21 @@ const addZnake = function(x, y) {
     }});
     znake.rotation = Math.PI;
     game.sfx.play('stomp');
+
+    if (properties && properties.triggerMusic && !znake.playedWaltz) {
+      game.music.play('waltz');
+      znake.playedWaltz = true;
+    }
   };
+
+  if (properties && properties.triggerMusic) {
+    this.time.delayedCall(12000, () => {
+      if (znake && !znake.playedWaltz) {
+        game.music.play('waltz');
+        znake.playedWaltz = true;
+      }
+    });
+  }
 
   znake.on('animationcomplete', () => {
     const anim = znake.anims.currentAnim.key;

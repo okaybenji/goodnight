@@ -50,6 +50,14 @@
                  "height":0,
                  "id":20,
                  "name":"",
+                 "properties":
+                    {
+                     "triggerMusic":true
+                    },
+                 "propertytypes":
+                    {
+                     "triggerMusic":"bool"
+                    },
                  "rotation":0,
                  "type":"znake",
                  "visible":true,
@@ -64,7 +72,7 @@
                  "properties":
                     {
                      "anim":"npc-swim",
-                     "dialog":"it's coming right for you!!\n\n\n\n\nnice job!\nyou can vault multiple times\neven from up there,\nit's a long jump to the chain\nbut I know you can make it",
+                     "dialog":"it's coming right for you!!\n\n\n\n\nnice job!\n\n\nyou can vault multiple times\n\n\neven from up there,\nit's a long jump to the chain\nbut I know you can make it",
                      "faceRight":false
                     },
                  "propertytypes":
