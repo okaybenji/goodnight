@@ -1181,7 +1181,15 @@ const scenes = {
       game.sfx = sfx();
       game.music = bgm(Howler.ctx);
 
-      this.add.image(128, 120, 'logo');
+      const logo = this.add.image(128, 120, 'logo');
+      logo.alpha = 0;
+
+      this.time.addEvent({delay: 500, callback: () => {
+        this.time.addEvent({delay: 100, callback: () => {
+          logo.alpha += 0.33;
+        }, repeat: 3});
+      }});
+
       game.music.play('logo');
 
       // Prepare the menu.
