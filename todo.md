@@ -1,7 +1,6 @@
 # TO-DO
 * Use current climax music after event in level 4. Add new climax music.
 * Create Electron app.
-* Remove all the .DS_Store files from the repo.
 * Show stats screen at the end of the game.
 * Release on Steam.
 * Port to Switch.
