@@ -1780,10 +1780,10 @@ const scenes = {
       let sprites = []; // To clear credits.
 
       const credits = [
-        ['art & animation:', , 'adam bing', , '@exciteless'],
         ['design, code, sound & story:', , 'benji kay', , '@okaybenji'],
+        ['art & animation:', , 'adam bing', , '@exciteless'],
         ['monochrome caves tileset:', , 'adam saltsman', , '@adamatomic'],
-        ['inspired by the art', 'of sam boucher', , '@monsieureureka'],
+        ['inspired by the art of', , 'sam boucher', , '@monsieureureka'],
         [, 'goodnight']
       ];
 
