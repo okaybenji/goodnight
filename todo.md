@@ -1,4 +1,8 @@
 # TO-DO
+* Try allowing holding down jump button to swim (throttled).
+* End credits: Have dreamers mouth stay closed until "I've missed it" scene?
+* Make "chill-look-up" exclusively for the sofa
+* Make "chill-gameboy" play as an "idle-extra" when chilling for a couple of seconds.
 * Use current climax music after event in level 4. Add new climax music.
 * Create Electron app.
 * Show stats screen at the end of the game.
@@ -16,6 +20,9 @@
 * Pazifizt: Don't kill any snakes.
 
 # KNOWN BUGS
+* When using gamepad, movement input can carry through between levels.
+* Player can sometimes jump while chilling on sofa.
+* Sinking makes it possible to clip into the lower right platform on level 6.
 * Title screen music goes silent for a bit after it has looped a couple of times.
 * After adding transitions, player doesn't have to come back to pick up the first flower in level 2.
 * If you put walls in front of znakes, they will walk through them (so I don't).
