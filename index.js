@@ -1840,7 +1840,6 @@ const config = {
   type: Phaser.AUTO,
   width: 256,
   height: 240,
-  zoom: 2,
   pixelArt: true,
   physics: {
     default: 'arcade',

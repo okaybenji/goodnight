@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  background: black;
+  width: 100%;
+  text-align: center;
+}
+
+canvas {
+  height: 100vh;
+  margin: auto;
+  display: inline;
+}
