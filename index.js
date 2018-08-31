@@ -98,6 +98,10 @@ const intro = {
           frames: [
             { key: 'eyes', frame: 4},
             { key: 'eyes', frame: 5},
+            { key: 'eyes', frame: 5},
+            { key: 'eyes', frame: 5},
+            { key: 'eyes', frame: 4},
+            { key: 'eyes', frame: 4},
             { key: 'eyes', frame: 4},
             { key: 'eyes', frame: 5},
             { key: 'eyes', frame: 6},
@@ -118,12 +122,6 @@ const intro = {
 
         this.anims.create({
           key: 'slacken',
-          frames: this.anims.generateFrameNumbers('mouth', { start: 0, end: 4 }),
-          frameRate: 5,
-        });
-
-        this.anims.create({
-          key: 'slackenFromBored',
           frames: this.anims.generateFrameNumbers('mouth', { start: 2, end: 4 }),
           frameRate: 5,
         });
@@ -203,7 +201,7 @@ const intro = {
       text: `and soon our young dreamer drifts off into a strange world of their very own.`,
       method(sprites) {
         sprites.eyes.anims.play('close');
-        sprites.mouth.anims.play('slackenFromBored');
+        sprites.mouth.anims.play('slacken');
       }
     },
     {
@@ -269,19 +267,26 @@ const outro = {
         });
 
         this.anims.create({
-          key: 'tighten',
+          key: 'sleepy',
           frames: [
             { key: 'mouth', frame: 4},
-            { key: 'mouth', frame: 3},
-            { key: 'mouth', frame: 2},
-            { key: 'mouth', frame: 1},
           ],
-          frameRate: 3,
+        });
+
+        this.anims.create({
+          key: 'tighten',
+          frames: [
+            { key: 'mouth', frame: 3},
+          ],
         });
 
         this.anims.create({
           key: 'smile',
-          frames: this.anims.generateFrameNumbers('mouth', { start: 0, end: 0 }),
+          frames: [
+            { key: 'mouth', frame: 2},
+            { key: 'mouth', frame: 1},
+          ],
+          frameRate: 3,
         });
 
         sprites.stars.visible = false;
@@ -290,7 +295,7 @@ const outro = {
         sprites.tvScreen.visible = false;
 
         sprites.eyes.anims.play('open');
-        sprites.mouth.anims.play('tighten');
+        sprites.mouth.anims.play('sleepy');
 
         // Set up parallax motion.
         sprites.sofa.target = 147;
@@ -339,6 +344,7 @@ const outro = {
         sprites.dreamer.visible = true;
         sprites.sofa.visible = true;
 
+        sprites.mouth.anims.play('tighten');
         sprites.eyes.anims.play('half-blink');
       },
       },
