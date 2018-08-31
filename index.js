@@ -703,6 +703,7 @@ const update = function() {
     if (onTile && onTile.properties.couch) {
       // End the game!!
       plr.endingGame = true;
+      plr.body.velocity.x = 0; // Stop slide in case player was moving.
       plr.anims.play('chill');
       game.npc.anims.play('npc-chill');
       game.music.stop();
