@@ -648,8 +648,15 @@ const update = function() {
     } else {
       this.lastUpdatedChillTime = this.time.now;
     }
+
+    const chillGameboyInterval = 8000;
+    if (this.time.now > this.lastPlayedGameboy + chillGameboyInterval) {
+      plr.anims.play('gameboy');
+      this.lastPlayedGameboy = this.time.now;
+    }
   } else {
     this.lastUpdatedChillTime = undefined;
+    this.lastPlayedGameboy = this.time.now;
   }
 
   const anim = plr.anims.currentAnim.key;
@@ -697,11 +704,12 @@ const update = function() {
       plr.chilling = false;
     }
   } else if (pressing.chill && !plr.chilling && plr.body.blocked.down) {
+    plr.body.velocity.x = 0; // Stop slide in case player was moving.
+
     if (onTile && onTile.properties.couch) {
       // End the game!!
       plr.endingGame = true;
-      plr.body.velocity.x = 0; // Stop slide in case player was moving.
-      plr.anims.play('chill');
+      plr.anims.play('watchTv');
       game.npc.anims.play('npc-chill');
       game.music.stop();
       this.scene.stop('pause');
@@ -717,20 +725,11 @@ const update = function() {
 
       return;
     }
-    plr.chilling = true;
-    plr.body.velocity.x = 0; // Stop slide in case player was moving.
-    const roll = Math.random();
-    const anim =
-      roll > 0.5 ? 'chill'
-      : roll > 0.25 ? 'sleep'
-      : 'gameboy';
 
-    plr.anims.play(anim);
+    plr.chilling = true;
+    plr.anims.play('startChill');
     return;
   } else if (plr.chilling) {
-    if (anim === 'gameboy' && !plr.anims.isPlaying) {
-      plr.anims.play('gameboy2');
-    }
     return;
   }
 
@@ -942,6 +941,9 @@ const setUpPlayer = function({x, y, properties}) {
     plr.flipX = true;
   }
 
+  plr.lastPlayedGameboy = this.time.now;
+  plr.lastSwam = this.time.now;
+
   game.plr = plr;
 
   this.physics.add.collider(game.map.worldLayer, plr, (plr, tile) => {
@@ -983,6 +985,12 @@ const setUpPlayer = function({x, y, properties}) {
     }
     if (anim === 'hurt') {
       plr.hurt = false;
+    }
+    if (anim === 'startChill') {
+      plr.anims.play('chill');
+    }
+    if (anim === 'gameboy') {
+      plr.anims.play('chill');
     }
   }, this);
 
@@ -1618,20 +1626,57 @@ const scenes = {
       });
 
       this.anims.create({
-        key: 'chill',
-        frames: this.anims.generateFrameNumbers('plr', { start: 56, end: 62 }),
+        key: 'startChill',
+        frames: this.anims.generateFrameNumbers('plr', { start: 64, end: 67 }),
         frameRate: 8
       });
 
       this.anims.create({
-        key: 'sleep',
-        frames: this.anims.generateFrameNumbers('plr', { start: 64, end: 70 }),
+        key: 'chill',
+        frames: [
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 67},
+          { key: 'plr', frame: 68},
+          { key: 'plr', frame: 69},
+          { key: 'plr', frame: 70},
+          { key: 'plr', frame: 69},
+          { key: 'plr', frame: 68},
+        ],
         frameRate: 8
       });
 
       this.anims.create({
         key: 'gameboy',
         frames: this.anims.generateFrameNumbers('plr', { start: 72, end: 78 }),
+        frames: [
+          { key: 'plr', frame: 72},
+          { key: 'plr', frame: 73},
+          { key: 'plr', frame: 74},
+          { key: 'plr', frame: 75},
+          { key: 'plr', frame: 76},
+          { key: 'plr', frame: 77},
+          { key: 'plr', frame: 78},
+          { key: 'plr', frame: 77},
+          { key: 'plr', frame: 76},
+          { key: 'plr', frame: 75},
+          { key: 'plr', frame: 74},
+          { key: 'plr', frame: 73},
+          { key: 'plr', frame: 72},
+        ],
         frameRate: 8
       });
 
@@ -1649,30 +1694,10 @@ const scenes = {
         frameRate: 4
       });
 
-      // Generate a bunch of frames that look like playing gameboy.
-      const playFrames = [74, 75];
-      const frames = [...Array(64)]
-        .map((f, i, arr) => ({key: 'plr', frame: randomArrayElement(playFrames)}))
-        .map((f, i, arr) => {
-          const last = arr[i - 1];
-          if (last) {
-            f.frame =
-              // 76 is the start of the blink animation, so if that comes up, finish it.
-              last.frame === 76 ? 77
-              : last.frame === 77 ? 78
-              // If we're repeating frames, play a different one, and maybe blink.
-              : last.frame === f.frame ? randomArrayElement([74, 75, 76].splice([74, 75, 76].indexOf(f.frame)))
-              : f.frame;
-          }
-
-          return f;
-        });
-
       this.anims.create({
-        key: 'gameboy2',
-        frames,
-        frameRate: 8,
-        repeat: -1,
+        key: 'watchTv',
+        frames: this.anims.generateFrameNumbers('plr', { start: 56, end: 62 }),
+        frameRate: 8
       });
 
       this.anims.create({
