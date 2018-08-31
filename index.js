@@ -612,7 +612,7 @@ const update = function() {
     gamepad.setAxisThreshold(0.5);
   }
 
-  const idleAnimationInteral = 8000; // How long in MS to wait before playing an alternative idle animation.
+  const idleAnimationInterval = 8000; // How long in MS to wait before playing an alternative idle animation.
   const animateTileInterval = 500;
 
   if (this.time.now > this.lastTileSwap + animateTileInterval) {
@@ -673,7 +673,7 @@ const update = function() {
   }
 
   // Play random alternative idle animation after some time passed w/o input.
-  if (this.time.now > this.lastPlayerInput + idleAnimationInteral && !plr.chilling) {
+  if (this.time.now > this.lastPlayerInput + idleAnimationInterval && !plr.chilling) {
     const anim = Math.random() > 0.5 ? 'idleAltA' : 'idleAltB';
     plr.anims.play(anim);
     this.lastPlayerInput = this.time.now; // Reset timer.
@@ -748,6 +748,12 @@ const update = function() {
   if (pressing.jump && touchingSide && plr.canAutovault && !plr.jumping) {
     plr.canAutovault = false;
     plr.jump();
+  }
+
+  // Allow player to swim (throttled) by holding jump key.
+  const autoSwimInterval = 200;
+  if (pressing.jump && plr.swimming && this.time.now > this.lastSwam + autoSwimInterval) {
+    plr.swim();
   }
 
   // Ensure upward movement (negative Y value) doesn't exceed maximum speed.
@@ -1019,6 +1025,7 @@ const setUpPlayer = function({x, y, properties}) {
     plr.setGravityY(800); // Make height change quickly but prevent player going up too high.
     plr.body.velocity.y = swimHeight;
     game.sfx.play('swim');
+    this.lastSwam = this.time.now;
   };
 
   this.input.gamepad.on('down', pad => {

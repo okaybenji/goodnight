@@ -1,5 +1,4 @@
 # TO-DO
-* Try allowing holding down jump button to swim (throttled).
 * End credits: Have dreamers mouth stay closed until "I've missed it" scene?
 * Make "chill-look-up" exclusively for the sofa
 * Make "chill-gameboy" play as an "idle-extra" when chilling for a couple of seconds.
