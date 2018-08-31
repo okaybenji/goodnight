@@ -19,4 +19,3 @@
 * If you put walls in front of znakes, they will walk through them (so I don't).
 * There is some weirdness with gamepad support. Sometimes keyboard keys or gamepad buttons/sticks stop working.
 * Sometimes the player animation glitches when climbing at the top of the chain.
-* For some reason on itch.io there is weird spacing on some of the opening cutscene paragraphs.

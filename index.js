@@ -30,8 +30,9 @@ const resetControls = () => {
 };
 
 const setLetter = (sprite, letter) => {
+  // Since itch.io does not support quote symbols, using { and } for opening and closing quotes.
   const map = {
-    ' ': 0, '!': 1, '“': 2, '”': 3, '@': 4, '&': 6, '\'': 7, '’': 7, '(': 8, ')': 9, '+': 11,
+    ' ': 0, '!': 1, '{': 2, '}': 3, '@': 4, '&': 6, '\'': 7, '(': 8, ')': 9, '+': 11,
     ',': 12, '-': 13, '.': 14, ':': 26, ';': 27, '<': 28, '>': 29, '?': 31,
     '0': 16, '1': 17, '2': 18, '3': 19, '4': 20, '5': 21, '6': 22, '7': 23, '8': 24, '9': 25,
     A: 33, B: 34, C: 35, D: 36, E: 37, F: 38, G: 39, H: 40,
@@ -202,8 +203,8 @@ const intro = {
       }
     },
     {
-      text: `“but i mustn't sleep” our dreamer realizes!
-      “my very favorite tv show will be starting any minute now!”`,
+      text: `{but i mustn't sleep,} our dreamer realizes!
+      {my very favorite tv show will be starting any minute now!}`,
       method(sprites) {
         game.music.stop();
 
@@ -232,8 +233,8 @@ const intro = {
       }
     },
     {
-      text: `“i must escape this world somehow...
-      ...and soon!!”`,
+      text: `{i must escape this world somehow...
+      ...and soon!!}`,
       method(sprites) {
       },
   }],
@@ -329,7 +330,7 @@ const outro = {
       },
     },
     {
-      text: `“i've missed it,” our dreamer sighs.
+      text: `{i've missed it,} our dreamer sighs.
       but they can't help showing a small smile.`,
       method(sprites) {
         sprites.sofaBack.visible = false;
