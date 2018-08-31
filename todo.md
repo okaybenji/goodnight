@@ -16,7 +16,6 @@
 * Pazifizt: Don't kill any snakes.
 
 # KNOWN BUGS
-* Sinking makes it possible to clip into the lower right platform on level 6.
 * Title screen music goes silent for a bit after it has looped a couple of times.
 * After adding transitions, player doesn't have to come back to pick up the first flower in level 2.
 * If you put walls in front of znakes, they will walk through them (so I don't).

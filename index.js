@@ -697,6 +697,7 @@ const update = function() {
     jump: this.keys.jump.isDown || gamepad.A,
     chill: this.keys.chill.isDown || gamepad.B,
   };
+  plr.pressing = pressing;
 
   if (pressing.left || pressing.right || pressing.up || pressing.down || pressing.jump) {
     this.lastPlayerInput = this.time.now;
@@ -852,6 +853,11 @@ const update = function() {
 
   // Handle climbing.
   if (overTile && overTile.properties.climbable) {
+    if (plr.body.y < 0 && !plr.jumping) {
+      // Next Level!
+      startNextLevel.call(this);
+    }
+
     plr.body.allowGravity = false;
     plr.jumping = false;
     plr.canAutovault = true;
@@ -860,10 +866,6 @@ const update = function() {
       plr.climbing = true;
       plr.body.velocity.x = 0;
       plr.body.velocity.y = 0;
-    } else if (plr.body.y < 0) {
-      // Next Level!
-      //game.sfx.play('victory');
-      startNextLevel.call(this);
     }
 
     if (oneVerticalKeyIsDownButNotBoth) {
@@ -1018,6 +1020,11 @@ const setUpPlayer = function({x, y, properties}) {
     // or vault off the sides of platforms,
     // or jump off chains.
     if (!plr.body.blocked.down && !plr.body.blocked.left && !plr.body.blocked.right && !plr.climbing) {
+      return;
+    }
+
+    // Player must be jumping left or right if climbing.
+    if (plr.climbing && !plr.pressing.left && !plr.pressing.right) {
       return;
     }
 
