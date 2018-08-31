@@ -1036,6 +1036,10 @@ const setUpPlayer = function({x, y, properties}) {
   };
 
   this.input.gamepad.on('down', pad => {
+    if (plr.endingGame) {
+      return;
+    }
+
     gamepad = pad; // In case player switches to another gamepad.
 
     // Let player jump once per button press.
