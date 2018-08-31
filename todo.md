@@ -2,7 +2,6 @@
 * Make "chill-look-up" exclusively for the sofa
 * Make "chill-gameboy" play as an "idle-extra" when chilling for a couple of seconds.
 * Add some music/FX when the dreamer falls asleep in the opening credits.
-* Use current climax music after event in level 4. Add new climax music.
 * Create Electron app.
 * Show stats screen in end credits, just before "GOODNIGHT".
 * Release on Steam.

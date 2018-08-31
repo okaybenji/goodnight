@@ -596,7 +596,7 @@ const startNextLevel = function() {
 
   const isLastLevel = !levels.length;
   if (isLastLevel) {
-    game.music.play('climax');
+    game.music.play('title');
   }
 
   game.transitionScene.setLevel(levelNum);
@@ -1126,17 +1126,17 @@ const addZnake = function({x, y, properties}) {
     znake.rotation = Math.PI;
     game.sfx.play('stomp');
 
-    if (properties && properties.triggerMusic && !znake.playedWaltz) {
-      game.music.play('waltz');
-      znake.playedWaltz = true;
+    if (properties && properties.triggerMusic && !znake.playedAlt) {
+      game.music.play('alt');
+      znake.playedAlt = true;
     }
   };
 
   if (properties && properties.triggerMusic) {
     this.time.delayedCall(12000, () => {
-      if (znake && !znake.playedWaltz) {
-        game.music.play('waltz');
-        znake.playedWaltz = true;
+      if (znake && !znake.playedAlt) {
+        game.music.play('alt');
+        znake.playedAlt = true;
       }
     });
   }
