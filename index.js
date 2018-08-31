@@ -852,19 +852,25 @@ const update = function() {
 
   // Handle climbing.
   if (overTile && overTile.properties.climbable) {
-    plr.body.allowGravity = false;
-    plr.jumping = false;
-    plr.canAutovault = true;
+    if (plr.body.y < 0) {
+      startNextLevel.call(this);
+      return;
+    }
 
-    if (!plr.climbing) {
+    if (!pressing.left && !pressing.right && !plr.climbing) {
+      plr.jumping = false;
       plr.climbing = true;
       plr.body.velocity.x = 0;
       plr.body.velocity.y = 0;
-    } else if (plr.body.y < 0) {
-      // Next Level!
-      //game.sfx.play('victory');
-      startNextLevel.call(this);
     }
+  } else {
+    plr.climbing = false;
+    plr.body.allowGravity = true;
+  }
+
+  if (plr.climbing) {
+    plr.body.allowGravity = false;
+    plr.canAutovault = true;
 
     if (oneVerticalKeyIsDownButNotBoth) {
       if (anim !== 'climb') {
@@ -872,9 +878,18 @@ const update = function() {
       }
       plr.y += pressing.up ? -3 : 2;
     }
-  } else {
-    plr.climbing = false;
-    plr.body.allowGravity = true;
+    // Prevent player falling off climbable objects (they must jump).
+    if (oneHorizontalKeyIsDownButNotBoth && !plr.jumping) {
+      const nextX = pressing.left ? plr.x - 6 : plr.x + 6;
+      const nextTile = game.map.worldLayer.tilemap.getTileAtWorldXY(nextX, plr.y);
+      if (!nextTile || (nextTile && !nextTile.properties.climbable)) {
+        plr.body.velocity.x = 0;
+      }
+
+      if (plr.body.velocity.y === 0) {
+        plr.anims.stop();
+      }
+    }
   }
 };
 
@@ -1018,6 +1033,11 @@ const setUpPlayer = function({x, y, properties}) {
     // or vault off the sides of platforms,
     // or jump off chains.
     if (!plr.body.blocked.down && !plr.body.blocked.left && !plr.body.blocked.right && !plr.climbing) {
+      return;
+    }
+
+    // If player is climbing, they can only jump left or right.
+    if (plr.climbing && !this.keys.left.isDown && !this.keys.right.isDown) {
       return;
     }
 
@@ -1708,7 +1728,7 @@ const scenes = {
           { key: 'plr', frame: 50},
           { key: 'plr', frame: 49},
         ],
-        frameRate: 10,
+        frameRate: 8,
         repeat: -1
       });
 
