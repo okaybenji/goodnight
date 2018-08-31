@@ -24,12 +24,9 @@ const resetControls = () => {
     game.levelScene.keys.chill.isDown = false;
   };
 
-  gamepad.up = false;
-  gamepad.down = false;
-  gamepad.left = false;
-  gamepad.right = false;
-  gamepad.A = false;
-  gamepad.B = false;
+  if (gamepad.buttons) {
+    gamepad.buttons.forEach(b => b.pressed = false);
+  }
 };
 
 const setLetter = (sprite, letter) => {
@@ -1078,6 +1075,8 @@ const preloadLevel = function(levelName) {
 };
 
 const createLevel = function(levelName) {
+  resetControls();
+
   if (level === 'level4') {
     game.music.play('level4');
   }
