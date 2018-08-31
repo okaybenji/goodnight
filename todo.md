@@ -16,8 +16,6 @@
 * Pazifizt: Don't kill any snakes.
 
 # KNOWN BUGS
-* Title screen music goes silent for a bit after it has looped a couple of times.
-* After adding transitions, player doesn't have to come back to pick up the first flower in level 2.
 * If you put walls in front of znakes, they will walk through them (so I don't).
 * There is some weirdness with gamepad support. Sometimes keyboard keys or gamepad buttons/sticks stop working.
 * Sometimes the player animation glitches when climbing at the top of the chain.

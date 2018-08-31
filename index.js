@@ -1449,11 +1449,11 @@ const scenes = {
       });
     },
     create() {
-      // Play a silent "sound" every 30 secs.
+      // Play a silent "sound" every 20 secs.
       // This prevents AudioContext from pausing itself.
       setInterval(() => {
         game.sfx.play('silence');
-      }, 30000);
+      }, 20000);
 
       game.music.play('title');
 
