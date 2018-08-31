@@ -1,7 +1,9 @@
 # TO-DO
+* Tweak the gameboy animation to match mock-up.
 * Add some music/FX when the dreamer falls asleep in the opening credits.
 * Create Electron app.
-* Show stats screen in end credits, just before "GOODNIGHT".
+* Show stats at end of game (somewhere?).
+* Clean up index.js.
 * Release on Steam.
 * Port to Switch.
 

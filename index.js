@@ -48,6 +48,38 @@ const setLetter = (sprite, letter) => {
   sprite.setFrame(map[letter] || 0);
 };
 
+const buildStats = (scene) => {
+  const stats = game.plr ? [
+    {text: 'LEVEL', icon: 'chain', value: levelNum},
+    {text: 'SECONDS CHILLED', icon: 'snowflake', value: secondsChilled},
+    // Flower and znake counts for each level reset if player dies.
+    {text: 'FLOWERS PICKED', icon: 'flower', value: flowersPicked + game.plr.flowers},
+    {text: 'ZNAKES KILLED', icon: 'z', value: znakesKilled + game.plr.znakes},
+    {text: 'DEATHS', icon: 'heart', value: deathCount},
+    {text: 'GORGE STREAK', icon: 'rock', value: Math.max(game.plr.gorges, gorgeStreak)},
+  ] : [];
+
+  stats.forEach((stat, i) => {
+    const top = 88;
+    const left = 64;
+    const right = 64;
+
+    // Display stat description.
+    stat.text.split('').forEach((char, col) => {
+      setLetter(scene.add.sprite(left + col * 8, top + i * 16, 'typeface'), char);
+    });
+
+    // Display stat.
+    const statStr = (stat.value + '');
+    statStr.split('').forEach((char, col) => {
+      setLetter(scene.add.sprite((256 - right) + col * 8, top + i * 16, 'typeface'), char);
+    });
+
+    // Display stat icon.
+    scene.add.image((256 - right) + statStr.length * 8, top + i * 16, `icon-${stat.icon}`);
+  });
+};
+
 const intro = {
   paragraphs: [
     {
@@ -1351,35 +1383,7 @@ const scenes = {
         setLetter(this.add.sprite(left + col * 8, top, 'typeface'), char);
       });
 
-      const stats = game.plr ? [
-        {text: 'LEVEL', icon: 'chain', value: levelNum},
-        {text: 'SECONDS CHILLED', icon: 'snowflake', value: secondsChilled},
-        // Flower and znake counts for each level reset if player dies.
-        {text: 'FLOWERS PICKED', icon: 'flower', value: flowersPicked + game.plr.flowers},
-        {text: 'ZNAKES KILLED', icon: 'z', value: znakesKilled + game.plr.znakes},
-        {text: 'DEATHS', icon: 'heart', value: deathCount},
-        {text: 'GORGE STREAK', icon: 'rock', value: Math.max(game.plr.gorges, gorgeStreak)},
-      ] : [];
-
-      stats.forEach((stat, i) => {
-        const top = 88;
-        const left = 64;
-        const right = 64;
-
-        // Display stat description.
-        stat.text.split('').forEach((char, col) => {
-          setLetter(this.add.sprite(left + col * 8, top + i * 16, 'typeface'), char);
-        });
-
-        // Display stat.
-        const statStr = (stat.value + '');
-        statStr.split('').forEach((char, col) => {
-          setLetter(this.add.sprite((256 - right) + col * 8, top + i * 16, 'typeface'), char);
-        });
-
-        // Display stat icon.
-        this.add.image((256 - right) + statStr.length * 8, top + i * 16, `icon-${stat.icon}`);
-      });
+      buildStats(this);
     },
   },
   transition: {
