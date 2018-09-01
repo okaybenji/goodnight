@@ -1,6 +1,5 @@
 # TO-DO
 * Add some music/FX when the dreamer falls asleep in the opening credits.
-* Create Electron app.
 * Show stats at end of game (somewhere?).
 * Clean up index.js.
 * Release on Steam.
@@ -18,5 +17,5 @@
 
 # KNOWN BUGS
 * If you put walls in front of znakes, they will walk through them (so I don't).
-* There is some weirdness with gamepad support. Sometimes keyboard keys or gamepad buttons/sticks stop working.
 * Sometimes the player animation glitches when climbing at the top of the chain.
+* Auto-swimming seems not to always work.
