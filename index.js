@@ -1800,7 +1800,7 @@ const scenes = {
       });
 
       // Press ENTER key or START/OPTIONS button to start.
-      this.input.keyboard.once('keydown', (event) => {
+      this.input.keyboard.on('keydown', (event) => {
         if (event.key === 'Enter') {
           this.scene.start('intro');
         }
