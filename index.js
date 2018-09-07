@@ -1,6 +1,7 @@
 const levels = ['level1', 'level2', 'level3', 'level4', 'level5', 'level6', 'final'];
 let level = 'intro'; // Trick to transition from opening cutscene to first level.
 let gamepad = {};
+let inputMethod = ''; // Will be 'keyboard' or 'gamepad'.
 
 // Global tracking of player stats.
 let levelNum = 0;
@@ -558,12 +559,16 @@ const cutsceneFactory = config => ({
     };
 
     // Press START or JUMP to progress.
-    this.input.keyboard.on('keydown', nextLine);
+    this.input.keyboard.on('keydown', event => {
+      inputMethod = 'keyboard'; // Capture input method for use in tutorial text.
+      nextLine(event);
+    });
 
     this.input.gamepad.on('down', pad => {
       const startButton = pad.buttons[9];
 
       if (pad.A || startButton.pressed) {
+        inputMethod = 'gamepad'; // Capture input method for use in tutorial text.
         nextLine();
       }
     }, this);
@@ -941,6 +946,14 @@ const addNpc = function({x, y, properties}) {
         }
 
         chars.forEach((char, col) => {
+          if (char === 'A' && inputMethod === 'keyboard') {
+            char = 'X';
+          }
+
+          if (char === 'B' && inputMethod === 'keyboard') {
+            char = 'Z';
+          }
+
           this.time.addEvent({
             delay: timeBetweenChars * col,
             callback: () => {
