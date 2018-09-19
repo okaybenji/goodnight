@@ -1374,7 +1374,7 @@ const scenes = {
         }
       };
 
-      // Set up controls to unpause.
+      // Set up controls to pause/unpause.
       this.input.keyboard.on('keydown', (event) => {
         if (event.key === 'Enter') {
           togglePause();
