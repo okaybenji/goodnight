@@ -1,9 +1,10 @@
 # TO-DO
+* Check if gamepad is plugged in at start of level 1. If not, swap the tutorial text to say 'press X' instead of 'press A'. Also update level 6 ('press B to chill').
 * Add some music/FX when the dreamer falls asleep in the opening credits.
 * Show stats at end of game (somewhere?).
+* Change the death player body rotation.
 * Clean up index.js.
 * Release on Steam.
-* Port to Switch.
 
 ## ACHIEVEMENTS
 * Zero Chill: Finish the game with a 0-second chill record.
@@ -16,6 +17,7 @@
 * Pazifizt: Don't kill any snakes.
 
 # KNOWN BUGS
-* If you put walls in front of znakes, they will walk through them (so I don't).
+* There's a glitch during the end game animation in the last level.
+* DEV: If you put walls in front of znakes, they will walk through them (so I don't).
 * Sometimes the player animation glitches when climbing at the top of the chain.
 * Auto-swimming seems not to always work.
