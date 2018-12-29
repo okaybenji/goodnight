@@ -13,6 +13,7 @@ let gorgeStreak = 0;
 
 const randomIntBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 const randomArrayElement = arr => arr[Math.floor(Math.random() * arr.length)];
+const mapFrames = (key, frames) => frames.map(frame => ({key, frame}));
 
 // Reset controls so they do not get stuck.
 const resetControls = () => {
@@ -94,60 +95,32 @@ const intro = {
 
         this.anims.create({
           key: 'sparkle',
-          frames: [
-            { key: 'eyes', frame: 0},
-            { key: 'eyes', frame: 1},
-            { key: 'eyes', frame: 2},
-            { key: 'eyes', frame: 1},
-          ],
+          frames: mapFrames('eyes', [0, 1, 2, 1]),
           frameRate: 10,
           repeat: -1
         });
 
         this.anims.create({
           key: 'glaze',
-          frames: [
-            { key: 'eyes', frame: 0},
-            { key: 'eyes', frame: 1},
-            { key: 'eyes', frame: 2},
-          ],
+          frames: mapFrames('eyes', [0, 1, 2]),
           frameRate: 10,
         });
 
         this.anims.create({
           key: 'bored',
-          frames: [
-            { key: 'mouth', frame: 0},
-            { key: 'mouth', frame: 1},
-            { key: 'mouth', frame: 2},
-          ],
+          frames: mapFrames('mouth', [0, 1, 2]),
           frameRate: 2,
         });
 
         this.anims.create({
           key: 'close',
-          frames: [
-            { key: 'eyes', frame: 4},
-            { key: 'eyes', frame: 5},
-            { key: 'eyes', frame: 5},
-            { key: 'eyes', frame: 5},
-            { key: 'eyes', frame: 4},
-            { key: 'eyes', frame: 4},
-            { key: 'eyes', frame: 4},
-            { key: 'eyes', frame: 5},
-            { key: 'eyes', frame: 6},
-            { key: 'eyes', frame: 7},
-          ],
+          frames: mapFrames('eyes', [4,5,5,5,4,4,4,5,6,7]),
           frameRate: 5,
         });
 
         this.anims.create({
           key: 'half-blink',
-          frames: [
-            { key: 'eyes', frame: 4},
-            { key: 'eyes', frame: 5},
-            { key: 'eyes', frame: 4},
-          ],
+          frames: mapFrames('eyes', [4, 5, 4]),
           frameRate: 5,
         });
 
@@ -288,35 +261,23 @@ const outro = {
       method(sprites) {
         this.anims.create({
           key: 'open',
-          frames: [
-            { key: 'eyes', frame: 7},
-            { key: 'eyes', frame: 6},
-            { key: 'eyes', frame: 5},
-            { key: 'eyes', frame: 4},
-          ],
+          frames: mapFrames('eyes', [7, 6, 5, 4]),
           frameRate: 3,
         });
 
         this.anims.create({
           key: 'sleepy',
-          frames: [
-            { key: 'mouth', frame: 4},
-          ],
+          frames: [{key: 'mouth', frame: 4}],
         });
 
         this.anims.create({
           key: 'tighten',
-          frames: [
-            { key: 'mouth', frame: 3},
-          ],
+          frames: [{key: 'mouth', frame: 3}],
         });
 
         this.anims.create({
           key: 'smile',
-          frames: [
-            { key: 'mouth', frame: 2},
-            { key: 'mouth', frame: 1},
-          ],
+          frames: mapFrames('mouth', [2, 1]),
           frameRate: 3,
         });
 
@@ -1530,50 +1491,26 @@ const scenes = {
 
       this.anims.create({
         key: 'lookLeft',
-        frames: [
-          { key: 'eye', frame: 3},
-          { key: 'eye', frame: 2},
-          { key: 'eye', frame: 1},
-          { key: 'eye', frame: 0},
-        ],
+        frames: mapFrames('eye', [3, 2, 1, 0]),
         frameRate: 10,
       });
 
       this.anims.create({
         key: 'blink',
-        frames: [
-          { key: 'eye', frame: 6},
-          { key: 'eye', frame: 7},
-          { key: 'eye', frame: 8},
-          { key: 'eye', frame: 9},
-          { key: 'eye', frame: 8},
-          { key: 'eye', frame: 7},
-          { key: 'eye', frame: 6},
-          { key: 'eye', frame: 0},
-        ],
+        frames: mapFrames('eye', [6,7,8,9,8,7,6,0]),
         frameRate: 10,
       });
 
       this.anims.create({
         key: 'npc-idle',
-        frames: [
-          { key: 'npc', frame: 6},
-          { key: 'npc', frame: 6},
-          { key: 'npc', frame: 8},
-          { key: 'npc', frame: 6},
-        ],
+        frames: mapFrames('npc', [6, 6, 8, 6]),
         frameRate: 8,
         repeat: -1
       });
 
       this.anims.create({
         key: 'npc-swim',
-        frames: [
-          { key: 'npc', frame: 18},
-          { key: 'npc', frame: 19},
-          { key: 'npc', frame: 20},
-          { key: 'npc', frame: 19},
-        ],
+        frames: mapFrames('npc', [18, 19, 20, 19]),
         frameRate: 8,
         repeat: -1
       });
@@ -1586,12 +1523,7 @@ const scenes = {
 
       this.anims.create({
         key: 'idle',
-        frames: [
-          { key: 'plr', frame: 8},
-          { key: 'plr', frame: 8},
-          { key: 'plr', frame: 10},
-          { key: 'plr', frame: 8},
-        ],
+        frames: mapFrames('plr', [8, 8, 10, 8]),
         frameRate: 8,
         repeat: -1
       });
@@ -1610,42 +1542,26 @@ const scenes = {
 
       this.anims.create({
         key: 'run',
-        frames: [
-          { key: 'plr', frame: 0},
-          { key: 'plr', frame: 1},
-          { key: 'plr', frame: 2},
-          { key: 'plr', frame: 1},
-        ],
+        frames: mapFrames('plr', [0, 1, 2, 1]),
         frameRate: 10,
         repeat: -1
       });
 
       this.anims.create({
         key: 'vault',
-        frames: [
-          { key: 'plr', frame: 33},
-          { key: 'plr', frame: 34},
-        ],
+        frames: mapFrames('plr', [33, 34]),
         frameRate: 20,
       });
 
        this.anims.create({
         key: 'jump',
-        frames: [
-          { key: 'plr', frame: 33},
-          { key: 'plr', frame: 32},
-        ],
+        frames: mapFrames('plr', [33, 32]),
         frameRate: 10,
       });
 
       this.anims.create({
         key: 'swim',
-        frames: [
-          { key: 'plr', frame: 40},
-          { key: 'plr', frame: 41},
-          { key: 'plr', frame: 42},
-          { key: 'plr', frame: 41},
-        ],
+        frames: mapFrames('plr', [40, 41, 42, 41]),
         frameRate: 8,
         repeat: -1,
       });
@@ -1658,69 +1574,19 @@ const scenes = {
 
       this.anims.create({
         key: 'chill',
-        frames: [
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 68},
-          { key: 'plr', frame: 69},
-          { key: 'plr', frame: 70},
-          { key: 'plr', frame: 69},
-          { key: 'plr', frame: 68},
-        ],
+        frames: mapFrames('plr', [67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,68,69,70,69,68]),
         frameRate: 8
       });
 
       this.anims.create({
         key: 'gameboy',
-        frames: [
-          { key: 'plr', frame: 72},
-          { key: 'plr', frame: 73},
-          { key: 'plr', frame: 74},
-          { key: 'plr', frame: 75},
-          { key: 'plr', frame: 74},
-          { key: 'plr', frame: 76},
-          { key: 'plr', frame: 74},
-          { key: 'plr', frame: 77},
-          { key: 'plr', frame: 78},
-          { key: 'plr', frame: 77},
-          { key: 'plr', frame: 74},
-          { key: 'plr', frame: 75},
-          { key: 'plr', frame: 74},
-          { key: 'plr', frame: 75},
-          { key: 'plr', frame: 74},
-          { key: 'plr', frame: 76},
-          { key: 'plr', frame: 74},
-          { key: 'plr', frame: 73},
-          { key: 'plr', frame: 72},
-        ],
+        frames: mapFrames('plr', [72,73,74,75,74,76,74,77,78,77,74,75,74,75,74,76,74,73,72]),
         frameRate: 8
       });
 
       this.anims.create({
         key: 'sleepFromChill',
-        frames: [
-          { key: 'plr', frame: 61},
-          { key: 'plr', frame: 60},
-          { key: 'plr', frame: 59},
-          { key: 'plr', frame: 67},
-          { key: 'plr', frame: 68},
-          { key: 'plr', frame: 69},
-          { key: 'plr', frame: 70},
-        ],
+        frames: mapFrames('plr', [61,60,59,67,68,69,70]),
         frameRate: 4
       });
 
@@ -1732,30 +1598,20 @@ const scenes = {
 
       this.anims.create({
         key: 'climb',
-        frames: [
-          { key: 'plr', frame: 48},
-          { key: 'plr', frame: 49},
-          { key: 'plr', frame: 50},
-          { key: 'plr', frame: 49},
-        ],
+        frames: mapFrames('plr', [48, 49, 50, 49]),
         frameRate: 10,
         repeat: -1
       });
 
       this.anims.create({
         key: 'climbIdle',
-        frames: [
-          { key: 'plr', frame: 49},
-        ],
+        frames: [{key: 'plr', frame: 49}],
         frameRate: 1
       });
 
       this.anims.create({
         key: 'hurt',
-        frames: [
-          { key: 'plr', frame: 34},
-          { key: 'plr', frame: 36},
-        ],
+        frames: mapFrames('plr', [34, 36]),
         frameRate: 10,
       });
 
@@ -1768,47 +1624,27 @@ const scenes = {
 
       this.anims.create({
         key: 'left',
-        frames: [
-          { key: 'znake', frame: 4 },
-          { key: 'znake', frame: 5 },
-          { key: 'znake', frame: 6 },
-          { key: 'znake', frame: 5 },
-        ],
+        frames: mapFrames('znake', [4, 5, 6, 5]),
         frameRate: 10,
         repeat: -1
       });
 
       this.anims.create({
         key: 'right',
-        frames: [
-          { key: 'znake', frame: 8 },
-          { key: 'znake', frame: 9 },
-          { key: 'znake', frame: 10 },
-          { key: 'znake', frame: 9 },
-        ],
+        frames: mapFrames('znake', [8, 9, 10, 9]),
         frameRate: 10,
         repeat: -1
       });
 
       this.anims.create({
         key: 'turnRight',
-        frames: [
-          { key: 'znake', frame: 0 },
-          { key: 'znake', frame: 1 },
-          { key: 'znake', frame: 2 },
-          { key: 'znake', frame: 3 },
-        ],
+        frames: mapFrames('znake', [0, 1, 2, 3]),
         frameRate: 10,
       });
 
       this.anims.create({
         key: 'turnLeft',
-        frames: [
-          { key: 'znake', frame: 3 },
-          { key: 'znake', frame: 2 },
-          { key: 'znake', frame: 1 },
-          { key: 'znake', frame: 0 },
-        ],
+        frames: mapFrames('znake', [3, 2, 1, 0]),
         frameRate: 10,
       });
 
