@@ -17,7 +17,6 @@
 * Pazifizt: Don't kill any snakes.
 
 # KNOWN BUGS
-* There's a glitch during the end game animation in the last level.
 * DEV: If you put walls in front of znakes, they will walk through them (so I don't).
 * Sometimes the player animation glitches when climbing at the top of the chain.
 * Auto-swimming seems not to always work.
